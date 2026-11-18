@@ -1,7 +1,7 @@
 # Kırık Mühür RPG — 4 Görselden Çizim Referansı (19.11.2026)
 
 > Kapsam: **yalnız Kırık Mühür RPG**. Arena Forge Pro ile karıştırma.
-> **Durum:** Bu dosya çizim talimatlarını GitHub'da saklar. Sohbette gönderilen dört **görsel dosyası henüz GitHub'a yüklenmedi**; yerel ZIP paketi ayrıca hazırlandı. Görseller yüklenince aşağıdaki dosya adları kullanılacak.
+> **Durum:** Dört orijinal görsel **GitHub'a yüklendi ve doğrulandı**. Her dosya kaynak WebP verisi değiştirilmeden aktarıldı. Görsel commit: `83017d517310a3fc0f9660cc510918ca93ba0b4b`.
 
 ## Kaynak görseller (gönderim sırası)
 
@@ -9,6 +9,14 @@
 2. `referanslar/market_soguk_isik.webp` — Market rafları, küçük merkez karakter. Soğuk mavi/camgöbeği ışık, açık renk karolar, rafların perspektif çizgileri, koyu karakter konturları.
 3. `referanslar/sehir_cephe.webp` — Eskimiş dükkân cepheleri. Kırık sıva, tabela/yüzey katmanları, gri-pembe-krem palet, yatay kaldırım.
 4. `referanslar/yikik_sokak.webp` — Arkadan karakterli yıkık sokak. Şeftali gün batımı, ön planda koyu siluet, ara planda enkaz, uzakta düşük kontrastlı binalar.
+
+
+## Görsel önizlemeleri
+
+![Kafe referansı](../referanslar/kafe_sicak_isik.webp)
+![Market referansı](../referanslar/market_soguk_isik.webp)
+![Şehir cephesi referansı](../referanslar/sehir_cephe.webp)
+![Yıkık sokak referansı](../referanslar/yikik_sokak.webp)
 
 ## Zorunlu görsel analiz ve üretim standardı
 
@@ -24,7 +32,7 @@
 
 ## Kontrol listesi
 
-- [ ] Dört orijinal görsel dosyası `referanslar/` dizinine yüklenip GitHub'da açılabilirliği doğrulandı.
+- [x] Dört orijinal görsel dosyası `referanslar/` dizinine yüklenip GitHub içerik listesinde SHA ve boyutları doğrulandı.
 - [ ] Her sahne için palet, kontur, perspektif, ışık ve piksel ölçeği örnekleri çıkarıldı.
 - [ ] Kırık Mühür'e ait özgün dikey yerleşim eskizleri üretildi.
 - [ ] Android'de sahne, sprite, NPC, savaş HUD ve menüyle görsel uyum kontrol edildi.
