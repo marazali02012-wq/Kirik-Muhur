@@ -409,7 +409,8 @@ function sprite(ent,type){
  const dir={down:0,up:1,left:2,right:3}[facing]??0;
  const dying=!!ent.deathPreview,attack=ent.attackAnim||0,hurt=ent.hurtAnim||0,heal=ent.healAnim||0;
  const animated=type==='player'?state.moving:ent.moving||type==='elder';
- const step=dying?Math.min(3,Math.floor((1-ent.t/ent.life)*4)):attack?Math.min(3,Math.floor((1-attack/.53)*4)):animated?(type==='elder'?Math.floor(performance.now()/900)%4:Math.floor((ent.walkPhase||0)*.44)%4):0;
+ const phase=type==='player'?state.walkPhase:(ent.walkPhase||0);
+ const step=dying?Math.min(3,Math.floor((1-ent.t/ent.life)*4)):attack?Math.min(3,Math.floor((1-attack/.53)*4)):animated?(type==='elder'?Math.floor(performance.now()/900)%4:Math.floor(phase*.44)%4):0;
  const sc=type==='boss'?1.37:type==='shade'?1.18:1;
  ctx.save();ctx.translate(x,y);ctx.scale(sc,sc);ctx.imageSmoothingEnabled=false;
  // 2.5D ground contact shadow remains under the same depth-sorted actor.
