@@ -21,7 +21,7 @@ Tarih: 18 Kasım 2026. Kod temeli: `index.html` (3.8). Savaş görsel denemesi: 
 | Ekran yönü | Dikey | `km-portrait-only` dokunmatik yatayı uyarıyor; masaüstü test kapısı açılıyor | Kısmen uygun; gerçek Android testi eksik |
 | Otomatik görev | Hedefe rota, düşman temizleme | `questAction`, `autoMissionTick`, `findPath`, `enemyTick` | Genel akış uygun |
 | Teslim ve ödül | Görev/NPC/ödül döngüsü | `ready→travel→hunt→complete→return→claim` | Kullanıcının istediği ayrı dokunma akışı uygulanmış |
-| Görev sayacı güvenliği | `N` gerçek hedef yenilmeli | 3.8'de tüm hedefler ölü ama sayaç düşükken **erken bitirme hatası** | 3.10 izole testte düzeltildi; ana oyuna henüz alınmadı |
+| Görev sayacı güvenliği | `N` gerçek hedef yenilmeli | 3.8'de tüm hedefler ölü ama sayaç düşükken **erken bitirme hatası** | 3.10 ana oyuna alındı; eski kaydı olanlarda da sayaç alt sınırı korundu |
 | Kamera | Referansta derinlikli, zengin 3D/2.5D görünüm | Sabit 2D canvas, 3 arka plan ve karakter takibi | **Eşdeğer değil**; yeniden dünya sanat/derinlik çalışması gerek |
 | Dünya/harita | Çok bölge, dünya haritası, ana ve yan görev | Yalnız Fener Köyü, Ruh Ormanı, Kırık Tapınak | Eksik; tüm referans dünya yapılmış değil |
 | Sınıflar | Çok sınıflı RPG, ikinci sınıf açılışı | 3 özgün sınıf; ikincil sınıf yok | Eksik |
@@ -43,13 +43,14 @@ Tarih: 18 Kasım 2026. Kod temeli: `index.html` (3.8). Savaş görsel denemesi: 
 - Tüm düşmanlar ölü / sayaç 3/3 → tamamlandı, ek hedef oluşmadı — **GEÇTİ**.
 - Normal durumda 1 canlı hedef varken sayaç 0/3 → erken tamamlama veya gereksiz yenileme yok — **GEÇTİ**.
 - JavaScript sözdizimi → **GEÇTİ**.
-- **Henüz yapılmadı:** 3.10 Android oynanış regresyon testi, tüm görevleri kapsayan tam uzun süreli test.
+- **TinyFish canlı tarayıcı testi:** 3.10 test kopyasında 2/3 sayaç gözlendi; yanlış erken tamamlama görülmedi, görev teslimi, +70 altın, +95 XP, seviye artışı ve yeni görev açılması doğrulandı. 3/3 anı görüntüde yakalanmadı.
+- **Henüz yapılmadı:** 3.10 ana sayfa yayını sonrası son kontrol, gerçek Android cihaz testi, tüm görevleri kapsayan uzun süreli test.
 
 ## Görsel QA
 Önceki canlı 3.9 tarayıcı testinde iki görev, XP, altın ve seviye yükselmesi çalıştı. Ancak görüntü yakalama anında düşman sprite'ları ve yeni vurma/ölüm efektleri gözlemlenemedi. **3.9 görsel onarımını tamamlandı sayma.**
 
 ## Aşama 3'ü bitirmek için ölçülebilir kriterler
-1. 3.10 görev düzeltmesi gerçekten tarayıcıda ve Android ekranda test edilip ana oyuna güvenle alınacak.
+1. 3.10 görev düzeltmesi test kopyasında tarayıcıdan doğrulandı ve ana oyuna alındı; **Android gerçek cihaz testi ve ana sayfa regresyonu bekliyor**.
 2. Savaşta en az 3 düşman ve bir boss'un sprite, HP, darbe, hasar, ölüm görüntüsü **gerçek ekran çıktısıyla** doğrulanacak.
 3. Dikey 360×800, 393×852, 412×915, Android tarayıcı ve kamera izlemesi test edilecek.
 4. Kamera/harita perspektifindeki 2D–referans farkı kabul edilmiş özgün tasarım standardına getirilip üç bölge için çevre sanat tutarlılığı sağlanacak.
@@ -57,7 +58,7 @@ Tarih: 18 Kasım 2026. Kod temeli: `index.html` (3.8). Savaş görsel denemesi: 
 6. Ana menü, envanter, görev teslimi, beceriler ve kayıt sistemi regresyon testi geçecek.
 
 ## Güvenlik ve izolasyon
-- Ana `index.html` 3.8 **değiştirilmedi**.
+- Ana `index.html` yalnızca **3.10 görev sayacı kök-neden yaması ve sürüm etiketi** için güncellendi. 3.9 görsel değişiklikleri ana oyuna alınmadı.
 - 3.9 ve 3.10 dosyaları ayrı test kopyalarıdır; kullanıcı verisi ve eski kayıt anahtarı değiştirilmedi.
 - Arena Forge Pro'nun Supabase / Render / PostHog sistemlerinde değişiklik yapılmadı.
 - Kırık Mühür'e ilişkin PostHog canlı oyuncu kanıtı olmadığı için analitik üzerinden performans iddiası kurulamaz.
