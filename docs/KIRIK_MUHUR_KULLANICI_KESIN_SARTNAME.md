@@ -127,4 +127,20 @@ Bu bölüm yukarıdaki kullanıcı hedeflerine **ek yorumdur**; onları değişt
 - Kırık Mühür ile **Arena Forge Pro** karıştırılmaz. Mevcut `index.html`, kayıtlar, çalışan sürümler ve sunucular doğrulama olmadan bozulmaz.
 - **Değişiklik denetimi:** Her yeni GitHub güncellemesini bu şartnameye karşı değerlendir; çelişirse kodu otomatik değiştirmek yerine sapmayı açıkça raporla. Kullanıcının yeni açık talimatı olmadan kapsamı genişletme.
 
+
+## 13) Zorunlu mobil grafik performansı ve FPS standardı
+**Kullanıcının kesin kararı:** Oyunun dikey mobil sürümü ayrı ekran kartı olmayan, dahili grafik birimli Android telefonlarda da akıcı kalmalı. Yüksek kaliteli özgün görseller eklenecek ama çalışan oynanış, kayıt ve dokunmatik kontroller feda edilmeyecek.
+
+- **Performans hedefi:** Önce yoğun sahnelerde **kararlı 30 FPS** hedefle; cihazın işlemci/grafik kapasitesi ve sıcaklık izin veriyorsa **60 FPS isteğe bağlı yüksek kalite modu** olsun. Bunlar *hedef*, ölçülmüş/garanti edilmiş cihaz FPS değeri değildir.
+- **Uyarlanabilir kalite:** Cihaz zorlandığında ilk olarak arka plan çizim çözünürlüğü, parçacık sayısı, ışık/gölge, ekran efektleri ve eşzamanlı animasyon maliyetini kademeli azalt; karakter/NPC/düşmanların konturunu, HUD yazı netliğini, dokunmatik hedeflerini ve temel oynanışı öncelikli koru.
+- **Canvas çözünürlüğü:** `devicePixelRatio` değerini kontrolsüz biçimde doğrudan tüm ekran çizimine uygulatma. Çözünürlük ölçeğini ekrana ve ölçülen performansa göre sınırlandır; orijinal görsel oranını ve 2D/piksel-art keskinliğini koru.
+- **Görsel üretim ve varlık optimizasyonu:** Harita arka planlarını uygun çözünürlükte sıkıştırılmış görüntü/katmanlarla önceden hazırla; değişmeyen dekoru her kare yeniden üretme. Mobil uyumlu animasyon kareleri/spritesheet ve önbellek kullan; gereksiz büyük dokular, fazla GIF/video, gerçek zamanlı ağır ışık/gölge ve gereksiz tam ekran filtrelerden kaçın. Tekrarlı nesne oluşturma/bellek sızıntılarını denetle.
+- **Gerçek oyun motoru:** `requestAnimationFrame` çizimi, fizik/savaş ilerleme süresi ve animasyon süreleri tutarlı olmalı; 30/60 FPS ayarı saldırı hızını, hasarı, görev sayacını, yürüyüşü veya kayıt güvenliğini değiştirmemeli.
+- **Görsel kalite sırası:** Önce özgün, net 2D/2.5D sınıf karakteri, yaratık, NPC, çevre ve HUD. Tam 3D/yoğun gerçek zamanlı efekt **zorunlu değil**; yeterli kanıt olmadan tüm oyuna ağır bir 3D motoru taşıma.
+- **Zorunlu cihaz testi:** 360×800, 393×852, 412×915 gibi dikey ekranlarda açılış, görev, NPC dönüşü, envanter, yoğun çoklu düşman ve boss sahnelerini incele; **fiziksel Android telefonda** en az 10–15 dakika yoğun oynanışta FPS/kare süreleri, donma, ısınma, bellek, pil ve dokunmatik tepkisini kontrol et. Düşük/orta/yüksek kalite karşılaştırması yap. Bu testler yapılmadan “60 FPS sabit”, “kasmaz” veya “performans tamamlandı” deme.
+- **Değişiklik kilidi:** Önce test HTML/ayrı dal, ölçüm ve görsel karşılaştırma; ardından kabul. Ana `index.html`, kayıt anahtarları, çalışan savaş/görev sistemi ve mevcut kullanıcı ilerlemesi onaysız değiştirilmez.
+- **Aşama bağlılığı:** Bu performans kuralı **her aşamada geçerli**; 3A çekirdek motor regresyonunu bozma. Görsel yoğunluğu ve otomatik kalite özellikle **3E görsel/HUD kabulünün zorunlu şartıdır**. “Görseller eklendi” tek başına kabul değildir; gerçek cihaz performansı da gerekir.
+
+**Mevcut 3.24 tespiti:** Oyun Canvas ile her kare çiziliyor; sahnede önceden oluşturulan katmanlar var; `resize()` tam `devicePixelRatio` ile çizim çözünürlüğünü ayarlıyor. Bu risk analizi FPS ölçümü değildir. Fiziksel telefon testleri bekliyor.
+
 **Kod ve kabul durumu için detay:** [Ana proje omurgası](KIRIK_MUHUR_PROJE_OMURGASI_KARAR_2026-11-19.md).
