@@ -16,3 +16,14 @@ PASS   A4-Galaxy_S8 İki parmak açma ve çift dokunma sayfayı yakınlaştırma
 PASS   A5-Galaxy_S8 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
 PASS   A6-Galaxy_S8 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
 PASS   A7-Galaxy_S8 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
+PASS   A8-Galaxy_S8 Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 4x): ilerleme, FPS, hata — {"quests":5,"popups":7,"deaths":0,"fpsMedian":53,"fpsP10":47,"longTasks":6,"heapMB":9.5,"errors":[]}
+PASS   A9-Galaxy_S8 Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır — {"pauseOpened":true,"closed":true}
+PASS   A10-Galaxy_S8 Yataya çevirince "telefonu dik tut" uyarısı; dikeye dönünce HUD düzgün — {"landscapeGuard":"grid","afterPortrait":{"guard":"none","out":[],"canvasW":450}}
+PASS   A11-Galaxy_S8 Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp) — {"toplam":16,"kucuk":[]}
+PASS   A1-Pixel_7 Pixel 7 (412×839, dpr 2.625, CPU 4x yavaş): yükleme ve siyah ekran yok — {"loadMs":1587,"firstFrameMs":117,"ua":"Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 "}
+PASS   A2-Pixel_7 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar — {"hit":"game","dx":97,"facing":"right"}
+PASS   A3-Pixel_7 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-158,"dy":178,"facing":"down"}
+PASS   A4-Pixel_7 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
+PASS   A5-Pixel_7 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
+PASS   A6-Pixel_7 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
+PASS   A7-Pixel_7 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
