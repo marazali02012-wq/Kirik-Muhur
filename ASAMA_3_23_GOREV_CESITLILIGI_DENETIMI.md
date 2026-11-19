@@ -17,6 +17,7 @@ Kung Fu Saga'dan genel **otomatik görev + ana görev/yan görev + dünya harita
 - Harita görünümüne iki yeni NPC konumu eklendi; inceleme/toplama hedefleri dünyada işaretleniyor.
 - **Tek dokunuşlu oto görev** korunuyor: hedefe git → uygun görevi yap → ilgili bölgedeki NPC'ye dön → ödülü bir kez al. Oyuncu manuel kontrolü devralınca otomatik hareket durur.
 - Eski 3.22 kayıtlarının `missionIndex>=2` devam eden devriyeleri, farklı görev şemasına hatalı bağlanmasın diye yeniden **hazır** duruma alınır; seviye, envanter, altın, XP, ödüller ve görev numarası korunur. Yarım kalan eski devriyenin sayacı sıfırlanır.
+- **3.23 deneme kayıtları ayrı anahtarda** (`kirikMuhurQuestFlowV323Test`) saklanır. Önceki `kirikMuhurQuestFlowV32` kaydı okunarak ilk kullanımda kopyalanabilir, ancak bu eski anahtarın üzerine asla yazılmaz. Bu yüzden 3.22 dosyasında ilerleme korunur.
 
 ## Otomatik Chromium testleri
 - **Muhafız:** 393×852 ekranında 0–14 görevleri art arda (15 tamamlandı).
