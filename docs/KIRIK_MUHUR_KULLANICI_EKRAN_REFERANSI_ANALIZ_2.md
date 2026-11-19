@@ -69,3 +69,25 @@
 | D | Binek **yıldızları, becerileri, binek hapı** | Binek Sv1–10; hız ve kalıcı can | Yıldız/şans/hap sistemi: **6** (ekonomi kararı). Binek becerisi: **3C sonrası açık madde**. |
 | E | **Çoklu karakter yuvası** (3 karakter) | Tek kayıt (`kirikMuhurQuestFlowV324Test`) | **Kullanıcı kararı gerekir.** Kural gereği kayıt anahtarı rastgele değiştirilemez. Yuva başına ayrı anahtar ya da tek anahtarda dizi gerekir; ayrıca eski kaydın 1. yuvaya taşınması gerekir. Önerilen aşama: **3E** (giriş ekranıyla birlikte); hesap ve sunucu bağı: **5**. |
 | F | Giriş ekranında sınıf tanıtım metni ve **Oyuna Gir** | 3.29–3.31'de oluşturma akışı var; kayıtlı karakter için ayrı "devam" ekranı yok | **3E** |
+
+## 5) Ek tur — Kule, Kader ve Elmas İşleme (10 ekran)
+| Ekran | Gözlenen yapı |
+|---|---|
+| **Kule girişi** ("Zindan" penceresi) | Kat kat pagoda (1–4. katman görünür). **Mevcut katman** ve **İlk temizleme ödülü** (sandık + kader parası 1200). "5. katmanı temizle → **Kader yuvası aç**". Sunucu sıralaması (ilk 3), "Sıralama Kontrol Et", "Oynanış". Maskotlu öğretici balon ve el işareti, "Eğitimi Geç". |
+| **Kule katı (savaş)** | Dairesel arena. Başlangıçta büyük **"3" geri sayımı**. Solda **Zindan Hedefi** paneli (mevcut katman ve ödülleri). Üstte **boss çubuğu**: portre, seviye 40, çok katmanlı can (**×93**). **"Zindan kalan süre 00:59"**. **Çık** düğmesi. Beceri satırında **"İptal et"** (oto savaş açık). Yerden çıkan ganimet için **"Kader Sandığı – Kullan"** hızlı kartı. Beceri adı afişi ("Kasırga"). |
+| **Kat temizlendi** | "Tebrikler – temizlendi (ödüller çantaya gönderildi)". Ödül ikonları. **Ödülleri Topla ve Çık / Sıradaki Meydan Okuma**. "**2 sn sonra bir sonraki katmana**" (otomatik devam). |
+| **"Aldın" (kader)** | Kazanılan iki kader taşı (ATK, DEF) ikonları ve **Onayla**. Görev "Kuleye bir kez meydan oku (1/1)" tamamlandı. |
+| **Kader paneli** | Ortada yin-yang dairesi ve **8 yuva**. 1. yuva açık; diğerleri kilitli ("Sonraki yuvayı açmak için Kule"). Seçili taş: "ATK 1. Seviye ATK+176" → önizleme **ATK+188**; yükseltme maliyeti **kader parası 2600/421**; **Değiştir / Yükselt**. Sekmeler: **İşle, Erit, Füzyon, Çıkar**. Boşken "Hiç kader işlemediniz" balonu. |
+| **Kader çantası** | Ayrı çanta (2/200). Taş kartları "ATK 1. Seviye ATK+176", "DEF 1. Seviye DEF+176". |
+| **Elmas İşleme** (Arıt → Değerli Taş) | Ortada seçili ekipman, çevresinde **6 taş yuvası**: biri açık ("elmas işlemek için tıklayınız"); diğerleri **ekipman aşamasıyla** açılıyor (1/3/5/7. aşama); biri **VIP5 kilidi**. Altta seçilebilir ekipman listesi. |
+| **HUD (Sv45)** | Seviye ödülü satırları "Al Gümüş×40000 / Al EXP×40000". Alt çubukta yeni açılan **Kader** düğmesi (kırmızı nokta). Sağda **Zindan** kısayolu. |
+
+| # | Eksik | 3.35'te | Karar / Aşama |
+|---|---|---|---|
+| G | **Kule (kat kat zindan)**: geri sayım, süre, boss çubuğu, Çık, ilk temizleme ödülü, "sıradaki kat" ve otomatik devam | Yok. Boss referans belgesinde **Aşama 4 madde 7** olarak planlı. | **4**. Kule, Aşama 4'te kurulacak **karşılaşma motoru** (giriş → dalga → boss → zafer/yenilgi/süre/çıkış) ile yapılacak. Bu ekranlar o planı doğruluyor. Sunucu sıralaması: **5**; sahte sıralama **eklenmeyecek**. |
+| H | **Kader sistemi**: 8 yuvalı ayrı stat katmanı, kuleden düşen taşlar, kader parası, yükselt/erit/füzyon | Yok | **4** (kuleye bağlı). Veri yapısı 3.32'deki eşya kaydı gibi olacak (tanım + seviye + yuva, kayıtta doğrulama). |
+| I | **Elmas işleme**: ekipmanda taş yuvaları, aşamayla açılır | Ayrıntı kartında taş alanı yok | **3C sonrası / 4**. Taş kaynağı (kule/boss) gelmeden yapılırsa boş sistem olur. **VIP kilidi eklenmeyecek.** |
+| J | Yeni sistem açılınca **alt çubukta yeni düğme + kırmızı nokta** | Sadık/Beceri düğmeleri sabit | **3E** (bildirim noktası: yükseltilebilir beceri/yuva varsa) |
+| K | Öğretici **maskot balonu + "Eğitimi Geç"** | 3.31 tanıtım kutusu var; öğretici akış yok | **3E** |
+
+**Sonuç:** Bu turun büyük kısmı (kule, kader, elmas) **Aşama 4'ün çekirdeği**. 3C kapsamını genişletmiyorum. Aşama 4 sırası: (1) karşılaşma motoru ve kule katları, (2) boss mekanikleri, (3) kule ödülleri ve kader taşı, (4) elmas yuvaları.
