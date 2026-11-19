@@ -603,7 +603,7 @@ function stopMissionMovement(){state.mapRoute=null;state.autoPath=false;state.au
 function missionDone(){if(state.questPhase!=='hunt')return;state.questPhase='return';state.mapRoute=null;state.autoPath=true;state.autoBattle=false;state.navDelay=0;moveTarget=null;path=[];state.targetId=null;notify('HEDEF TAMAM! Bilge Işın’a otomatik dönülüyor.');syncUI();save()}
 function deliverMissionAtNPC(){
  if(!['return','claim','complete'].includes(state.questPhase)||state.zone!=='village')return false;
- const npc=state.npcs.find(n=>n.id==='elder');if(!npc||dist(state.player,npc)>95)return false;
+ const npc=state.npcs.find(n=>n.id==='elder');if(!npc||dist(state.player,npc)>62)return false;
  const m=missionInfo(),id='mission-'+state.missionIndex;
  const already=state.questRewards.includes(id);
  if(!already){
