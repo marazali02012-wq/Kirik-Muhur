@@ -37,6 +37,8 @@ Bu görüşmede paylaşılan Kung Fu Saga ekranları, yalnızca **düzen/UX** i�
 
 ## Canlı testte engel
 - TinyFish ile `https://kirik-muhur-3-asama-test.onrender.com/hud_referans_test_3_13.html` kontrol edildi: **404 Not Found**.
+- GitHub 3.14 kaynak dosyası dalda mevcut ve doğrudan GitHub API üzerinden açılıp JavaScript sözdizimi doğrulandı; **dosya yok iddiası doğru değil**.
+- TinyFish ile RawGithack üzerinden 3.14 geçici HTML önizlemesi de denendi; o servis de **404** döndü. Bu, depo dosyasının silindiğini kanıtlamaz; yalnız geçici önizlemenin erişilemediğini gösterir.
 - Bu nedenle 3.13 veya 3.14 için çalışan mobil render, 360×800 / 393×852 / 412×915 ekran çakışması, gerçek dokunmatik görev ve savaş testleri **YAPILMADI**.
 - 8/8 iş mantığı testi **tam oyun tarayıcı testi değildir**. Testi geçmiş saymak için gerçek tarayıcıda ödül penceresi açma/kapatma/alma ve kayıt yükleme de denenmeli.
 
