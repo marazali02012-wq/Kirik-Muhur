@@ -1,0 +1,292 @@
+{
+ "log": [
+  {
+   "i": 0,
+   "title": "ORMANIN GÖLGELERİ",
+   "kind": "hunt",
+   "zone": "forest",
+   "npc": "elder",
+   "ok": true,
+   "pop": true,
+   "s": 18,
+   "d": 0
+  },
+  {
+   "i": 1,
+   "title": "KIRIK MÜHÜR MUHAFIZI",
+   "kind": "hunt",
+   "zone": "arena",
+   "npc": "elder",
+   "ok": true,
+   "pop": true,
+   "s": 22,
+   "d": 0
+  },
+  {
+   "i": 2,
+   "title": "KÖYDEKİ KAYIP İZ",
+   "kind": "inspect",
+   "zone": "village",
+   "npc": "elder",
+   "ok": true,
+   "pop": true,
+   "s": 4,
+   "d": 0
+  },
+  {
+   "i": 3,
+   "title": "GÖZCÜNÜN İMDAT ÇAĞRISI",
+   "kind": "hunt",
+   "zone": "forest",
+   "npc": "ranger",
+   "ok": true,
+   "pop": true,
+   "s": 10,
+   "d": 0
+  },
+  {
+   "i": 4,
+   "title": "ORMANDAKİ RUH PARÇALARI",
+   "kind": "collect",
+   "zone": "forest",
+   "npc": "ranger",
+   "ok": true,
+   "pop": true,
+   "s": 8,
+   "d": 0
+  },
+  {
+   "i": 5,
+   "title": "TAPINAĞIN YİTİK YAZITI",
+   "kind": "inspect",
+   "zone": "arena",
+   "npc": "scribe",
+   "ok": true,
+   "pop": true,
+   "s": 12,
+   "d": 0
+  },
+  {
+   "i": 6,
+   "title": "KIRIK MÜHÜR TAŞLARI",
+   "kind": "collect",
+   "zone": "arena",
+   "npc": "scribe",
+   "ok": true,
+   "pop": true,
+   "s": 8,
+   "d": 0
+  },
+  {
+   "i": 7,
+   "title": "FENER KÖYÜ ARŞİVİ",
+   "kind": "inspect",
+   "zone": "village",
+   "npc": "elder",
+   "ok": true,
+   "pop": true,
+   "s": 8,
+   "d": 0
+  },
+  {
+   "i": 8,
+   "title": "GÖZCÜNÜN SON NÖBETİ",
+   "kind": "hunt",
+   "zone": "forest",
+   "npc": "ranger",
+   "ok": true,
+   "pop": true,
+   "s": 5,
+   "d": 0
+  },
+  {
+   "i": 9,
+   "title": "MÜHRÜN KAYNAĞI",
+   "kind": "inspect",
+   "zone": "arena",
+   "npc": "scribe",
+   "ok": true,
+   "pop": true,
+   "s": 13,
+   "d": 0
+  },
+  {
+   "i": 10,
+   "title": "KÜL GEÇİDİ’NE ÇAĞRI",
+   "kind": "talk",
+   "zone": "ashpass",
+   "npc": "hermit",
+   "ok": true,
+   "pop": true,
+   "s": 10,
+   "d": 0
+  },
+  {
+   "i": 11,
+   "title": "KÜL KIVILCIMLARI",
+   "kind": "hunt",
+   "zone": "ashpass",
+   "npc": "keeper",
+   "ok": true,
+   "pop": true,
+   "s": 12,
+   "d": 0
+  },
+  {
+   "i": 12,
+   "title": "KÜL TEPESİ VE YIKIK KÖPRÜ",
+   "kind": "explore",
+   "zone": "ashpass",
+   "npc": "hermit",
+   "ok": true,
+   "pop": true,
+   "s": 8,
+   "d": 0
+  },
+  {
+   "i": 13,
+   "title": "DİKENLİ TEHDİT",
+   "kind": "hunt",
+   "zone": "forest",
+   "npc": "herbalist",
+   "ok": true,
+   "pop": true,
+   "s": 19,
+   "d": 0
+  },
+  {
+   "i": 14,
+   "title": "UYANAN NÖBETÇİLER",
+   "kind": "hunt",
+   "zone": "arena",
+   "npc": "scribe",
+   "ok": true,
+   "pop": true,
+   "s": 17,
+   "d": 0
+  },
+  {
+   "i": 15,
+   "title": "KÜL LORDU",
+   "kind": "hunt",
+   "zone": "ashpass",
+   "npc": "keeper",
+   "ok": true,
+   "pop": true,
+   "s": 31,
+   "d": 0
+  },
+  {
+   "i": 16,
+   "title": "GÖZCÜNÜN MALZEMELERİ • 1",
+   "kind": "collect",
+   "zone": "forest",
+   "npc": "ranger",
+   "ok": true,
+   "pop": true,
+   "s": 16,
+   "d": 0
+  },
+  {
+   "i": 17,
+   "title": "KÖY KAPISINDA İŞARET • 1",
+   "kind": "inspect",
+   "zone": "village",
+   "npc": "elder",
+   "ok": true,
+   "pop": true,
+   "s": 4,
+   "d": 0
+  },
+  {
+   "i": 18,
+   "title": "TAPINAKTA RUH TOPLA • 1",
+   "kind": "collect",
+   "zone": "arena",
+   "npc": "scribe",
+   "ok": true,
+   "pop": true,
+   "s": 18,
+   "d": 0
+  },
+  {
+   "i": 19,
+   "title": "ORMAN SINIRI SAVUNMASI • 1",
+   "kind": "hunt",
+   "zone": "forest",
+   "npc": "ranger",
+   "ok": true,
+   "pop": true,
+   "s": 12,
+   "d": 0
+  },
+  {
+   "i": 20,
+   "title": "TAPINAK KONTROLÜ • 1",
+   "kind": "inspect",
+   "zone": "arena",
+   "npc": "scribe",
+   "ok": true,
+   "pop": true,
+   "s": 12,
+   "d": 0
+  },
+  {
+   "i": 21,
+   "title": "DİKEN KURDU AVI • 1",
+   "kind": "hunt",
+   "zone": "forest",
+   "npc": "herbalist",
+   "ok": true,
+   "pop": true,
+   "s": 17,
+   "d": 0
+  },
+  {
+   "i": 22,
+   "title": "KIVILCIM SÖNDÜRME • 1",
+   "kind": "hunt",
+   "zone": "ashpass",
+   "npc": "keeper",
+   "ok": true,
+   "pop": true,
+   "s": 22,
+   "d": 0
+  },
+  {
+   "i": 23,
+   "title": "NÖBETÇİ TAŞLARI • 1",
+   "kind": "hunt",
+   "zone": "arena",
+   "npc": "scribe",
+   "ok": true,
+   "pop": true,
+   "s": 16,
+   "d": 0
+  },
+  {
+   "i": 24,
+   "title": "KÜL TEPESİ GÖZCÜLÜĞÜ • 1",
+   "kind": "explore",
+   "zone": "ashpass",
+   "npc": "hermit",
+   "ok": true,
+   "pop": true,
+   "s": 10,
+   "d": 0
+  },
+  {
+   "i": 25,
+   "title": "DEMİRCİNİN SİPARİŞİ • 1",
+   "kind": "talk",
+   "zone": "forest",
+   "npc": "smith",
+   "ok": true,
+   "pop": true,
+   "s": 15,
+   "d": 0
+  }
+ ],
+ "unique": true,
+ "level": 370
+}

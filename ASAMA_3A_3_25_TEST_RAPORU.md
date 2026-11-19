@@ -77,3 +77,7 @@ Not: Bu, konteynerdeki masaüstü Chromium ölçümüdür; telefon FPS'i/ısınm
 5. Geri tuşuna basın → duraklatma açılır, oyundan çıkmaz.
 6. Tarayıcıyı tamamen kapatıp açın → seviye, altın, görev, konum aynı.
 7. 30 dk oynayın; takılma, siyah ekran, ısınma/FPS düşüşü olursa ekran görüntüsüyle bildirin.
+
+
+## GÜNCELLEME 19.11.2026 — 3A kullanıcı kararıyla kapatıldı
+Kullanıcı talimatı: "3a bitir 3b e geç". Tarayıcıda test edilebilen 3A maddelerinin tamamı PASS. **Fiziksel Android kabulü ve canlı HTTPS kapat/aç denemesi yapılmadı, açık madde olarak taşınıyor.** 3B: `ASAMA_3B_3_26_TEST_RAPORU.md`.

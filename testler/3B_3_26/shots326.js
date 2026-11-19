@@ -1,0 +1,13 @@
+const {chromium}=require('playwright');const O=process.argv[3];
+(async()=>{const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:393,height:852},hasTouch:true,isMobile:true,deviceScaleFactor:2});const pg=await ctx.newPage();pg.on('pageerror',e=>console.log('ERR',e.message));
+await pg.goto('file://'+process.argv[2]);await pg.waitForTimeout(500);await pg.tap('[data-class="weaver"]');await pg.waitForTimeout(200);
+const sc=async(n,fn,arg)=>{await pg.evaluate(fn,arg);await pg.waitForTimeout(400);await pg.screenshot({path:O+'/'+n})};
+await sc('kul_gecidi_giris.png',()=>{const T=window.__kmTest;T.setQuest(11);T.enter('ashpass',250,560);T.questAction();for(let i=0;i<10;i++)T.step(.05)});
+await sc('kul_gecidi_kivilcim_savasi.png',()=>{const T=window.__kmTest;for(let i=0;i<120;i++)T.step(.05)});
+await sc('kul_lordu.png',()=>{const T=window.__kmTest;T.closeModal();T.setQuest(15);T.enter('ashpass',980,640);T.questAction();for(let i=0;i<30;i++)T.step(.05)});
+await sc('orman_diken_kurdu_otaci.png',()=>{const T=window.__kmTest;T.closeModal();T.setQuest(13);T.enter('forest',560,640);document.getElementById('autoPath').click();for(let i=0;i<20;i++)T.step(.05)});
+await sc('tapinak_nobetci_kul_kapisi.png',()=>{const T=window.__kmTest;T.closeModal();T.setQuest(14);T.enter('arena',712,360);for(let i=0;i<10;i++)T.step(.05)});
+await sc('koy_demirci.png',()=>{const T=window.__kmTest;T.closeModal();T.setQuest(20);T.enter('village',870,620);for(let i=0;i<10;i++)T.step(.05)});
+await sc('harita_kilitler_gorev0.png',()=>{const T=window.__kmTest;T.closeModal();T.setQuest(0);T.enter('forest',300,600);document.getElementById('mapBtn').click()});
+await sc('harita_kul_gecidi_acik.png',()=>{const T=window.__kmTest;T.closeModal();T.setQuest(11);T.enter('ashpass',250,560);document.getElementById('mapBtn').click()});
+await b.close()})();
