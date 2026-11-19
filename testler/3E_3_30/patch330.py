@@ -39,6 +39,7 @@ rep("for(const sh of km329Shots)sh.t+=dt;","km330Screen=Math.max(0,km330Screen-d
 rep('<style id="km321-character-portrait">','''<style id="km330-reference">
 #app #level{color:#ffd56a!important;font-weight:900!important;font-size:10px!important;text-shadow:0 1px 0 #3a1a00,0 0 6px #ffb84a55}
 #app .topRail .railBtn{border-radius:50%!important;border:2px solid #c9a35a!important;background:radial-gradient(circle at 35% 30%,#56718a,#16243a 72%)!important;box-shadow:0 2px 0 #0a1422,inset 0 0 0 2px #2c4258!important}
+#app .topRail .railBtn::before{inset:-6px}
 #app .topRail .railBtn span{position:absolute;bottom:-3px;left:50%;transform:translateX(-50%);background:#24180f;border:1px solid #8a6a3a;border-radius:4px;padding:0 3px;white-space:nowrap;line-height:9px}
 .km330talk{display:grid;grid-template-columns:88px 1fr;gap:8px;align-items:end;margin:-2px 0 6px}
 #km330Npc{width:88px;height:110px;image-rendering:pixelated;background:radial-gradient(circle at 50% 70%,#3a5a6a,#0f1b2c 70%);border:2px solid #c9a35a;border-radius:10px}

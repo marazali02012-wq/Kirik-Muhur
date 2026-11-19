@@ -51,10 +51,10 @@ Referans görselleri **depoya ve oyun paketine konmadı.** Yalnız incelemek iç
 | Paket | Sonuç |
 |---|---|
 | 3.30 yeni (`suite330.js`) | **6/6 PASS** |
-| 3A regresyonu | R3A |
-| 3B regresyonu | R3B |
-| 3.27 regresyonu | R327 |
-| 3.29 regresyonu | R329 |
-| Android emülasyonu | RAND |
+| 3A regresyonu | **43/43 PASS** |
+| 3B regresyonu | **16/16 PASS** |
+| 3.27 regresyonu | **8/8 PASS** |
+| 3.29 regresyonu | **9/9 PASS** |
+| Android emülasyonu | **56/56 PASS** (ilk koşuda 51/56: yuvarlak ikonların 2 px kenarlığı görünmez dokunma alanını 41 px’e düşürmüştü; alan genişletildi, yeniden koşu 56/56) |
 
 **T03 test düzeltmesi:** Yakınlaştırma 1,45'e çıktığından "sağa yürü" dokunuşu Bilge Işın'ın dokunma alanına düşüp konuşma başlatıyordu (oyunun doğru davranışı). Hedef NPC'den uzak bir noktaya alındı.
