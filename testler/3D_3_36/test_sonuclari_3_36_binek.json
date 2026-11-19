@@ -1,0 +1,78 @@
+[
+ {
+  "id": "M1-guardian",
+  "name": "Görev akışı: yolda binili, savaş başlayınca iner, savaş bitince yeniden biner; binili saldırı yok; binili hız > yaya hız",
+  "status": "PASS",
+  "evidence": {
+   "seq": [
+    "travel:binili",
+    "hunt:binili",
+    "hunt:yaya",
+    "return:yaya",
+    "return:binili",
+    "ready:binili"
+   ],
+   "speeds": {
+    "ride": 241.8,
+    "foot": 156
+   },
+   "done": true
+  }
+ },
+ {
+  "id": "M1-scout",
+  "name": "Görev akışı: yolda binili, savaş başlayınca iner, savaş bitince yeniden biner; binili saldırı yok; binili hız > yaya hız",
+  "status": "PASS",
+  "evidence": {
+   "seq": [
+    "travel:binili",
+    "hunt:binili",
+    "hunt:yaya",
+    "return:yaya",
+    "return:binili",
+    "ready:binili"
+   ],
+   "speeds": {
+    "ride": 294.5,
+    "foot": 190
+   },
+   "done": true
+  }
+ },
+ {
+  "id": "M1-weaver",
+  "name": "Görev akışı: yolda binili, savaş başlayınca iner, savaş bitince yeniden biner; binili saldırı yok; binili hız > yaya hız",
+  "status": "PASS",
+  "evidence": {
+   "seq": [
+    "travel:binili",
+    "hunt:binili",
+    "hunt:yaya",
+    "return:yaya",
+    "return:binili",
+    "ready:binili"
+   ],
+   "speeds": {
+    "ride": 265.05,
+    "foot": 171
+   },
+   "done": true
+  }
+ },
+ {
+  "id": "M2",
+  "name": "Elle SALDIRI binekten indirir (hız düşer); 2,5 sn savaşsız kalınca yeniden biner; düşman vuruşu da indirir; binek KAPALI iken hiç binilmez",
+  "status": "PASS",
+  "evidence": {
+   "riding0": true,
+   "spd0": 241.8,
+   "afterAttack": false,
+   "spd1": 156,
+   "at1s": false,
+   "at3s": true,
+   "afterHit": false,
+   "off": false,
+   "btn": "♞ Binek: KAPALI"
+  }
+ }
+]
