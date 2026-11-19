@@ -42,7 +42,21 @@
 **Toplam otomatik:** 43/43 PASS (`testler/3A_3_25/test_sonuclari.json`, `suite.log`).
 
 ## Uzun oturum (gerçek zamanlı)
-LONGRUN_PLACEHOLDER
+**Ortam:** Headless Chromium, 393×852 dokunmatik emülasyon, yerel HTTPS, hızlandırma yok, **30 dakika**. Betik insan gibi gerçek dokunuşla görev kutusuna basar ve popup'ta "DEVAM"a dokunur; her 5 dakikada sayfa yenilenir.
+
+| Ölçüm | Sonuç |
+|---|---|
+| Süre | 30 dk gerçek zaman |
+| Tamamlanan görev | 162 (10 ana + 152 devam döngüsü) |
+| Ödül kimlikleri | 164, hepsi tekil (çift ödül yok) |
+| Gösterilen/kapatılan ödül popup'ı | 164 |
+| JS hatası / console error | 0 |
+| FPS (5 sn pencereler, 96 örnek) | 59–60 |
+| JS heap | 2.2–4.2 MB (bellek büyümesi yok) |
+| 5 yeniden yükleme | 5/5 görev, altın, ödül sayısı birebir |
+| Ölüm | 0 (İzci, oto savaş) |
+
+Not: Bu, konteynerdeki masaüstü Chromium ölçümüdür; telefon FPS'i/ısınması **ölçülmedi**.
 
 ## Önemli bulgu: `file://` ile açılışta kayıt güvenilir değil
 `file://` ile açılan sayfada Chromium'da yeniden yüklemeden sonra `localStorage` zaman zaman **tamamen boş** okundu (12 döngüde 1–12 kayıp). Aynı durum **3.24 kaynakta da** oluşuyor (oyun koduna ait değil). Aynı test yerel **HTTPS origin'de 12/12 ve 50/50 kayıpsız**. Öneri: oyunu dosya yöneticisinden açmak yerine HTTPS adresinden (ör. GitHub Pages) oynayın; Android'de `content://`/dosya açılışı için kayıt kalıcılığı ayrıca doğrulanmalı.

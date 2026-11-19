@@ -27,5 +27,5 @@
 | Değişiklik güvenliği | main/index.html, eski HTML, eski kayıt anahtarları korunur | **PASS** | `git status`: yalnız yeni dosyalar; `index.html` ve 3.19–3.22 HTML'leri değişmedi; eski kayıt anahtarlarına yazan kod yok (T19) |
 
 
-**AŞAMA 3A KABUL DURUMU:** [ ] KABUL EDİLDİ / [x] AÇIK — neden: Tarayıcıda test edilebilen tüm maddeler PASS (43/43 + 30 dk gerçek zamanlı oturum); fiziksel Android cihaz kabulü ve canlı HTTPS site origin'inde kapat/aç denemesi kullanıcı tarafından yapılmalı.
+**AŞAMA 3A KABUL DURUMU:** [ ] KABUL EDİLDİ / [x] AÇIK — neden: Tarayıcıda test edilebilen tüm maddeler PASS (43/43 + 30 dk gerçek zamanlı oturum: 162 görev, 0 hata, 59–60 FPS); fiziksel Android cihaz kabulü ve canlı HTTPS site origin'inde kapat/aç denemesi kullanıcı tarafından yapılmalı.
 **Sıradaki aşamaya geçiş izni:** 3A kabul edilmeden HAYIR.

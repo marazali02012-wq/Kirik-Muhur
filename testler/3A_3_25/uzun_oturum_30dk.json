@@ -1,0 +1,456 @@
+{
+ "minutes": 30,
+ "env": "Headless Chromium (Playwright), 393x852 dokunmatik emülasyon, yerel HTTPS",
+ "questsCompleted": 162,
+ "maxQuest": 162,
+ "uniqueRewards": true,
+ "rewardCount": 164,
+ "taps": 162,
+ "popupsClosed": 164,
+ "deaths": 0,
+ "reloads": 5,
+ "errors": [],
+ "samples": [
+  {
+   "min": 0,
+   "heapMB": 4.2,
+   "fps": [],
+   "quest": 0,
+   "phase": "ready"
+  },
+  {
+   "min": 1,
+   "heapMB": 2.8,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 4,
+   "phase": "hunt"
+  },
+  {
+   "min": 2,
+   "heapMB": 3.5,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 10,
+   "phase": "hunt"
+  },
+  {
+   "min": 3,
+   "heapMB": 2.9,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 15,
+   "phase": "hunt"
+  },
+  {
+   "min": 4,
+   "heapMB": 3.5,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 20,
+   "phase": "return"
+  },
+  {
+   "reload": 1,
+   "before": {
+    "q": 25,
+    "c": 3376,
+    "r": 27
+   },
+   "after": {
+    "q": 25,
+    "c": 3376,
+    "r": 27
+   },
+   "match": true
+  },
+  {
+   "min": 5,
+   "heapMB": 2.2,
+   "fps": [],
+   "quest": 25,
+   "phase": "return"
+  },
+  {
+   "min": 6,
+   "heapMB": 3.4,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 31,
+   "phase": "ready"
+  },
+  {
+   "min": 7,
+   "heapMB": 3.2,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 36,
+   "phase": "return"
+  },
+  {
+   "min": 8,
+   "heapMB": 3.9,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 42,
+   "phase": "travel"
+  },
+  {
+   "min": 9,
+   "heapMB": 3.3,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 47,
+   "phase": "travel"
+  },
+  {
+   "min": 10,
+   "heapMB": 3.3,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 52,
+   "phase": "hunt"
+  },
+  {
+   "reload": 2,
+   "before": {
+    "q": 52,
+    "c": 9123,
+    "r": 54
+   },
+   "after": {
+    "q": 52,
+    "c": 9123,
+    "r": 54
+   },
+   "match": true
+  },
+  {
+   "min": 11,
+   "heapMB": 3.7,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 57,
+   "phase": "return"
+  },
+  {
+   "min": 12,
+   "heapMB": 3.4,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 63,
+   "phase": "ready"
+  },
+  {
+   "min": 12,
+   "heapMB": 3.9,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 63,
+   "phase": "travel"
+  },
+  {
+   "min": 13,
+   "heapMB": 3.4,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 69,
+   "phase": "ready"
+  },
+  {
+   "min": 14,
+   "heapMB": 3.6,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 74,
+   "phase": "travel"
+  },
+  {
+   "min": 15,
+   "heapMB": 3.2,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 79,
+   "phase": "return"
+  },
+  {
+   "reload": 3,
+   "before": {
+    "q": 80,
+    "c": 17885,
+    "r": 82
+   },
+   "after": {
+    "q": 80,
+    "c": 17885,
+    "r": 82
+   },
+   "match": true
+  },
+  {
+   "min": 16,
+   "heapMB": 3.6,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 85,
+   "phase": "ready"
+  },
+  {
+   "min": 17,
+   "heapMB": 3.2,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 90,
+   "phase": "hunt"
+  },
+  {
+   "min": 18,
+   "heapMB": 3.3,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 96,
+   "phase": "ready"
+  },
+  {
+   "min": 19,
+   "heapMB": 3.3,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 101,
+   "phase": "return"
+  },
+  {
+   "min": 20,
+   "heapMB": 3.8,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 107,
+   "phase": "travel"
+  },
+  {
+   "reload": 4,
+   "before": {
+    "q": 107,
+    "c": 28978,
+    "r": 109
+   },
+   "after": {
+    "q": 107,
+    "c": 28978,
+    "r": 109
+   },
+   "match": true
+  },
+  {
+   "min": 21,
+   "heapMB": 3.1,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 112,
+   "phase": "travel"
+  },
+  {
+   "min": 21,
+   "heapMB": 3.4,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 112,
+   "phase": "hunt"
+  },
+  {
+   "min": 22,
+   "heapMB": 3.9,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 117,
+   "phase": "return"
+  },
+  {
+   "min": 23,
+   "heapMB": 3.5,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 123,
+   "phase": "ready"
+  },
+  {
+   "min": 24,
+   "heapMB": 3.4,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 129,
+   "phase": "ready"
+  },
+  {
+   "min": 25,
+   "heapMB": 3.4,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 134,
+   "phase": "travel"
+  },
+  {
+   "reload": 5,
+   "before": {
+    "q": 134,
+    "c": 42724,
+    "r": 136
+   },
+   "after": {
+    "q": 134,
+    "c": 42724,
+    "r": 136
+   },
+   "match": true
+  },
+  {
+   "min": 26,
+   "heapMB": 3.3,
+   "fps": [
+    60,
+    59,
+    60
+   ],
+   "quest": 139,
+   "phase": "return"
+  },
+  {
+   "min": 26,
+   "heapMB": 3,
+   "fps": [
+    60,
+    59,
+    60
+   ],
+   "quest": 139,
+   "phase": "return"
+  },
+  {
+   "min": 27,
+   "heapMB": 3.8,
+   "fps": [
+    60,
+    60,
+    59
+   ],
+   "quest": 145,
+   "phase": "travel"
+  },
+  {
+   "min": 28,
+   "heapMB": 3.3,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 150,
+   "phase": "hunt"
+  },
+  {
+   "min": 29,
+   "heapMB": 3.4,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 156,
+   "phase": "ready"
+  },
+  {
+   "min": 30,
+   "heapMB": 3.8,
+   "fps": [
+    60,
+    60,
+    60
+   ],
+   "quest": 162,
+   "phase": "ready"
+  }
+ ],
+ "final": {
+  "level": 850,
+  "coins": 59723,
+  "quest": 162
+ }
+}
