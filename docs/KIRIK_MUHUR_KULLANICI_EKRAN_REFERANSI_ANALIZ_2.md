@@ -49,3 +49,23 @@
   6. Seviye ödülü (tek seferlik, sahte kontenjan yok).
 - **Bilerek dışarıda:** mağaza, premium para, VIP, indirim, sunucu kontenjanı, hesap ve aktivasyon kodu. Satın alınan görünüm de eklenmiyor.
 - **Açık kalan 3C maddeleri** (raporda yazılı): kritik/kaçma statları, depo, yerel posta, unvan.
+
+## 4) Ek tur — binek akışı ve karakter seçimi (7 ekran)
+"Arıt" ekranı önceki turdaki ile aynıydı; yeni bilgi yok.
+
+| Ekran | Gözlenen yapı |
+|---|---|
+| Ana görev "Yolculuğa Hazırlık – ahıra gidiniz" | Binek bir **hikâye görevi** ile veriliyor. Görev satırında öğretici el işareti var. Ahırda seyis NPC'si ve bağlı binekler duruyor (eşek, tay, at); oyuncu yanlarına yürüyor. |
+| "Binmek için hızlıca yukarı kaydırın" | Maskot karakterli **öğretici balon** ve büyük yukarı ok. **Yukarı kaydırma hareketi** bineğe bindiriyor. Sağ üstte "Eğitimi Geç". |
+| "Aldın – Küçük Eşek" | Kazanma gösterisi. Solda kazanılan stat (**HP+600**), altta tek satır tanıtım, **Onayla (8)**. |
+| Dost → Binek sekmesi | Binek adı, Savaş Gücü, **Aşama + 10 yıldız**, **5 binek becerisi** (ilki açık), **Binek Hapı** (3 tür), Özellik Bonusu (ATK/HP/Zırh kırma/DEF ve sonraki yıldızda artış), **Şans 0/30**, Hızlı Yükselt. Altta **Ruh Canavarı / Binek** sekmeleri. |
+| Karakter seçimi | **3 karakter yuvası**: biri dolu (portre, ad, Lv.32), ikisi "+". Sınıf adı ve 4 satırlık tanıtım. Ay ışıklı gece sahnesi, **Oyuna Gir**. |
+
+| # | Eksik | 3.35'te | Karar / Aşama |
+|---|---|---|---|
+| A | Binek **görevle** verilsin (ahır/seyis NPC'si), seviyeyle sessizce açılmasın | Binek Sv2'de açılıyor; 3.35'te açılış gösterisi eklendi | **3B içerik + 3E**. 26 görevlik hikâye zincirini ve kayıtları değiştirir; bu yüzden 3C'de yapılmadı. Öneri: ilk görevlerden sonra köydeki NPC'ye "ahıra git" adımı. |
+| B | Kazanma gösterisinde **kazanılan stat** ("HP+600") | Gösteride yalnız "hız +%55" yazıyor | **3E — küçük**. Binek Sv1'de kalıcı stat vermiyor; stat eklemek dengeyi değiştirir, simülasyonla birlikte yapılmalı. |
+| C | **Yukarı kaydırarak bin** hareketi + öğretici balon + "Eğitimi Geç" | Binek düğmesi ve Sadık menüsü var; hareket yok | **3E (dokunmatik kullanım)**. Ekrana dokununca yürüme ile çakışmaması için gerçek Android dokunma testleriyle yapılmalı. |
+| D | Binek **yıldızları, becerileri, binek hapı** | Binek Sv1–10; hız ve kalıcı can | Yıldız/şans/hap sistemi: **6** (ekonomi kararı). Binek becerisi: **3C sonrası açık madde**. |
+| E | **Çoklu karakter yuvası** (3 karakter) | Tek kayıt (`kirikMuhurQuestFlowV324Test`) | **Kullanıcı kararı gerekir.** Kural gereği kayıt anahtarı rastgele değiştirilemez. Yuva başına ayrı anahtar ya da tek anahtarda dizi gerekir; ayrıca eski kaydın 1. yuvaya taşınması gerekir. Önerilen aşama: **3E** (giriş ekranıyla birlikte); hesap ve sunucu bağı: **5**. |
+| F | Giriş ekranında sınıf tanıtım metni ve **Oyuna Gir** | 3.29–3.31'de oluşturma akışı var; kayıtlı karakter için ayrı "devam" ekranı yok | **3E** |
