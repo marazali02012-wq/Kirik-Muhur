@@ -77,12 +77,12 @@ const G=pg=>pg.evaluate(()=>window.__kmTest.get());
    T.closeModal();T.setQuest(13);T.enter('forest',820,600);T.questAction();for(let i=0;i<3;i++)T.step(.05);const before=T.get().enemies.find(e=>e.id==='shade2').hp;for(let i=0;i<60;i++){T.setPlayer(820,600);T.step(.05)}o.shadeHp=[before,T.get().enemies.find(e=>e.id==='shade2').hp];return o});
   rec('B07','Manuel konuşma/keşif/diken kurdu avı sayılır; oto savaş görev dışı saldırgana karşılık verir',r.talk[0]==='return'&&r.explore[0]==='return'&&r.explore[1]===2&&r.thornManual[0]==='return'&&r.shadeHp[1]<r.shadeHp[0],r);await ctx.close()}
 
- // B08 Kayıt geçişi 3.25 → 3.26 (gerçek localStorage)
+ // B08 Kayıt geçişi 3.25 → 3.26 (gerçek localStorage). 3.35: Sv≥5 eski kayda kaçırılmış Sv5 seviye ödülü (150 altın) yüklemede bir kez verilir.
  for(const [name,save,check] of [
   ['bitmis-eski-devam',{questSchema:325,classId:'scout',level:9,xp:10,coins:2000,materials:20,missionIndex:12,quest:12,questPhase:'return',missionKills:2,questRewards:['mission-0','mission-1','mission-2','mission-3','mission-4','mission-5','mission-6','mission-7','mission-8','mission-9','mission-10','mission-11'],inv:['bow','armor','boots'],equipment:{weapon:'bow'},zone:'arena',x:500,y:700,hp:150,mp:50},
-    g=>g.quest===13&&g.coins===2000+111+18*1&&g.questRewards.includes('mission-12')&&g.questPhase==='ready'],
+    g=>g.quest===13&&g.coins===2000+111+18*1+150&&g.questRewards.includes('lv335-5')&&g.questRewards.includes('mission-12')&&g.questPhase==='ready'],
   ['yarim-eski-devam',{questSchema:325,classId:'weaver',level:8,coins:900,missionIndex:11,quest:11,questPhase:'hunt',missionKills:1,questRewards:['mission-10'],inv:['staff'],equipment:{weapon:'staff'},zone:'forest',x:500,y:600},
-    g=>g.quest===11&&g.coins===900&&g.questPhase==='ready'&&g.missionKills===0],
+    g=>g.quest===11&&g.coins===900+150&&g.questRewards.filter(x=>x==='lv335-5').length===1&&g.questPhase==='ready'&&g.missionKills===0],
   ['kilitli-bolgede-kayit',{questSchema:325,classId:'guardian',level:1,coins:45,missionIndex:0,quest:0,questPhase:'ready',questRewards:[],inv:['sword'],equipment:{weapon:'sword'},zone:'arena',x:600,y:600},
     g=>g.zone==='village'&&g.quest===0]]){
   const {ctx,pg}=await open({cls:null,init:(sv)=>{if(!sessionStorage.getItem('i')){sessionStorage.setItem('i','1');localStorage.clear();localStorage.setItem('kirikMuhurQuestFlowV324Test',sv)}},});

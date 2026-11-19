@@ -7,11 +7,11 @@ PASS  B06-guardian 26 görev (16 hikâye + 10 devam): hepsi biter, tek ödül + 
 PASS  B06-scout 26 görev (16 hikâye + 10 devam): hepsi biter, tek ödül + popup, 5 görev türü, 7 teslim NPC’si, 4 bölge, ardışık aynı devam görevi yok — {"done":26,"kinds":["hunt","inspect","collect","talk","explore"],"npcs":["elder","ranger","scribe","hermit","keeper","herbalist","smith"],"zones":["forest","arena","village","ashpass"],"deaths":2,"seconds":"16,23,6,8,7,10,7,6,4,11,8,12,7,33,15,57,13,5,15,9,10,16,23,14,8,13","repeatDistinct":10,"errors":[]}
 PASS  B06-weaver 26 görev (16 hikâye + 10 devam): hepsi biter, tek ödül + popup, 5 görev türü, 7 teslim NPC’si, 4 bölge, ardışık aynı devam görevi yok — {"done":26,"kinds":["hunt","inspect","collect","talk","explore"],"npcs":["elder","ranger","scribe","hermit","keeper","herbalist","smith"],"zones":["forest","arena","village","ashpass"],"deaths":1,"seconds":"19,25,6,10,8,11,7,7,5,12,9,13,7,39,17,37,14,6,16,10,11,19,30,17,9,14","repeatDistinct":10,"errors":[]}
 PASS  B07 Manuel konuşma/keşif/diken kurdu avı sayılır; oto savaş görev dışı saldırgana karşılık verir — {"talk":["return",1],"explore":["return",2],"thornManual":["return",2],"shadeHp":[179,141]}
-FAIL  B08-bitmis-eski-devam 3.25 kaydı 3.26’ya geçer: bitmis-eski-devam — {"quest":13,"phase":"ready","coins":2279,"zone":"arena","rewards":["mission-11","mission-12","lv335-5"],"schema":335,"errors":[]}
-FAIL  B08-yarim-eski-devam 3.25 kaydı 3.26’ya geçer: yarim-eski-devam — {"quest":11,"phase":"ready","coins":1050,"zone":"forest","rewards":["mission-10","lv335-5"],"schema":335,"errors":[]}
+PASS  B08-bitmis-eski-devam 3.25 kaydı 3.26’ya geçer: bitmis-eski-devam — {"quest":13,"phase":"ready","coins":2279,"zone":"arena","rewards":["mission-11","mission-12","lv335-5"],"schema":335,"errors":[]}
+PASS  B08-yarim-eski-devam 3.25 kaydı 3.26’ya geçer: yarim-eski-devam — {"quest":11,"phase":"ready","coins":1050,"zone":"forest","rewards":["mission-10","lv335-5"],"schema":335,"errors":[]}
 PASS  B08-kilitli-bolgede-kayit 3.25 kaydı 3.26’ya geçer: kilitli-bolgede-kayit — {"quest":0,"phase":"ready","coins":45,"zone":"village","rewards":[],"schema":335,"errors":[]}
 PASS  B09-320x568 Kül Geçidi portre 320×568: düğme taşması/çakışması yok — {"out":[],"over":[],"count":16,"scroll":false}
 PASS  B09-360x800 Kül Geçidi portre 360×800: düğme taşması/çakışması yok — {"out":[],"over":[],"count":16,"scroll":false}
 PASS  B09-393x852 Kül Geçidi portre 393×852: düğme taşması/çakışması yok — {"out":[],"over":[],"count":16,"scroll":false}
 PASS  B09-412x915 Kül Geçidi portre 412×915: düğme taşması/çakışması yok — {"out":[],"over":[],"count":16,"scroll":false}
-ÖZET { PASS: 14, FAIL: 2 }
+ÖZET { PASS: 16, FAIL: 0 }

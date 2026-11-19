@@ -5,3 +5,12 @@ PASS   A4-Moto_G4 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/
 PASS   A5-Moto_G4 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
 PASS   A6-Moto_G4 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
 PASS   A7-Moto_G4 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
+PASS   A8-Moto_G4 Gerçek zamanlı 150 sn oyun, parmakla görev/popup (CPU 6x): ilerleme, FPS, hata — {"quests":11,"popups":14,"deaths":0,"fpsMedian":47,"fpsP10":38,"longTasks":29,"heapMB":9.5,"errors":[]}
+PASS   A9-Moto_G4 Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır — {"pauseOpened":true,"closed":true}
+PASS   A10-Moto_G4 Yataya çevirince "telefonu dik tut" uyarısı; dikeye dönünce HUD düzgün — {"landscapeGuard":"grid","afterPortrait":{"guard":"none","out":[],"canvasW":360}}
+PASS   A11-Moto_G4 Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp) — {"toplam":16,"kucuk":[]}
+PASS   A1-Galaxy_S8 Galaxy S8 (360×740, dpr 3, CPU 4x yavaş): yükleme ve siyah ekran yok — {"loadMs":1465,"firstFrameMs":133,"ua":"Mozilla/5.0 (Linux; Android 7.0; SM-G950U Build/NRD90M) Appl"}
+PASS   A2-Galaxy_S8 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar — {"hit":"game","dx":96,"facing":"right"}
+PASS   A3-Galaxy_S8 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-160,"dy":173,"facing":"down"}
+PASS   A4-Galaxy_S8 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
+PASS   A5-Galaxy_S8 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
