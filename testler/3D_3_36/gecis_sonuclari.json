@@ -1,0 +1,627 @@
+[
+ {
+  "id": "G-3_24_KAYNAK",
+  "name": "Kirik_Muhur_3_24_KAYNAK_TEST.html (guardian) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5
+   },
+   "old": {
+    "schema": 324,
+    "level": 4,
+    "coins": 5679,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": [
+     "sword",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat"
+    ],
+    "eq": {
+     "weapon": "sword",
+     "armor": null,
+     "talisman": null,
+     "boots": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5679,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": 5,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_25_3A_Onarim",
+  "name": "Kirik_Muhur_3_25_3A_Onarim_TEST.html (scout) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5
+   },
+   "old": {
+    "schema": 325,
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": [
+     "bow",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat"
+    ],
+    "eq": {
+     "weapon": "bow",
+     "armor": null,
+     "talisman": null,
+     "boots": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": 5,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_26_3B_Harita_Gorev",
+  "name": "Kirik_Muhur_3_26_3B_Harita_Gorev_TEST.html (weaver) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5
+   },
+   "old": {
+    "schema": 326,
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": [
+     "staff",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat"
+    ],
+    "eq": {
+     "weapon": "staff",
+     "armor": null,
+     "talisman": null,
+     "boots": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": 5,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_27_3B_Tamamlama",
+  "name": "Kirik_Muhur_3_27_3B_Tamamlama_TEST.html (guardian) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5
+   },
+   "old": {
+    "schema": 327,
+    "level": 4,
+    "coins": 5685,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": [
+     "sword",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat"
+    ],
+    "eq": {
+     "weapon": "sword",
+     "armor": null,
+     "talisman": null,
+     "boots": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5685,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": 5,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_28_Android_Uyum",
+  "name": "Kirik_Muhur_3_28_Android_Uyum_TEST.html (scout) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5
+   },
+   "old": {
+    "schema": 328,
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": [
+     "bow",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat"
+    ],
+    "eq": {
+     "weapon": "bow",
+     "armor": null,
+     "talisman": null,
+     "boots": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": 5,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_29_Kahraman_Savas",
+  "name": "Kirik_Muhur_3_29_Kahraman_Savas_TEST.html (weaver) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5
+   },
+   "old": {
+    "schema": 329,
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": [
+     "staff",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat"
+    ],
+    "eq": {
+     "weapon": "staff",
+     "armor": null,
+     "talisman": null,
+     "boots": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": 5,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_30_NPC_Efekt",
+  "name": "Kirik_Muhur_3_30_NPC_Efekt_TEST.html (guardian) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5
+   },
+   "old": {
+    "schema": 330,
+    "level": 4,
+    "coins": 5685,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": [
+     "sword",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat"
+    ],
+    "eq": {
+     "weapon": "sword",
+     "armor": null,
+     "talisman": null,
+     "boots": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5685,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": 5,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_31_Referans_Arayuz",
+  "name": "Kirik_Muhur_3_31_Referans_Arayuz_TEST.html (scout) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5
+   },
+   "old": {
+    "schema": 331,
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": [
+     "bow",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat"
+    ],
+    "eq": {
+     "weapon": "bow",
+     "armor": null,
+     "talisman": null,
+     "boots": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5691,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 7,
+    "inv": 5,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_32_3C_Ekipman",
+  "name": "Kirik_Muhur_3_32_3C_Ekipman_TEST.html (weaver) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5,
+    "gear": true
+   },
+   "old": {
+    "schema": 332,
+    "level": 4,
+    "coins": 5736,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 8,
+    "inv": [
+     "staff",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat",
+     "g1",
+     "g2"
+    ],
+    "eq": {
+     "weapon": "staff",
+     "helm": null,
+     "armor": "g1",
+     "gloves": null,
+     "boots": null,
+     "talisman": null
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5736,
+    "mat": 222,
+    "mission": 5,
+    "rewards": 8,
+    "inv": 7,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_33_3C_Beceri",
+  "name": "Kirik_Muhur_3_33_3C_Beceri_TEST.html (guardian) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5,
+    "gear": true,
+    "skill": true
+   },
+   "old": {
+    "schema": 333,
+    "level": 4,
+    "coins": 5700,
+    "mat": 221,
+    "mission": 5,
+    "rewards": 8,
+    "inv": [
+     "sword",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat",
+     "g1",
+     "g2"
+    ],
+    "eq": {
+     "weapon": "sword",
+     "helm": null,
+     "armor": "g1",
+     "gloves": null,
+     "boots": null,
+     "talisman": null
+    },
+    "skillLv": {
+     "s1": 2,
+     "s2": 1,
+     "heal": 1,
+     "s3": 1
+    }
+   },
+   "new": {
+    "level": 4,
+    "coins": 5700,
+    "mat": 221,
+    "mission": 5,
+    "rewards": 8,
+    "inv": 7,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ },
+ {
+  "id": "G-3_34_3C_Denge",
+  "name": "Kirik_Muhur_3_34_3C_Denge_TEST.html (scout) kaydı → Kirik_Muhur_3_35_3C_Tamamlama_TEST.html: veri kaybı yok, şema 335, ikinci açılışta sabit",
+  "status": "PASS",
+  "evidence": {
+   "played": {
+    "missions": 5,
+    "gear": true,
+    "skill": true,
+    "pet": true
+   },
+   "old": {
+    "schema": 334,
+    "level": 4,
+    "coins": 5666,
+    "mat": 219,
+    "mission": 5,
+    "rewards": 8,
+    "inv": [
+     "bow",
+     "armor",
+     "boots",
+     "talisman",
+     "wardcoat",
+     "g1",
+     "g2"
+    ],
+    "eq": {
+     "weapon": "bow",
+     "helm": null,
+     "armor": "g1",
+     "gloves": null,
+     "boots": null,
+     "talisman": null
+    },
+    "skillLv": {
+     "s1": 2,
+     "s2": 1,
+     "heal": 1,
+     "s3": 1
+    },
+    "petLv": 2
+   },
+   "new": {
+    "level": 4,
+    "coins": 5666,
+    "mat": 219,
+    "mission": 5,
+    "rewards": 8,
+    "inv": 7,
+    "lvRew": []
+   },
+   "lost": {
+    "classId": false,
+    "level": false,
+    "coins": false,
+    "materials": false,
+    "mission": false,
+    "rewards": [],
+    "inv": [],
+    "equip": [],
+    "skill": false,
+    "pet": false
+   },
+   "stable": true,
+   "errors": []
+  }
+ }
+]
