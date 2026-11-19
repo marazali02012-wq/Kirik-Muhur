@@ -1,0 +1,17 @@
+PASS  K1 Yuva güçlendirme: kuşanılmamış eşya güçlendirilmez; güçlendirme eşyayı değiştirmez, yuvaya yazılır; eşya değişince yuva seviyesi korunur ve yeni eşyaya uygulanır; maliyet artar; en fazla +10; "Yuva Ustası" (2 yuva +5) ve "Ekipman Ustası" yan hedefleri — {"unequipped":null,"ret":"g1","cost1":40,"lv":1,"itemEnch":0,"sameId":true,"gain":3,"cost2":80,"lvAfterSwap":2,"bonusB":{"atk":7,"def":0},"atkB":90,"expectB":90,"cap":10,"side0":false,"side":true,"forge":true}
+PASS  K2 Eski kayıt: eşya başına +4 güçlendirme korunur (saldırı aynı); yuva seviyeleri 0; kaçırılmış seviye ödülü yalnız bir kez (Sv5 zaten alınmış) — {"mode":"game","def":{"name":"Eski Kılıç","slot":"weapon","icon":"⚔","rarity":3,"tier":2,"req":1,"ench":4,"batk":28,"bdef":0,"gen":true,"atk":41,"def":0},"slot":{"weapon":0,"helm":0,"armor":0,"gloves":0,"boots":0,"talisman":0},"atk":80,"expect":80,"lvRew":["lv335-5"]}
+PASS  K3 Eşya puanı: Efsanevi > Sıradan; ayrıntı kartında "Puan" ve kuşanılıya göre fark (+) — {"sa":150,"sb":330,"txt":"▣ Çırak ZırhEfsanevi • Zırh • 1. Aşama • Seviye 1SAL 0 (±0) • SAV 18 (+10)Puan 330 (+180)\n KUŞANKUŞANINCA GÜÇLENİRYUT (+4t +20a)"}
+FAIL  K4 Tilki: Sv3 vuruşun yarısı 2. düşmana sıçrar; Sv6 hasarın %25’i can; Sv9 her 3. vuruş çift; Sadık ekranında açık etkiler işaretli — {"lv2":[0,0],"lv3":[0,0],"lv6":[0,0],"heal":0,"h1":0,"h2":0,"n9":62,"perks":3}
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')
+    at eval (eval at evaluate (:311:30), <anonymous>:1:52)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at /home/user/Kirik-Muhur/testler/3D_3_37/suite335_regresyon.js:28:110 {
+  log: []
+}
+
+Node.js v22.23.5

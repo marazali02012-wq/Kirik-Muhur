@@ -1,0 +1,51 @@
+PASS  D1 Zorluk ölçeği: yaratık canı/saldırısı görev sırasıyla artar (en fazla k=12); Kolos 572 can/16 saldırı; Kül Lordu 1265/30 — {"shade0":{"hp":78,"atk":8,"def":2,"lvl":1},"boss1":{"hp":572,"atk":16,"def":7,"lvl":4},"shade13":{"hp":246,"atk":18,"def":10,"lvl":13},"thorn13":{"hp":288,"atk":24,"def":12,"lvl":16},"shade20":{"hp":246,"atk":18,"def":10,"lvl":13},"m15":15,"ash":{"hp":1265,"atk":30,"def":12,"lvl":15}}
+PASS  D2-guardian Seviye atlama: ortada "SEVİYE ATLADIN", Sv1→Sv2, gösterilen CAN/SAL/SAV/RUH/GÜÇ artışı gerçek farka eşit; dokunmayı engellemez; ~2,4 sn sonra kapanır — {"show":{"text":"SEVİYE ATLADINSv 1 → Sv 2CAN +19 • SAL +3 • SAV +1 • RUH +6GÜÇ 115 (+15)Sv 3: yeni beceri açılır","d":{"hp":19,"atk":3,"def":1,"mp":6,"pw":15}},"real":{"hp":19,"atk":3,"def":1,"mp":6,"pw":15},"pe":"none","fit":true,"gone":null}
+PASS  D2-weaver Seviye atlama: ortada "SEVİYE ATLADIN", Sv1→Sv2, gösterilen CAN/SAL/SAV/RUH/GÜÇ artışı gerçek farka eşit; dokunmayı engellemez; ~2,4 sn sonra kapanır — {"show":{"text":"SEVİYE ATLADINSv 1 → Sv 2CAN +19 • SAL +3 • SAV +1 • RUH +6GÜÇ 98 (+15)Sv 3: yeni beceri açılır","d":{"hp":19,"atk":3,"def":1,"mp":6,"pw":15}},"real":{"hp":19,"atk":3,"def":1,"mp":6,"pw":15},"pe":"none","fit":true,"gone":null}
+FAIL  D3 Sadık/binek: Sv1’de binek kilitli; seviye karakter seviyesini geçemez; tilki hasarı ↑ bekleme ↓; binek hızı ve kalıcı can ↑; en fazla Sv10; parasız yükselmez; tilki seviyeli hasarı gerçekten vurur — {"mountLocked":false,"petCap":false,"up":false,"cost":0,"dmg":[28,28],"cd":[3.4,3.4],"petLv":1,"mountLv":1,"speed":[156,156],"hp":[389,389],"poor":false,"petHit":0,"expect":28}
+FAIL  D4 Kayıt: sadık/binek seviyesi ve can birebir; bozuk değerler sınırlanır (99→10, "x"→1) — {"before":{"pet":1,"mount":1,"hp":275},"after":{"pet":1,"mount":1,"hp":275},"bad":{"mode":"game","pet":10,"mount":1}}
+PASS  D5 Görev ekranında "Önerilen güç" ve oyuncunun gücü; güç düşükse kırmızı uyarı, yeterliyse yeşil — {"low":"Önerilen güç: 90 • Senin gücün: 100","lowCls":false,"ok":"Önerilen güç: 90 • Senin gücün: 233","okCls":false,"rec":90,"pw":233}
+PASS  D5b Güç önerinin altındaysa kırmızı uyarı ve "ekipman/beceri güçlendir" ipucu — {"t":"Önerilen güç: 220 • Senin gücün: 100 — ekipman/beceri güçlendir","low":true}
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.tap: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#km334PetUp')[22m
+[2m    - locator resolved to <button disabled class="primary" id="km334PetUp">TİLKİ SV+ (40a+2t)</button>[22m
+[2m  - attempting tap action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not enabled[22m
+[2m    - retrying tap action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not enabled[22m
+[2m    - retrying tap action[22m
+[2m      - waiting 100ms[22m
+[2m    56 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not enabled[22m
+[2m     - retrying tap action[22m
+[2m       - waiting 500ms[22m
+
+    at /home/user/Kirik-Muhur/testler/3D_3_37/suite334_regresyon.js:43:92 {
+  log: [
+    "  - waiting for locator('#km334PetUp')",
+    '    - locator resolved to <button disabled class="primary" id="km334PetUp">TİLKİ SV+ (40a+2t)</button>',
+    '  - attempting tap action',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is not enabled',
+    '    - retrying tap action',
+    '    - waiting 20ms',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is not enabled',
+    '    - retrying tap action',
+    '      - waiting 100ms',
+    '    56 × waiting for element to be visible, enabled and stable',
+    '       - element is not enabled',
+    '     - retrying tap action',
+    '       - waiting 500ms'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v22.23.5

@@ -1,0 +1,5 @@
+FAIL  M1-guardian Görev akışı: yolda binili, savaş başlayınca iner, savaş bitince yeniden biner; binili saldırı yok; binili hız > yaya hız — {"seq":["travel:yaya","hunt:yaya","return:yaya","ready:yaya"],"speeds":{"ride":null,"foot":156},"done":true}
+FAIL  M1-scout Görev akışı: yolda binili, savaş başlayınca iner, savaş bitince yeniden biner; binili saldırı yok; binili hız > yaya hız — {"seq":["travel:yaya","hunt:yaya","return:yaya","ready:yaya"],"speeds":{"ride":null,"foot":190},"done":true}
+FAIL  M1-weaver Görev akışı: yolda binili, savaş başlayınca iner, savaş bitince yeniden biner; binili saldırı yok; binili hız > yaya hız — {"seq":["travel:yaya","hunt:yaya","return:yaya","ready:yaya"],"speeds":{"ride":null,"foot":171},"done":true}
+FAIL  M2 Elle SALDIRI binekten indirir (hız düşer); 2,5 sn savaşsız kalınca yeniden biner; düşman vuruşu da indirir; binek KAPALI iken hiç binilmez — {"riding0":false,"spd0":156,"afterAttack":false,"spd1":156,"at1s":false,"at3s":false,"afterHit":false,"off":false,"btn":"♞ Binek: KAPALI"}
+ÖZET { PASS: 0, FAIL: 4 }
