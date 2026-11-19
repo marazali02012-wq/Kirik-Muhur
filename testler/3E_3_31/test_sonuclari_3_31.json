@@ -1,0 +1,97 @@
+[
+ {
+  "id": "G1",
+  "name": "Karakter oluşturma: 7 saç rengi (önizleme + oyun sprite’ı yeniden renklenir), zarla isim, yeniden açılışta korunur",
+  "status": "PASS",
+  "evidence": {
+   "previewBluePx": 476,
+   "name": "Defne",
+   "game": {
+    "hair": 6,
+    "key": "scout_h6"
+   },
+   "afterReload": {
+    "hair": 6,
+    "key": "scout_h6"
+   },
+   "sprite": {
+    "blue": 3728,
+    "old": 0
+   },
+   "errors": []
+  }
+ },
+ {
+  "id": "G2",
+  "name": "Kazanım satırları (altın/XP/toz/eşya) kayar ve kaybolur; daha iyi eşyada KUŞAN kartı: dokununca, 8 sn sonra otomatik, ✕ ile kuşanmaz",
+  "status": "PASS",
+  "evidence": {
+   "gains": [
+    "◆Altın×78",
+    "✦XP×100",
+    "❖Ruh tozu×2",
+    "▥Gözcü Ceketi×1"
+   ],
+   "card": true,
+   "cardText": "✕Gözcü Ceketi▥+1 SAL • +7 SAVKUŞAN (8)",
+   "armorAfterTap": "wardcoat",
+   "cardAfter": false,
+   "gainsGone": 0,
+   "bootsAuto": "forestboots",
+   "charmAfterX": null
+  }
+ },
+ {
+  "id": "G3",
+  "name": "Portre seviye rozeti, sonraki açılım tanıtımı (binek → bölge), beceri adı afişi, tam genişlik EXP çubuğu",
+  "status": "PASS",
+  "evidence": {
+   "lv": "1",
+   "teaser1": "♞ Binek • Sv2’de açılır",
+   "banner": "KÜL OKU",
+   "lv2": "2",
+   "teaser2": "🔒 Kırık Tapınak • 1. görev sonrası",
+   "exp": "32%"
+  }
+ },
+ {
+  "id": "G4-320x568",
+  "name": "Kuşanma kartı + kazanım satırları görünürken 320×568: taşma/çakışma yok",
+  "status": "PASS",
+  "evidence": {
+   "out": [],
+   "over": [],
+   "cardOver": []
+  }
+ },
+ {
+  "id": "G4-360x800",
+  "name": "Kuşanma kartı + kazanım satırları görünürken 360×800: taşma/çakışma yok",
+  "status": "PASS",
+  "evidence": {
+   "out": [],
+   "over": [],
+   "cardOver": []
+  }
+ },
+ {
+  "id": "G4-393x852",
+  "name": "Kuşanma kartı + kazanım satırları görünürken 393×852: taşma/çakışma yok",
+  "status": "PASS",
+  "evidence": {
+   "out": [],
+   "over": [],
+   "cardOver": []
+  }
+ },
+ {
+  "id": "G4-412x915",
+  "name": "Kuşanma kartı + kazanım satırları görünürken 412×915: taşma/çakışma yok",
+  "status": "PASS",
+  "evidence": {
+   "out": [],
+   "over": [],
+   "cardOver": []
+  }
+ }
+]
