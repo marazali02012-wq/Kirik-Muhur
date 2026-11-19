@@ -1,0 +1,7 @@
+PASS   A1-Moto_G4 Moto G4 (360×640, dpr 3, CPU 6x yavaş): yükleme ve siyah ekran yok — {"loadMs":2269,"firstFrameMs":138,"ua":"Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537"}
+PASS   A2-Moto_G4 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar — {"hit":"game","dx":99,"facing":"right"}
+PASS   A3-Moto_G4 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-208,"dy":212,"facing":"left"}
+PASS   A4-Moto_G4 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
+PASS   A5-Moto_G4 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
+PASS   A6-Moto_G4 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
+PASS   A7-Moto_G4 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}

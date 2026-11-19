@@ -1,0 +1,7 @@
+PASS  F1 Görev teslimi NPC konuşma kartı: portre + isim + özgün cümle + ödüller; tek DEVAM, geri sayım, ~6 sn sonra otomatik kapanır — {"px":5055,"name":"Bilge Işın","line":"Gölgeler geri çekildi. Ruh Ormanı yeniden nefes alıyor; ama tapınaktaki kırık mühür hâlâ uğulduyor.","cd":"(6 sn)","buttons":["DEVAM ✓ (6 sn)"],"cdAfter2s":"(4 sn)","autoClosed":true,"errors":[]}
+PASS  F2 Görev başında NPC/kahraman konuşma balonu; tek dokunuşla oto akış başlar — {"0":["[Ruh Ormanı] Gölge ×3 yen!",true,"travel"],"1":["[Kırık Tapınak] Mühür Kolosu ×1 yen!",true,"travel"],"2":["[Fener Köyü] İzi incele!",true,"travel"],"4":["[Ruh Ormanı] 3 parça topla!",true,"travel"],"10":["[Kül Geçidi] Geçit Bekçisi Varan ile konuş!",true,"travel"],"12":["[Kül Geçidi] Bölgeyi keşfet!",true,"travel"]}
+PASS  F3-guardian Beceri 1 ve 2: çok renkli halka efekti ve kısa ekran parlaması; sonra temizlenir — {"nova1":true,"sc":true,"nova2":true,"after":0,"screenAfter":0}
+PASS  F3-scout Beceri 1 ve 2: çok renkli halka efekti ve kısa ekran parlaması; sonra temizlenir — {"nova1":true,"sc":true,"nova2":true,"after":0,"screenAfter":0}
+PASS  F3-weaver Beceri 1 ve 2: çok renkli halka efekti ve kısa ekran parlaması; sonra temizlenir — {"nova1":true,"sc":true,"nova2":true,"after":0,"screenAfter":0}
+PASS  F4 HUD: güç altın renkte, alt menü ikonları yuvarlak — {"level":"rgb(255, 213, 106)","rail":["50%","50%","50%","50%","50%","50%"]}
+ÖZET { PASS: 6, FAIL: 0 }

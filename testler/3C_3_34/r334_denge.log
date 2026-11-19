@@ -1,0 +1,6 @@
+guardian pasif {"ok":26,"deaths":3,"time":455,"lv":11,"minHp":3,"bosses":"1:58% 15:7%/1ö"} errs 0
+guardian aktif {"ok":26,"deaths":0,"time":335,"lv":11,"minHp":43,"bosses":"1:59% 15:43%"} errs 0
+scout    pasif {"ok":26,"deaths":2,"time":356,"lv":11,"minHp":1,"bosses":"1:58% 15:8%/1ö"} errs 0
+scout    aktif {"ok":26,"deaths":0,"time":278,"lv":11,"minHp":42,"bosses":"1:61% 15:42%"} errs 0
+weaver   pasif {"ok":26,"deaths":1,"time":378,"lv":11,"minHp":4,"bosses":"1:52% 15:15%"} errs 0
+weaver   aktif {"ok":26,"deaths":0,"time":303,"lv":11,"minHp":58,"bosses":"1:59% 15:58%"} errs 0
