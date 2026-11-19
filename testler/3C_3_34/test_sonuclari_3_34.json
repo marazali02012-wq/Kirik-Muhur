@@ -1,0 +1,204 @@
+[
+ {
+  "id": "D1",
+  "name": "Zorluk ölçeği: yaratık canı/saldırısı görev sırasıyla artar (en fazla k=12); Kolos 572 can/16 saldırı; Kül Lordu 1265/30",
+  "status": "PASS",
+  "evidence": {
+   "shade0": {
+    "hp": 78,
+    "atk": 8,
+    "def": 2,
+    "lvl": 1
+   },
+   "boss1": {
+    "hp": 572,
+    "atk": 16,
+    "def": 7,
+    "lvl": 4
+   },
+   "shade13": {
+    "hp": 246,
+    "atk": 18,
+    "def": 10,
+    "lvl": 13
+   },
+   "thorn13": {
+    "hp": 288,
+    "atk": 24,
+    "def": 12,
+    "lvl": 16
+   },
+   "shade20": {
+    "hp": 246,
+    "atk": 18,
+    "def": 10,
+    "lvl": 13
+   },
+   "m15": 15,
+   "ash": {
+    "hp": 1265,
+    "atk": 30,
+    "def": 12,
+    "lvl": 15
+   }
+  }
+ },
+ {
+  "id": "D2-guardian",
+  "name": "Seviye atlama: ortada \"SEVİYE ATLADIN\", Sv1→Sv2, gösterilen CAN/SAL/SAV/RUH/GÜÇ artışı gerçek farka eşit; dokunmayı engellemez; ~2,4 sn sonra kapanır",
+  "status": "PASS",
+  "evidence": {
+   "show": {
+    "text": "SEVİYE ATLADINSv 1 → Sv 2CAN +19 • SAL +3 • SAV +1 • RUH +6GÜÇ 115 (+15)Sv 3: yeni beceri açılır",
+    "d": {
+     "hp": 19,
+     "atk": 3,
+     "def": 1,
+     "mp": 6,
+     "pw": 15
+    }
+   },
+   "real": {
+    "hp": 19,
+    "atk": 3,
+    "def": 1,
+    "mp": 6,
+    "pw": 15
+   },
+   "pe": "none",
+   "fit": true,
+   "gone": null
+  }
+ },
+ {
+  "id": "D2-weaver",
+  "name": "Seviye atlama: ortada \"SEVİYE ATLADIN\", Sv1→Sv2, gösterilen CAN/SAL/SAV/RUH/GÜÇ artışı gerçek farka eşit; dokunmayı engellemez; ~2,4 sn sonra kapanır",
+  "status": "PASS",
+  "evidence": {
+   "show": {
+    "text": "SEVİYE ATLADINSv 1 → Sv 2CAN +19 • SAL +3 • SAV +1 • RUH +6GÜÇ 98 (+15)Sv 3: yeni beceri açılır",
+    "d": {
+     "hp": 19,
+     "atk": 3,
+     "def": 1,
+     "mp": 6,
+     "pw": 15
+    }
+   },
+   "real": {
+    "hp": 19,
+    "atk": 3,
+    "def": 1,
+    "mp": 6,
+    "pw": 15
+   },
+   "pe": "none",
+   "fit": true,
+   "gone": null
+  }
+ },
+ {
+  "id": "D3",
+  "name": "Sadık/binek: Sv1’de binek kilitli; seviye karakter seviyesini geçemez; tilki hasarı ↑ bekleme ↓; binek hızı ve kalıcı can ↑; en fazla Sv10; parasız yükselmez; tilki seviyeli hasarı gerçekten vurur",
+  "status": "PASS",
+  "evidence": {
+   "mountLocked": false,
+   "petCap": false,
+   "up": true,
+   "cost": 40,
+   "dmg": [
+    28,
+    32
+   ],
+   "cd": [
+    3.4,
+    3.28
+   ],
+   "petLv": 10,
+   "mountLv": 5,
+   "speed": [
+    241.8,
+    260.52
+   ],
+   "hp": [
+    389,
+    403
+   ],
+   "poor": false,
+   "petHit": 66,
+   "expect": 66
+  }
+ },
+ {
+  "id": "D4",
+  "name": "Kayıt: sadık/binek seviyesi ve can birebir; bozuk değerler sınırlanır (99→10, \"x\"→1)",
+  "status": "PASS",
+  "evidence": {
+   "before": {
+    "pet": 3,
+    "mount": 2,
+    "hp": 279
+   },
+   "after": {
+    "pet": 3,
+    "mount": 2,
+    "hp": 279
+   },
+   "bad": {
+    "mode": "game",
+    "pet": 10,
+    "mount": 1
+   }
+  }
+ },
+ {
+  "id": "D5",
+  "name": "Görev ekranında \"Önerilen güç\" ve oyuncunun gücü; güç düşükse kırmızı uyarı, yeterliyse yeşil",
+  "status": "PASS",
+  "evidence": {
+   "low": "Önerilen güç: 90 • Senin gücün: 100",
+   "lowCls": false,
+   "ok": "Önerilen güç: 90 • Senin gücün: 233",
+   "okCls": false,
+   "rec": 90,
+   "pw": 233
+  }
+ },
+ {
+  "id": "D5b",
+  "name": "Güç önerinin altındaysa kırmızı uyarı ve \"ekipman/beceri güçlendir\" ipucu",
+  "status": "PASS",
+  "evidence": {
+   "t": "Önerilen güç: 220 • Senin gücün: 100 — ekipman/beceri güçlendir",
+   "low": true
+  }
+ },
+ {
+  "id": "D6-320x568",
+  "name": "Sadık ekranı: seviye etiketi, YÜKSELT düğmeleri ≥44 px, panel sığar, dokununca tilki Sv2",
+  "status": "PASS",
+  "evidence": {
+   "fits": true,
+   "minH": 44,
+   "txt": [
+    "Sv1/10",
+    "Sv1/10"
+   ],
+   "lv": 2
+  }
+ },
+ {
+  "id": "D6-393x852",
+  "name": "Sadık ekranı: seviye etiketi, YÜKSELT düğmeleri ≥44 px, panel sığar, dokununca tilki Sv2",
+  "status": "PASS",
+  "evidence": {
+   "fits": true,
+   "minH": 44,
+   "txt": [
+    "Sv1/10",
+    "Sv1/10"
+   ],
+   "lv": 2
+  }
+ }
+]
