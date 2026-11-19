@@ -1,0 +1,146 @@
+[
+ {
+  "id": "E0",
+  "name": "Sınıf seçim ekranında 3 sn: konsol/sayfa hatası yok",
+  "status": "PASS",
+  "evidence": {
+   "errors": [],
+   "fatal": ""
+  }
+ },
+ {
+  "id": "E1",
+  "name": "Kahraman oluşturma: Sınıf → Görünüm → İsim, geri/değiştir, kadın görünüm, isim temizleme, yeniden açılışta korunur",
+  "status": "PASS",
+  "evidence": {
+   "step1": "1. SINIF",
+   "classAfterPick": "Ruh Dokumacısı",
+   "backTo": "1. SINIF",
+   "previewDrawn": 4934,
+   "game": {
+    "mode": "game",
+    "gender": "f",
+    "name": "bAyşe/bx",
+    "key": "weaver_f",
+    "quest": 0
+   },
+   "portrait": 2583,
+   "afterReload": {
+    "mode": "game",
+    "gender": "f",
+    "name": "bAyşe/bx",
+    "key": "weaver_f"
+   },
+   "errors": []
+  }
+ },
+ {
+  "id": "E2",
+  "name": "Kadın görünüm sayfaları (3 sınıf × 4 yön × 4 kare) yüklü ve erkek görünümden farklı",
+  "status": "PASS",
+  "evidence": [
+   {
+    "k": "guardian",
+    "loaded": true,
+    "diff": 1954
+   },
+   {
+    "k": "scout",
+    "loaded": true,
+    "diff": 1970
+   },
+   {
+    "k": "weaver",
+    "loaded": true,
+    "diff": 2079
+   }
+  ]
+ },
+ {
+  "id": "E3",
+  "name": "HUD: SV+GÜÇ, XP çubuğu, bölge+koordinat, boss çubuğu (yalnız boss yakınken), yan görev satırı ve YOL",
+  "status": "PASS",
+  "evidence": {
+   "level": "SV 1 • GÜÇ 100",
+   "power": 100,
+   "zone": "Fener Köyü • 48,58",
+   "sideHiddenAtStart": true,
+   "bossHiddenVillage": true,
+   "boss": {
+    "shown": true,
+    "name": "◆ Mühür Kolosu • Sv4",
+    "hp": "128 / 260"
+   },
+   "side": {
+    "shown": true,
+    "text": "◇ YAN: Fener Yağı 0/2"
+   },
+   "routeAfterTap": {
+    "zone": "village",
+    "x": 300,
+    "y": 700,
+    "id": "sq-lamp"
+   },
+   "xp": {
+    "w": "63%"
+   }
+  }
+ },
+ {
+  "id": "E4-guardian",
+  "name": "Saldırı görseli (guardian): kılıç yayı, beceri rakamı büyük, seviye atlama efekti",
+  "status": "PASS",
+  "evidence": {
+   "shots": 0,
+   "big": 1,
+   "glow": true,
+   "lvText": true
+  }
+ },
+ {
+  "id": "E4-scout",
+  "name": "Saldırı görseli (scout): mermi, beceri rakamı büyük, seviye atlama efekti",
+  "status": "PASS",
+  "evidence": {
+   "shots": 1,
+   "big": 1,
+   "glow": true,
+   "lvText": true
+  }
+ },
+ {
+  "id": "E4-weaver",
+  "name": "Saldırı görseli (weaver): mermi, beceri rakamı büyük, seviye atlama efekti",
+  "status": "PASS",
+  "evidence": {
+   "shots": 1,
+   "big": 1,
+   "glow": true,
+   "lvText": true
+  }
+ },
+ {
+  "id": "E5",
+  "name": "SADIK ekranı: Ruh Tilkisi, Ay Işığı Geyiği (Sv2 kilidi), oto yol/savaş gerçek durumu değiştirir",
+  "status": "PASS",
+  "evidence": {
+   "title": "✧ SADIK YOLDAŞ & BİNEK",
+   "mountLocked": true,
+   "pet": true,
+   "battle": true,
+   "mount": true,
+   "speed": 294.5
+  }
+ },
+ {
+  "id": "E6",
+  "name": "Dikey kamera: kahraman çizimi ekran yüksekliğinin ≥%8’i",
+  "status": "PASS",
+  "evidence": {
+   "zoom": 1.45,
+   "heroPx": 101,
+   "screenH": 839,
+   "ratio": 0.121
+  }
+ }
+]

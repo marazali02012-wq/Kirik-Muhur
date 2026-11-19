@@ -1,0 +1,11 @@
+const {chromium,devices}=require('playwright');const O=process.argv[3];
+(async()=>{const b=await chromium.launch();const ctx=await b.newContext({...devices['Pixel 7']});await ctx.addInitScript(()=>{window.__kmCreateFlow=true});const pg=await ctx.newPage();const errs=[];pg.on('pageerror',e=>errs.push(e.message));
+await pg.goto('file://'+process.argv[2]);await pg.waitForTimeout(800);await pg.screenshot({path:O+'/01_sinif_secimi.png'});
+await pg.tap('[data-class="scout"]');await pg.waitForTimeout(700);await pg.screenshot({path:O+'/02_adim1_sinif.png'});
+await pg.tap('#km329Next');await pg.waitForTimeout(200);await pg.tap('[data-g="f"]');await pg.waitForTimeout(700);await pg.screenshot({path:O+'/03_adim2_kadin.png'});
+await pg.tap('#km329Next');await pg.waitForTimeout(200);await pg.fill('#km329Name','Ayla');await pg.screenshot({path:O+'/04_adim3_isim.png'});
+await pg.tap('#km329Next');await pg.waitForTimeout(700);const g=await pg.evaluate(()=>window.__kmTest.get());await pg.screenshot({path:O+'/05_oyun_basladi.png'});
+await pg.evaluate(()=>{const T=window.__kmTest;T.setQuest(1);T.questAction();T.enter('arena',820,470);for(let i=0;i<40;i++)T.step(.05)});await pg.waitForTimeout(400);await pg.screenshot({path:O+'/06_boss_savasi.png'});
+await pg.evaluate(()=>{const T=window.__kmTest;T.closeModal();T.setQuest(11);T.enter('ashpass',560,430);T.questAction();for(let i=0;i<25;i++)T.step(.05)});await pg.waitForTimeout(300);await pg.screenshot({path:O+'/07_kivilcim_savasi.png'});
+await pg.evaluate(()=>{document.getElementById('quickBtn').click()});await pg.waitForTimeout(300);await pg.screenshot({path:O+'/08_sadik_ekrani.png'});
+console.log(JSON.stringify({gender:g.gender,name:g.heroName,key:g.spriteKey,mode:g.mode,errs}));await b.close()})();
