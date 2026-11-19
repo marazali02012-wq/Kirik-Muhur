@@ -601,7 +601,7 @@ else if(mode==='reward'){
   const mission=missionInfo(),expectedMission=state.missionIndex;
   const rewardId='mission-'+expectedMission;
   const uniqueItem=expectedMission===1&&!state.inv.includes('talisman');
-  const extraReward=uniqueItem?'<div class="rewardTile"><span class="rewardIcon">'+itemdefs.talisman.icon+'</span><b>MÜHÜR TILSIMI</b><small>Görev eşyası</small></div>':'';
+  const extraReward=uniqueItem?'<div class="rewardTile"><span class="rewardIcon">'+itemdefs.talisman.icon+'</span><b>'+itemdefs.talisman.name+'</b><small>Görev eşyası</small></div>':'';
   body.classList.add('rewardPanel');
   el.classList.add('rewardVisible');
   body.innerHTML='<h1>✦ GÖREV ÖDÜLÜ</h1>'+
