@@ -43,7 +43,12 @@
 **Test düzeltmesi (A9, yalnız Moto G4):** Geri tuşuna basıldığında açık bir ödül penceresi vardı. Geri tuşu önce onu kapattı, bu doğru davranış. Test artık ölçüme açık pencere olmadan başlıyor.
 
 ## Regresyon (3.28)
-REGRESYON_328
+| Paket | Sonuç |
+|---|---|
+| 3A (`suite_3A_regresyon.js`) | **43/43 PASS** |
+| 3B (`suite_3B_regresyon.js`, 26 görev × 3 sınıf dahil) | **16/16 PASS** |
+| 3.27 tamamlama (`suite_327_regresyon.js`, rota 480 hedef dahil) | **8/8 PASS** |
+| Android emülasyonu (`android_emulasyon.js`) | **56/56 PASS** (+ A13 uzun oturum PASS) |
 
 ## Durum ve sıradaki adım
 - 3A ve 3B'nin tarayıcıda ve emülasyonda test edilebilen bütün maddeleri kapandı.

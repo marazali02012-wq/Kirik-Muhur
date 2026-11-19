@@ -1,0 +1,601 @@
+[
+ {
+  "id": "A1-Moto_G4",
+  "name": "Moto G4 (360×640, dpr 3, CPU 6x yavaş): yükleme ve siyah ekran yok",
+  "status": "PASS",
+  "evidence": {
+   "loadMs": 1892,
+   "firstFrameMs": 108,
+   "ua": "Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537"
+  }
+ },
+ {
+  "id": "A2-Moto_G4",
+  "name": "Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar",
+  "status": "PASS",
+  "evidence": {
+   "hit": "game",
+   "dx": 96,
+   "facing": "right"
+  }
+ },
+ {
+  "id": "A3-Moto_G4",
+  "name": "Parmağı sürükleyerek yürüme (sola-aşağı)",
+  "status": "PASS",
+  "evidence": {
+   "dx": -200,
+   "dy": 172,
+   "facing": "left"
+  }
+ },
+ {
+  "id": "A4-Moto_G4",
+  "name": "İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz",
+  "status": "PASS",
+  "evidence": {
+   "scale": 1,
+   "scrollX": 0,
+   "scrollY": 0
+  }
+ },
+ {
+  "id": "A5-Moto_G4",
+  "name": "Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez",
+  "status": "PASS",
+  "evidence": {
+   "from": "main",
+   "to": "utilities",
+   "moved": 0
+  }
+ },
+ {
+  "id": "A6-Moto_G4",
+  "name": "Saldırı tuşuna basılı tutma: art arda vuruş",
+  "status": "PASS",
+  "evidence": {
+   "hp0": 78,
+   "hp1": 6,
+   "approxHits": 5
+  }
+ },
+ {
+  "id": "A7-Moto_G4",
+  "name": "Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok",
+  "status": "PASS",
+  "evidence": {
+   "phase": "travel",
+   "auto": true
+  }
+ },
+ {
+  "id": "A8-Moto_G4",
+  "name": "Gerçek zamanlı 150 sn oyun, parmakla görev/popup (CPU 6x): ilerleme, FPS, hata",
+  "status": "PASS",
+  "evidence": {
+   "quests": 12,
+   "popups": 14,
+   "deaths": 0,
+   "fpsMedian": 54,
+   "fpsP10": 44,
+   "longTasks": 18,
+   "heapMB": 9.5,
+   "errors": []
+  }
+ },
+ {
+  "id": "A9-Moto_G4",
+  "name": "Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır",
+  "status": "PASS",
+  "evidence": {
+   "pauseOpened": true,
+   "closed": true
+  }
+ },
+ {
+  "id": "A10-Moto_G4",
+  "name": "Yataya çevirince \"telefonu dik tut\" uyarısı; dikeye dönünce HUD düzgün",
+  "status": "PASS",
+  "evidence": {
+   "landscapeGuard": "grid",
+   "afterPortrait": {
+    "guard": "none",
+    "out": [],
+    "canvasW": 360
+   }
+  }
+ },
+ {
+  "id": "A11-Moto_G4",
+  "name": "Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp)",
+  "status": "PASS",
+  "evidence": {
+   "toplam": 15,
+   "kucuk": []
+  }
+ },
+ {
+  "id": "A1-Galaxy_S8",
+  "name": "Galaxy S8 (360×740, dpr 3, CPU 4x yavaş): yükleme ve siyah ekran yok",
+  "status": "PASS",
+  "evidence": {
+   "loadMs": 1244,
+   "firstFrameMs": 117,
+   "ua": "Mozilla/5.0 (Linux; Android 7.0; SM-G950U Build/NRD90M) Appl"
+  }
+ },
+ {
+  "id": "A2-Galaxy_S8",
+  "name": "Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar",
+  "status": "PASS",
+  "evidence": {
+   "hit": "game",
+   "dx": 97,
+   "facing": "right"
+  }
+ },
+ {
+  "id": "A3-Galaxy_S8",
+  "name": "Parmağı sürükleyerek yürüme (sola-aşağı)",
+  "status": "PASS",
+  "evidence": {
+   "dx": -201,
+   "dy": 171,
+   "facing": "left"
+  }
+ },
+ {
+  "id": "A4-Galaxy_S8",
+  "name": "İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz",
+  "status": "PASS",
+  "evidence": {
+   "scale": 1,
+   "scrollX": 0,
+   "scrollY": 0
+  }
+ },
+ {
+  "id": "A5-Galaxy_S8",
+  "name": "Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez",
+  "status": "PASS",
+  "evidence": {
+   "from": "main",
+   "to": "utilities",
+   "moved": 0
+  }
+ },
+ {
+  "id": "A6-Galaxy_S8",
+  "name": "Saldırı tuşuna basılı tutma: art arda vuruş",
+  "status": "PASS",
+  "evidence": {
+   "hp0": 78,
+   "hp1": 6,
+   "approxHits": 5
+  }
+ },
+ {
+  "id": "A7-Galaxy_S8",
+  "name": "Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok",
+  "status": "PASS",
+  "evidence": {
+   "phase": "travel",
+   "auto": true
+  }
+ },
+ {
+  "id": "A8-Galaxy_S8",
+  "name": "Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 4x): ilerleme, FPS, hata",
+  "status": "PASS",
+  "evidence": {
+   "quests": 5,
+   "popups": 7,
+   "deaths": 0,
+   "fpsMedian": 57,
+   "fpsP10": 51,
+   "longTasks": 4,
+   "heapMB": 9.5,
+   "errors": []
+  }
+ },
+ {
+  "id": "A9-Galaxy_S8",
+  "name": "Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır",
+  "status": "PASS",
+  "evidence": {
+   "pauseOpened": true,
+   "closed": true
+  }
+ },
+ {
+  "id": "A10-Galaxy_S8",
+  "name": "Yataya çevirince \"telefonu dik tut\" uyarısı; dikeye dönünce HUD düzgün",
+  "status": "PASS",
+  "evidence": {
+   "landscapeGuard": "grid",
+   "afterPortrait": {
+    "guard": "none",
+    "out": [],
+    "canvasW": 450
+   }
+  }
+ },
+ {
+  "id": "A11-Galaxy_S8",
+  "name": "Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp)",
+  "status": "PASS",
+  "evidence": {
+   "toplam": 15,
+   "kucuk": []
+  }
+ },
+ {
+  "id": "A1-Pixel_7",
+  "name": "Pixel 7 (412×839, dpr 2.625, CPU 4x yavaş): yükleme ve siyah ekran yok",
+  "status": "PASS",
+  "evidence": {
+   "loadMs": 1575,
+   "firstFrameMs": 116,
+   "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 "
+  }
+ },
+ {
+  "id": "A2-Pixel_7",
+  "name": "Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar",
+  "status": "PASS",
+  "evidence": {
+   "hit": "game",
+   "dx": 96,
+   "facing": "right"
+  }
+ },
+ {
+  "id": "A3-Pixel_7",
+  "name": "Parmağı sürükleyerek yürüme (sola-aşağı)",
+  "status": "PASS",
+  "evidence": {
+   "dx": -159,
+   "dy": 170,
+   "facing": "left"
+  }
+ },
+ {
+  "id": "A4-Pixel_7",
+  "name": "İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz",
+  "status": "PASS",
+  "evidence": {
+   "scale": 1,
+   "scrollX": 0,
+   "scrollY": 0
+  }
+ },
+ {
+  "id": "A5-Pixel_7",
+  "name": "Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez",
+  "status": "PASS",
+  "evidence": {
+   "from": "main",
+   "to": "utilities",
+   "moved": 0
+  }
+ },
+ {
+  "id": "A6-Pixel_7",
+  "name": "Saldırı tuşuna basılı tutma: art arda vuruş",
+  "status": "PASS",
+  "evidence": {
+   "hp0": 78,
+   "hp1": 6,
+   "approxHits": 5
+  }
+ },
+ {
+  "id": "A7-Pixel_7",
+  "name": "Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok",
+  "status": "PASS",
+  "evidence": {
+   "phase": "travel",
+   "auto": true
+  }
+ },
+ {
+  "id": "A8-Pixel_7",
+  "name": "Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 4x): ilerleme, FPS, hata",
+  "status": "PASS",
+  "evidence": {
+   "quests": 5,
+   "popups": 7,
+   "deaths": 0,
+   "fpsMedian": 51,
+   "fpsP10": 43,
+   "longTasks": 13,
+   "heapMB": 9.5,
+   "errors": []
+  }
+ },
+ {
+  "id": "A9-Pixel_7",
+  "name": "Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır",
+  "status": "PASS",
+  "evidence": {
+   "pauseOpened": true,
+   "closed": true
+  }
+ },
+ {
+  "id": "A10-Pixel_7",
+  "name": "Yataya çevirince \"telefonu dik tut\" uyarısı; dikeye dönünce HUD düzgün",
+  "status": "PASS",
+  "evidence": {
+   "landscapeGuard": "grid",
+   "afterPortrait": {
+    "guard": "none",
+    "out": [],
+    "canvasW": 515
+   }
+  }
+ },
+ {
+  "id": "A11-Pixel_7",
+  "name": "Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp)",
+  "status": "PASS",
+  "evidence": {
+   "toplam": 15,
+   "kucuk": []
+  }
+ },
+ {
+  "id": "A1-Galaxy_A55",
+  "name": "Galaxy A55 (480×1040, dpr 2.25, CPU 4x yavaş): yükleme ve siyah ekran yok",
+  "status": "PASS",
+  "evidence": {
+   "loadMs": 1595,
+   "firstFrameMs": 116,
+   "ua": "Mozilla/5.0 (Linux; Android 14; SM-A556B) AppleWebKit/537.36"
+  }
+ },
+ {
+  "id": "A2-Galaxy_A55",
+  "name": "Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar",
+  "status": "PASS",
+  "evidence": {
+   "hit": "game",
+   "dx": 96,
+   "facing": "right"
+  }
+ },
+ {
+  "id": "A3-Galaxy_A55",
+  "name": "Parmağı sürükleyerek yürüme (sola-aşağı)",
+  "status": "PASS",
+  "evidence": {
+   "dx": -119,
+   "dy": 174,
+   "facing": "left"
+  }
+ },
+ {
+  "id": "A4-Galaxy_A55",
+  "name": "İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz",
+  "status": "PASS",
+  "evidence": {
+   "scale": 1,
+   "scrollX": 0,
+   "scrollY": 0
+  }
+ },
+ {
+  "id": "A5-Galaxy_A55",
+  "name": "Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez",
+  "status": "PASS",
+  "evidence": {
+   "from": "main",
+   "to": "utilities",
+   "moved": 0
+  }
+ },
+ {
+  "id": "A6-Galaxy_A55",
+  "name": "Saldırı tuşuna basılı tutma: art arda vuruş",
+  "status": "PASS",
+  "evidence": {
+   "hp0": 78,
+   "hp1": 6,
+   "approxHits": 5
+  }
+ },
+ {
+  "id": "A7-Galaxy_A55",
+  "name": "Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok",
+  "status": "PASS",
+  "evidence": {
+   "phase": "travel",
+   "auto": true
+  }
+ },
+ {
+  "id": "A8-Galaxy_A55",
+  "name": "Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 4x): ilerleme, FPS, hata",
+  "status": "PASS",
+  "evidence": {
+   "quests": 5,
+   "popups": 7,
+   "deaths": 0,
+   "fpsMedian": 52,
+   "fpsP10": 39,
+   "longTasks": 7,
+   "heapMB": 9.5,
+   "errors": []
+  }
+ },
+ {
+  "id": "A9-Galaxy_A55",
+  "name": "Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır",
+  "status": "PASS",
+  "evidence": {
+   "pauseOpened": true,
+   "closed": true
+  }
+ },
+ {
+  "id": "A10-Galaxy_A55",
+  "name": "Yataya çevirince \"telefonu dik tut\" uyarısı; dikeye dönünce HUD düzgün",
+  "status": "PASS",
+  "evidence": {
+   "landscapeGuard": "grid",
+   "afterPortrait": {
+    "guard": "none",
+    "out": [],
+    "canvasW": 480
+   }
+  }
+ },
+ {
+  "id": "A11-Galaxy_A55",
+  "name": "Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp)",
+  "status": "PASS",
+  "evidence": {
+   "toplam": 15,
+   "kucuk": []
+  }
+ },
+ {
+  "id": "A1-Galaxy_S24",
+  "name": "Galaxy S24 (360×780, dpr 3, CPU 2x yavaş): yükleme ve siyah ekran yok",
+  "status": "PASS",
+  "evidence": {
+   "loadMs": 629,
+   "firstFrameMs": 111,
+   "ua": "Mozilla/5.0 (Linux; Android 14; SM-S921U) AppleWebKit/537.36"
+  }
+ },
+ {
+  "id": "A2-Galaxy_S24",
+  "name": "Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar",
+  "status": "PASS",
+  "evidence": {
+   "hit": "game",
+   "dx": 97,
+   "facing": "right"
+  }
+ },
+ {
+  "id": "A3-Galaxy_S24",
+  "name": "Parmağı sürükleyerek yürüme (sola-aşağı)",
+  "status": "PASS",
+  "evidence": {
+   "dx": -158,
+   "dy": 168,
+   "facing": "left"
+  }
+ },
+ {
+  "id": "A4-Galaxy_S24",
+  "name": "İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz",
+  "status": "PASS",
+  "evidence": {
+   "scale": 1,
+   "scrollX": 0,
+   "scrollY": 0
+  }
+ },
+ {
+  "id": "A5-Galaxy_S24",
+  "name": "Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez",
+  "status": "PASS",
+  "evidence": {
+   "from": "main",
+   "to": "utilities",
+   "moved": 0
+  }
+ },
+ {
+  "id": "A6-Galaxy_S24",
+  "name": "Saldırı tuşuna basılı tutma: art arda vuruş",
+  "status": "PASS",
+  "evidence": {
+   "hp0": 78,
+   "hp1": 6,
+   "approxHits": 5
+  }
+ },
+ {
+  "id": "A7-Galaxy_S24",
+  "name": "Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok",
+  "status": "PASS",
+  "evidence": {
+   "phase": "travel",
+   "auto": true
+  }
+ },
+ {
+  "id": "A8-Galaxy_S24",
+  "name": "Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 2x): ilerleme, FPS, hata",
+  "status": "PASS",
+  "evidence": {
+   "quests": 5,
+   "popups": 7,
+   "deaths": 0,
+   "fpsMedian": 60,
+   "fpsP10": 58,
+   "longTasks": 10,
+   "heapMB": 9.5,
+   "errors": []
+  }
+ },
+ {
+  "id": "A9-Galaxy_S24",
+  "name": "Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır",
+  "status": "PASS",
+  "evidence": {
+   "pauseOpened": true,
+   "closed": true
+  }
+ },
+ {
+  "id": "A10-Galaxy_S24",
+  "name": "Yataya çevirince \"telefonu dik tut\" uyarısı; dikeye dönünce HUD düzgün",
+  "status": "PASS",
+  "evidence": {
+   "landscapeGuard": "grid",
+   "afterPortrait": {
+    "guard": "none",
+    "out": [],
+    "canvasW": 540
+   }
+  }
+ },
+ {
+  "id": "A11-Galaxy_S24",
+  "name": "Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp)",
+  "status": "PASS",
+  "evidence": {
+   "toplam": 15,
+   "kucuk": []
+  }
+ },
+ {
+  "id": "A12",
+  "name": "Android süreci aniden öldürürse (SIGKILL, pagehide yok): görev/altın/ödül korunur, en fazla ~4 sn konum kaybı",
+  "status": "PASS",
+  "evidence": {
+   "killedPids": 2,
+   "before": {
+    "quest": 1,
+    "phase": "ready",
+    "coins": 133
+   },
+   "lastLive": {
+    "quest": 1,
+    "phase": "ready",
+    "coins": 133
+   },
+   "afterRestart": {
+    "quest": 1,
+    "phase": "ready",
+    "coins": 133
+   },
+   "positionDiffFromLastLive": 1
+  }
+ }
+]

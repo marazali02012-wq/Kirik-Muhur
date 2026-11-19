@@ -1,0 +1,58 @@
+PASS   A1-Moto_G4 Moto G4 (360×640, dpr 3, CPU 6x yavaş): yükleme ve siyah ekran yok — {"loadMs":2025,"firstFrameMs":115,"ua":"Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537"}
+PASS   A2-Moto_G4 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar — {"hit":"game","dx":97,"facing":"right"}
+PASS   A3-Moto_G4 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-178,"dy":178,"facing":"left"}
+PASS   A4-Moto_G4 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
+PASS   A5-Moto_G4 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
+PASS   A6-Moto_G4 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
+PASS   A7-Moto_G4 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
+PASS   A8-Moto_G4 Gerçek zamanlı 150 sn oyun, parmakla görev/popup (CPU 6x): ilerleme, FPS, hata — {"quests":12,"popups":14,"deaths":0,"fpsMedian":54,"fpsP10":44,"longTasks":9,"heapMB":9.5,"errors":[]}
+FAIL   A9-Moto_G4 Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır — {"pauseOpened":false,"closed":false}
+PASS   A10-Moto_G4 Yataya çevirince "telefonu dik tut" uyarısı; dikeye dönünce HUD düzgün — {"landscapeGuard":"grid","afterPortrait":{"guard":"none","out":[],"canvasW":360}}
+FAIL   A11-Moto_G4 Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp) — {"toplam":15,"kucuk":[{"id":"skill1","w":41,"h":41,"gorsel":[39,39]},{"id":"skill2","w":41,"h":41,"gorsel":[39,39]},{"id":"healBtn","w":41,"h":41,"gorsel":[39,39]}]}
+PASS   A1-Galaxy_S8 Galaxy S8 (360×740, dpr 3, CPU 4x yavaş): yükleme ve siyah ekran yok — {"loadMs":1303,"firstFrameMs":125,"ua":"Mozilla/5.0 (Linux; Android 7.0; SM-G950U Build/NRD90M) Appl"}
+PASS   A2-Galaxy_S8 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar — {"hit":"game","dx":97,"facing":"right"}
+PASS   A3-Galaxy_S8 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-175,"dy":175,"facing":"left"}
+PASS   A4-Galaxy_S8 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
+PASS   A5-Galaxy_S8 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
+PASS   A6-Galaxy_S8 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
+PASS   A7-Galaxy_S8 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
+PASS   A8-Galaxy_S8 Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 4x): ilerleme, FPS, hata — {"quests":5,"popups":7,"deaths":0,"fpsMedian":52,"fpsP10":46,"longTasks":6,"heapMB":9.5,"errors":[]}
+PASS   A9-Galaxy_S8 Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır — {"pauseOpened":true,"closed":true}
+PASS   A10-Galaxy_S8 Yataya çevirince "telefonu dik tut" uyarısı; dikeye dönünce HUD düzgün — {"landscapeGuard":"grid","afterPortrait":{"guard":"none","out":[],"canvasW":540}}
+FAIL   A11-Galaxy_S8 Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp) — {"toplam":15,"kucuk":[{"id":"skill1","w":41,"h":41,"gorsel":[39,39]},{"id":"skill2","w":41,"h":41,"gorsel":[39,39]},{"id":"healBtn","w":41,"h":41,"gorsel":[39,39]}]}
+PASS   A1-Pixel_7 Pixel 7 (412×839, dpr 2.625, CPU 4x yavaş): yükleme ve siyah ekran yok — {"loadMs":1344,"firstFrameMs":115,"ua":"Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 "}
+PASS   A2-Pixel_7 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar — {"hit":"game","dx":99,"facing":"right"}
+PASS   A3-Pixel_7 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-160,"dy":171,"facing":"left"}
+PASS   A4-Pixel_7 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
+PASS   A5-Pixel_7 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
+PASS   A6-Pixel_7 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
+PASS   A7-Pixel_7 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
+PASS   A8-Pixel_7 Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 4x): ilerleme, FPS, hata — {"quests":5,"popups":7,"deaths":0,"fpsMedian":53,"fpsP10":48,"longTasks":7,"heapMB":9.5,"errors":[]}
+PASS   A9-Pixel_7 Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır — {"pauseOpened":true,"closed":true}
+PASS   A10-Pixel_7 Yataya çevirince "telefonu dik tut" uyarısı; dikeye dönünce HUD düzgün — {"landscapeGuard":"grid","afterPortrait":{"guard":"none","out":[],"canvasW":515}}
+FAIL   A11-Pixel_7 Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp) — {"toplam":15,"kucuk":[{"id":"skill1","w":41,"h":41,"gorsel":[39,39]},{"id":"skill2","w":41,"h":41,"gorsel":[39,39]},{"id":"healBtn","w":41,"h":41,"gorsel":[39,39]}]}
+PASS   A1-Galaxy_A55 Galaxy A55 (480×1040, dpr 2.25, CPU 4x yavaş): yükleme ve siyah ekran yok — {"loadMs":1436,"firstFrameMs":107,"ua":"Mozilla/5.0 (Linux; Android 14; SM-A556B) AppleWebKit/537.36"}
+PASS   A2-Galaxy_A55 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar — {"hit":"game","dx":100,"facing":"right"}
+PASS   A3-Galaxy_A55 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-138,"dy":175,"facing":"left"}
+PASS   A4-Galaxy_A55 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
+PASS   A5-Galaxy_A55 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
+PASS   A6-Galaxy_A55 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
+PASS   A7-Galaxy_A55 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
+PASS   A8-Galaxy_A55 Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 4x): ilerleme, FPS, hata — {"quests":5,"popups":7,"deaths":0,"fpsMedian":55,"fpsP10":45,"longTasks":4,"heapMB":9.5,"errors":[]}
+PASS   A9-Galaxy_A55 Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır — {"pauseOpened":true,"closed":true}
+PASS   A10-Galaxy_A55 Yataya çevirince "telefonu dik tut" uyarısı; dikeye dönünce HUD düzgün — {"landscapeGuard":"grid","afterPortrait":{"guard":"none","out":[],"canvasW":480}}
+FAIL   A11-Galaxy_A55 Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp) — {"toplam":15,"kucuk":[{"id":"skill1","w":41,"h":41,"gorsel":[39,39]},{"id":"skill2","w":41,"h":41,"gorsel":[39,39]},{"id":"healBtn","w":41,"h":41,"gorsel":[39,39]}]}
+PASS   A1-Galaxy_S24 Galaxy S24 (360×780, dpr 3, CPU 2x yavaş): yükleme ve siyah ekran yok — {"loadMs":621,"firstFrameMs":114,"ua":"Mozilla/5.0 (Linux; Android 14; SM-S921U) AppleWebKit/537.36"}
+PASS   A2-Galaxy_S24 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, sağa bakar — {"hit":"game","dx":95,"facing":"right"}
+PASS   A3-Galaxy_S24 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-157,"dy":167,"facing":"left"}
+PASS   A4-Galaxy_S24 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
+PASS   A5-Galaxy_S24 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
+PASS   A6-Galaxy_S24 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
+PASS   A7-Galaxy_S24 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
+PASS   A8-Galaxy_S24 Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 2x): ilerleme, FPS, hata — {"quests":5,"popups":7,"deaths":0,"fpsMedian":60,"fpsP10":60,"longTasks":0,"heapMB":9.5,"errors":[]}
+PASS   A9-Galaxy_S24 Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır — {"pauseOpened":true,"closed":true}
+PASS   A10-Galaxy_S24 Yataya çevirince "telefonu dik tut" uyarısı; dikeye dönünce HUD düzgün — {"landscapeGuard":"grid","afterPortrait":{"guard":"none","out":[],"canvasW":540}}
+FAIL   A11-Galaxy_S24 Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp) — {"toplam":15,"kucuk":[{"id":"skill1","w":41,"h":41,"gorsel":[39,39]},{"id":"skill2","w":41,"h":41,"gorsel":[39,39]},{"id":"healBtn","w":41,"h":41,"gorsel":[39,39]}]}
+PASS   A12 Android süreci aniden öldürürse (SIGKILL, pagehide yok): görev/altın/ödül korunur, en fazla ~4 sn konum kaybı — {"killedPids":2,"before":{"quest":1,"phase":"ready","coins":133},"lastLive":{"quest":1,"phase":"ready","coins":133},"afterRestart":{"quest":1,"phase":"ready","coins":133},"positionDiffFromLastLive":0}
+PASS   A13 Uzun oturum 10 dk — Moto G4 profili, CPU 6x, gerçek zaman, parmakla oynanış — {"quests":39,"popups":41,"deaths":0,"fpsMedian":53,"fpsMin":29,"heapMB":[9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5],"errors":[]}
+ÖZET { PASS: 51, FAIL: 6 }
