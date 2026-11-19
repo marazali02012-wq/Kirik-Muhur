@@ -1,0 +1,766 @@
+[
+ {
+  "id": "T01-guardian",
+  "name": "Sınıf oyunu açar: guardian",
+  "status": "PASS",
+  "evidence": {
+   "mode": "game",
+   "sprites": 6,
+   "hp": 180,
+   "atk": 22,
+   "errors": []
+  }
+ },
+ {
+  "id": "T01-scout",
+  "name": "Sınıf oyunu açar: scout",
+  "status": "PASS",
+  "evidence": {
+   "mode": "game",
+   "sprites": 6,
+   "hp": 128,
+   "atk": 20,
+   "errors": []
+  }
+ },
+ {
+  "id": "T01-weaver",
+  "name": "Sınıf oyunu açar: weaver",
+  "status": "PASS",
+  "evidence": {
+   "mode": "game",
+   "sprites": 6,
+   "hp": 138,
+   "atk": 19,
+   "errors": []
+  }
+ },
+ {
+  "id": "T02-320x568",
+  "name": "Portre 320×568: taşma/çakışma/yanlış dokunma",
+  "status": "PASS",
+  "evidence": {
+   "out": [],
+   "over": [],
+   "scrollW": false,
+   "wrong": [],
+   "count": 17
+  }
+ },
+ {
+  "id": "T02-360x800",
+  "name": "Portre 360×800: taşma/çakışma/yanlış dokunma",
+  "status": "PASS",
+  "evidence": {
+   "out": [],
+   "over": [],
+   "scrollW": false,
+   "wrong": [],
+   "count": 17
+  }
+ },
+ {
+  "id": "T02-393x852",
+  "name": "Portre 393×852: taşma/çakışma/yanlış dokunma",
+  "status": "PASS",
+  "evidence": {
+   "out": [],
+   "over": [],
+   "scrollW": false,
+   "wrong": [],
+   "count": 17
+  }
+ },
+ {
+  "id": "T02-412x915",
+  "name": "Portre 412×915: taşma/çakışma/yanlış dokunma",
+  "status": "PASS",
+  "evidence": {
+   "out": [],
+   "over": [],
+   "scrollW": false,
+   "wrong": [],
+   "count": 17
+  }
+ },
+ {
+  "id": "T03",
+  "name": "Dokunmatik yürüme: sağ/sol/yukarı/aşağı/çapraz, animasyon, varışta titreme yok",
+  "status": "PASS",
+  "evidence": {
+   "sag": {
+    "hitCanvas": true,
+    "seq": "down>right",
+    "osc": false,
+    "final": "right",
+    "flips": 1,
+    "walk": 9.03,
+    "moved": [
+     97,
+     -23
+    ]
+   },
+   "sol": {
+    "hitCanvas": true,
+    "seq": "up>left",
+    "osc": false,
+    "final": "left",
+    "flips": 1,
+    "walk": 7.17,
+    "moved": [
+     -79,
+     -5
+    ]
+   },
+   "asagi": {
+    "hitCanvas": true,
+    "seq": "left>down",
+    "osc": false,
+    "final": "down",
+    "flips": 1,
+    "walk": 12.5,
+    "moved": [
+     7,
+     140
+    ]
+   },
+   "yukari": {
+    "hitCanvas": true,
+    "seq": "right>up",
+    "osc": false,
+    "final": "up",
+    "flips": 1,
+    "walk": 10.64,
+    "moved": [
+     7,
+     -125
+    ]
+   },
+   "capraz_sag_asagi": {
+    "hitCanvas": true,
+    "seq": "up>right",
+    "osc": false,
+    "final": "right",
+    "flips": 1,
+    "walk": 12.96,
+    "moved": [
+     111,
+     94
+    ]
+   },
+   "varis": [
+    "636.6,645.2"
+   ]
+  }
+ },
+ {
+  "id": "T04-guardian",
+  "name": "Tek dokunuş: hedef → savaş → NPC’ye otomatik dönüş → teslim",
+  "status": "PASS",
+  "evidence": {
+   "autoAfterOneTap": true,
+   "phases": [
+    "travel",
+    "hunt",
+    "return",
+    "ready"
+   ],
+   "quest": 1
+  }
+ },
+ {
+  "id": "T05-guardian",
+  "name": "Bilgi popup’ı otomatik açılır, kazanımı gösterir, onay sormaz",
+  "status": "PASS",
+  "evidence": {
+   "buttons": [
+    "DEVAM ✓"
+   ],
+   "text": "✦ GÖREV TAMAMLANDI | Bilge Işın • ORMANIN GÖLGELERİ | ◆ | +70 | ALTIN | ✦ | +95 | XP | ❖ | +2 | RUH TOZU | ⚔ | 100 → 115 | GÜÇ | ⬆ SEVİYE 1 → 2 | Ödül hesabına otomatik ve tek kez eklendi. Onay gerekmez. | DEVAM ✓",
+   "screenshot": "odul_popup_guardian.png"
+  }
+ },
+ {
+  "id": "T06-guardian",
+  "name": "Görev ödülü tek kez (tekrar teslim, NPC konuşma, yeniden yükleme)",
+  "status": "PASS",
+  "evidence": {
+   "coinsStart": 45,
+   "afterReward": 133,
+   "afterRetry": 133,
+   "afterReload": 133,
+   "rewardIds": [
+    "mission-0"
+   ],
+   "popupAfterReload": false,
+   "errors": []
+  }
+ },
+ {
+  "id": "T07-guardian",
+  "name": "2. ana görev (boss): hasar, beceri, tek ödül + tılsım",
+  "status": "PASS",
+  "evidence": {
+   "quest": 2,
+   "bossDamageSeen": 260,
+   "playerHpMin": 171,
+   "talisman": 1,
+   "relic": 0
+  }
+ },
+ {
+  "id": "T04-scout",
+  "name": "Tek dokunuş: hedef → savaş → NPC’ye otomatik dönüş → teslim",
+  "status": "PASS",
+  "evidence": {
+   "autoAfterOneTap": true,
+   "phases": [
+    "travel",
+    "hunt",
+    "return",
+    "ready"
+   ],
+   "quest": 1
+  }
+ },
+ {
+  "id": "T05-scout",
+  "name": "Bilgi popup’ı otomatik açılır, kazanımı gösterir, onay sormaz",
+  "status": "PASS",
+  "evidence": {
+   "buttons": [
+    "DEVAM ✓"
+   ],
+   "text": "✦ GÖREV TAMAMLANDI | Bilge Işın • ORMANIN GÖLGELERİ | ◆ | +70 | ALTIN | ✦ | +95 | XP | ❖ | +2 | RUH TOZU | ⚔ | 80 → 95 | GÜÇ | ⬆ SEVİYE 1 → 2 | Ödül hesabına otomatik ve tek kez eklendi. Onay gerekmez. | DEVAM ✓",
+   "screenshot": "odul_popup_scout.png"
+  }
+ },
+ {
+  "id": "T06-scout",
+  "name": "Görev ödülü tek kez (tekrar teslim, NPC konuşma, yeniden yükleme)",
+  "status": "PASS",
+  "evidence": {
+   "coinsStart": 45,
+   "afterReward": 133,
+   "afterRetry": 133,
+   "afterReload": 133,
+   "rewardIds": [
+    "mission-0"
+   ],
+   "popupAfterReload": false,
+   "errors": []
+  }
+ },
+ {
+  "id": "T07-scout",
+  "name": "2. ana görev (boss): hasar, beceri, tek ödül + tılsım",
+  "status": "PASS",
+  "evidence": {
+   "quest": 2,
+   "bossDamageSeen": 260,
+   "playerHpMin": 147,
+   "talisman": 1,
+   "relic": 0
+  }
+ },
+ {
+  "id": "T04-weaver",
+  "name": "Tek dokunuş: hedef → savaş → NPC’ye otomatik dönüş → teslim",
+  "status": "PASS",
+  "evidence": {
+   "autoAfterOneTap": true,
+   "phases": [
+    "travel",
+    "hunt",
+    "return",
+    "ready"
+   ],
+   "quest": 1
+  }
+ },
+ {
+  "id": "T05-weaver",
+  "name": "Bilgi popup’ı otomatik açılır, kazanımı gösterir, onay sormaz",
+  "status": "PASS",
+  "evidence": {
+   "buttons": [
+    "DEVAM ✓"
+   ],
+   "text": "✦ GÖREV TAMAMLANDI | Bilge Işın • ORMANIN GÖLGELERİ | ◆ | +70 | ALTIN | ✦ | +95 | XP | ❖ | +2 | RUH TOZU | ⚔ | 83 → 98 | GÜÇ | ⬆ SEVİYE 1 → 2 | Ödül hesabına otomatik ve tek kez eklendi. Onay gerekmez. | DEVAM ✓",
+   "screenshot": "odul_popup_weaver.png"
+  }
+ },
+ {
+  "id": "T06-weaver",
+  "name": "Görev ödülü tek kez (tekrar teslim, NPC konuşma, yeniden yükleme)",
+  "status": "PASS",
+  "evidence": {
+   "coinsStart": 45,
+   "afterReward": 133,
+   "afterRetry": 133,
+   "afterReload": 133,
+   "rewardIds": [
+    "mission-0"
+   ],
+   "popupAfterReload": false,
+   "errors": []
+  }
+ },
+ {
+  "id": "T07-weaver",
+  "name": "2. ana görev (boss): hasar, beceri, tek ödül + tılsım",
+  "status": "PASS",
+  "evidence": {
+   "quest": 2,
+   "bossDamageSeen": 260,
+   "playerHpMin": 151,
+   "talisman": 1,
+   "relic": 0
+  }
+ },
+ {
+  "id": "T08-guardian",
+  "name": "Manuel devralma: oto kapanır, 10 sn kendiliğinden açılmaz, görev tuşuyla kaldığı yerden sürer",
+  "status": "PASS",
+  "evidence": {
+   "before": true,
+   "afterTap": [
+    false,
+    false
+   ],
+   "after10s": [
+    false,
+    false
+   ],
+   "resume": [
+    true,
+    "travel"
+   ]
+  }
+ },
+ {
+  "id": "T09-guardian",
+  "name": "Tamamen manuel oyun: kendi vuruşu sayılır, NPC yanında ödül otomatik + popup",
+  "status": "PASS",
+  "evidence": {
+   "hunt": {
+    "phase": "return",
+    "kills": 3,
+    "auto": false
+   },
+   "deliver": {
+    "quest": 1,
+    "popup": true,
+    "auto": false
+   }
+  }
+ },
+ {
+  "id": "T08-scout",
+  "name": "Manuel devralma: oto kapanır, 10 sn kendiliğinden açılmaz, görev tuşuyla kaldığı yerden sürer",
+  "status": "PASS",
+  "evidence": {
+   "before": true,
+   "afterTap": [
+    false,
+    false
+   ],
+   "after10s": [
+    false,
+    false
+   ],
+   "resume": [
+    true,
+    "travel"
+   ]
+  }
+ },
+ {
+  "id": "T09-scout",
+  "name": "Tamamen manuel oyun: kendi vuruşu sayılır, NPC yanında ödül otomatik + popup",
+  "status": "PASS",
+  "evidence": {
+   "hunt": {
+    "phase": "return",
+    "kills": 3,
+    "auto": false
+   },
+   "deliver": {
+    "quest": 1,
+    "popup": true,
+    "auto": false
+   }
+  }
+ },
+ {
+  "id": "T08-weaver",
+  "name": "Manuel devralma: oto kapanır, 10 sn kendiliğinden açılmaz, görev tuşuyla kaldığı yerden sürer",
+  "status": "PASS",
+  "evidence": {
+   "before": true,
+   "afterTap": [
+    false,
+    false
+   ],
+   "after10s": [
+    false,
+    false
+   ],
+   "resume": [
+    true,
+    "travel"
+   ]
+  }
+ },
+ {
+  "id": "T09-weaver",
+  "name": "Tamamen manuel oyun: kendi vuruşu sayılır, NPC yanında ödül otomatik + popup",
+  "status": "PASS",
+  "evidence": {
+   "hunt": {
+    "phase": "return",
+    "kills": 3,
+    "auto": false
+   },
+   "deliver": {
+    "quest": 1,
+    "popup": true,
+    "auto": false
+   }
+  }
+ },
+ {
+  "id": "T10",
+  "name": "Manuel inceleme/toplama görevleri sayılır",
+  "status": "PASS",
+  "evidence": {
+   "inspect": "return",
+   "collect": [
+    "return",
+    3
+   ]
+  }
+ },
+ {
+  "id": "T11",
+  "name": "3 yan hedef: doğru sayım, her biri tek ödül + bilgi popup’ı",
+  "status": "PASS",
+  "evidence": {
+   "regionsPopup": true,
+   "ids": [
+    "side324-regions",
+    "side324-shadows",
+    "side324-forge"
+   ],
+   "shown": [
+    "side324-regions",
+    "side324-shadows",
+    "side324-forge"
+   ],
+   "side": {
+    "shadows": 9,
+    "regions": {
+     "village": true,
+     "forest": true,
+     "arena": true
+    },
+    "forge": 2
+   },
+   "stable": true
+  }
+ },
+ {
+  "id": "T12",
+  "name": "Yanlış bölge (harita rotası tapınağa) → görev tuşu → portallarla doğru bölge → NPC teslimi",
+  "status": "PASS",
+  "evidence": {
+   "mapArrived": [
+    "arena",
+    false,
+    "11s"
+   ],
+   "phaseInWrongZone": "hunt",
+   "completedFromWrongZone": [
+    1,
+    "15s"
+   ]
+  }
+ },
+ {
+  "id": "T13-guardian",
+  "name": "Ölüm → köyde yeniden doğma → görev ilerlemesi korunur → görev tuşuyla tamamlanır",
+  "status": "PASS",
+  "evidence": {
+   "dead": true,
+   "killsAtDeath": 1,
+   "afterRespawn": {
+    "zone": "village",
+    "hp": 180,
+    "phase": "hunt",
+    "kills": 1
+   },
+   "completed": true
+  }
+ },
+ {
+  "id": "T13-scout",
+  "name": "Ölüm → köyde yeniden doğma → görev ilerlemesi korunur → görev tuşuyla tamamlanır",
+  "status": "PASS",
+  "evidence": {
+   "dead": true,
+   "killsAtDeath": 1,
+   "afterRespawn": {
+    "zone": "village",
+    "hp": 128,
+    "phase": "hunt",
+    "kills": 1
+   },
+   "completed": true
+  }
+ },
+ {
+  "id": "T13-weaver",
+  "name": "Ölüm → köyde yeniden doğma → görev ilerlemesi korunur → görev tuşuyla tamamlanır",
+  "status": "PASS",
+  "evidence": {
+   "dead": true,
+   "killsAtDeath": 1,
+   "afterRespawn": {
+    "zone": "village",
+    "hp": 138,
+    "phase": "hunt",
+    "kills": 1
+   },
+   "completed": true
+  }
+ },
+ {
+  "id": "T14",
+  "name": "Çiçek: dokunuş/kaydırma ile menü sayfası değişir; karakter hareket etmez; joystick yok",
+  "status": "PASS",
+  "evidence": {
+   "pages": [
+    "utilities",
+    "hidden",
+    "main"
+   ],
+   "swipe": "utilities",
+   "playerMoved": 0,
+   "moveTarget": null,
+   "joystick": "none"
+  }
+ },
+ {
+  "id": "T15",
+  "name": "Oto av sırasında çanta: oyun durur (konum/HP sabit), kapanınca oto sürer",
+  "status": "PASS",
+  "evidence": {
+   "paused": true,
+   "posFrozen": true,
+   "hpFrozen": true,
+   "resumedAuto": true
+  }
+ },
+ {
+  "id": "T16",
+  "name": "Geri tuşu: oyundan çıkmaz; duraklatma açar / açık pencereyi kapatır (Chromium geçmiş simülasyonu)",
+  "status": "PASS",
+  "evidence": {
+   "url": true,
+   "pauseOpened": true,
+   "closedOnSecondBack": true
+  }
+ },
+ {
+  "id": "T17",
+  "name": "Bozuk kayıt: çökme yok, bildirim var, ham veri yedekte",
+  "status": "PASS",
+  "evidence": {
+   "notice": "⚠ Kayıt okunamadı (bozuk veri). Ham veri silinmedi, \"kirikMuhurQuestFlowV324Test_bozukYedek\" anahtarına yedeklendi. Yeni oyun başlatabilirsin.",
+   "hidden": false,
+   "backup": "{\"classId\":\"guardian\",BOZUK",
+   "fatal": "",
+   "mode": "select"
+  }
+ },
+ {
+  "id": "T18",
+  "name": "Geçersiz alanlı kayıt: alanlar onarılır, çanta açılır, görev kilitlenmez",
+  "status": "PASS",
+  "evidence": {
+   "mode": "game",
+   "level": 138,
+   "coins": 45,
+   "zone": "village",
+   "inv": [
+    "staff"
+   ],
+   "phaseAfterTap": "travel",
+   "bag": true,
+   "fatal": "",
+   "errors": []
+  }
+ },
+ {
+  "id": "T19",
+  "name": "Eski 3.23 kaydı: seviye/altın/görev/eşya geçer, eski anahtar değişmez, ödül yeniden işlenmez",
+  "status": "PASS",
+  "evidence": {
+   "mode": "game",
+   "cls": "bow",
+   "coins": 612,
+   "quest": 3,
+   "phase": "hunt",
+   "kills": 1,
+   "rewards": [
+    "mission-0",
+    "mission-1",
+    "mission-2"
+   ],
+   "zone": "forest",
+   "pos": [
+    600,
+    700
+   ],
+   "atk": 35,
+   "legacyRaw": "AYNEN KORUNDU",
+   "newKey": true
+  }
+ },
+ {
+  "id": "T20",
+  "name": "HTTPS origin: 50 kez yarım görevde yeniden yükleme, diskteki kayıt birebir, çift ödül yok",
+  "status": "PASS",
+  "evidence": {
+   "cycles": 50,
+   "mismatches": [],
+   "finalQuest": 13,
+   "rewards": [
+    "mission-0",
+    "side324-regions",
+    "mission-1",
+    "mission-2",
+    "side324-shadows",
+    "mission-3",
+    "mission-4",
+    "mission-5",
+    "mission-6",
+    "mission-7",
+    "mission-8",
+    "mission-9",
+    "mission-10",
+    "mission-11",
+    "mission-12"
+   ]
+  }
+ },
+ {
+  "id": "T21",
+  "name": "Gerçek diskli kayıt: yerel HTTPS origin, tarayıcı kapat/aç, alanlar birebir",
+  "status": "PASS",
+  "evidence": {
+   "origin": "https://127.0.0.1:8443 secure=true",
+   "diff": [],
+   "before": {
+    "quest": 1,
+    "phase": "travel",
+    "coins": 133,
+    "level": 103,
+    "auto": false,
+    "inv": [
+     "staff",
+     "armor",
+     "boots"
+    ]
+   },
+   "after": {
+    "quest": 1,
+    "phase": "travel",
+    "coins": 133,
+    "level": 103,
+    "auto": false,
+    "inv": [
+     "staff",
+     "armor",
+     "boots"
+    ]
+   },
+   "profile": "Playwright kalıcı Chromium profili (disk)"
+  }
+ },
+ {
+  "id": "T22-guardian",
+  "name": "10 ana + 5 devam görevi oto akış: her birinde tek ödül + popup",
+  "status": "PASS",
+  "evidence": {
+   "done": "15/15",
+   "seconds": "18,22,4,10,8,12,8,8,5,13,12,4,18,12,12",
+   "kinds": [
+    "hunt",
+    "inspect",
+    "collect"
+   ],
+   "unique": true,
+   "gear": [
+    "sword",
+    "armor",
+    "boots",
+    "talisman",
+    "wardcoat",
+    "forestboots",
+    "mooncharm"
+   ],
+   "errors": []
+  }
+ },
+ {
+  "id": "T22-scout",
+  "name": "10 ana + 5 devam görevi oto akış: her birinde tek ödül + popup",
+  "status": "PASS",
+  "evidence": {
+   "done": "15/15",
+   "seconds": "15,18,3,7,7,10,7,7,3,11,10,4,15,9,10",
+   "kinds": [
+    "hunt",
+    "inspect",
+    "collect"
+   ],
+   "unique": true,
+   "gear": [
+    "bow",
+    "armor",
+    "boots",
+    "talisman",
+    "wardcoat",
+    "forestboots",
+    "mooncharm"
+   ],
+   "errors": []
+  }
+ },
+ {
+  "id": "T22-weaver",
+  "name": "10 ana + 5 devam görevi oto akış: her birinde tek ödül + popup",
+  "status": "PASS",
+  "evidence": {
+   "done": "15/15",
+   "seconds": "18,20,3,9,8,11,7,7,4,12,11,4,16,10,11",
+   "kinds": [
+    "hunt",
+    "inspect",
+    "collect"
+   ],
+   "unique": true,
+   "gear": [
+    "staff",
+    "armor",
+    "boots",
+    "talisman",
+    "wardcoat",
+    "forestboots",
+    "mooncharm"
+   ],
+   "errors": []
+  }
+ }
+]

@@ -1,0 +1,75 @@
+{
+ "A_popupAfterDelivery": {
+  "quest": 1,
+  "modalHidden": false,
+  "rewardVisible": true
+ },
+ "B_manual": {
+  "autoAfterTap": false,
+  "phase": "return",
+  "kills": 3
+ },
+ "C_inspect": {
+  "phase": "return",
+  "kills": 1,
+  "auto": false
+ },
+ "D_boss": {
+  "relics": 1
+ },
+ "E_corrupt": {
+  "before": {
+   "mode": "select",
+   "fatal": ""
+  },
+  "after": "{\"questSchema\":325,\"saveVersion\":\"3.25\",",
+  "backups": [
+   "kirikMuhurQuestFlowV324Test_bozukYedek",
+   "kirikMuhurQuestFlowV324Test"
+  ]
+ },
+ "F_repath": {
+  "moveTarget": null,
+  "last": [
+   516,
+   327
+  ],
+  "jitter": "516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5,516.5"
+ },
+ "F_tickMs": 0.125,
+ "G_hp": {
+  "hpBefore": 168,
+  "hpAfter": 168
+ },
+ "H_pos": {
+  "before": [
+   678,
+   685
+  ],
+  "after": [
+   678,
+   685
+  ]
+ },
+ "J": [
+  false,
+  false,
+  false
+ ],
+ "J_after": {
+  "k": 2,
+  "dead": [
+   false,
+   false,
+   false
+  ]
+ },
+ "K": {
+  "phase": "travel",
+  "coins": 45,
+  "atk": 15,
+  "fatal": "",
+  "invErr": null,
+  "errs": []
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "A_popupAfterDelivery": {
+  "quest": 1,
+  "modalHidden": true,
+  "rewardVisible": false
+ },
+ "B_manual": {
+  "autoAfterTap": false,
+  "phase": "travel",
+  "kills": 0
+ },
+ "C_inspect": {
+  "phase": "travel",
+  "kills": 0,
+  "auto": false
+ },
+ "D_boss": {
+  "relics": 3
+ },
+ "E_corrupt": {
+  "before": {
+   "mode": "select",
+   "fatal": ""
+  },
+  "after": "{\"questSchema\":324,\"classId\":\"scout\",\"le",
+  "backups": [
+   "kirikMuhurQuestFlowV324Test"
+  ]
+ },
+ "F_repath": {
+  "moveTarget": null,
+  "last": [
+   450,
+   420
+  ],
+  "jitter": "450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0,450.0"
+ },
+ "F_tickMs": 0.14333333333488554,
+ "G_hp": {
+  "hpBefore": 168,
+  "hpAfter": 180
+ },
+ "H_pos": {
+  "before": [
+   683,
+   688
+  ],
+  "after": [
+   475,
+   580
+  ]
+ },
+ "J": [
+  false,
+  false,
+  false
+ ],
+ "J_after": {
+  "k": 2,
+  "dead": [
+   true,
+   true,
+   false
+  ]
+ },
+ "K": {
+  "phase": "weird",
+  "coins": "x",
+  "atk": null,
+  "fatal": "HATA: Uncaught TypeError: Cannot read properties of undefined (reading 'icon')",
+  "invErr": null,
+  "errs": [
+   "Cannot read properties of undefined (reading 'icon')"
+  ]
+ }
+}
