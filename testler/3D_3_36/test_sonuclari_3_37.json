@@ -1,0 +1,153 @@
+[
+ {
+  "id": "Y1",
+  "name": "Yeni oyun: tilki ve binek kilitli (seviye yükselse de); düğme açmaz; Sadık ekranında KİLİTLİ; HUD tanıtımı \"N. Ana Görevi Bitir\" biçiminde",
+  "status": "PASS",
+  "evidence": {
+   "pet": false,
+   "mount": false,
+   "teaser0": "🔒 Kırık Tapınak • 1. Ana Görevi Bitir",
+   "petAfterClick": false,
+   "mountAfterClick": false,
+   "ridingLv5": false,
+   "lockBtns": [
+    "true:KİLİTLİ",
+    "true:KİLİTLİ"
+   ]
+  }
+ },
+ {
+  "id": "Y2-guardian",
+  "name": "Hikâye akışı: 4. ana görev tesliminde Ruh Tilkisi (KAZANDIN + gerçek stat); 8. görev \"YOLCULUĞA HAZIRLIK\": Seyis + AHIR, \"Toplanıyor\" çubuğu, teslimde Ay Işığı Geyiği (CAN +…); ardından \"yukarı kaydır\" öğreticisi; parmakla yukarı kaydırınca biner",
+  "status": "PASS",
+  "evidence": {
+   "teasers": [
+    "🔒 Kırık Tapınak • 1. Ana Görevi Bitir",
+    "🦊 Ruh Tilkisi • 4. Ana Görevi Bitir",
+    "🦊 Ruh Tilkisi • 4. Ana Görevi Bitir",
+    "🦊 Ruh Tilkisi • 4. Ana Görevi Bitir",
+    "♞ Binek • 8. Ana Görevi Bitir",
+    "♞ Binek • 8. Ana Görevi Bitir",
+    "♞ Binek • 8. Ana Görevi Bitir",
+    "♞ Binek • 8. Ana Görevi Bitir"
+   ],
+   "chan": 1.5000000000000007,
+   "chanText": "",
+   "petAt": 4,
+   "petOpen": true,
+   "petReveal": "KAZANDIN🦊Ruh TilkisiYakındaki düşmana kendiliğinden saldırır. CAN +7 • SAL +2TAMAM (8)",
+   "mountBefore": false,
+   "teaserAfterPet": "♞ Binek • 8. Ana Görevi Bitir",
+   "title": "YOLCULUĞA HAZIRLIK",
+   "mi": 8,
+   "mountOpen": true,
+   "mountOn": true,
+   "reveal": "KAZANDIN♞Ay Işığı GeyiğiOraya buraya gitmek için bineğe bin. CAN +14 • SAV +2TAMAM (8)",
+   "groom": true,
+   "tutBefore": {
+    "modalOpen": true,
+    "tut": false
+   },
+   "tut": {
+    "tut": true,
+    "txt": "Binmek için ekranda hızlıca yukarı kaydır ↑EĞİTİMİ GEÇ"
+   },
+   "sw": {
+    "mount": true,
+    "riding": true,
+    "tutDone": true,
+    "tutGone": true
+   }
+  }
+ },
+ {
+  "id": "Y2-weaver",
+  "name": "Hikâye akışı: 4. ana görev tesliminde Ruh Tilkisi (KAZANDIN + gerçek stat); 8. görev \"YOLCULUĞA HAZIRLIK\": Seyis + AHIR, \"Toplanıyor\" çubuğu, teslimde Ay Işığı Geyiği (CAN +…); ardından \"yukarı kaydır\" öğreticisi; parmakla yukarı kaydırınca biner",
+  "status": "PASS",
+  "evidence": {
+   "teasers": [
+    "🔒 Kırık Tapınak • 1. Ana Görevi Bitir",
+    "🦊 Ruh Tilkisi • 4. Ana Görevi Bitir",
+    "🦊 Ruh Tilkisi • 4. Ana Görevi Bitir",
+    "🦊 Ruh Tilkisi • 4. Ana Görevi Bitir",
+    "♞ Binek • 8. Ana Görevi Bitir",
+    "♞ Binek • 8. Ana Görevi Bitir",
+    "♞ Binek • 8. Ana Görevi Bitir",
+    "♞ Binek • 8. Ana Görevi Bitir"
+   ],
+   "chan": 1.5000000000000007,
+   "chanText": "",
+   "petAt": 4,
+   "petOpen": true,
+   "petReveal": "KAZANDIN🦊Ruh TilkisiYakındaki düşmana kendiliğinden saldırır. CAN +6 • SAL +2TAMAM (8)",
+   "mountBefore": false,
+   "teaserAfterPet": "♞ Binek • 8. Ana Görevi Bitir",
+   "title": "YOLCULUĞA HAZIRLIK",
+   "mi": 8,
+   "mountOpen": true,
+   "mountOn": true,
+   "reveal": "KAZANDIN♞Ay Işığı GeyiğiOraya buraya gitmek için bineğe bin. CAN +11 • SAV +2TAMAM (8)",
+   "groom": true,
+   "tutBefore": {
+    "modalOpen": true,
+    "tut": false
+   },
+   "tut": {
+    "tut": true,
+    "txt": "Binmek için ekranda hızlıca yukarı kaydır ↑EĞİTİMİ GEÇ"
+   },
+   "sw": {
+    "mount": true,
+    "riding": true,
+    "tutDone": true,
+    "tutGone": true
+   }
+  }
+ },
+ {
+  "id": "Y3",
+  "name": "Eski kayıt: 8. görevi geçmiş oyuncuda tilki+binek açık; erken kayıtta önceden açılmış tilki/binek korunur; hiç açmamışta kilitli ve doğru tanıtım",
+  "status": "PASS",
+  "evidence": {
+   "ilerlemis": {
+    "mode": "game",
+    "petOpen": true,
+    "mountOpen": true,
+    "mount": false,
+    "teaser": ""
+   },
+   "erken-binek-acik": {
+    "mode": "game",
+    "petOpen": true,
+    "mountOpen": true,
+    "mount": true,
+    "teaser": "🔒 Kül Geçidi • 10. Ana Görevi Bitir"
+   },
+   "erken-kapali": {
+    "mode": "game",
+    "petOpen": false,
+    "mountOpen": false,
+    "mount": false,
+    "teaser": "🦊 Ruh Tilkisi • 4. Ana Görevi Bitir"
+   }
+  }
+ },
+ {
+  "id": "Y4-320x568",
+  "name": "Ahır sahnesi ve \"Toplanıyor\" çubuğu ekranda, taşma yok",
+  "status": "PASS",
+  "evidence": {
+   "chan": true,
+   "fits": true
+  }
+ },
+ {
+  "id": "Y4-393x852",
+  "name": "Ahır sahnesi ve \"Toplanıyor\" çubuğu ekranda, taşma yok",
+  "status": "PASS",
+  "evidence": {
+   "chan": true,
+   "fits": true
+  }
+ }
+]
