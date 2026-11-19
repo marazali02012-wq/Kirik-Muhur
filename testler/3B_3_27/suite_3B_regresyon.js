@@ -90,7 +90,7 @@ const G=pg=>pg.evaluate(()=>window.__kmTest.get());
   const ctx2=await browser.newContext(MOBILE(393,852));await ctx2.addInitScript(sv=>{if(!sessionStorage.getItem('i')){sessionStorage.setItem('i','1');localStorage.clear();localStorage.setItem('kirikMuhurQuestFlowV324Test',sv)}},JSON.stringify(save));
   const p2=await ctx2.newPage();const errs=[];p2.on('pageerror',e=>errs.push(e.message));await p2.goto('file://'+NEW);await p2.waitForTimeout(700);const g=await G(p2);
   const disk=await p2.evaluate(()=>JSON.parse(localStorage.getItem('kirikMuhurQuestFlowV324Test')));
-  rec('B08-'+name,'3.25 kaydı 3.26’ya geçer: '+name,check(g)&&disk.questSchema===326&&new Set(g.questRewards).size===g.questRewards.length&&!errs.length,{quest:g.quest,phase:g.questPhase,coins:g.coins,zone:g.zone,rewards:g.questRewards.slice(-3),schema:disk.questSchema,errors:errs});await ctx2.close()}
+  rec('B08-'+name,'3.25 kaydı 3.26’ya geçer: '+name,check(g)&&disk.questSchema>=326&&new Set(g.questRewards).size===g.questRewards.length&&!errs.length,{quest:g.quest,phase:g.questPhase,coins:g.coins,zone:g.zone,rewards:g.questRewards.slice(-3),schema:disk.questSchema,errors:errs});await ctx2.close()}
 
  // B09 Kül Geçidi portre ölçüleri: HUD taşma/çakışma + görüntü
  for(const [w,h] of [[320,568],[360,800],[393,852],[412,915]]){const {ctx,pg}=await open({w,h});

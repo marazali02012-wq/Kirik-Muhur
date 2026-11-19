@@ -66,7 +66,7 @@ async function until(pg,fn,max=600,arg){for(let i=0;i<max;i++){await step(pg,20)
  if(!ONLY||ONLY.split(',').includes('T03')){
  {const {ctx,pg}=await open(NEW);const res={};
   const canvasTapWorld=async(wx,wy)=>{const p=await pg.evaluate(([wx,wy])=>{const c=document.getElementById('game').getBoundingClientRect(),q=Math.min(c.width/432,c.height/960),cz=window.__kmTest.get().zoom,cam=window.__kmTest.get().camera;const x=c.left+(c.width-432*q)/2+(wx-cam.x)*cz*q,y=c.top+(c.height-960*q)/2+(wy-cam.y)*cz*q;return {x,y,hit:document.elementFromPoint(x,y).id}},[wx,wy]);await pg.touchscreen.tap(p.x,p.y);return p.hit==='game'};
-  const trial=async(name,dx,dy,expect)=>{await pg.evaluate(()=>{window.__kmTest.enter('village',475,580)});await step(pg,30);const g0=await G(pg);
+  const trial=async(name,dx,dy,expect)=>{await pg.evaluate(()=>{window.__kmTest.enter('village',700,560)});await step(pg,30);const g0=await G(pg); // 3.27: başlangıcın altındaki sandık engelinden uzak açık alan
    const hitOk=await canvasTapWorld(g0.player.x+dx,g0.player.y+dy);const faces=[];let ph0=(await G(pg)).walkPhase;
    for(let i=0;i<40;i++){await step(pg,1,1/60);faces.push((await G(pg)).facing)}
    const g=await G(pg);const flips=faces.reduce((n,f,i)=>n+(i&&f!==faces[i-1]?1:0),0);const seq=faces.filter((f,i)=>!i||f!==faces[i-1]);const osc=seq.some((f,i)=>i>=2&&seq[i-2]===f);

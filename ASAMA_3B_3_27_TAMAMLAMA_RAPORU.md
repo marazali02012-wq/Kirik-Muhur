@@ -79,8 +79,8 @@ Yeni engeller **3.24'ten beri var olan iki yol bulma hatasını** görünür kı
 | Paket | Sonuç |
 |---|---|
 | 3.27 tamamlama (`suite327.js`) | **8/8 PASS**: C01 çizim/çarpışma, C02 rota 479/480, C03 6 yan görevin tam akışı (gerçek dokunuşla alma, tek ödül + popup, ikinci teslimde değişiklik yok, yeniden yüklemede durum korunuyor), C04 YOL düğmesi, C05 sürü, C06 ×2 kayıt geçişi, C07 görsel denetim |
-| 3B regresyonu (`suite_3B_regresyon.js`) | REG3B |
-| 3A regresyonu (`suite_3A_regresyon.js`) | REG3A |
+| 3B regresyonu (`suite_3B_regresyon.js`) | **16/16 PASS**. Test düzeltmesi: B08, kayıt şemasını tam olarak 326 bekliyordu; 3.27 şeması 327 olduğu için `>=326` yapıldı. Geçiş değerleri aynı. |
+| 3A regresyonu (`suite_3A_regresyon.js`) | **43/43 PASS**. Test düzeltmesi: T03'te "aşağı yürü" denemesi, 3.27'de engel olan sandığın tam üstünden başlıyordu ve karakter sandığı dolanıyordu. Bu titreme değil, gerçek bir dolanma; başlangıç açık alana (700,560) taşındı. |
 | 26 görev zinciri ×3 sınıf | 26/26 (B06 içinde) |
 
 ## AŞAMA 3B KABUL DURUMU
