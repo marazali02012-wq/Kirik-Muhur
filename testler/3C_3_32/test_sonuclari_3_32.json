@@ -1,0 +1,226 @@
+[
+ {
+  "id": "H1",
+  "name": "Nadirlik (5) ve aşama (4) değerleri artar; seviye şartı karşılanmadan kuşanılmaz",
+  "status": "PASS",
+  "evidence": {
+   "atk": [
+    8,
+    11,
+    14,
+    18,
+    24
+   ],
+   "tiers": [
+    11,
+    19,
+    27,
+    35
+   ],
+   "req": [
+    1,
+    6,
+    11,
+    16
+   ],
+   "equipLow": false,
+   "wpn": "sword",
+   "equipHigh": true,
+   "wpn2": "g14"
+  }
+ },
+ {
+  "id": "H2",
+  "name": "Boss kesin ≥Destansı eşya düşürür; yaratık ~%10; yerden toplanır + \"Kazanıldı\"; çanta 40 dolunca eşya eritilir",
+  "status": "PASS",
+  "evidence": {
+   "bossDrop": {
+    "rar": 3,
+    "tier": 3
+   },
+   "picked": 1,
+   "gain": "◆Mühür Parçası×1|❖Kül Dövme Tılsım×1",
+   "mobDropRate": 0.099,
+   "full": {
+    "bag": 40,
+    "coins": 20,
+    "toz": 4
+   }
+  }
+ },
+ {
+  "id": "H3",
+  "name": "Güçlendirme: ilk seferde sabit eşya kopyalanır (kuşanım korunur), saldırı artar, maliyet artar, en fazla +10; \"Ekipman Ustası\" yan hedefi",
+  "status": "PASS",
+  "evidence": {
+   "clone": true,
+   "atkGain": 1,
+   "cost2": 40,
+   "ench": 10,
+   "side": true,
+   "atkFinal": 17
+  }
+ },
+ {
+  "id": "H4",
+  "name": "YUT ruh tozu/altın verir; kuşanılı eşya eritilmez; TOPLU YUT yalnız Sıradan/Nadir ve daha kötüleri; DÜZENLE yuva sırasına dizer",
+  "status": "PASS",
+  "evidence": {
+   "smeltA": true,
+   "tozA": 6,
+   "smeltEquipped": false,
+   "low": 2,
+   "left": 1,
+   "order": [
+    "weapon",
+    "weapon",
+    "armor",
+    "boots",
+    "boots",
+    "talisman"
+   ]
+  }
+ },
+ {
+  "id": "H5",
+  "name": "Kayıt/yükleme: üretilen eşya, +güçlendirme, kuşanım ve güç birebir",
+  "status": "PASS",
+  "evidence": {
+   "before": {
+    "eq": {
+     "weapon": "sword",
+     "helm": null,
+     "armor": "g1",
+     "gloves": null,
+     "boots": null,
+     "talisman": null
+    },
+    "def": {
+     "name": "Mühürlü Zırh",
+     "slot": "armor",
+     "icon": "▣",
+     "rarity": 4,
+     "tier": 2,
+     "req": 6,
+     "ench": 2,
+     "batk": 0,
+     "bdef": 32,
+     "gen": true,
+     "atk": 0,
+     "def": 39
+    },
+    "power": 262,
+    "inv": [
+     "sword",
+     "armor",
+     "boots",
+     "g1"
+    ]
+   },
+   "after": {
+    "eq": {
+     "weapon": "sword",
+     "helm": null,
+     "armor": "g1",
+     "gloves": null,
+     "boots": null,
+     "talisman": null
+    },
+    "def": {
+     "name": "Mühürlü Zırh",
+     "slot": "armor",
+     "icon": "▣",
+     "rarity": 4,
+     "tier": 2,
+     "req": 6,
+     "ench": 2,
+     "batk": 0,
+     "bdef": 32,
+     "gen": true,
+     "atk": 0,
+     "def": 39
+    },
+    "power": 262,
+    "inv": [
+     "sword",
+     "armor",
+     "boots",
+     "g1"
+    ]
+   }
+  }
+ },
+ {
+  "id": "H6",
+  "name": "Bozuk/eski eşya kaydı: geçersiz alanlar sınırlanır (nadirlik ≤5, +≤10), geçersiz yuvalı eşya ve bilinmeyen eşya ayıklanır, eski upgradeAtk korunur",
+  "status": "PASS",
+  "evidence": {
+   "mode": "game",
+   "eq": {
+    "weapon": "staff",
+    "helm": null,
+    "armor": "g7",
+    "gloves": null,
+    "boots": null,
+    "talisman": null
+   },
+   "g7": {
+    "name": "Test Zırh",
+    "slot": "armor",
+    "icon": "▣",
+    "rarity": 5,
+    "tier": 2,
+    "req": 1,
+    "ench": 10,
+    "batk": 0,
+    "bdef": 20,
+    "gen": true,
+    "atk": 0,
+    "def": 46
+   },
+   "g8": null,
+   "inv": [
+    "staff",
+    "armor",
+    "g7"
+   ],
+   "atk": 35
+  }
+ },
+ {
+  "id": "H7-320x568",
+  "name": "Çanta arayüzü: hücre → ayrıntı → KUŞAN çalışır; panel ekrana sığar; hücreler ≥44 px",
+  "status": "PASS",
+  "evidence": {
+   "detail": true,
+   "panelFits": true,
+   "cells": true,
+   "equipped": {
+    "weapon": "sword",
+    "helm": "g1",
+    "armor": null,
+    "gloves": null,
+    "boots": null,
+    "talisman": null
+   }
+  }
+ },
+ {
+  "id": "H7-393x852",
+  "name": "Çanta arayüzü: hücre → ayrıntı → KUŞAN çalışır; panel ekrana sığar; hücreler ≥44 px",
+  "status": "PASS",
+  "evidence": {
+   "detail": true,
+   "panelFits": true,
+   "cells": true,
+   "equipped": {
+    "weapon": "sword",
+    "helm": "g1",
+    "armor": null,
+    "gloves": null,
+    "boots": null,
+    "talisman": null
+   }
+  }
+ }
+]

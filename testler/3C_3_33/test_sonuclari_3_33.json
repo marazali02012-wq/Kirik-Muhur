@@ -1,0 +1,348 @@
+[
+ {
+  "id": "S1-guardian",
+  "name": "Açılım: Beceri 2 Sv3, Beceri 3 Sv8; kilitliyken 🔒SvN etiketi ve kullanılamaz (ruh harcanmaz); seviye atlayınca \"YENİ BECERİ\"; Beceri 3 en fazla 6 düşmana vurur",
+  "status": "PASS",
+  "evidence": {
+   "hud1": {
+    "s2": {
+     "lock": true,
+     "tag": "🔒Sv3",
+     "cap": "🔒 SV3"
+    },
+    "s3": {
+     "lock": true,
+     "tag": "🔒Sv8",
+     "cap": "🔒 SV8"
+    }
+   },
+   "lockedNoCost": true,
+   "lv": 3,
+   "banner": "YENİ BECERİ: MÜHÜR SAVURUŞU",
+   "hud3": {
+    "s2": {
+     "lock": false,
+     "tag": "",
+     "cap": "BECERİ 2"
+    },
+    "s3": {
+     "lock": true,
+     "tag": "🔒Sv8",
+     "cap": "🔒 SV8"
+    }
+   },
+   "s2used": true,
+   "lv8": 8,
+   "banner8": "YENİ BECERİ: TAPINAK ÇÖKÜŞÜ",
+   "hud8": {
+    "lock": false,
+    "tag": "",
+    "cap": "BECERİ 3"
+   },
+   "hit": 3,
+   "n": 3,
+   "s3cd": 14,
+   "name": "TAPINAK ÇÖKÜŞÜ"
+  }
+ },
+ {
+  "id": "S1-scout",
+  "name": "Açılım: Beceri 2 Sv3, Beceri 3 Sv8; kilitliyken 🔒SvN etiketi ve kullanılamaz (ruh harcanmaz); seviye atlayınca \"YENİ BECERİ\"; Beceri 3 en fazla 6 düşmana vurur",
+  "status": "PASS",
+  "evidence": {
+   "hud1": {
+    "s2": {
+     "lock": true,
+     "tag": "🔒Sv3",
+     "cap": "🔒 SV3"
+    },
+    "s3": {
+     "lock": true,
+     "tag": "🔒Sv8",
+     "cap": "🔒 SV8"
+    }
+   },
+   "lockedNoCost": true,
+   "lv": 3,
+   "banner": "YENİ BECERİ: KÜL YAĞMURU",
+   "hud3": {
+    "s2": {
+     "lock": false,
+     "tag": "",
+     "cap": "BECERİ 2"
+    },
+    "s3": {
+     "lock": true,
+     "tag": "🔒Sv8",
+     "cap": "🔒 SV8"
+    }
+   },
+   "s2used": true,
+   "lv8": 8,
+   "banner8": "YENİ BECERİ: KÜL FIRTINASI",
+   "hud8": {
+    "lock": false,
+    "tag": "",
+    "cap": "BECERİ 3"
+   },
+   "hit": 3,
+   "n": 3,
+   "s3cd": 14,
+   "name": "KÜL FIRTINASI"
+  }
+ },
+ {
+  "id": "S1-weaver",
+  "name": "Açılım: Beceri 2 Sv3, Beceri 3 Sv8; kilitliyken 🔒SvN etiketi ve kullanılamaz (ruh harcanmaz); seviye atlayınca \"YENİ BECERİ\"; Beceri 3 en fazla 6 düşmana vurur",
+  "status": "PASS",
+  "evidence": {
+   "hud1": {
+    "s2": {
+     "lock": true,
+     "tag": "🔒Sv3",
+     "cap": "🔒 SV3"
+    },
+    "s3": {
+     "lock": true,
+     "tag": "🔒Sv8",
+     "cap": "🔒 SV8"
+    }
+   },
+   "lockedNoCost": true,
+   "lv": 3,
+   "banner": "YENİ BECERİ: RUH ÇEMBERİ",
+   "hud3": {
+    "s2": {
+     "lock": false,
+     "tag": "",
+     "cap": "BECERİ 2"
+    },
+    "s3": {
+     "lock": true,
+     "tag": "🔒Sv8",
+     "cap": "🔒 SV8"
+    }
+   },
+   "s2used": true,
+   "lv8": 8,
+   "banner8": "YENİ BECERİ: RUH SELİ",
+   "hud8": {
+    "lock": false,
+    "tag": "",
+    "cap": "BECERİ 3"
+   },
+   "hit": 3,
+   "n": 3,
+   "s3cd": 14,
+   "name": "RUH SELİ"
+  }
+ },
+ {
+  "id": "S2",
+  "name": "Yükseltme: beceri seviyesi karakter seviyesini geçemez; maliyet 30×Sv altın + Sv toz; en fazla Sv10; Sv10 hasarı ×1.9; parasızken ve kilitliyken yükselmez",
+  "status": "PASS",
+  "evidence": {
+   "d1": 57,
+   "capLv": false,
+   "up1": true,
+   "cost": {
+    "gold": 30,
+    "toz": 1
+   },
+   "lv": 10,
+   "d10": 390,
+   "atk": 79,
+   "poor": false,
+   "lockUp": false
+  }
+ },
+ {
+  "id": "S3",
+  "name": "Oto beceri sırası: varsayılan s3,s1,s2; öne alma ve kapatma oto savaşı değiştirir; hepsi kapalı/ruh yetersizse beceri kullanılmaz",
+  "status": "PASS",
+  "evidence": {
+   "def": "s3,s1,s2",
+   "first": "s3",
+   "order2": "s2,s3,s1",
+   "second": "s2",
+   "order3": "s3,s1",
+   "third": "s3",
+   "none": null,
+   "mpKept": true,
+   "noMp": null
+  }
+ },
+ {
+  "id": "S4",
+  "name": "Gerçek oto savaş: yalnız sıradaki beceriler kullanılır (sıra=[s2] → s2 evet, s1/s3 hayır)",
+  "status": "PASS",
+  "evidence": {
+   "s2": true,
+   "s1": false,
+   "s3": false
+  }
+ },
+ {
+  "id": "S5",
+  "name": "Kayıt/yükleme: beceri seviyeleri ve oto sıra birebir",
+  "status": "PASS",
+  "evidence": {
+   "before": {
+    "lv": {
+     "s1": 3,
+     "s2": 1,
+     "heal": 1,
+     "s3": 2
+    },
+    "auto": [
+     "s2",
+     "s1"
+    ]
+   },
+   "after": {
+    "lv": {
+     "s1": 3,
+     "s2": 1,
+     "heal": 1,
+     "s3": 2
+    },
+    "auto": [
+     "s2",
+     "s1"
+    ]
+   }
+  }
+ },
+ {
+  "id": "S6",
+  "name": "Eski kayıt (beceri alanı yok) varsayılanla açılır; bozuk beceri kaydı sınırlanır/ayıklanır",
+  "status": "PASS",
+  "evidence": {
+   "eski": {
+    "mode": "game",
+    "lv": {
+     "s1": 1,
+     "s2": 1,
+     "heal": 1,
+     "s3": 1
+    },
+    "auto": [
+     "s3",
+     "s1",
+     "s2"
+    ],
+    "errs": 0
+   },
+   "bozuk": {
+    "mode": "game",
+    "lv": {
+     "s1": 10,
+     "s2": 1,
+     "heal": 1,
+     "s3": 2
+    },
+    "auto": [
+     "s1",
+     "s3"
+    ],
+    "errs": 0
+   }
+  }
+ },
+ {
+  "id": "S7-320x568",
+  "name": "Arayüz: HUD 4 beceri yuvası çakışmasız, ekranda ve diğer yuvalarla aynı boyda; beceri ekranında 4 kart (Sv3: 1 kilitli), panel sığar, düğmeler ≥44 px, YÜKSELT çalışır",
+  "status": "PASS",
+  "evidence": {
+   "hud": {
+    "ov": [],
+    "same": true,
+    "inScreen": true,
+    "s3": {
+     "w": 39,
+     "h": 39,
+     "v": true
+    }
+   },
+   "ui": {
+    "cards": 4,
+    "locked": 1,
+    "fits": true,
+    "minBtn": 44
+   },
+   "lv": 2
+  }
+ },
+ {
+  "id": "S7-360x640",
+  "name": "Arayüz: HUD 4 beceri yuvası çakışmasız, ekranda ve diğer yuvalarla aynı boyda; beceri ekranında 4 kart (Sv3: 1 kilitli), panel sığar, düğmeler ≥44 px, YÜKSELT çalışır",
+  "status": "PASS",
+  "evidence": {
+   "hud": {
+    "ov": [],
+    "same": true,
+    "inScreen": true,
+    "s3": {
+     "w": 39,
+     "h": 39,
+     "v": true
+    }
+   },
+   "ui": {
+    "cards": 4,
+    "locked": 1,
+    "fits": true,
+    "minBtn": 44
+   },
+   "lv": 2
+  }
+ },
+ {
+  "id": "S7-393x852",
+  "name": "Arayüz: HUD 4 beceri yuvası çakışmasız, ekranda ve diğer yuvalarla aynı boyda; beceri ekranında 4 kart (Sv3: 1 kilitli), panel sığar, düğmeler ≥44 px, YÜKSELT çalışır",
+  "status": "PASS",
+  "evidence": {
+   "hud": {
+    "ov": [],
+    "same": true,
+    "inScreen": true,
+    "s3": {
+     "w": 39,
+     "h": 39,
+     "v": true
+    }
+   },
+   "ui": {
+    "cards": 4,
+    "locked": 1,
+    "fits": true,
+    "minBtn": 44
+   },
+   "lv": 2
+  }
+ },
+ {
+  "id": "S7-412x915",
+  "name": "Arayüz: HUD 4 beceri yuvası çakışmasız, ekranda ve diğer yuvalarla aynı boyda; beceri ekranında 4 kart (Sv3: 1 kilitli), panel sığar, düğmeler ≥44 px, YÜKSELT çalışır",
+  "status": "PASS",
+  "evidence": {
+   "hud": {
+    "ov": [],
+    "same": true,
+    "inScreen": true,
+    "s3": {
+     "w": 39,
+     "h": 39,
+     "v": true
+    }
+   },
+   "ui": {
+    "cards": 4,
+    "locked": 1,
+    "fits": true,
+    "minBtn": 44
+   },
+   "lv": 2
+  }
+ }
+]
