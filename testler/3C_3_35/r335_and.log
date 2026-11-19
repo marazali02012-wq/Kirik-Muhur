@@ -14,3 +14,5 @@ PASS   A2-Galaxy_S8 Gerçek dokunuşla yürüme: sağa dokun → sağa yürür, 
 PASS   A3-Galaxy_S8 Parmağı sürükleyerek yürüme (sola-aşağı) — {"dx":-160,"dy":173,"facing":"down"}
 PASS   A4-Galaxy_S8 İki parmak açma ve çift dokunma sayfayı yakınlaştırmaz/kaydırmaz — {"scale":1,"scrollX":0,"scrollY":0}
 PASS   A5-Galaxy_S8 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
+PASS   A6-Galaxy_S8 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
+PASS   A7-Galaxy_S8 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
