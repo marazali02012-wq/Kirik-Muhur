@@ -1,0 +1,10 @@
+PASS  E0 Sınıf seçim ekranında 3 sn: konsol/sayfa hatası yok — {"errors":[],"fatal":""}
+PASS  E1 Kahraman oluşturma: Sınıf → Görünüm → İsim, geri/değiştir, kadın görünüm, isim temizleme, yeniden açılışta korunur — {"step1":"1. SINIF","classAfterPick":"Ruh Dokumacısı","backTo":"1. SINIF","previewDrawn":4934,"game":{"mode":"game","gender":"f","name":"bAyşe/bx","key":"weaver_f","quest":0},"portrait":2583,"afterReload":{"mode":"game","gender":"f","name":"bAyşe/bx","key":"weaver_f"},"errors":[]}
+PASS  E2 Kadın görünüm sayfaları (3 sınıf × 4 yön × 4 kare) yüklü ve erkek görünümden farklı — [{"k":"guardian","loaded":true,"diff":1954},{"k":"scout","loaded":true,"diff":1970},{"k":"weaver","loaded":true,"diff":2079}]
+PASS  E3 HUD: SV+GÜÇ, XP çubuğu, bölge+koordinat, boss çubuğu (yalnız boss yakınken), yan görev satırı ve YOL — {"level":"SV 1 • GÜÇ 100","power":100,"zone":"Fener Köyü • 48,58","sideHiddenAtStart":true,"bossHiddenVillage":true,"boss":{"shown":true,"name":"◆ Mühür Kolosu • Sv4","hp":"128 / 260"},"side":{"shown":true,"text":"◇ YAN: Fener Yağı 0/2"},"routeAfterTap":{"zone":"village","x":300,"y":700,"id":"sq-lamp"},"xp":{"w":"63%"}}
+PASS  E4-guardian Saldırı görseli (guardian): kılıç yayı, beceri rakamı büyük, seviye atlama efekti — {"shots":0,"big":1,"glow":true,"lvText":true}
+PASS  E4-scout Saldırı görseli (scout): mermi, beceri rakamı büyük, seviye atlama efekti — {"shots":1,"big":1,"glow":true,"lvText":true}
+PASS  E4-weaver Saldırı görseli (weaver): mermi, beceri rakamı büyük, seviye atlama efekti — {"shots":1,"big":1,"glow":true,"lvText":true}
+PASS  E5 SADIK ekranı: Ruh Tilkisi, Ay Işığı Geyiği (Sv2 kilidi), oto yol/savaş gerçek durumu değiştirir — {"title":"✧ SADIK YOLDAŞ & BİNEK","mountLocked":true,"pet":true,"battle":true,"mount":true,"speed":294.5}
+PASS  E6 Dikey kamera: kahraman çizimi ekran yüksekliğinin ≥%8’i — {"zoom":1.45,"heroPx":101,"screenH":839,"ratio":0.121}
+ÖZET { PASS: 9, FAIL: 0 }

@@ -63,9 +63,9 @@ Referans görselleri depoya ve oyuna **konmadı.** Hiçbir görsel, isim veya me
 | Paket | Sonuç |
 |---|---|
 | 3.31 yeni (`suite331.js`) | **7/7 PASS** |
-| 3A regresyonu | R3A |
-| 3B regresyonu | R3B |
-| 3.27 regresyonu | R327 |
-| 3.29 regresyonu | R329 |
-| 3.30 regresyonu | R330 |
-| Android emülasyonu | RAND |
+| 3A regresyonu | **43/43 PASS** |
+| 3B regresyonu | **16/16 PASS** |
+| 3.27 regresyonu | **8/8 PASS** |
+| 3.29 regresyonu | **9/9 PASS** |
+| 3.30 regresyonu | **6/6 PASS** |
+| Android emülasyonu | **56/56 PASS** |
