@@ -49,3 +49,9 @@ PASS   A4-Galaxy_S24 İki parmak açma ve çift dokunma sayfayı yakınlaştırm
 PASS   A5-Galaxy_S24 Çiçeği parmakla kaydırma menüyü değiştirir; karakter yürümez — {"from":"main","to":"utilities","moved":0}
 PASS   A6-Galaxy_S24 Saldırı tuşuna basılı tutma: art arda vuruş — {"hp0":78,"hp1":6,"approxHits":5}
 PASS   A7-Galaxy_S24 Görev tuşuna hızlı çift dokunma: görev bir kez başlar, hata yok — {"phase":"travel","auto":true}
+PASS   A8-Galaxy_S24 Gerçek zamanlı 75 sn oyun, parmakla görev/popup (CPU 2x): ilerleme, FPS, hata — {"quests":5,"popups":7,"deaths":0,"fpsMedian":60,"fpsP10":59,"longTasks":2,"heapMB":9.5,"errors":[]}
+PASS   A9-Galaxy_S24 Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır — {"pauseOpened":true,"closed":true}
+PASS   A10-Galaxy_S24 Yataya çevirince "telefonu dik tut" uyarısı; dikeye dönünce HUD düzgün — {"landscapeGuard":"grid","afterPortrait":{"guard":"none","out":[],"canvasW":540}}
+PASS   A11-Galaxy_S24 Gerçek dokunulabilir alan her düğmede ≥43 px (Android önerisi 48dp) — {"toplam":16,"kucuk":[]}
+PASS   A12 Android süreci aniden öldürürse (SIGKILL, pagehide yok): görev/altın/ödül korunur, en fazla ~4 sn konum kaybı — {"killedPids":2,"before":{"quest":1,"phase":"ready","coins":133},"lastLive":{"quest":1,"phase":"ready","coins":133},"afterRestart":{"quest":1,"phase":"ready","coins":133},"positionDiffFromLastLive":1}
+ÖZET { PASS: 56 }
