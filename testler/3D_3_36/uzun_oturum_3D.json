@@ -1,0 +1,245 @@
+{
+ "minutes": 35,
+ "segments": [
+  {
+   "seg": 1,
+   "min": 5,
+   "quest": 22,
+   "level": 10,
+   "coins": 3805,
+   "fpsMed": 46,
+   "fpsMin": 32,
+   "heap": 9.5,
+   "saveKB": 1.5,
+   "action": "yenile"
+  },
+  {
+   "seg": 2,
+   "min": 10,
+   "quest": 46,
+   "level": 15,
+   "coins": 8290,
+   "fpsMed": 55,
+   "fpsMin": 38,
+   "heap": 9.5,
+   "saveKB": 2.1,
+   "action": "SIGKILL+yeniden aç"
+  },
+  {
+   "seg": 3,
+   "min": 15,
+   "quest": 72,
+   "level": 19,
+   "coins": 13679,
+   "fpsMed": 55,
+   "fpsMin": 41,
+   "heap": 9.5,
+   "saveKB": 2.6,
+   "action": "yenile"
+  },
+  {
+   "seg": 4,
+   "min": 20,
+   "quest": 98,
+   "level": 23,
+   "coins": 20344,
+   "fpsMed": 58,
+   "fpsMin": 41,
+   "heap": 9.5,
+   "saveKB": 3,
+   "action": "SIGKILL+yeniden aç"
+  },
+  {
+   "seg": 5,
+   "min": 25,
+   "quest": 125,
+   "level": 27,
+   "coins": 28613,
+   "fpsMed": 55,
+   "fpsMin": 31,
+   "heap": 9.5,
+   "saveKB": 3.4,
+   "action": "yenile"
+  },
+  {
+   "seg": 6,
+   "min": 30,
+   "quest": 152,
+   "level": 32,
+   "coins": 38092,
+   "fpsMed": 52,
+   "fpsMin": 32,
+   "heap": 9.5,
+   "saveKB": 3.8,
+   "action": "SIGKILL+yeniden aç"
+  },
+  {
+   "seg": 7,
+   "min": 35,
+   "quest": 178,
+   "level": 35,
+   "coins": 48456,
+   "fpsMed": 58,
+   "fpsMin": 47,
+   "heap": 9.5,
+   "saveKB": 4.4,
+   "action": "son"
+  }
+ ],
+ "reopenChecks": [
+  {
+   "seg": 1,
+   "action": "yenile",
+   "ok": true,
+   "before": {
+    "quest": 22,
+    "phase": "travel",
+    "level": 10,
+    "coins": 3805,
+    "rewards": 26,
+    "inv": 9
+   },
+   "after": {
+    "quest": 22,
+    "phase": "travel",
+    "level": 10,
+    "coins": 3805,
+    "rewards": 26,
+    "inv": 9
+   },
+   "lostRewards": [],
+   "lostInv": [],
+   "posDiff": 704
+  },
+  {
+   "seg": 2,
+   "action": "SIGKILL+yeniden aç",
+   "ok": true,
+   "before": {
+    "quest": 46,
+    "phase": "ready",
+    "level": 15,
+    "coins": 8290,
+    "rewards": 51,
+    "inv": 11
+   },
+   "after": {
+    "quest": 46,
+    "phase": "ready",
+    "level": 15,
+    "coins": 8290,
+    "rewards": 51,
+    "inv": 11
+   },
+   "lostRewards": [],
+   "lostInv": [],
+   "posDiff": 0
+  },
+  {
+   "seg": 3,
+   "action": "yenile",
+   "ok": false,
+   "before": {
+    "quest": 72,
+    "phase": "travel",
+    "level": 19,
+    "coins": 13679,
+    "rewards": 77,
+    "inv": 12
+   },
+   "after": {
+    "quest": 72,
+    "phase": "travel",
+    "level": 19,
+    "coins": 13685,
+    "rewards": 77,
+    "inv": 12
+   },
+   "lostRewards": [],
+   "lostInv": [],
+   "posDiff": 250
+  },
+  {
+   "seg": 4,
+   "action": "SIGKILL+yeniden aç",
+   "ok": true,
+   "before": {
+    "quest": 98,
+    "phase": "return",
+    "level": 23,
+    "coins": 20344,
+    "rewards": 103,
+    "inv": 13
+   },
+   "after": {
+    "quest": 98,
+    "phase": "return",
+    "level": 23,
+    "coins": 20344,
+    "rewards": 103,
+    "inv": 13
+   },
+   "lostRewards": [],
+   "lostInv": [],
+   "posDiff": 152
+  },
+  {
+   "seg": 5,
+   "action": "yenile",
+   "ok": true,
+   "before": {
+    "quest": 125,
+    "phase": "hunt",
+    "level": 27,
+    "coins": 28613,
+    "rewards": 130,
+    "inv": 13
+   },
+   "after": {
+    "quest": 125,
+    "phase": "return",
+    "level": 27,
+    "coins": 28613,
+    "rewards": 130,
+    "inv": 13
+   },
+   "lostRewards": [],
+   "lostInv": [],
+   "posDiff": 111
+  },
+  {
+   "seg": 6,
+   "action": "SIGKILL+yeniden aç",
+   "ok": true,
+   "before": {
+    "quest": 152,
+    "phase": "return",
+    "level": 32,
+    "coins": 38092,
+    "rewards": 157,
+    "inv": 13
+   },
+   "after": {
+    "quest": 152,
+    "phase": "return",
+    "level": 32,
+    "coins": 38092,
+    "rewards": 157,
+    "inv": 13
+   },
+   "lostRewards": [],
+   "lostInv": [],
+   "posDiff": 205
+  }
+ ],
+ "popups": 183,
+ "deaths": 0,
+ "errors": [],
+ "final": {
+  "quest": 178,
+  "level": 35,
+  "coins": 48456,
+  "rewards": 183,
+  "unique": true
+ }
+}
