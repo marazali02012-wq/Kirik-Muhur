@@ -58,6 +58,7 @@ const PERF=()=>{window.__fps=[];window.__long=0;let n=0,t0=performance.now();(fu
   await pg.screenshot({path:path.join(OUT,'GORSEL_DENETIM',`android_${tag}_oyun.png`)});
   rec(`A8-${tag}`,`Gerçek zamanlı ${Math.round(playMs/1000)} sn oyun, parmakla görev/popup (CPU ${cpu}x): ilerleme, FPS, hata`,gEnd.quest>startQ&&!errs.length&&med>=30,{quests:gEnd.quest-startQ,popups,deaths,fpsMedian:med,fpsP10:p10,longTasks:perf.long,heapMB:perf.heap,errors:errs.slice(0,3)});
   // Geri tuşu
+  await pg.evaluate(()=>{if(!document.getElementById('modal').classList.contains('hidden'))window.__kmTest.closeModal()});await sleep(150);
   await pg.goBack().catch(()=>{});await sleep(400);const back1=await pg.evaluate(()=>!document.getElementById('modal').classList.contains('hidden'));await pg.goBack().catch(()=>{});await sleep(400);const back2=await pg.evaluate(()=>document.getElementById('modal').classList.contains('hidden'));
   rec(`A9-${tag}`,'Android geri tuşu (tarayıcı geçmişi): oyundan çıkmaz, duraklatma açar/kapatır',back1&&back2&&pg.url().startsWith(URL),{pauseOpened:back1,closed:back2});
   // Yatay çevirme ve geri dikey
