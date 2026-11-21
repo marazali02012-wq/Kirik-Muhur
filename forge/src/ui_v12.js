@@ -70,7 +70,7 @@
     const t0 = performance.now();
     S3.ch = F.createCharacter({ body: S3.src.body, palette: S3.src.palette, style: S3.src.style, seed: S3.src.seed || 7 });
     S3.perf.buildMs = performance.now() - t0;
-    if (!keepSheets) { S3.sheets.clear(); S3.glb = null; S3.manifest = null; updateResume(); }
+    if (!keepSheets) { S3.sheets.clear(); S3.glb = null; S3.manifest = null; updateResume(); loadStoredSheets().then(n => { if (n > 0 && n < 40) status('s3-status', `Bu karakter için önceki oturumdan ${n}/40 sayfa bulundu. "Devam et" ile tamamlayın.`); }); }
     const est = new Uint8Array(S3.ch.mesh.parts.length); S3.ch.mesh.parts.forEach((p, i) => { est[i] = p.estimated ? 1 : 0; }); S3.est8 = est;
     const m = S3.ch.mesh;
     $('s3-info').textContent = `${m.vertexCount} vertex · ${m.triangleCount} üçgen · ${S3.ch.skel.bones.length} kemik · ${m.parts.length} parça · kurulum ${S3.perf.buildMs.toFixed(0)} ms`;
@@ -155,6 +155,11 @@
     return S3.worker;
   }
   function srcForWorker() { return { body: S3.ch.params.body, palette: S3.ch.params.palette, style: S3.ch.params.style, seed: S3.src.seed || 7 }; }
+  // Sekme kapanırsa (telefon belleği) tamamlanan sayfalar kaybolmasın: IndexedDB'de karakter özetine göre saklanır
+  function charKey() { const j = JSON.stringify(srcForWorker()); let h = 2166136261; for (let i = 0; i < j.length; i++) { h ^= j.charCodeAt(i); h = Math.imul(h, 16777619); } return 'sp:' + (h >>> 0).toString(16); }
+  async function storeSheet(name, data) { try { const k = charKey(), idx = (await LD.kvGet(k)) || []; if (!idx.includes(name)) idx.push(name); await LD.kvSet(k + ':' + name, data); await LD.kvSet(k, idx); } catch (e) { } }
+  async function loadStoredSheets() { try { const k = charKey(), idx = (await LD.kvGet(k)) || []; for (const n of idx) { const d = await LD.kvGet(k + ':' + n); if (d) S3.sheets.set(n, d); } } catch (e) { } updateResume(); return S3.sheets.size; }
+  async function clearStoredSheets() { try { const k = charKey(), idx = (await LD.kvGet(k)) || []; for (const n of idx) await LD.kvDel(k + ':' + n); await LD.kvDel(k); } catch (e) { } }
   function updateResume() { $('s3-resume').disabled = !(S3.sheets.size > 0 && S3.sheets.size < 40); }
   function runSprites(resume) {
     if (!S3.ch || S3.busy) return;
@@ -165,7 +170,7 @@
     w.onmessage = async ev => {
       const m = ev.data;
       if (m.type === 'framing') { S3.manifest = m.manifest; }
-      else if (m.type === 'sheet') { S3.sheets.set(m.name, m.data); rSum += m.renderMs; eSum += m.encodeMs; $('s3-bar').style.width = (m.done / m.total * 100).toFixed(1) + '%'; status('s3-status', `Sprite sayfası ${m.done}/40 · ${m.name.split('/').slice(1).join(' / ')}`); }
+      else if (m.type === 'sheet') { S3.sheets.set(m.name, m.data); storeSheet(m.name, m.data); rSum += m.renderMs; eSum += m.encodeMs; $('s3-bar').style.width = (m.done / m.total * 100).toFixed(1) + '%'; status('s3-status', `Sprite sayfası ${m.done}/40 · ${m.name.split('/').slice(1).join(' / ')}`); }
       else if (m.type === 'cancelled') { S3.busy = false; $('s3-zip').disabled = false; $('s3-cancel').disabled = true; updateResume(); status('s3-status', `İptal edildi: ${S3.sheets.size}/40 sayfa saklandı. "Devam et" ile kalanlar üretilir.`); }
       else if (m.type === 'error') { S3.busy = false; $('s3-zip').disabled = false; $('s3-cancel').disabled = true; updateResume(); status('s3-status', 'Hata: ' + m.message, true); }
       else if (m.type === 'sprites-done') {
@@ -180,13 +185,13 @@
         // ZIP'i hemen geri okuyup doğrula
         const back = F.readZip(zip), bad = back.filter(f => !f.crcOk).length;
         S3.lastZip = zip; S3.perf.spritesMs = performance.now() - t0;
-        download(new Blob([zip], { type: 'application/zip' }), 'forge_v12_3d_8yon_5hareket.zip');
+        download(new Blob([zip], { type: 'application/zip' }), 'forge_v12_3d_8yon_5hareket.zip'); clearStoredSheets();
         $('s3-bar').style.width = '100%'; S3.busy = false; $('s3-zip').disabled = false; $('s3-cancel').disabled = true; updateResume();
         status('s3-status', `Hazır: ${back.length} dosya (40 sayfa + manifest + GLB) · ZIP ${fmtMB(zip.length)} · CRC ${bad ? bad + ' HATALI' : 'tamam'} · ${(S3.perf.spritesMs / 1000).toFixed(1)} sn`);
         perfPanel();
       }
     };
-    w.postMessage({ type: 'sprites', src: srcForWorker(), have, ss: DEV.cores && DEV.cores <= 4 && DEV.memGB && DEV.memGB < 3 ? 1 : 2 });
+    w.postMessage({ type: 'sprites', src: srcForWorker(), have, coolMs: +$('s3-cool').value, ss: DEV.cores && DEV.cores <= 4 && DEV.memGB && DEV.memGB < 3 ? 1 : 2 });
   }
   function makeGLB() {
     return new Promise(res => {
@@ -287,7 +292,7 @@
     $('s3-bones').onchange = e => { S3.bones = e.target.checked; draw(); };
     $('s3-est').onchange = e => { S3.est = e.target.checked; draw(); };
     $('s3-overlay').onchange = e => { S3.overlay = e.target.checked; if (S3.overlay) { S3.yaw = 0; S3.clip = 'idle'; S3.t = 0; S3.playing = false; syncButtons(); } draw(); };
-    $('s3-zip').onclick = () => runSprites(false); $('s3-resume').onclick = () => runSprites(true);
+    $('s3-zip').onclick = () => runSprites(false); $('s3-resume').onclick = async () => { if (!S3.sheets.size) await loadStoredSheets(); runSprites(true); };
     $('s3-cancel').onclick = () => { if (S3.worker) S3.worker.postMessage({ type: 'cancel' }); };
     $('s3-glb').onclick = async () => { status('s3-status', 'GLB üretiliyor…'); const g = await makeGLB(); if (g) { download(new Blob([g], { type: 'model/gltf-binary' }), 'forge_v12_savasci.glb'); await verifyGLBUI(g); status('s3-status', `GLB indirildi (${fmtMB(g.length)}) ve tekrar okunarak doğrulandı.`); perfPanel(); } };
     $('s3-verify-file').onchange = async e => { const f = e.target.files[0]; if (!f) return; const rep = await verifyGLBUI(new Uint8Array(await f.arrayBuffer())); status('s3-status', f.name + ': ' + (rep.ok ? 'geçerli GLB' : 'hatalı GLB'), !rep.ok); };

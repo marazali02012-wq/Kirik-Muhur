@@ -1,1 +1,7 @@
 tests/node_modules/
+# test sırasında yeniden üretilen büyük kopyalar
+ciktilar/v11_uyumluluk_*.zip
+ciktilar/tarayici_*.zip
+ciktilar/tarayici_*.glb
+ciktilar/*kukla*
+ciktilar/ekran/kukla_*

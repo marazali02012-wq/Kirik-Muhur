@@ -77,6 +77,7 @@ function run(bodyOpts, style, label) {
     const peak = tipSpeed.reduce((a, b) => b[1] > a[1] ? b : a, [0, 0]);
     report.clips[clip] = { worstAttachment: attachWorst.name, worstAttachmentCm: +(attachWorst.d * 100).toFixed(2), worstAttachmentRatio: +attachWorst.ratio.toFixed(3), maxSolidEdgeGrowth_cm: +(maxAbsSolid * 100).toFixed(2), minVertexY_cm: +(minY * 100).toFixed(2), clothRawMinY_cm_GLB: +(minYRawCloth * 100).toFixed(2), maxEdgeStretch: +maxStretch.toFixed(3), maxEdgeGrowth_cm: +(maxAbs * 100).toFixed(2), weaponGripErrMm: +(gripErr * 1000).toFixed(3), boneLenErrMm: +(boneErr * 1000).toFixed(4), bladeTipPeakSpeed: +peak[1].toFixed(2), bladeTipPeakAt: +peak[0].toFixed(3) };
     assert(minY > -0.012, `${clip}: hiçbir vertex zeminin altında değil (en düşük y = ${(minY * 100).toFixed(2)} cm)`);
+    assert(minYRawCloth > -0.012, `${clip}: GLB'de (kırpmasız) kumaş da zeminin üstünde (en düşük y = ${(minYRawCloth * 100).toFixed(2)} cm)`);
     assert(maxAbsSolid < 0.07, `${clip}: gövde/zırh yüzeyi aşırı gerilmiyor (en büyük kenar uzaması ${(maxAbsSolid * 100).toFixed(1)} cm)`);
     assert(maxAbs < 0.14, `${clip}: kumaş dahil tüm yüzeyler yırtılmıyor (en büyük kenar uzaması ${(maxAbs * 100).toFixed(1)} cm, oran ${maxStretch.toFixed(2)})`);
     assert(attachWorst.ratio < 1.0, `${clip}: kollar/bacaklar/baş gövdeden kopmuyor (en kötü bağlantı: ${attachWorst.name} ${(attachWorst.d * 100).toFixed(1)} cm, yarıçapın ${(attachWorst.ratio * 100).toFixed(0)}%'i)`);

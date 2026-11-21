@@ -1,50 +1,16 @@
 {
   "tag": "normal",
   "cpuThrottle": 1,
-  "startedAt": "2026-11-21T20:12:16.457Z",
+  "startedAt": "2026-11-21T20:27:34.950Z",
   "checks": [
     {
       "ok": true,
-      "check": "Sayfa çevrimdışı açıldı (341 ms)"
-    },
-    {
-      "ok": true,
-      "check": "V11.2: 8 yön düğmesi"
-    },
-    {
-      "ok": true,
-      "check": "V11.2: 5 hareket önizlemesi"
-    },
-    {
-      "ok": true,
-      "check": "V11.2: 6 renk paleti (renk düzenleme)"
-    },
-    {
-      "ok": true,
-      "check": "V11.2: kırmızı palete geçildi (renk düzenleme çalışıyor)"
-    },
-    {
-      "ok": true,
-      "check": "V11.2: 8 yön × 5 hareket ZIP oluşturuldu ve CRC doğrulandı",
-      "detail": "41 None"
-    },
-    {
-      "ok": true,
-      "check": "V11.2: seçili yön PNG dışa aktarımı",
-      "detail": "forge_savasci_blue_dir0.png"
-    },
-    {
-      "ok": true,
-      "check": "V11.2: örnek PNG içe aktarma (büyücü)"
-    },
-    {
-      "ok": true,
-      "check": "V11.2: telefondan PNG seçme + arka plan temizleme"
+      "check": "Sayfa çevrimdışı açıldı (371 ms)"
     },
     {
       "ok": true,
       "check": "Resimden analiz yapıldı",
-      "detail": "• V11.2 boyalı savaşçı (ön + yan görünüş) · güven 100% · analiz 57 ms• Bacak arası açıklık diz hizasında başlıyor (önlük"
+      "detail": "• V11.2 boyalı savaşçı (ön + yan görünüş) · güven 100% · analiz 65 ms• Bacak arası açıklık diz hizasında başlıyor (önlük"
     },
     {
       "ok": true,
@@ -61,7 +27,7 @@
     },
     {
       "ok": true,
-      "check": "Önizleme karesi (320×320, CPU): 35.5 ms"
+      "check": "Önizleme karesi (320×320, CPU): 35.2 ms"
     },
     {
       "ok": true,
@@ -69,12 +35,12 @@
     },
     {
       "ok": true,
-      "check": "Sprite üretimi iptal edildi (4/40 saklandı)"
+      "check": "Sprite üretimi iptal edildi (3/40 saklandı)"
     },
     {
       "ok": true,
-      "check": "\"Devam et\" ile kalan sayfalar üretildi ve ZIP indirildi (7.8 sn)",
-      "detail": "Hazır: 42 dosya (40 sayfa + manifest + GLB) · ZIP 7.8 MB · CRC tamam · 7.8 sn"
+      "check": "\"Devam et\" ile kalan sayfalar üretildi ve ZIP indirildi (10.6 sn)",
+      "detail": "Hazır: 42 dosya (40 sayfa + manifest + GLB) · ZIP 7.8 MB · CRC tamam · 10.5 sn"
     },
     {
       "ok": true,
@@ -84,7 +50,7 @@
     {
       "ok": true,
       "check": "GLB tarayıcıda yeniden okunup doğrulandı",
-      "detail": "GLB DOĞRULANDI · 5863 vertex · 8102 üçgen · 26 kemik · 11 parça · 0.5 MBAnimasyonlar: idle 1.6s (17 kanal), walk 0.9s (19 kanal), attack 0.8s (19 kanal), hurt 0"
+      "detail": "GLB DOĞRULANDI · 5767 vertex · 8102 üçgen · 26 kemik · 10 parça · 0.5 MBAnimasyonlar: idle 1.6s (17 kanal), walk 0.9s (19 kanal), attack 0.8s (19 kanal), hurt 0"
     },
     {
       "ok": true,
@@ -102,21 +68,21 @@
     }
   ],
   "timings": {
-    "pageReadyMs": 341,
-    "analyzeClickMs": 611,
-    "preview320FrameMs": 35.5,
-    "sprites40ResumeMs": 7810,
-    "statusSeconds": 7.8
+    "pageReadyMs": 371,
+    "analyzeClickMs": 613,
+    "preview320FrameMs": 35.2,
+    "sprites40ResumeMs": 10578,
+    "statusSeconds": 10.5
   },
   "memory": {
-    "heapAfterLoadMB": 6,
-    "chromeRssAfterLoadMB": 489.4,
-    "heapBeforeSpritesMB": 3.5,
-    "heapAfterSpritesMB": 27.2,
-    "chromeRssAfterSpritesMB": 655.5
+    "heapAfterLoadMB": 6.4,
+    "chromeRssAfterLoadMB": 501.2,
+    "heapBeforeSpritesMB": 9.2,
+    "heapAfterSpritesMB": 48.3,
+    "chromeRssAfterSpritesMB": 667.3
   },
   "errors": [],
   "consoleWarnings": [],
-  "finishedAt": "2026-11-21T20:12:35.372Z",
+  "finishedAt": "2026-11-21T20:27:51.959Z",
   "passed": true
 }

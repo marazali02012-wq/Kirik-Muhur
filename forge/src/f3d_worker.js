@@ -36,6 +36,7 @@
           const data = await png(sh.rgba, sh.width, sh.height);
           done++;
           post({ type: 'sheet', name, data, footRows: F.footRows(sh, ch.framing.frame), done, total, renderMs: rMs, encodeMs: performance.now() - te }, [data.buffer]);
+          if (m.coolMs) await new Promise(r => setTimeout(r, m.coolMs)); // ısınma koruması
         }
         post({ type: 'sprites-done', ms: performance.now() - t0 });
       } else if (m.type === 'glb') {

@@ -77,6 +77,7 @@
 <div class="section">RENKLER</div><div id="s3-colors" class="s3-colors"></div>
 <hr><div class="section">OYUNA AKTAR</div>
 <div class="export"><button class="btn primary" id="s3-zip">40 sprite + GLB ZIP</button><button class="btn" id="s3-glb">GLB indir + doğrula</button><button class="btn" id="s3-cancel" disabled>İptal</button><button class="btn" id="s3-resume" disabled>Devam et</button></div>
+<label class="s3-sel" style="margin-top:6px"><span>Isınma koruması (sayfalar arası bekleme)</span><select id="s3-cool"><option value="0">yok</option><option value="60" selected>60 ms</option><option value="250">250 ms</option></select></label>
 <label class="filebtn" style="margin-top:6px">GLB dosyası aç ve doğrula<input type="file" id="s3-verify-file" accept=".glb,model/gltf-binary"></label>
 <div class="progress"><div id="s3-bar"></div></div>
 <div class="status" id="s3-status"></div>
@@ -1471,9 +1472,11 @@ window.ForgeV11={get state(){return {...state}},dirs,actKeys,frameCanvas,manifes
         pose.rot[j2] = q.fromTo(d1, q.rotate(q.conj(W1), D2));
         // zemin çarpışması: eteğin en derin noktası (orta-arka) zeminin üstünde kalana dek etek geriye yatırılır
         const Bd = skel.body, c2 = Pr('cape.2');
-        const hem = [0, Bd.capeBottomY - c2[1] - 0.02, -(Bd.chestD * 1.17 * Bd.bulk) - 0.03 - c2[2]];
+        // etek ucundan 5 örnek nokta (yanlar + orta-arka); mesh'teki pelerin biçimiyle aynı formül
+        const rad = Bd.shoulderW * 0.72 * Bd.bulk * 1.035, dep = Bd.chestD * 1.17 * Bd.bulk * 1.035, arc = Math.PI * 1.14;
+        const hems = [-0.5, -0.25, 0, 0.25, 0.5].map(f => { const a = arc * f; return [Math.sin(a) * rad, Bd.capeBottomY - c2[1] - 0.02, -Math.cos(a) * dep - 0.03 - c2[2]]; });
         const p2 = F.poseWorld(skel, pose).wpos[j2];
-        const hemY = () => p2[1] + q.rotate(q.mul(W1, pose.rot[j2]), hem)[1];
+        const hemY = () => { const R2 = q.mul(W1, pose.rot[j2]); return Math.min(...hems.map(h => p2[1] + q.rotate(R2, h)[1])); };
         if (hemY() < 0.025) {
           let hz = [D2[0], 0, D2[2]]; if (v3.len(hz) < 0.1) hz = q.rotate(Wh, [0, 0, -1]); hz = v3.norm([hz[0], 0, hz[2]]);
           for (let beta = Math.asin(clamp(-D2[1], -1, 1)); beta > -0.9; beta -= 0.04) {
@@ -1488,7 +1491,7 @@ window.ForgeV11={get state(){return {...state}},dirs,actKeys,frameCanvas,manifes
         const type = (skel.style && skel.style.weapon) || 'sword'; if (type === 'none') return;
         const R = { sword: [0.96, 0.16], dagger: [0.44, 0.16], axe: [0.89, 0.17], hammer: [0.8, 0.17], mace: [0.87, 0.17], spear: [1.29, 0.58], staff: [1.11, 0.58] }[type] || [0.97, 0.16]; // mesh ile aynı uç/sap uzunlukları
         const W = F.poseWorld(skel, pose), wf = F.weaponFrame(skel, Pr), g = W.wpos[J.weapon];
-        const d = q.rotate(W.wrot[J.weapon], wf.dir), lim = 0.035;
+        const d = q.rotate(W.wrot[J.weapon], wf.dir), lim = 0.05; // balçak/bıçak kalınlığı payı
         const lo = -(g[1] - lim) / R[0], hi = (g[1] - lim) / R[1];
         let ny = d[1];
         if (lo > hi) ny = 0; else ny = clamp(ny, lo, hi);
@@ -1532,7 +1535,8 @@ window.ForgeV11={get state(){return {...state}},dirs,actKeys,frameCanvas,manifes
     if (ph < duty) { const s = ph / duty; return { z: half - 2 * half * s, y: B.ankleH, pitch: 0, stance: 1 }; }
     const s = (ph - duty) / (1 - duty), e = (1 - Math.cos(Math.PI * s)) / 2;
     const pitch = 0.7 * Math.sin(Math.PI * Math.min(1, s * 1.6)) * (1 - s) - 0.28 * Math.sin(Math.PI * s) * s;
-    return { z: -half + 2 * half * e, y: B.ankleH + lift * Math.pow(Math.sin(Math.PI * s), 0.85), pitch, stance: 0, s };
+    // parmak ucu aşağı dönerken ayak bileği o kadar yükseltilir: çizme burnu zemine girmez
+    return { z: -half + 2 * half * e, y: B.ankleH + Math.max(lift * Math.pow(Math.sin(Math.PI * s), 0.85), B.footL * 0.66 * Math.sin(Math.max(0, pitch)) + 0.004), pitch, stance: 0, s };
   }
   function walk(skel, t) {
     const c = makeCtx(skel), B = skel.body, ph = t * TAU;
@@ -1613,7 +1617,7 @@ window.ForgeV11={get state(){return {...state}},dirs,actKeys,frameCanvas,manifes
     for (const s of ['L', 'R']) {
       const toe = c.Pr('toe.' + s), an = c.Pr('foot.' + s), off = v3.sub(an, toe);
       const r = q.rotate(q.axisAngle([1, 0, 0], footPitch), off);
-      ankles[s] = v3.add(toe, r);
+      ankles[s] = v3.add(toe, v3.add(r, [0, 0.012 * Math.sin(footPitch), 0])); // çizme burnu ekleminin altındaki taban zemine girmesin
     }
     // Diz yere değdiğinde: diz = bilek + (0, -(ay-0.08), +ileri)
     const aY = ankles.L[1], aZ = ankles.L[2];
@@ -2378,6 +2382,7 @@ window.ForgeV11={get state(){return {...state}},dirs,actKeys,frameCanvas,manifes
           const data = await png(sh.rgba, sh.width, sh.height);
           done++;
           post({ type: 'sheet', name, data, footRows: F.footRows(sh, ch.framing.frame), done, total, renderMs: rMs, encodeMs: performance.now() - te }, [data.buffer]);
+          if (m.coolMs) await new Promise(r => setTimeout(r, m.coolMs)); // ısınma koruması
         }
         post({ type: 'sprites-done', ms: performance.now() - t0 });
       } else if (m.type === 'glb') {
@@ -2607,7 +2612,7 @@ self.onmessage = async ev => {
     async savedState() { try { return this.lastState || await kvGet('ldstate'); } catch (e) { return this.lastState; } },
     async resume() { const st = await this.savedState(); if (!st || !st.req) throw new Error('Devam edilecek kayıt yok'); this.lastReq = st.req; this.worker.postMessage(Object.assign({ type: 'generate', id: Date.now() }, st.req, { resume: st })); },
     cancel() { if (this.worker) this.worker.postMessage({ type: 'cancel' }); },
-    promptToCond, parsePack,
+    promptToCond, parsePack, kvGet, kvSet, kvDel,
   };
 })(typeof self !== 'undefined' ? self : globalThis);
 
@@ -2685,7 +2690,7 @@ self.onmessage = async ev => {
     const t0 = performance.now();
     S3.ch = F.createCharacter({ body: S3.src.body, palette: S3.src.palette, style: S3.src.style, seed: S3.src.seed || 7 });
     S3.perf.buildMs = performance.now() - t0;
-    if (!keepSheets) { S3.sheets.clear(); S3.glb = null; S3.manifest = null; updateResume(); }
+    if (!keepSheets) { S3.sheets.clear(); S3.glb = null; S3.manifest = null; updateResume(); loadStoredSheets().then(n => { if (n > 0 && n < 40) status('s3-status', `Bu karakter için önceki oturumdan ${n}/40 sayfa bulundu. "Devam et" ile tamamlayın.`); }); }
     const est = new Uint8Array(S3.ch.mesh.parts.length); S3.ch.mesh.parts.forEach((p, i) => { est[i] = p.estimated ? 1 : 0; }); S3.est8 = est;
     const m = S3.ch.mesh;
     $('s3-info').textContent = `${m.vertexCount} vertex · ${m.triangleCount} üçgen · ${S3.ch.skel.bones.length} kemik · ${m.parts.length} parça · kurulum ${S3.perf.buildMs.toFixed(0)} ms`;
@@ -2770,6 +2775,11 @@ self.onmessage = async ev => {
     return S3.worker;
   }
   function srcForWorker() { return { body: S3.ch.params.body, palette: S3.ch.params.palette, style: S3.ch.params.style, seed: S3.src.seed || 7 }; }
+  // Sekme kapanırsa (telefon belleği) tamamlanan sayfalar kaybolmasın: IndexedDB'de karakter özetine göre saklanır
+  function charKey() { const j = JSON.stringify(srcForWorker()); let h = 2166136261; for (let i = 0; i < j.length; i++) { h ^= j.charCodeAt(i); h = Math.imul(h, 16777619); } return 'sp:' + (h >>> 0).toString(16); }
+  async function storeSheet(name, data) { try { const k = charKey(), idx = (await LD.kvGet(k)) || []; if (!idx.includes(name)) idx.push(name); await LD.kvSet(k + ':' + name, data); await LD.kvSet(k, idx); } catch (e) { } }
+  async function loadStoredSheets() { try { const k = charKey(), idx = (await LD.kvGet(k)) || []; for (const n of idx) { const d = await LD.kvGet(k + ':' + n); if (d) S3.sheets.set(n, d); } } catch (e) { } updateResume(); return S3.sheets.size; }
+  async function clearStoredSheets() { try { const k = charKey(), idx = (await LD.kvGet(k)) || []; for (const n of idx) await LD.kvDel(k + ':' + n); await LD.kvDel(k); } catch (e) { } }
   function updateResume() { $('s3-resume').disabled = !(S3.sheets.size > 0 && S3.sheets.size < 40); }
   function runSprites(resume) {
     if (!S3.ch || S3.busy) return;
@@ -2780,7 +2790,7 @@ self.onmessage = async ev => {
     w.onmessage = async ev => {
       const m = ev.data;
       if (m.type === 'framing') { S3.manifest = m.manifest; }
-      else if (m.type === 'sheet') { S3.sheets.set(m.name, m.data); rSum += m.renderMs; eSum += m.encodeMs; $('s3-bar').style.width = (m.done / m.total * 100).toFixed(1) + '%'; status('s3-status', `Sprite sayfası ${m.done}/40 · ${m.name.split('/').slice(1).join(' / ')}`); }
+      else if (m.type === 'sheet') { S3.sheets.set(m.name, m.data); storeSheet(m.name, m.data); rSum += m.renderMs; eSum += m.encodeMs; $('s3-bar').style.width = (m.done / m.total * 100).toFixed(1) + '%'; status('s3-status', `Sprite sayfası ${m.done}/40 · ${m.name.split('/').slice(1).join(' / ')}`); }
       else if (m.type === 'cancelled') { S3.busy = false; $('s3-zip').disabled = false; $('s3-cancel').disabled = true; updateResume(); status('s3-status', `İptal edildi: ${S3.sheets.size}/40 sayfa saklandı. "Devam et" ile kalanlar üretilir.`); }
       else if (m.type === 'error') { S3.busy = false; $('s3-zip').disabled = false; $('s3-cancel').disabled = true; updateResume(); status('s3-status', 'Hata: ' + m.message, true); }
       else if (m.type === 'sprites-done') {
@@ -2795,13 +2805,13 @@ self.onmessage = async ev => {
         // ZIP'i hemen geri okuyup doğrula
         const back = F.readZip(zip), bad = back.filter(f => !f.crcOk).length;
         S3.lastZip = zip; S3.perf.spritesMs = performance.now() - t0;
-        download(new Blob([zip], { type: 'application/zip' }), 'forge_v12_3d_8yon_5hareket.zip');
+        download(new Blob([zip], { type: 'application/zip' }), 'forge_v12_3d_8yon_5hareket.zip'); clearStoredSheets();
         $('s3-bar').style.width = '100%'; S3.busy = false; $('s3-zip').disabled = false; $('s3-cancel').disabled = true; updateResume();
         status('s3-status', `Hazır: ${back.length} dosya (40 sayfa + manifest + GLB) · ZIP ${fmtMB(zip.length)} · CRC ${bad ? bad + ' HATALI' : 'tamam'} · ${(S3.perf.spritesMs / 1000).toFixed(1)} sn`);
         perfPanel();
       }
     };
-    w.postMessage({ type: 'sprites', src: srcForWorker(), have, ss: DEV.cores && DEV.cores <= 4 && DEV.memGB && DEV.memGB < 3 ? 1 : 2 });
+    w.postMessage({ type: 'sprites', src: srcForWorker(), have, coolMs: +$('s3-cool').value, ss: DEV.cores && DEV.cores <= 4 && DEV.memGB && DEV.memGB < 3 ? 1 : 2 });
   }
   function makeGLB() {
     return new Promise(res => {
@@ -2902,7 +2912,7 @@ self.onmessage = async ev => {
     $('s3-bones').onchange = e => { S3.bones = e.target.checked; draw(); };
     $('s3-est').onchange = e => { S3.est = e.target.checked; draw(); };
     $('s3-overlay').onchange = e => { S3.overlay = e.target.checked; if (S3.overlay) { S3.yaw = 0; S3.clip = 'idle'; S3.t = 0; S3.playing = false; syncButtons(); } draw(); };
-    $('s3-zip').onclick = () => runSprites(false); $('s3-resume').onclick = () => runSprites(true);
+    $('s3-zip').onclick = () => runSprites(false); $('s3-resume').onclick = async () => { if (!S3.sheets.size) await loadStoredSheets(); runSprites(true); };
     $('s3-cancel').onclick = () => { if (S3.worker) S3.worker.postMessage({ type: 'cancel' }); };
     $('s3-glb').onclick = async () => { status('s3-status', 'GLB üretiliyor…'); const g = await makeGLB(); if (g) { download(new Blob([g], { type: 'model/gltf-binary' }), 'forge_v12_savasci.glb'); await verifyGLBUI(g); status('s3-status', `GLB indirildi (${fmtMB(g.length)}) ve tekrar okunarak doğrulandı.`); perfPanel(); } };
     $('s3-verify-file').onchange = async e => { const f = e.target.files[0]; if (!f) return; const rep = await verifyGLBUI(new Uint8Array(await f.arrayBuffer())); status('s3-status', f.name + ': ' + (rep.ok ? 'geçerli GLB' : 'hatalı GLB'), !rep.ok); };

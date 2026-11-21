@@ -86,6 +86,6 @@
     async savedState() { try { return this.lastState || await kvGet('ldstate'); } catch (e) { return this.lastState; } },
     async resume() { const st = await this.savedState(); if (!st || !st.req) throw new Error('Devam edilecek kayıt yok'); this.lastReq = st.req; this.worker.postMessage(Object.assign({ type: 'generate', id: Date.now() }, st.req, { resume: st })); },
     cancel() { if (this.worker) this.worker.postMessage({ type: 'cancel' }); },
-    promptToCond, parsePack,
+    promptToCond, parsePack, kvGet, kvSet, kvDel,
   };
 })(typeof self !== 'undefined' ? self : globalThis);

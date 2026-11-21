@@ -69,9 +69,11 @@
         pose.rot[j2] = q.fromTo(d1, q.rotate(q.conj(W1), D2));
         // zemin çarpışması: eteğin en derin noktası (orta-arka) zeminin üstünde kalana dek etek geriye yatırılır
         const Bd = skel.body, c2 = Pr('cape.2');
-        const hem = [0, Bd.capeBottomY - c2[1] - 0.02, -(Bd.chestD * 1.17 * Bd.bulk) - 0.03 - c2[2]];
+        // etek ucundan 5 örnek nokta (yanlar + orta-arka); mesh'teki pelerin biçimiyle aynı formül
+        const rad = Bd.shoulderW * 0.72 * Bd.bulk * 1.035, dep = Bd.chestD * 1.17 * Bd.bulk * 1.035, arc = Math.PI * 1.14;
+        const hems = [-0.5, -0.25, 0, 0.25, 0.5].map(f => { const a = arc * f; return [Math.sin(a) * rad, Bd.capeBottomY - c2[1] - 0.02, -Math.cos(a) * dep - 0.03 - c2[2]]; });
         const p2 = F.poseWorld(skel, pose).wpos[j2];
-        const hemY = () => p2[1] + q.rotate(q.mul(W1, pose.rot[j2]), hem)[1];
+        const hemY = () => { const R2 = q.mul(W1, pose.rot[j2]); return Math.min(...hems.map(h => p2[1] + q.rotate(R2, h)[1])); };
         if (hemY() < 0.025) {
           let hz = [D2[0], 0, D2[2]]; if (v3.len(hz) < 0.1) hz = q.rotate(Wh, [0, 0, -1]); hz = v3.norm([hz[0], 0, hz[2]]);
           for (let beta = Math.asin(clamp(-D2[1], -1, 1)); beta > -0.9; beta -= 0.04) {
@@ -86,7 +88,7 @@
         const type = (skel.style && skel.style.weapon) || 'sword'; if (type === 'none') return;
         const R = { sword: [0.96, 0.16], dagger: [0.44, 0.16], axe: [0.89, 0.17], hammer: [0.8, 0.17], mace: [0.87, 0.17], spear: [1.29, 0.58], staff: [1.11, 0.58] }[type] || [0.97, 0.16]; // mesh ile aynı uç/sap uzunlukları
         const W = F.poseWorld(skel, pose), wf = F.weaponFrame(skel, Pr), g = W.wpos[J.weapon];
-        const d = q.rotate(W.wrot[J.weapon], wf.dir), lim = 0.035;
+        const d = q.rotate(W.wrot[J.weapon], wf.dir), lim = 0.05; // balçak/bıçak kalınlığı payı
         const lo = -(g[1] - lim) / R[0], hi = (g[1] - lim) / R[1];
         let ny = d[1];
         if (lo > hi) ny = 0; else ny = clamp(ny, lo, hi);
@@ -130,7 +132,8 @@
     if (ph < duty) { const s = ph / duty; return { z: half - 2 * half * s, y: B.ankleH, pitch: 0, stance: 1 }; }
     const s = (ph - duty) / (1 - duty), e = (1 - Math.cos(Math.PI * s)) / 2;
     const pitch = 0.7 * Math.sin(Math.PI * Math.min(1, s * 1.6)) * (1 - s) - 0.28 * Math.sin(Math.PI * s) * s;
-    return { z: -half + 2 * half * e, y: B.ankleH + lift * Math.pow(Math.sin(Math.PI * s), 0.85), pitch, stance: 0, s };
+    // parmak ucu aşağı dönerken ayak bileği o kadar yükseltilir: çizme burnu zemine girmez
+    return { z: -half + 2 * half * e, y: B.ankleH + Math.max(lift * Math.pow(Math.sin(Math.PI * s), 0.85), B.footL * 0.66 * Math.sin(Math.max(0, pitch)) + 0.004), pitch, stance: 0, s };
   }
   function walk(skel, t) {
     const c = makeCtx(skel), B = skel.body, ph = t * TAU;
@@ -211,7 +214,7 @@
     for (const s of ['L', 'R']) {
       const toe = c.Pr('toe.' + s), an = c.Pr('foot.' + s), off = v3.sub(an, toe);
       const r = q.rotate(q.axisAngle([1, 0, 0], footPitch), off);
-      ankles[s] = v3.add(toe, r);
+      ankles[s] = v3.add(toe, v3.add(r, [0, 0.012 * Math.sin(footPitch), 0])); // çizme burnu ekleminin altındaki taban zemine girmesin
     }
     // Diz yere değdiğinde: diz = bilek + (0, -(ay-0.08), +ileri)
     const aY = ankles.L[1], aZ = ankles.L[2];
