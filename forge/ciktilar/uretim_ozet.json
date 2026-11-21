@@ -4,9 +4,10 @@
     "confidence": 1,
     "ratios": {
       "headFrac": 0.123,
-      "legFrac": 0.46,
+      "legFrac": 0.49,
       "shoulderFrac": 0.41,
-      "asym": 0.048
+      "asym": 0.048,
+      "capeWidthRatio": 1.234
     },
     "style": {
       "cape": true,
@@ -16,45 +17,45 @@
       "pauldrons": "large"
     },
     "notes": [
-      "Bacak arası açıklık diz hizasında başlıyor (önlük/etek örtüyor); bacak oranı 0.46 kabul edildi.",
+      "Bacak arası açıklık diz hizasında başlıyor (önlük/etek örtüyor); bacak oranı 0.49 kabul edildi (düzeltilebilir).",
       "Derinlik (göğüs/bel/kalça kalınlığı) ve sırt/yan renkler tek resimden kesin bilinemez; anatomik oranlarla tahmin edildi."
     ]
   },
   "timingsMs": {
-    "analyzeMs": 75,
-    "buildMeshMs": 33,
-    "framingMs": 80,
-    "glbMs": 37,
-    "spritesAndZipMs": 10112
+    "analyzeMs": 73,
+    "buildMeshMs": 45,
+    "framingMs": 91,
+    "glbMs": 42,
+    "spritesAndZipMs": 10199
   },
-  "rssMB": 152.4,
+  "rssMB": 156.4,
   "mesh": {
     "vertices": 5459,
     "triangles": 8102,
     "bones": 26
   },
   "framing": {
-    "scale": 102.791,
+    "scale": 102.46,
     "cx": 128,
-    "cy": 229,
+    "cy": 228,
     "pitch": 0.33,
     "frame": 256,
     "extents": {
       "maxX": 1.148546381874981,
       "maxUp": 2.14613759365284,
-      "maxDown": 0.18870718290351668
+      "maxDown": 0.19623559116403816
     }
   },
   "glb": {
-    "bytes": 506896,
+    "bytes": 500308,
     "verify": {
       "ok": true,
       "errors": [],
       "stats": {
-        "vertices": 5863,
+        "vertices": 5767,
         "triangles": 8102,
-        "primitives": 11,
-        "materials": 11,
+        "primitives": 10,
+        "materials": 10,
         "joints": 26,
         "nodes": 27,
         "animations": {
@@ -79,7 +80,7 @@
             "duration": 1.4
           }
         },
-        "bytes": 506896,
+        "bytes": 500308,
         "jointNames": [
           "root",
           "hips",
@@ -87,25 +88,25 @@
           "chest",
           "neck",
           "head",
-          "shoulder.L",
-          "upperarm.L",
-          "forearm.L",
-          "hand.L",
-          "shoulder.R",
-          "upperarm.R",
-          "forearm.R",
-          "hand.R",
-          "thigh.L",
-          "shin.L",
-          "foot.L",
-          "toe.L",
-          "thigh.R",
-          "shin.R",
-          "foot.R",
-          "toe.R",
+          "shoulder_L",
+          "upperarm_L",
+          "forearm_L",
+          "hand_L",
+          "shoulder_R",
+          "upperarm_R",
+          "forearm_R",
+          "hand_R",
+          "thigh_L",
+          "shin_L",
+          "foot_L",
+          "toe_L",
+          "thigh_R",
+          "shin_R",
+          "foot_R",
+          "toe_R",
           "weapon",
-          "cape.1",
-          "cape.2",
+          "cape_1",
+          "cape_2",
           "shield"
         ],
         "maxWeightSumError": 2.9802322387695312e-8,
@@ -114,7 +115,7 @@
     }
   },
   "zip": {
-    "bytes": 7020362,
+    "bytes": 6936576,
     "files": 42
   }
 }

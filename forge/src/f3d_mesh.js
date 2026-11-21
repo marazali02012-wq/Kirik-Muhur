@@ -413,7 +413,7 @@
           const edge = c === 0 || c === cols || r.t > 0.95;
           const emblem = Math.abs(x) < r.wdt * 0.3 && r.t > 0.35 && r.t < 0.8;
           const col = edge ? trim : emblem ? mix(cloth, trim, 0.55) : cloth;
-          B.vert([x, r.y, r.z + side * (1 - (2 * u - 1) ** 2) * 0.012], [0, 0, side], [u, r.t], col, edge ? MAT.trim : MAT.cloth, r.w);
+          B.vert([x, r.y, r.z + side * (1 - (2 * u - 1) ** 2) * 0.012], [0, 0, side], [u, r.t], col, MAT.cloth /* nakış: metal değil */, r.w);
         }
         for (let i = 0; i < n; i++) for (let c = 0; c < cols; c++) {
           const a = base + i * (cols + 1) + c, b = a + 1, d = a + cols + 1, e = d + 1;
@@ -448,7 +448,7 @@
           const edge = t > 0.94 || c === 0 || c === colsN;
           const emblem = Math.abs(u - 0.5) < 0.09 && t > 0.2 && t < 0.55;
           const col = edge ? trim : emblem ? mix(cloth, trim, 0.6) : shade(cloth, 0.9 + 0.1 * Math.sin(u * Math.PI * 7));
-          B.vert([x * fold, y, z * fold], v3.norm([Math.sin(a), 0, -Math.cos(a)]), [u, t], col, edge ? MAT.trim : MAT.cloth, w);
+          B.vert([x * fold, y, z * fold], v3.norm([Math.sin(a), 0, -Math.cos(a)]), [u, t], col, MAT.cloth /* nakış: metal değil */, w);
         }
       }
       for (let i = 0; i < rowsN; i++) for (let c = 0; c < colsN; c++) {

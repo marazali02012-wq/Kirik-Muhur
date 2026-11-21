@@ -1,0 +1,104 @@
+{
+ "glb": "ciktilar/ornek_savasci.glb",
+ "threeVersion": "0.170.0",
+ "pass": true,
+ "result": {
+  "ok": true,
+  "animations": [
+   {
+    "name": "idle",
+    "duration": 1.6,
+    "tracks": 17
+   },
+   {
+    "name": "walk",
+    "duration": 0.9,
+    "tracks": 19
+   },
+   {
+    "name": "attack",
+    "duration": 0.8,
+    "tracks": 19
+   },
+   {
+    "name": "hurt",
+    "duration": 0.5,
+    "tracks": 18
+   },
+   {
+    "name": "death",
+    "duration": 1.4,
+    "tracks": 18
+   }
+  ],
+  "skinnedMeshes": 10,
+  "bones": 26,
+  "boneNames": [
+   "root",
+   "hips",
+   "spine",
+   "chest",
+   "neck",
+   "head",
+   "shoulder_L",
+   "upperarm_L",
+   "forearm_L",
+   "hand_L",
+   "shoulder_R",
+   "upperarm_R",
+   "forearm_R",
+   "hand_R",
+   "thigh_L",
+   "shin_L",
+   "foot_L",
+   "toe_L",
+   "thigh_R",
+   "shin_R",
+   "foot_R",
+   "toe_R",
+   "weapon",
+   "cape_1",
+   "cape_2",
+   "shield"
+  ],
+  "poses": [
+   {
+    "name": "idle",
+    "t": 0.3,
+    "handR": [
+     -0.367,
+     0.924,
+     0.047
+    ]
+   },
+   {
+    "name": "walk",
+    "t": 0.25,
+    "handR": [
+     -0.366,
+     0.917,
+     0.048
+    ]
+   },
+   {
+    "name": "attack",
+    "t": 0.33,
+    "handR": [
+     -0.109,
+     1.262,
+     0.302
+    ]
+   },
+   {
+    "name": "death",
+    "t": 1.39,
+    "handR": [
+     -0.331,
+     0.164,
+     0.601
+    ]
+   }
+  ]
+ },
+ "pageErrors": []
+}

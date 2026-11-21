@@ -9,7 +9,7 @@
   const { q, m4 } = F;
 
   const MAT_PBR = { // [metallic, roughness, emissiveStrength]
-    skin: [0, 0.7, 0], metal: [0.85, 0.35, 0], cloth: [0, 0.9, 0], leather: [0, 0.75, 0], hair: [0, 0.8, 0],
+    skin: [0, 0.7, 0], metal: [0.7, 0.38, 0], cloth: [0, 0.9, 0], leather: [0, 0.75, 0], hair: [0, 0.8, 0],
     blade: [1, 0.2, 0], trim: [1, 0.3, 0], gem: [0.2, 0.15, 0.6], dark: [0, 0.9, 0], under: [0, 0.85, 0],
   };
 
@@ -47,14 +47,17 @@
       const remap = new Map(), used = [];
       const li = idx.map(v => { let r = remap.get(v); if (r === undefined) { r = used.length; remap.set(v, r); used.push(v); } return r; });
       const nv = used.length, P = new Float32Array(nv * 3), N = new Float32Array(nv * 3), C = new Float32Array(nv * 3), Jn = new Uint8Array(nv * 4), Wt = new Float32Array(nv * 4);
-      used.forEach((v, k) => { for (let e = 0; e < 3; e++) { P[k * 3 + e] = mesh.position[v * 3 + e]; N[k * 3 + e] = mesh.normal[v * 3 + e]; C[k * 3 + e] = mesh.color[v * 3 + e]; } for (let e = 0; e < 4; e++) { Jn[k * 4 + e] = mesh.joints[v * 4 + e]; Wt[k * 4 + e] = mesh.weights[v * 4 + e]; } });
+      // glTF COLOR_0 doğrusal renk uzayındadır: sRGB -> doğrusal
+      const lin = c => c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+      used.forEach((v, k) => { for (let e = 0; e < 3; e++) { P[k * 3 + e] = mesh.position[v * 3 + e]; N[k * 3 + e] = mesh.normal[v * 3 + e]; C[k * 3 + e] = lin(mesh.color[v * 3 + e]); } for (let e = 0; e < 4; e++) { Jn[k * 4 + e] = mesh.joints[v * 4 + e]; Wt[k * 4 + e] = mesh.weights[v * 4 + e]; } });
       const attributes = { POSITION: addAccessor(P, 'VEC3', 5126, 34962, minmax(P, 3)), NORMAL: addAccessor(N, 'VEC3', 5126, 34962), COLOR_0: addAccessor(C, 'VEC3', 5126, 34962), JOINTS_0: addAccessor(Jn, 'VEC4', 5121, 34962), WEIGHTS_0: addAccessor(Wt, 'VEC4', 5126, 34962) };
       const arr = nv > 65535 ? new Uint32Array(li) : new Uint16Array(li);
       const aIdx = addAccessor(arr, 'SCALAR', nv > 65535 ? 5125 : 5123, 34963);
       primitives.push({ attributes, indices: aIdx, material: materials.length - 1, mode: 4 });
     }
     // Kemik düğümleri
-    const nodes = skel.bones.map(b => ({ name: b.name, translation: b.restLocal.map(v => +v.toFixed(6)), children: [] }));
+    // Düğüm adlarında nokta yok (three.js vb. bazı yükleyiciler noktayı siler): hand.R -> hand_R
+    const nodes = skel.bones.map(b => ({ name: b.name.replace(/\./g, '_'), translation: b.restLocal.map(v => +v.toFixed(6)), children: [] }));
     skel.bones.forEach(b => { if (b.parent >= 0) nodes[b.parent].children.push(b.index); });
     nodes.forEach(nd => { if (!nd.children.length) delete nd.children; });
     const meshNode = nodes.length;
@@ -195,7 +198,7 @@
     const skin = json.skins[0], joints = skin.joints, nJ = joints.length;
     const parent = new Array(json.nodes.length).fill(-1); json.nodes.forEach((nd, i) => (nd.children || []).forEach(c => { parent[c] = i; }));
     const jIndex = new Map(joints.map((j, k) => [j, k]));
-    const bones = joints.map((j, k) => ({ name: json.nodes[j].name, index: k, parent: parent[j] >= 0 ? jIndex.get(parent[j]) : -1, restLocal: json.nodes[j].translation || [0, 0, 0] }));
+    const bones = joints.map((j, k) => ({ name: json.nodes[j].name.replace(/_(L|R|1|2)$/, '.$1'), index: k, parent: parent[j] >= 0 ? jIndex.get(parent[j]) : -1, restLocal: json.nodes[j].translation || [0, 0, 0] }));
     const ibm = read(skin.inverseBindMatrices);
     const skel = { bones, index: Object.fromEntries(bones.map(b => [b.name, b.index])), invBind: bones.map((b, k) => Array.from(ibm.subarray(k * 16, k * 16 + 16))) };
     const prims = json.meshes[0].primitives;
@@ -203,7 +206,8 @@
     const n = all.reduce((a, x) => a + x.P.length / 3, 0);
     const position = new Float32Array(n * 3), normal = new Float32Array(n * 3), color = new Float32Array(n * 3), jointsA = new Uint8Array(n * 4), weightsA = new Float32Array(n * 4), material = new Uint8Array(n), part = new Uint16Array(n), idxAll = [];
     let base = 0;
-    all.forEach((x, pi) => { const nv = x.P.length / 3; position.set(x.P, base * 3); normal.set(x.N, base * 3); color.set(x.C, base * 3); jointsA.set(x.J, base * 4); weightsA.set(x.W, base * 4); material.fill(x.m, base, base + nv); part.fill(pi, base, base + nv); for (const v of x.I) idxAll.push(v + base); base += nv; });
+    const srgb = c => c <= 0.0031308 ? c * 12.92 : 1.055 * Math.pow(c, 1 / 2.4) - 0.055;
+    all.forEach((x, pi) => { const nv = x.P.length / 3; position.set(x.P, base * 3); normal.set(x.N, base * 3); color.set(x.C.map(srgb), base * 3); jointsA.set(x.J, base * 4); weightsA.set(x.W, base * 4); material.fill(x.m, base, base + nv); part.fill(pi, base, base + nv); for (const v of x.I) idxAll.push(v + base); base += nv; });
     const mesh = {
       vertexCount: n, position, normal, color, joints: jointsA, weights: weightsA,
       material, part, index: n > 65535 ? new Uint32Array(idxAll) : new Uint16Array(idxAll), doubleSidedPart: new Uint8Array(prims.map(p => json.materials[p.material].doubleSided ? 1 : 0)), clothPart: null, parts: prims.map((p, i) => ({ name: 'prim' + i })),

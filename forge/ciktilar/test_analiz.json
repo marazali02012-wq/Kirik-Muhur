@@ -1,0 +1,1406 @@
+{
+ "summary": {
+  "samples": 60,
+  "legFracAbsErr": {
+   "mean": 0.027,
+   "median": 0.026
+  },
+  "shoulderRelErr": {
+   "mean": 0.053,
+   "median": 0.053
+  },
+  "headRelErr": {
+   "mean": 0.017,
+   "median": 0.017
+  },
+  "capeDetectAcc": 1,
+  "heavyArmorDetectAcc": 0.55,
+  "clothHueErrDeg": {
+   "mean": 16.609,
+   "median": 1.395,
+   "within30": 0.9
+  }
+ },
+ "samples": [
+  {
+   "i": 0,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.526,
+    "shoulderW": 0.408,
+    "headH": 0.247,
+    "clothHue": 90
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.401,
+    "headH": 0.244,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 84
+   }
+  },
+  {
+   "i": 1,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.505,
+    "shoulderW": 0.404,
+    "headH": 0.256,
+    "clothHue": 0
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.396,
+    "headH": 0.252,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 7
+   }
+  },
+  {
+   "i": 2,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.503,
+    "shoulderW": 0.401,
+    "headH": 0.23,
+    "clothHue": 60
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.397,
+    "headH": 0.226,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 228
+   }
+  },
+  {
+   "i": 3,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.494,
+    "shoulderW": 0.509,
+    "headH": 0.235,
+    "clothHue": 330
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.465,
+    "headH": 0.23,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 332
+   }
+  },
+  {
+   "i": 4,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.507,
+    "shoulderW": 0.52,
+    "headH": 0.238,
+    "clothHue": 30
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.47,
+    "headH": 0.234,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 228
+   }
+  },
+  {
+   "i": 5,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.533,
+    "shoulderW": 0.437,
+    "headH": 0.279,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.42,
+    "headH": 0.274,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 117
+   }
+  },
+  {
+   "i": 6,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.541,
+    "shoulderW": 0.445,
+    "headH": 0.278,
+    "clothHue": 330
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.425,
+    "headH": 0.274,
+    "cape": true,
+    "armor": "medium",
+    "clothHue": 330
+   }
+  },
+  {
+   "i": 7,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.553,
+    "shoulderW": 0.404,
+    "headH": 0.249,
+    "clothHue": 300
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.396,
+    "headH": 0.248,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 301
+   }
+  },
+  {
+   "i": 8,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.533,
+    "shoulderW": 0.421,
+    "headH": 0.249,
+    "clothHue": 150
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.411,
+    "headH": 0.244,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 141
+   }
+  },
+  {
+   "i": 9,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.498,
+    "shoulderW": 0.513,
+    "headH": 0.281,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.464,
+    "headH": 0.274,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 119
+   }
+  },
+  {
+   "i": 10,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.492,
+    "shoulderW": 0.472,
+    "headH": 0.252,
+    "clothHue": 180
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.44,
+    "headH": 0.248,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 180
+   }
+  },
+  {
+   "i": 11,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.526,
+    "shoulderW": 0.418,
+    "headH": 0.278,
+    "clothHue": 240
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.406,
+    "headH": 0.274,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 241
+   }
+  },
+  {
+   "i": 12,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.48,
+    "shoulderW": 0.453,
+    "headH": 0.286,
+    "clothHue": 90
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.43,
+    "headH": 0.281,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 88
+   }
+  },
+  {
+   "i": 13,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.529,
+    "shoulderW": 0.447,
+    "headH": 0.26,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.425,
+    "headH": 0.255,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 121
+   }
+  },
+  {
+   "i": 14,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.516,
+    "shoulderW": 0.405,
+    "headH": 0.289,
+    "clothHue": 240
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.401,
+    "headH": 0.281,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 241
+   }
+  },
+  {
+   "i": 15,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.518,
+    "shoulderW": 0.467,
+    "headH": 0.266,
+    "clothHue": 30
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.435,
+    "headH": 0.263,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 228
+   }
+  },
+  {
+   "i": 16,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.502,
+    "shoulderW": 0.436,
+    "headH": 0.271,
+    "clothHue": 240
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.415,
+    "headH": 0.266,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 240
+   }
+  },
+  {
+   "i": 17,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.552,
+    "shoulderW": 0.48,
+    "headH": 0.24,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.445,
+    "headH": 0.234,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 87
+   }
+  },
+  {
+   "i": 18,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.52,
+    "shoulderW": 0.46,
+    "headH": 0.28,
+    "clothHue": 180
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.435,
+    "headH": 0.274,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 178
+   }
+  },
+  {
+   "i": 19,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.555,
+    "shoulderW": 0.504,
+    "headH": 0.28,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.459,
+    "headH": 0.274,
+    "cape": true,
+    "armor": "medium",
+    "clothHue": 121
+   }
+  },
+  {
+   "i": 20,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.516,
+    "shoulderW": 0.431,
+    "headH": 0.278,
+    "clothHue": 210
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.415,
+    "headH": 0.274,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 210
+   }
+  },
+  {
+   "i": 21,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.524,
+    "shoulderW": 0.415,
+    "headH": 0.257,
+    "clothHue": 210
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.406,
+    "headH": 0.255,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 210
+   }
+  },
+  {
+   "i": 22,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.478,
+    "shoulderW": 0.437,
+    "headH": 0.271,
+    "clothHue": 210
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.42,
+    "headH": 0.266,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 210
+   }
+  },
+  {
+   "i": 23,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.503,
+    "shoulderW": 0.517,
+    "headH": 0.282,
+    "clothHue": 150
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.469,
+    "headH": 0.278,
+    "cape": true,
+    "armor": "medium",
+    "clothHue": 150
+   }
+  },
+  {
+   "i": 24,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.503,
+    "shoulderW": 0.419,
+    "headH": 0.273,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.406,
+    "headH": 0.266,
+    "cape": false,
+    "armor": "medium",
+    "clothHue": 120
+   }
+  },
+  {
+   "i": 25,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.511,
+    "shoulderW": 0.444,
+    "headH": 0.249,
+    "clothHue": 300
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.42,
+    "headH": 0.244,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 309
+   }
+  },
+  {
+   "i": 26,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.527,
+    "shoulderW": 0.481,
+    "headH": 0.249,
+    "clothHue": 330
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.444,
+    "headH": 0.248,
+    "cape": false,
+    "armor": "medium",
+    "clothHue": 336
+   }
+  },
+  {
+   "i": 27,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.51,
+    "shoulderW": 0.463,
+    "headH": 0.263,
+    "clothHue": 60
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.435,
+    "headH": 0.259,
+    "cape": true,
+    "armor": "medium",
+    "clothHue": 51
+   }
+  },
+  {
+   "i": 28,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.504,
+    "shoulderW": 0.411,
+    "headH": 0.239,
+    "clothHue": 0
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.402,
+    "headH": 0.234,
+    "cape": true,
+    "armor": "medium",
+    "clothHue": 3
+   }
+  },
+  {
+   "i": 29,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.513,
+    "shoulderW": 0.436,
+    "headH": 0.279,
+    "clothHue": 300
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.415,
+    "headH": 0.274,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 299
+   }
+  },
+  {
+   "i": 30,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.504,
+    "shoulderW": 0.404,
+    "headH": 0.274,
+    "clothHue": 270
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.396,
+    "headH": 0.27,
+    "cape": false,
+    "armor": "medium",
+    "clothHue": 270
+   }
+  },
+  {
+   "i": 31,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.554,
+    "shoulderW": 0.454,
+    "headH": 0.253,
+    "clothHue": 300
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.43,
+    "headH": 0.252,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 309
+   }
+  },
+  {
+   "i": 32,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.533,
+    "shoulderW": 0.472,
+    "headH": 0.285,
+    "clothHue": 210
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.44,
+    "headH": 0.278,
+    "cape": true,
+    "armor": "medium",
+    "clothHue": 210
+   }
+  },
+  {
+   "i": 33,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.521,
+    "shoulderW": 0.44,
+    "headH": 0.281,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.42,
+    "headH": 0.274,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 120
+   }
+  },
+  {
+   "i": 34,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.486,
+    "shoulderW": 0.517,
+    "headH": 0.273,
+    "clothHue": 210
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.469,
+    "headH": 0.266,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 210
+   }
+  },
+  {
+   "i": 35,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.502,
+    "shoulderW": 0.513,
+    "headH": 0.271,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.464,
+    "headH": 0.266,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 120
+   }
+  },
+  {
+   "i": 36,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.497,
+    "shoulderW": 0.47,
+    "headH": 0.286,
+    "clothHue": 60
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.44,
+    "headH": 0.281,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 228
+   }
+  },
+  {
+   "i": 37,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.545,
+    "shoulderW": 0.498,
+    "headH": 0.269,
+    "clothHue": 300
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.454,
+    "headH": 0.266,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 309
+   }
+  },
+  {
+   "i": 38,
+   "style": {
+    "cape": false,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.535,
+    "shoulderW": 0.498,
+    "headH": 0.267,
+    "clothHue": 330
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.454,
+    "headH": 0.263,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 338
+   }
+  },
+  {
+   "i": 39,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.538,
+    "shoulderW": 0.455,
+    "headH": 0.255,
+    "clothHue": 150
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.43,
+    "headH": 0.252,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 143
+   }
+  },
+  {
+   "i": 40,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.537,
+    "shoulderW": 0.491,
+    "headH": 0.235,
+    "clothHue": 330
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.455,
+    "headH": 0.23,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 338
+   }
+  },
+  {
+   "i": 41,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.528,
+    "shoulderW": 0.509,
+    "headH": 0.233,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.465,
+    "headH": 0.23,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 113
+   }
+  },
+  {
+   "i": 42,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.535,
+    "shoulderW": 0.409,
+    "headH": 0.283,
+    "clothHue": 330
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.401,
+    "headH": 0.278,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 332
+   }
+  },
+  {
+   "i": 43,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.502,
+    "shoulderW": 0.45,
+    "headH": 0.281,
+    "clothHue": 180
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.425,
+    "headH": 0.274,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 179
+   }
+  },
+  {
+   "i": 44,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.486,
+    "shoulderW": 0.474,
+    "headH": 0.233,
+    "clothHue": 210
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.441,
+    "headH": 0.23,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 210
+   }
+  },
+  {
+   "i": 45,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.526,
+    "shoulderW": 0.413,
+    "headH": 0.272,
+    "clothHue": 150
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.406,
+    "headH": 0.266,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 149
+   }
+  },
+  {
+   "i": 46,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.523,
+    "shoulderW": 0.446,
+    "headH": 0.252,
+    "clothHue": 120
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.425,
+    "headH": 0.248,
+    "cape": false,
+    "armor": "medium",
+    "clothHue": 120
+   }
+  },
+  {
+   "i": 47,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.519,
+    "shoulderW": 0.467,
+    "headH": 0.24,
+    "clothHue": 0
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.436,
+    "headH": 0.234,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 4
+   }
+  },
+  {
+   "i": 48,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.498,
+    "shoulderW": 0.506,
+    "headH": 0.233,
+    "clothHue": 210
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.46,
+    "headH": 0.23,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 210
+   }
+  },
+  {
+   "i": 49,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.504,
+    "shoulderW": 0.443,
+    "headH": 0.252,
+    "clothHue": 210
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.42,
+    "headH": 0.248,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 210
+   }
+  },
+  {
+   "i": 50,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.512,
+    "shoulderW": 0.492,
+    "headH": 0.267,
+    "clothHue": 240
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.454,
+    "headH": 0.263,
+    "cape": true,
+    "armor": "medium",
+    "clothHue": 240
+   }
+  },
+  {
+   "i": 51,
+   "style": {
+    "cape": false,
+    "armor": "light",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.495,
+    "shoulderW": 0.403,
+    "headH": 0.258,
+    "clothHue": 180
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.396,
+    "headH": 0.255,
+    "cape": false,
+    "armor": "medium",
+    "clothHue": 181
+   }
+  },
+  {
+   "i": 52,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.513,
+    "shoulderW": 0.51,
+    "headH": 0.257,
+    "clothHue": 90
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.464,
+    "headH": 0.252,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 89
+   }
+  },
+  {
+   "i": 53,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.497,
+    "shoulderW": 0.42,
+    "headH": 0.231,
+    "clothHue": 300
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.412,
+    "headH": 0.226,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 303
+   }
+  },
+  {
+   "i": 54,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.496,
+    "shoulderW": 0.435,
+    "headH": 0.286,
+    "clothHue": 0
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.415,
+    "headH": 0.281,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 2
+   }
+  },
+  {
+   "i": 55,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.506,
+    "shoulderW": 0.473,
+    "headH": 0.257,
+    "clothHue": 60
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.44,
+    "headH": 0.252,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 228
+   }
+  },
+  {
+   "i": 56,
+   "style": {
+    "cape": true,
+    "armor": "heavy",
+    "weapon": "mace",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.515,
+    "shoulderW": 0.499,
+    "headH": 0.283,
+    "clothHue": 90
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.459,
+    "headH": 0.278,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 89
+   }
+  },
+  {
+   "i": 57,
+   "style": {
+    "cape": true,
+    "armor": "light",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.533,
+    "shoulderW": 0.402,
+    "headH": 0.232,
+    "clothHue": 300
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.397,
+    "headH": 0.226,
+    "cape": true,
+    "armor": "medium",
+    "clothHue": 300
+   }
+  },
+  {
+   "i": 58,
+   "style": {
+    "cape": true,
+    "armor": "medium",
+    "weapon": "axe",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.523,
+    "shoulderW": 0.405,
+    "headH": 0.274,
+    "clothHue": 240
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.401,
+    "headH": 0.27,
+    "cape": true,
+    "armor": "heavy",
+    "clothHue": 240
+   }
+  },
+  {
+   "i": 59,
+   "style": {
+    "cape": false,
+    "armor": "medium",
+    "weapon": "sword",
+    "tabard": true
+   },
+   "true": {
+    "legFrac": 0.553,
+    "shoulderW": 0.457,
+    "headH": 0.243,
+    "clothHue": 270
+   },
+   "found": {
+    "legFrac": 0.49,
+    "shoulderW": 0.431,
+    "headH": 0.237,
+    "cape": false,
+    "armor": "heavy",
+    "clothHue": 272
+   }
+  }
+ ]
+}

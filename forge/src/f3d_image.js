@@ -126,7 +126,7 @@
     }
     let legFrac = crotchIdx > 0 ? (H - crotchIdx) / H : 0.47;
     if (crotchIdx < 0) notes.push('Kasık açıklığı görülmedi (önlük/cüppe olabilir); bacak boyu ortalama oranla tahmin edildi.');
-    if (legFrac < 0.43) { notes.push('Bacak arası açıklık diz hizasında başlıyor (önlük/etek örtüyor); bacak oranı 0.46 kabul edildi.'); legFrac = 0.46; }
+    if (legFrac < 0.43) { notes.push('Bacak arası açıklık diz hizasında başlıyor (önlük/etek örtüyor); bacak oranı 0.49 kabul edildi (düzeltilebilir).'); legFrac = 0.49; }
     legFrac = clamp(legFrac, 0.40, 0.52);
     // Kollar: gövde bandında merkezden ayrı koşular
     let armSamples = [];
@@ -186,8 +186,13 @@
     for (let i = Math.round(H * 0.35); i < Math.round(H * 0.75); i += 2) {
       const row = rows[i]; for (const x of [row.l + 1, row.r - 1]) { const k = row.y * w + x; if (!mask[k]) continue; capeTot++; const hv = rgb2hsv(rgba[k * 4], rgba[k * 4 + 1], rgba[k * 4 + 2]); const cc = rgb2hsv(...palette.cloth); if (Math.abs(hv[0] - cc[0]) < 25 && hv[1] > 0.25) capeVotes++; }
     }
+    // Pelerin: diz hizasında (0.72H) gövde eksenine yakın, kalın (ince bıçak değil) parçaların genişliği / omuz genişliği.
+    // Pelerin arkadan iki yana taşar; pelerinsiz karakterde bu oran bacak genişliği kadardır. (Sentetik testte ayrım: ≤0.71 / ≥0.88)
+    const capeRow = R(0.72), thick = H * 0.03;
+    const near = capeRow.runs.filter(r => r[1] - r[0] + 1 >= thick && Math.abs((r[0] + r[1]) / 2 - cx) < shoulderPx * 0.62);
+    const capeWidthRatio = near.length ? (Math.max(...near.map(r => r[1])) - Math.min(...near.map(r => r[0])) + 1) / Math.max(1, shoulderPx) : 0;
     const style = {
-      cape: capeTot > 0 && capeVotes / capeTot > 0.3,
+      cape: capeWidthRatio > 0.8 || (capeWidthRatio > 0.74 && capeTot > 0 && capeVotes / capeTot > 0.5),
       armor: metalShare > 0.28 ? 'heavy' : metalShare > 0.14 ? 'medium' : clothShare > 0.45 ? 'robe' : 'light',
       helmet: hair && rgb2hsv(...hair)[1] < 0.25 && rgb2hsv(...hair)[2] > 0.55 ? 'full' : 'circlet',
       weapon: weaponGuess || 'sword',
@@ -217,7 +222,7 @@
       ok: true, method, confidence, body, palette, style, notes,
       clusters: clusters.map(c => ({ rgb: c.rgb, share: +c.share.toFixed(3) })),
       landmarks: { top, bot, left, right, cx, neckY: top + neckIdx, shoulderY: top + shoulderIdx, crotchY: crotchIdx >= 0 ? top + crotchIdx : null, H },
-      ratios: { headFrac: +headFrac.toFixed(3), legFrac: +legFrac.toFixed(3), shoulderFrac: +(shoulderPx / H).toFixed(3), asym: +asym.toFixed(3) },
+      ratios: { headFrac: +headFrac.toFixed(3), legFrac: +legFrac.toFixed(3), shoulderFrac: +(shoulderPx / H).toFixed(3), asym: +asym.toFixed(3), capeWidthRatio: +capeWidthRatio.toFixed(3) },
     };
   }
 

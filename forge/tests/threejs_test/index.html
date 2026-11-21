@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><title>three.js GLB açma testi</title>
+<script type="importmap">{"imports":{"three":"/tests/node_modules/three/build/three.module.js","three/addons/":"/tests/node_modules/three/examples/jsm/"}}</script></head>
+<body style="margin:0;background:#223"><canvas id="c" width="640" height="360"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const out = window.RESULT = { ok: false };
+try {
+  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, preserveDrawingBuffer: true });
+  const scene = new THREE.Scene(); scene.background = new THREE.Color(0x283a55);
+  const cam = new THREE.PerspectiveCamera(30, 640 / 360, 0.1, 100); cam.position.set(2.2, 1.6, 4.2); cam.lookAt(0, 0.95, 0);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x334455, 2.2)); const d = new THREE.DirectionalLight(0xffffff, 2); d.position.set(2, 4, 3); scene.add(d);
+  const gltf = await new GLTFLoader().loadAsync(new URLSearchParams(location.search).get('glb'));
+  const root = gltf.scene; scene.add(root);
+  let skinned = null; root.traverse(o => { if (o.isSkinnedMesh && !skinned) skinned = o; });
+  const mixer = new THREE.AnimationMixer(root);
+  out.animations = gltf.animations.map(a => ({ name: a.name, duration: +a.duration.toFixed(3), tracks: a.tracks.length }));
+  out.skinnedMeshes = 0; out.bones = skinned ? skinned.skeleton.bones.length : 0; root.traverse(o => { if (o.isSkinnedMesh) out.skinnedMeshes++; });
+  out.boneNames = skinned ? skinned.skeleton.bones.map(b => b.name) : [];
+  // 3 klip yan yana: idle, walk, attack — her biri ayrı kopya
+  const shots = [];
+  for (const [name, t] of [['idle', 0.3], ['walk', 0.25], ['attack', 0.33], ['death', 1.39]]) {
+    const clip = gltf.animations.find(a => a.name === name); mixer.stopAllAction(); const act = mixer.clipAction(clip); act.play(); mixer.setTime(t); root.updateMatrixWorld(true);
+    // eldeki silahın dünya konumu (animasyonun mesh'e uygulandığını kanıtlar)
+    const hand = root.getObjectByName('hand_R'); const p = new THREE.Vector3(); hand.getWorldPosition(p); shots.push({ name, t, handR: p.toArray().map(v => +v.toFixed(3)) });
+    renderer.render(scene, cam);
+    shots[shots.length - 1].png = renderer.domElement.toDataURL('image/png');
+  }
+  out.poses = shots; out.ok = true;
+} catch (e) { out.error = String(e && e.stack || e); }
+</script></body></html>
