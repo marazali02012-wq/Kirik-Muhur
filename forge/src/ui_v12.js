@@ -112,7 +112,9 @@
     const res = F.sampleClip(S3.ch.skel, S3.clip, S3.t), Wd = F.poseWorld(S3.ch.skel, res.pose);
     const sk = F.skinVertices(S3.ch.mesh, F.skinMatrices(S3.ch.skel, Wd));
     const scale = H / 2.45, cx = W / 2, cy = H * 0.9;
-    const r = F.render(S3.ch.mesh, sk, { width: W, height: H, yaw: S3.yaw, pitch: S3.pitch, scale, cx, cy, ss: S3.dragging ? 1 : 2, highlight: S3.est ? S3.est8 : null,
+    // yavaş cihazda (kare > 60 ms) oynatma sırasında süper örnekleme 1x'e iner; durunca 2x net kare çizilir
+    const ss = S3.dragging || (S3.playing && (S3.perf.frameMs || 0) > 60) ? 1 : 2;
+    const r = F.render(S3.ch.mesh, sk, { width: W, height: H, yaw: S3.yaw, pitch: S3.pitch, scale, cx, cy, ss, highlight: S3.est ? S3.est8 : null,
       shadow: { cx, cy, rx: 0.36 * scale, ry: 0.36 * scale * Math.sin(S3.pitch), alpha: 0.3 }, tint: res.tint && res.tint[3] > 0.01 ? res.tint : null });
     const ctx = c.getContext('2d'); ctx.clearRect(0, 0, W, H);
     if (S3.overlay && S3.srcImg) { ctx.globalAlpha = 0.45; const s = S3.srcImg, k = Math.min(W / s.width, H / s.height); ctx.drawImage(s, (W - s.width * k) / 2, (H - s.height * k) / 2, s.width * k, s.height * k); ctx.globalAlpha = 1; }
@@ -224,9 +226,14 @@
   }
 
   // ---------------- YEREL RÜYA (Local Dream) ----------------
-  async function ldShowPack(p) {
+  async function ldShowPack(p, lazy) {
     if (!p) { status('ld-status', 'Model paketi yüklü değil. Kurulum: .forgepack dosyasını bir kez seçin; sonra internet gerekmez.', true); $('ld-go').disabled = true; return; }
     const cfg = LD.config();
+    if (lazy) { // telefonda her açılışta 50 MB'lık motoru derlememek için: ilk "Üret" dokunuşunda başlatılır
+      status('ld-status', `Kayıtlı paket: ${cfg.name} · ${fmtMB(p.bytes || 0)} · cihazda (çevrimdışı). Motor ilk üretimde başlatılır.`);
+      $('ld-go').disabled = false; LD.needStart = true; const st = await LD.savedState(); $('ld-resume').disabled = !st; return;
+    }
+    LD.needStart = false;
     status('ld-status', `Paket: ${cfg.name} · ${fmtMB(p.bytes || 0)} · ${p.saved ? 'cihaza kaydedildi (çevrimdışı)' : 'bu oturumda yüklü (tarayıcı depolamaya izin vermedi)'} · motor başlatılıyor…`);
     try {
       const t0 = performance.now();
@@ -261,7 +268,7 @@
     $('ld-to-3d').onclick = () => { const img = new Image(); img.onload = () => { V11.importImage(img, 'YerelRuya_' + (LD.lastSeed || 0) + '.png', true); analyzeCurrent(); $('s3-card').scrollIntoView({ behavior: 'smooth' }); }; img.src = $('ld-out').toDataURL('image/png'); };
     LD.onMessage = m => {
       if (m.type === 'progress') {
-        const tot = m.total, frac = m.phase === 'decode' ? 0.97 : m.phase === 'hires' ? 0.6 + 0.35 * m.step / tot : (($('ld-size').value === '512' ? 0.6 : 0.95) * m.step / tot);
+        const tot = m.total, frac = m.phase === 'decode' ? 0.97 : 0.95 * m.step / tot;
         $('ld-bar').style.width = (frac * 100).toFixed(1) + '%';
         const el = (performance.now() - LD.t0) / 1000;
         status('ld-status', m.phase === 'decode' ? 'Görüntü çözülüyor (TAESD)…' : `${m.phase === 'hires' ? '512 iyileştirme' : 'Gürültü giderme'} adımı ${m.step}/${tot} · ${el.toFixed(1)} sn`);
@@ -269,7 +276,7 @@
         const c = $('ld-out'); c.width = m.width; c.height = m.height; c.getContext('2d').putImageData(new ImageData(new Uint8ClampedArray(m.rgba), m.width, m.height), 0, 0);
         $('ld-bar').style.width = '100%'; LD.busy = false; ldButtons();
         LD.lastPerf = Object.assign(LD.lastPerf || {}, { sonÜretim: { boyut: m.width, toplamMs: Math.round(m.totalMs), unetMs: Math.round(m.timings.unetMs), çözücüMs: Math.round(m.timings.decodeMs), unetAdım: m.timings.steps } });
-        status('ld-status', `Üretildi: ${m.width}×${m.height} · ${(m.totalMs / 1000).toFixed(1)} sn (UNet ${(m.timings.unetMs / 1000).toFixed(1)} sn, çözücü ${(m.timings.decodeMs / 1000).toFixed(1)} sn) · tamamen bu cihazda`);
+        status('ld-status', `Üretildi: ${m.width}×${m.height}${m.width > 256 ? ' (256 üretim + 2× büyütme)' : ''} · ${(m.totalMs / 1000).toFixed(1)} sn (UNet ${(m.timings.unetMs / 1000).toFixed(1)} sn, çözücü ${(m.timings.decodeMs / 1000).toFixed(1)} sn) · tamamen bu cihazda`);
         $('ld-result').hidden = false; perfPanel();
       } else if (m.type === 'cancelled') { LD.busy = false; ldButtons(); $('ld-resume').disabled = false; status('ld-status', 'İptal edildi. "Devam et" kaydedilen adımdan sürdürür.'); }
       else if (m.type === 'error') { LD.busy = false; ldButtons(); status('ld-status', 'Hata: ' + m.message, true); }
@@ -277,7 +284,9 @@
   }
   function ldButtons() { $('ld-go').disabled = LD.busy || !LD.ready; $('ld-cancel').disabled = !LD.busy; }
   async function ldRun(resume) {
-    if (!LD.ready || LD.busy) return;
+    if (LD.busy) return;
+    if (!LD.ready && LD.pack) { $('ld-go').disabled = true; await ldShowPack(LD.pack); if (!LD.ready) return; }
+    if (!LD.ready) return;
     const r = ldChips(), seed = $('ld-seed').value === '' ? Math.floor(Math.random() * 1e9) : +$('ld-seed').value;
     LD.lastSeed = seed; LD.busy = true; LD.t0 = performance.now(); ldButtons(); $('ld-bar').style.width = '0%';
     const req = { cond: r.cond, seed, steps: +$('ld-steps').value, guidance: +$('ld-guid').value, size: +$('ld-size').value, coolMs: +$('ld-cool').value };
@@ -300,7 +309,7 @@
     // varsayılan: tarif kutusundaki metinle başla (analiz düğmesiyle resme geçilir)
     fromPrompt();
     requestAnimationFrame(loop);
-    LD.restore().then(p => ldShowPack(p)).catch(() => ldShowPack(null));
+    LD.restore().then(p => ldShowPack(p, true)).catch(() => ldShowPack(null));
     ldChips(); perfPanel();
     window.ForgeV12 = { S3, LD, DEV, analyzeCurrent, fromPrompt, runSprites, makeGLB, verifyGLBUI, draw };
   }

@@ -1,21 +1,55 @@
 {
   "tag": "normal",
   "cpuThrottle": 1,
-  "startedAt": "2026-11-21T20:27:34.950Z",
+  "startedAt": "2026-11-21T21:06:44.321Z",
   "checks": [
     {
       "ok": true,
-      "check": "Sayfa çevrimdışı açıldı (371 ms)"
+      "check": "Sayfa çevrimdışı açıldı (302 ms)"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: 8 yön düğmesi"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: 5 hareket önizlemesi"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: 6 renk paleti (renk düzenleme)"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: kırmızı palete geçildi (renk düzenleme çalışıyor)"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: 8 yön × 5 hareket ZIP oluşturuldu ve CRC doğrulandı",
+      "detail": "41 None"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: seçili yön PNG dışa aktarımı",
+      "detail": "forge_savasci_blue_dir0.png"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: örnek PNG içe aktarma (büyücü)"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: telefondan PNG seçme + arka plan temizleme"
     },
     {
       "ok": true,
       "check": "Resimden analiz yapıldı",
-      "detail": "• V11.2 boyalı savaşçı (ön + yan görünüş) · güven 100% · analiz 65 ms• Bacak arası açıklık diz hizasında başlıyor (önlük"
+      "detail": "• V11.2 boyalı savaşçı (ön + yan görünüş) · güven 100% · analiz 35 ms• Bacak arası açıklık diz hizasında başlıyor (önlük"
     },
     {
       "ok": true,
       "check": "Gerçek mesh üretildi",
-      "detail": "5459 vertex · 8102 üçgen · 26 kemik · 34 parça · kurulum 16 ms"
+      "detail": "5459 vertex · 8102 üçgen · 26 kemik · 34 parça · kurulum 11 ms"
     },
     {
       "ok": true,
@@ -27,7 +61,7 @@
     },
     {
       "ok": true,
-      "check": "Önizleme karesi (320×320, CPU): 35.2 ms"
+      "check": "Önizleme karesi (320×320, CPU): 36.4 ms"
     },
     {
       "ok": true,
@@ -58,6 +92,54 @@
     },
     {
       "ok": true,
+      "check": "Model paketi yüklendi, ONNX Runtime WASM motoru başladı",
+      "detail": "Hazır: Forge-Mini Savaşçı v1 · 50.0 MB · ONNX Runtime WASM (CPU, 1 iş parçacığı) · başlatma 555 ms"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (4.0 sn)",
+      "detail": "Üretildi: 256×256 · 4.0 sn (UNet 3.0 sn, çözücü 0.9 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (4.0 sn)",
+      "detail": "Üretildi: 256×256 · 4.0 sn (UNet 3.0 sn, çözücü 0.9 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (2.0 sn)",
+      "detail": "Üretildi: 256×256 · 1.9 sn (UNet 1.0 sn, çözücü 0.9 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 512×512 PNG üretildi (4.3 sn)",
+      "detail": "Üretildi: 512×512 (256 üretim + 2× büyütme) · 4.2 sn (UNet 3.1 sn, çözücü 1.0 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Görsel üretimi iptal edildi"
+    },
+    {
+      "ok": true,
+      "check": "Kaydedilen adımdan \"Devam et\" ile tamamlandı"
+    },
+    {
+      "ok": true,
+      "check": "Üretilen görsel PNG olarak kaydedildi",
+      "detail": "(256, 256) RGBA"
+    },
+    {
+      "ok": true,
+      "check": "Üretilen görsel Forge'a aktarıldı ve 3B analizine gönderildi",
+      "detail": "• İçe aktarılan PNG (tek yön) · güven 100% · analiz 28 ms• Bacak arası açıklık diz hizasında başlıyo"
+    },
+    {
+      "ok": true,
+      "check": "Yeniden açılışta model cihaz deposundan internetsiz geldi ve üretim yaptı",
+      "detail": "Kayıtlı paket: Forge-Mini Savaşçı v1 · 50.0 MB · cihazda (çevrimdışı). Motor ilk üretimde başlatılır."
+    },
+    {
+      "ok": true,
       "check": "Hiçbir uzak ağ isteği yapılmadı",
       "detail": []
     },
@@ -68,21 +150,118 @@
     }
   ],
   "timings": {
-    "pageReadyMs": 371,
-    "analyzeClickMs": 613,
-    "preview320FrameMs": 35.2,
-    "sprites40ResumeMs": 10578,
-    "statusSeconds": 10.5
+    "pageReadyMs": 302,
+    "analyzeClickMs": 588,
+    "preview320FrameMs": 36.4,
+    "sprites40ResumeMs": 10552,
+    "statusSeconds": 10.5,
+    "ldPackLoadAndInitMs": 871
   },
   "memory": {
-    "heapAfterLoadMB": 6.4,
-    "chromeRssAfterLoadMB": 501.2,
-    "heapBeforeSpritesMB": 9.2,
-    "heapAfterSpritesMB": 48.3,
-    "chromeRssAfterSpritesMB": 667.3
+    "heapAfterLoadMB": 6.7,
+    "chromeRssAfterLoadMB": 491.4,
+    "heapBeforeSpritesMB": 3.5,
+    "heapAfterSpritesMB": 69.1,
+    "chromeRssAfterSpritesMB": 677.3,
+    "heapAfterLdInitMB": 3.7,
+    "chromeRssAfterLdInitMB": 1021.8
   },
   "errors": [],
+  "localDream": [
+    {
+      "prompt": "Kırmızı pelerinli, miğferli, kalkanlı, baltalı savaşçı, önden",
+      "size": 256,
+      "steps": 20,
+      "guidance": 2,
+      "seed": 11,
+      "wallMs": 4025,
+      "status": "Üretildi: 256×256 · 4.0 sn (UNet 3.0 sn, çözücü 0.9 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 555,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 3980,
+          "unetMs": 2967,
+          "çözücüMs": 940,
+          "unetAdım": 20
+        }
+      },
+      "file": "normal_yerel_ruya_256_11.png",
+      "heapMB": 4.3,
+      "chromeRssMB": 1079.2
+    },
+    {
+      "prompt": "Mavi cüppeli asalı büyücü, sağdan",
+      "size": 256,
+      "steps": 20,
+      "guidance": 2,
+      "seed": 5,
+      "wallMs": 4009,
+      "status": "Üretildi: 256×256 · 4.0 sn (UNet 3.0 sn, çözücü 0.9 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 555,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 3967,
+          "unetMs": 2971,
+          "çözücüMs": 934,
+          "unetAdım": 20
+        }
+      },
+      "file": "normal_yerel_ruya_256_5.png",
+      "heapMB": 4.7,
+      "chromeRssMB": 1078
+    },
+    {
+      "prompt": "Yeşil pelerinli kılıçlı altın zırhlı savaşçı, saldırı",
+      "size": 256,
+      "steps": 12,
+      "guidance": 1,
+      "seed": 7,
+      "wallMs": 1964,
+      "status": "Üretildi: 256×256 · 1.9 sn (UNet 1.0 sn, çözücü 0.9 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 555,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 1914,
+          "unetMs": 962,
+          "çözücüMs": 924,
+          "unetAdım": 12
+        }
+      },
+      "file": "normal_yerel_ruya_256_7.png",
+      "heapMB": 3.7,
+      "chromeRssMB": 954.5
+    },
+    {
+      "prompt": "Mor pelerinli mızraklı savaşçı, önden",
+      "size": 512,
+      "steps": 20,
+      "guidance": 2,
+      "seed": 3,
+      "wallMs": 4255,
+      "status": "Üretildi: 512×512 (256 üretim + 2× büyütme) · 4.2 sn (UNet 3.1 sn, çözücü 1.0 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 555,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 512,
+          "toplamMs": 4204,
+          "unetMs": 3126,
+          "çözücüMs": 986,
+          "unetAdım": 20
+        }
+      },
+      "file": "normal_yerel_ruya_512_3.png",
+      "heapMB": 3.7,
+      "chromeRssMB": 940.1
+    }
+  ],
   "consoleWarnings": [],
-  "finishedAt": "2026-11-21T20:27:51.959Z",
+  "finishedAt": "2026-11-21T21:07:33.798Z",
   "passed": true
 }

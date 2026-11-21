@@ -46,7 +46,7 @@
 <label>Tohum<input id="ld-seed" type="number" placeholder="rastgele" inputmode="numeric"></label>
 <label>Adım<select id="ld-steps"><option value="12">12 (hızlı)</option><option value="20" selected>20</option><option value="30">30 (kaliteli)</option></select></label>
 <label>Rehberlik<select id="ld-guid"><option value="1">1 (tek geçiş)</option><option value="2" selected>2</option><option value="3">3</option></select></label>
-<label>Boyut<select id="ld-size"><option value="256" selected>256×256</option><option value="512">512×512</option></select><small id="ld-size-note"></small></label>
+<label>Boyut<select id="ld-size"><option value="256" selected>256×256</option><option value="512">512×512 (2× büyütme)</option></select><small id="ld-size-note"></small></label>
 <label>Soğuma<select id="ld-cool"><option value="0">yok</option><option value="40" selected>40 ms/adım</option><option value="150">150 ms/adım</option></select></label>
 <label class="s3-chk"><input type="checkbox" id="ld-memsaver"> Bellek tasarrufu</label>
 </div>
@@ -2426,13 +2426,15 @@ async function init(m) {
   ORT.env.wasm.proxy = false;
   cfg = m.config; files = m.files; memSaver = !!m.memSaver;
   await ensureUnet();
-  if (!memSaver) await ensureDec();
+  if (!memSaver) { await ensureDec(); files = null; } // oturumlar modeli kendi belleğine aldı; ham baytlar bırakılır
   post({ type: 'ready', ms: performance.now() - t0, threads: ORT.env.wasm.numThreads, isolated: !!self.crossOriginIsolated });
 }
 
 // DDIM (v-tahmini) — eğitimdeki alphas_cumprod ile birebir aynı
 async function sample(m) {
-  const C = cfg.latentChannels, S0 = cfg.latentSize, size = m.size === 512 ? 512 : 256;
+  // 512: varsayılan olarak 256 üretilip 2x yüksek kaliteli büyütülür (ölçüldü: bu modelde gizli uzay iyileştirmesi bozuyor).
+  // m.hires === true ise deneysel gizli uzay iyileştirmesi kullanılır.
+  const C = cfg.latentChannels, S0 = cfg.latentSize, size = m.size === 512 && m.hires ? 512 : 256, upscale = m.size === 512 && !m.hires;
   const ab = cfg.alphasCumprod, T = cfg.trainSteps;
   const steps = Math.max(2, Math.min(60, m.steps || 20)), g = m.guidance || 1;
   const nullCond = cfg.attrSizes.slice();
@@ -2501,7 +2503,27 @@ async function sample(m) {
   if (memSaver && dec) { await dec.release(); dec = null; }
   const img = out.image.data, H = out.image.dims[2], W = out.image.dims[3], rgba = new Uint8ClampedArray(W * H * 4);
   for (let i = 0; i < W * H; i++) { rgba[i * 4] = img[i] * 255; rgba[i * 4 + 1] = img[W * H + i] * 255; rgba[i * 4 + 2] = img[2 * W * H + i] * 255; rgba[i * 4 + 3] = 255; }
+  if (upscale) {
+    const t1 = performance.now(), up = upscale2x(rgba, W, H); timings.upscaleMs = performance.now() - t1;
+    return { rgba: up, width: W * 2, height: H * 2, timings, upscaled: true };
+  }
   return { rgba, width: W, height: H, timings };
+}
+
+// 2x bikübik (Catmull-Rom) büyütme — yeni ayrıntı üretmez, yalnızca pürüzsüz büyütür
+function upscale2x(src, W, H) {
+  const W2 = W * 2, H2 = H * 2, out = new Uint8ClampedArray(W2 * H2 * 4);
+  const cr = t => { const a = Math.abs(t); return a <= 1 ? 1.5 * a * a * a - 2.5 * a * a + 1 : a < 2 ? -0.5 * a * a * a + 2.5 * a * a - 4 * a + 2 : 0; };
+  for (let y = 0; y < H2; y++) {
+    const fy = (y + 0.5) / 2 - 0.5, y0 = Math.floor(fy);
+    for (let x = 0; x < W2; x++) {
+      const fx = (x + 0.5) / 2 - 0.5, x0 = Math.floor(fx); let r = 0, g = 0, b = 0, wsum = 0;
+      for (let j = -1; j <= 2; j++) { const yy = Math.min(H - 1, Math.max(0, y0 + j)), wy = cr(fy - (y0 + j));
+        for (let i = -1; i <= 2; i++) { const xx = Math.min(W - 1, Math.max(0, x0 + i)), w = wy * cr(fx - (x0 + i)), o = (yy * W + xx) * 4; r += src[o] * w; g += src[o + 1] * w; b += src[o + 2] * w; wsum += w; } }
+      const o = (y * W2 + x) * 4; out[o] = r / wsum; out[o + 1] = g / wsum; out[o + 2] = b / wsum; out[o + 3] = 255;
+    }
+  }
+  return out;
 }
 
 self.onmessage = async ev => {
@@ -2585,12 +2607,13 @@ self.onmessage = async ev => {
     async loadFromUrl(base) { // yalnızca sayfa http(s) üzerinden açıldığında (yerel sunucu / PWA) kullanılır
       const r = await fetch(base); if (!r.ok) throw new Error('Paket bulunamadı: ' + base); const buf = await r.arrayBuffer(); const p = parsePack(buf); p.source = base; p.bytes = buf.byteLength; this.pack = p; p.saved = await this.savePack(p); return p;
     },
-    config() { return this.pack ? JSON.parse(new TextDecoder().decode(this.pack.files['config.json'])) : null; },
+    config() { if (!this.pack) return null; if (!this.pack.files) return this.cfgCache; return (this.cfgCache = JSON.parse(new TextDecoder().decode(this.pack.files['config.json']))); },
     stop() { if (this.worker) this.worker.terminate(); this.worker = null; this.ready = false; },
     async start(opts) {
       opts = opts || {};
       if (!this.pack) throw new Error('Önce model paketini seçin');
       this.stop();
+      if (!this.pack.files) { const p = await kvGet('pack'); if (!p) throw new Error('Paket cihaz deposunda bulunamadı; yeniden seçin'); this.pack.files = p.files; }
       const src = document.getElementById('ld-worker-src').textContent;
       const w = this.worker = new Worker(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })));
       const f = this.pack.files, cfg = this.config();
@@ -2598,9 +2621,14 @@ self.onmessage = async ev => {
         w.onmessage = ev => { const m = ev.data; if (m.type === 'ready') { this.ready = true; this.info = m; res(m); } else if (m.type === 'error') rej(new Error(m.message)); else if (this.onMessage) this.onMessage(m); };
         w.onerror = e => rej(new Error(e.message || 'Worker hatası'));
       });
-      w.postMessage({ type: 'init', ortJs: new TextDecoder().decode(f['ort.wasm.min.js']), glueMjs: new TextDecoder().decode(f['ort-wasm-simd-threaded.mjs']), wasm: f['ort-wasm-simd-threaded.wasm'].slice(0),
-        files: { unet: new Uint8Array(f['unet.onnx'].slice(0)), decoder: new Uint8Array(f['taesd_decoder.onnx'].slice(0)) }, config: cfg, threads: opts.threads || 1, memSaver: !!opts.memSaver });
+      // Kopyalar worker'a AKTARILIR (transfer): aynı baytlar bellekte iki kez tutulmaz
+      const wasm = f['ort-wasm-simd-threaded.wasm'].slice(0), unet = new Uint8Array(f['unet.onnx'].slice(0)), dec = new Uint8Array(f['taesd_decoder.onnx'].slice(0));
+      w.postMessage({ type: 'init', ortJs: new TextDecoder().decode(f['ort.wasm.min.js']), glueMjs: new TextDecoder().decode(f['ort-wasm-simd-threaded.mjs']), wasm,
+        files: { unet, decoder: dec }, config: cfg, threads: opts.threads || 1, memSaver: !!opts.memSaver }, [wasm, unet.buffer, dec.buffer]);
       const info = await ready;
+      this.cfgCache = cfg;
+      // Paket cihaza kaydedildiyse ana iş parçacığındaki ~50 MB'lık kopya bırakılır (gerekirse depodan yeniden okunur)
+      if (this.pack.saved) this.pack.files = null;
       w.onmessage = ev => { const m = ev.data; if (m.type === 'state') { this.lastState = Object.assign({ req: this.lastReq }, m.state); try { kvSet('ldstate', this.lastState); } catch (e) { } } if (this.onMessage) this.onMessage(m); };
       return info;
     },
@@ -2732,7 +2760,9 @@ self.onmessage = async ev => {
     const res = F.sampleClip(S3.ch.skel, S3.clip, S3.t), Wd = F.poseWorld(S3.ch.skel, res.pose);
     const sk = F.skinVertices(S3.ch.mesh, F.skinMatrices(S3.ch.skel, Wd));
     const scale = H / 2.45, cx = W / 2, cy = H * 0.9;
-    const r = F.render(S3.ch.mesh, sk, { width: W, height: H, yaw: S3.yaw, pitch: S3.pitch, scale, cx, cy, ss: S3.dragging ? 1 : 2, highlight: S3.est ? S3.est8 : null,
+    // yavaş cihazda (kare > 60 ms) oynatma sırasında süper örnekleme 1x'e iner; durunca 2x net kare çizilir
+    const ss = S3.dragging || (S3.playing && (S3.perf.frameMs || 0) > 60) ? 1 : 2;
+    const r = F.render(S3.ch.mesh, sk, { width: W, height: H, yaw: S3.yaw, pitch: S3.pitch, scale, cx, cy, ss, highlight: S3.est ? S3.est8 : null,
       shadow: { cx, cy, rx: 0.36 * scale, ry: 0.36 * scale * Math.sin(S3.pitch), alpha: 0.3 }, tint: res.tint && res.tint[3] > 0.01 ? res.tint : null });
     const ctx = c.getContext('2d'); ctx.clearRect(0, 0, W, H);
     if (S3.overlay && S3.srcImg) { ctx.globalAlpha = 0.45; const s = S3.srcImg, k = Math.min(W / s.width, H / s.height); ctx.drawImage(s, (W - s.width * k) / 2, (H - s.height * k) / 2, s.width * k, s.height * k); ctx.globalAlpha = 1; }
@@ -2844,9 +2874,14 @@ self.onmessage = async ev => {
   }
 
   // ---------------- YEREL RÜYA (Local Dream) ----------------
-  async function ldShowPack(p) {
+  async function ldShowPack(p, lazy) {
     if (!p) { status('ld-status', 'Model paketi yüklü değil. Kurulum: .forgepack dosyasını bir kez seçin; sonra internet gerekmez.', true); $('ld-go').disabled = true; return; }
     const cfg = LD.config();
+    if (lazy) { // telefonda her açılışta 50 MB'lık motoru derlememek için: ilk "Üret" dokunuşunda başlatılır
+      status('ld-status', `Kayıtlı paket: ${cfg.name} · ${fmtMB(p.bytes || 0)} · cihazda (çevrimdışı). Motor ilk üretimde başlatılır.`);
+      $('ld-go').disabled = false; LD.needStart = true; const st = await LD.savedState(); $('ld-resume').disabled = !st; return;
+    }
+    LD.needStart = false;
     status('ld-status', `Paket: ${cfg.name} · ${fmtMB(p.bytes || 0)} · ${p.saved ? 'cihaza kaydedildi (çevrimdışı)' : 'bu oturumda yüklü (tarayıcı depolamaya izin vermedi)'} · motor başlatılıyor…`);
     try {
       const t0 = performance.now();
@@ -2881,7 +2916,7 @@ self.onmessage = async ev => {
     $('ld-to-3d').onclick = () => { const img = new Image(); img.onload = () => { V11.importImage(img, 'YerelRuya_' + (LD.lastSeed || 0) + '.png', true); analyzeCurrent(); $('s3-card').scrollIntoView({ behavior: 'smooth' }); }; img.src = $('ld-out').toDataURL('image/png'); };
     LD.onMessage = m => {
       if (m.type === 'progress') {
-        const tot = m.total, frac = m.phase === 'decode' ? 0.97 : m.phase === 'hires' ? 0.6 + 0.35 * m.step / tot : (($('ld-size').value === '512' ? 0.6 : 0.95) * m.step / tot);
+        const tot = m.total, frac = m.phase === 'decode' ? 0.97 : 0.95 * m.step / tot;
         $('ld-bar').style.width = (frac * 100).toFixed(1) + '%';
         const el = (performance.now() - LD.t0) / 1000;
         status('ld-status', m.phase === 'decode' ? 'Görüntü çözülüyor (TAESD)…' : `${m.phase === 'hires' ? '512 iyileştirme' : 'Gürültü giderme'} adımı ${m.step}/${tot} · ${el.toFixed(1)} sn`);
@@ -2889,7 +2924,7 @@ self.onmessage = async ev => {
         const c = $('ld-out'); c.width = m.width; c.height = m.height; c.getContext('2d').putImageData(new ImageData(new Uint8ClampedArray(m.rgba), m.width, m.height), 0, 0);
         $('ld-bar').style.width = '100%'; LD.busy = false; ldButtons();
         LD.lastPerf = Object.assign(LD.lastPerf || {}, { sonÜretim: { boyut: m.width, toplamMs: Math.round(m.totalMs), unetMs: Math.round(m.timings.unetMs), çözücüMs: Math.round(m.timings.decodeMs), unetAdım: m.timings.steps } });
-        status('ld-status', `Üretildi: ${m.width}×${m.height} · ${(m.totalMs / 1000).toFixed(1)} sn (UNet ${(m.timings.unetMs / 1000).toFixed(1)} sn, çözücü ${(m.timings.decodeMs / 1000).toFixed(1)} sn) · tamamen bu cihazda`);
+        status('ld-status', `Üretildi: ${m.width}×${m.height}${m.width > 256 ? ' (256 üretim + 2× büyütme)' : ''} · ${(m.totalMs / 1000).toFixed(1)} sn (UNet ${(m.timings.unetMs / 1000).toFixed(1)} sn, çözücü ${(m.timings.decodeMs / 1000).toFixed(1)} sn) · tamamen bu cihazda`);
         $('ld-result').hidden = false; perfPanel();
       } else if (m.type === 'cancelled') { LD.busy = false; ldButtons(); $('ld-resume').disabled = false; status('ld-status', 'İptal edildi. "Devam et" kaydedilen adımdan sürdürür.'); }
       else if (m.type === 'error') { LD.busy = false; ldButtons(); status('ld-status', 'Hata: ' + m.message, true); }
@@ -2897,7 +2932,9 @@ self.onmessage = async ev => {
   }
   function ldButtons() { $('ld-go').disabled = LD.busy || !LD.ready; $('ld-cancel').disabled = !LD.busy; }
   async function ldRun(resume) {
-    if (!LD.ready || LD.busy) return;
+    if (LD.busy) return;
+    if (!LD.ready && LD.pack) { $('ld-go').disabled = true; await ldShowPack(LD.pack); if (!LD.ready) return; }
+    if (!LD.ready) return;
     const r = ldChips(), seed = $('ld-seed').value === '' ? Math.floor(Math.random() * 1e9) : +$('ld-seed').value;
     LD.lastSeed = seed; LD.busy = true; LD.t0 = performance.now(); ldButtons(); $('ld-bar').style.width = '0%';
     const req = { cond: r.cond, seed, steps: +$('ld-steps').value, guidance: +$('ld-guid').value, size: +$('ld-size').value, coolMs: +$('ld-cool').value };
@@ -2920,7 +2957,7 @@ self.onmessage = async ev => {
     // varsayılan: tarif kutusundaki metinle başla (analiz düğmesiyle resme geçilir)
     fromPrompt();
     requestAnimationFrame(loop);
-    LD.restore().then(p => ldShowPack(p)).catch(() => ldShowPack(null));
+    LD.restore().then(p => ldShowPack(p, true)).catch(() => ldShowPack(null));
     ldChips(); perfPanel();
     window.ForgeV12 = { S3, LD, DEV, analyzeCurrent, fromPrompt, runSprites, makeGLB, verifyGLBUI, draw };
   }

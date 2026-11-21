@@ -135,8 +135,12 @@ function chromeRssMB() { try { const out = execSync("ps -eo rss,args | grep -E '
     ok(await page.evaluate(() => ForgeV11.state.custom), 'Üretilen görsel Forge\'a aktarıldı ve 3B analizine gönderildi', (await page.textContent('#s3-notes')).slice(0, 100));
     await page.locator('#s3-card').screenshot({ path: path.join(SHOTS, `${TAG}_yerel_ruya_to_3b.png`) });
     // Sayfayı yeniden yükle: paket IndexedDB'den çevrimdışı geri gelmeli
-    await page.reload(); await page.waitForFunction(() => /Hazır:|yüklü değil|başlatılamadı/.test(document.getElementById('ld-status').textContent), null, { timeout: 600000 });
-    ok(/Hazır:/.test(await page.textContent('#ld-status')), 'Yeniden açılışta model, cihaz deposundan internetsiz yüklendi', await page.textContent('#ld-status'));
+    await page.reload(); await page.waitForFunction(() => /Kayıtlı paket|yüklü değil/.test(document.getElementById('ld-status').textContent), null, { timeout: 600000 });
+    const st2 = await page.textContent('#ld-status');
+    await page.fill('#ld-seed', '12'); await page.selectOption('#ld-steps', '12'); await page.selectOption('#ld-size', '256');
+    await page.evaluate(() => { document.getElementById('ld-status').textContent = ''; }); await page.click('#ld-go');
+    await page.waitForFunction(() => /Üretildi|Hata|başlatılamadı/.test(document.getElementById('ld-status').textContent), null, { timeout: 900000 });
+    ok(/Kayıtlı paket/.test(st2) && /Üretildi/.test(await page.textContent('#ld-status')), 'Yeniden açılışta model cihaz deposundan internetsiz geldi ve üretim yaptı', st2);
   }
 
   ok(remote.length === 0, 'Hiçbir uzak ağ isteği yapılmadı', remote.slice(0, 5));

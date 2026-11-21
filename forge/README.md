@@ -10,7 +10,7 @@ V11.2 dosyası `surumler/` altında **bayt bayt aynı** saklanır (SHA-256 `ac6b
 | `Forge_25D_V12_Yerel3D.html` | **Ana uygulama.** Telefonda dosya yöneticisinden veya Chrome'da açın. Tek dosya, 1,2 MB, internet istemez. |
 | `yerel-calisma/ForgeMini_Savasci_v1.forgepack` | Cihazda görsel üretimi için **model paketi** (ONNX Runtime WASM + model + lisanslar). Uygulamada "Model paketi seç" ile **bir kez** seçilir. |
 | `surumler/Forge_25D_V11_2_LocalDream_Aktar.html` | Değiştirilmemiş eski sürüm. |
-| `ciktilar/` | Örnek GLB, 40 sayfalık sprite ZIP, önizlemeler, test sonuçları. |
+| `ciktilar/` | Örnek GLB (`ornek_savasci.glb`), 40 sayfalık sprite ZIP, `hareket_onizleme.gif`, üretilen görseller, test sonuçları (JSON). |
 | `RAPOR_V12.md` | Ne yapıldı, ne ölçüldü, neler yapılamadı (gerekçeleriyle). |
 
 ## Uygulamadaki bölümler
@@ -20,6 +20,8 @@ V11.2 dosyası `surumler/` altında **bayt bayt aynı** saklanır (SHA-256 `ac6b
 2. **YEREL RÜYA — cihazda görsel üretimi:** `.forgepack` seçilir → model telefonda ONNX Runtime Web (WASM, yalnızca
    işlemci) ile çalışır → 256×256 (veya donanım uygunsa 512×512) PNG. İptal, ilerleme, kaldığı adımdan devam,
    bellek tasarrufu, soğuma beklemesi. Üretilen görsel tek dokunuşla Forge'a veya 3B stüdyoya aktarılır.
+   *Dürüst not:* paketteki Forge-Mini modeli bu çalışmada 58 dakikada eğitilen küçük bir modeldir; görseller tanınır ama
+   bulanık/düşük ayrıntılıdır. 512 seçeneği 256 üretimin 2× büyütülmesidir.
 3. **3B KARAKTER STÜDYOSU:** Resim → silüet/oran/renk analizi → gerçek mesh (≈5.500 vertex, ≈8.100 üçgen) →
    26 kemikli iskelet → 5 iskelet animasyonu (IK) → 8 yön × 5 hareket sprite → GLB. Kaydırıcılarla anatomi,
    donanım ve renk düzeltme. "Tahmini yüzeyler" resimde görünmeyen bölgeleri turuncu taramayla gösterir.
@@ -68,5 +70,7 @@ araclar/egitim/      Forge-Mini eğitim verisi üretimi ve eğitim betiği (PyTo
 tests/               Node + Python + Chromium testleri
 ```
 
-Yeniden derleme: `node araclar/derle.js`. Testler: `node tests/test_anim.js`, `node tests/uretim_ornek.js`,
-`cd tests && npm install && node test_glb_validator.js`, `python3 tests/test_zip.py`, `node tests/test_tarayici.js`.
+Yeniden derleme: `node araclar/derle.js`. Tüm testler tek komutla: `bash tests/hepsini_calistir.sh`. Tek tek: `node tests/test_anim.js`, `node tests/uretim_ornek.js`,
+`cd tests && npm install && node test_glb_validator.js && node test_threejs.js`, `python3 tests/test_zip.py`,
+`node tests/test_analiz.js`, `node tests/test_tarayici.js --pack=yerel-calisma/ForgeMini_Savasci_v1.forgepack`,
+`node tests/test_sekme_kapanma.js`, `node tests/test_bellek.js`.

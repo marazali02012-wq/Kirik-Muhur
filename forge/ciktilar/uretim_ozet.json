@@ -22,20 +22,20 @@
     ]
   },
   "timingsMs": {
-    "analyzeMs": 89,
-    "buildMeshMs": 46,
-    "framingMs": 81,
-    "glbMs": 36,
-    "spritesAndZipMs": 10144
+    "analyzeMs": 63,
+    "buildMeshMs": 23,
+    "framingMs": 63,
+    "glbMs": 29,
+    "spritesAndZipMs": 10159
   },
-  "rssMB": 151.1,
+  "rssMB": 134.9,
   "mesh": {
     "vertices": 5459,
     "triangles": 8102,
     "bones": 26
   },
   "framing": {
-    "scale": 102.46,
+    "scale": 102.461,
     "cx": 128,
     "cy": 228,
     "pitch": 0.33,
@@ -43,7 +43,7 @@
     "extents": {
       "maxX": 1.148546381874981,
       "maxUp": 2.14613759365284,
-      "maxDown": 0.19623559116403816
+      "maxDown": 0.19621191288208012
     }
   },
   "glb": {
@@ -115,7 +115,7 @@
     }
   },
   "zip": {
-    "bytes": 6954410,
+    "bytes": 6953285,
     "files": 42
   }
 }

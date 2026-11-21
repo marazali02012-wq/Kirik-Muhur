@@ -1,0 +1,233 @@
+{
+  "tag": "tekcekirdek_1bolu6",
+  "cpuThrottle": 1,
+  "startedAt": "2026-11-21T21:09:35.334Z",
+  "checks": [
+    {
+      "ok": true,
+      "check": "Sayfa çevrimdışı açıldı (1137 ms)"
+    },
+    {
+      "ok": true,
+      "check": "Resimden analiz yapıldı",
+      "detail": "• V11.2 boyalı savaşçı (ön + yan görünüş) · güven 100% · analiz 139 ms• Bacak arası açıklık diz hizasında başlıyor (önlü"
+    },
+    {
+      "ok": true,
+      "check": "Gerçek mesh üretildi",
+      "detail": "5459 vertex · 8102 üçgen · 26 kemik · 34 parça · kurulum 39 ms"
+    },
+    {
+      "ok": true,
+      "check": "3B karakter sürükleyerek döndürüldü",
+      "detail": {
+        "yaw0": 0,
+        "yaw1": -1.44
+      }
+    },
+    {
+      "ok": true,
+      "check": "Önizleme karesi (320×320, CPU): 72.5 ms"
+    },
+    {
+      "ok": true,
+      "check": "Anatomi kaydırıcısı mesh'i yeniden kurdu (irilik 1.2)"
+    },
+    {
+      "ok": true,
+      "check": "Sprite üretimi iptal edildi (4/40 saklandı)"
+    },
+    {
+      "ok": true,
+      "check": "\"Devam et\" ile kalan sayfalar üretildi ve ZIP indirildi (21.6 sn)",
+      "detail": "Hazır: 42 dosya (40 sayfa + manifest + GLB) · ZIP 7.8 MB · CRC tamam · 21.5 sn"
+    },
+    {
+      "ok": true,
+      "check": "Tarayıcıda üretilen ZIP bağımsız Python denetiminden geçti",
+      "detail": "HATALAR: yok | SONUÇ: ZIP testi geçti"
+    },
+    {
+      "ok": true,
+      "check": "GLB tarayıcıda yeniden okunup doğrulandı",
+      "detail": "GLB DOĞRULANDI · 5767 vertex · 8102 üçgen · 26 kemik · 10 parça · 0.5 MBAnimasyonlar: idle 1.6s (17 kanal), walk 0.9s (19 kanal), attack 0.8s (19 kanal), hurt 0"
+    },
+    {
+      "ok": true,
+      "check": "GLB dosyası \"aç ve doğrula\" ile açıldı"
+    },
+    {
+      "ok": true,
+      "check": "Model paketi yüklendi, ONNX Runtime WASM motoru başladı",
+      "detail": "Hazır: Forge-Mini Savaşçı v1 · 50.0 MB · ONNX Runtime WASM (CPU, 1 iş parçacığı) · başlatma 2196 ms"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (10.4 sn)",
+      "detail": "Üretildi: 256×256 · 10.3 sn (UNet 7.8 sn, çözücü 2.3 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (9.8 sn)",
+      "detail": "Üretildi: 256×256 · 9.7 sn (UNet 7.4 sn, çözücü 2.1 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (4.6 sn)",
+      "detail": "Üretildi: 256×256 · 4.6 sn (UNet 2.3 sn, çözücü 2.2 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 512×512 PNG üretildi (10.1 sn)",
+      "detail": "Üretildi: 512×512 (256 üretim + 2× büyütme) · 10.0 sn (UNet 7.4 sn, çözücü 2.4 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Görsel üretimi iptal edildi"
+    },
+    {
+      "ok": true,
+      "check": "Kaydedilen adımdan \"Devam et\" ile tamamlandı"
+    },
+    {
+      "ok": true,
+      "check": "Üretilen görsel PNG olarak kaydedildi",
+      "detail": "(256, 256) RGBA"
+    },
+    {
+      "ok": true,
+      "check": "Üretilen görsel Forge'a aktarıldı ve 3B analizine gönderildi",
+      "detail": "• İçe aktarılan PNG (tek yön) · güven 100% · analiz 91 ms• Bacak arası açıklık diz hizasında başlıyo"
+    },
+    {
+      "ok": true,
+      "check": "Yeniden açılışta model cihaz deposundan internetsiz geldi ve üretim yaptı",
+      "detail": "Kayıtlı paket: Forge-Mini Savaşçı v1 · 50.0 MB · cihazda (çevrimdışı). Motor ilk üretimde başlatılır."
+    },
+    {
+      "ok": true,
+      "check": "Hiçbir uzak ağ isteği yapılmadı",
+      "detail": []
+    },
+    {
+      "ok": true,
+      "check": "Konsolda hata yok",
+      "detail": []
+    }
+  ],
+  "timings": {
+    "pageReadyMs": 1137,
+    "analyzeClickMs": 1815,
+    "preview320FrameMs": 72.5,
+    "sprites40ResumeMs": 21643,
+    "statusSeconds": 21.5,
+    "ldPackLoadAndInitMs": 2908
+  },
+  "memory": {
+    "heapAfterLoadMB": 9.1,
+    "chromeRssAfterLoadMB": 508,
+    "heapBeforeSpritesMB": 5.3,
+    "heapAfterSpritesMB": 24.2,
+    "chromeRssAfterSpritesMB": 649.7,
+    "heapAfterLdInitMB": 4.2,
+    "chromeRssAfterLdInitMB": 1040.5
+  },
+  "errors": [],
+  "localDream": [
+    {
+      "prompt": "Kırmızı pelerinli, miğferli, kalkanlı, baltalı savaşçı, önden",
+      "size": 256,
+      "steps": 20,
+      "guidance": 2,
+      "seed": 11,
+      "wallMs": 10412,
+      "status": "Üretildi: 256×256 · 10.3 sn (UNet 7.8 sn, çözücü 2.3 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 2196,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 10325,
+          "unetMs": 7826,
+          "çözücüMs": 2294,
+          "unetAdım": 20
+        }
+      },
+      "file": "tekcekirdek_1bolu6_yerel_ruya_256_11.png",
+      "heapMB": 4.2,
+      "chromeRssMB": 972.3
+    },
+    {
+      "prompt": "Mavi cüppeli asalı büyücü, sağdan",
+      "size": 256,
+      "steps": 20,
+      "guidance": 2,
+      "seed": 5,
+      "wallMs": 9795,
+      "status": "Üretildi: 256×256 · 9.7 sn (UNet 7.4 sn, çözücü 2.1 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 2196,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 9705,
+          "unetMs": 7426,
+          "çözücüMs": 2148,
+          "unetAdım": 20
+        }
+      },
+      "file": "tekcekirdek_1bolu6_yerel_ruya_256_5.png",
+      "heapMB": 4.3,
+      "chromeRssMB": 940.9
+    },
+    {
+      "prompt": "Yeşil pelerinli kılıçlı altın zırhlı savaşçı, saldırı",
+      "size": 256,
+      "steps": 12,
+      "guidance": 1,
+      "seed": 7,
+      "wallMs": 4616,
+      "status": "Üretildi: 256×256 · 4.6 sn (UNet 2.3 sn, çözücü 2.2 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 2196,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 4558,
+          "unetMs": 2335,
+          "çözücüMs": 2170,
+          "unetAdım": 12
+        }
+      },
+      "file": "tekcekirdek_1bolu6_yerel_ruya_256_7.png",
+      "heapMB": 4.3,
+      "chromeRssMB": 894.1
+    },
+    {
+      "prompt": "Mor pelerinli mızraklı savaşçı, önden",
+      "size": 512,
+      "steps": 20,
+      "guidance": 2,
+      "seed": 3,
+      "wallMs": 10087,
+      "status": "Üretildi: 512×512 (256 üretim + 2× büyütme) · 10.0 sn (UNet 7.4 sn, çözücü 2.4 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 2196,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 512,
+          "toplamMs": 10016,
+          "unetMs": 7402,
+          "çözücüMs": 2363,
+          "unetAdım": 20
+        }
+      },
+      "file": "tekcekirdek_1bolu6_yerel_ruya_512_3.png",
+      "heapMB": 4.3,
+      "chromeRssMB": 849.6
+    }
+  ],
+  "consoleWarnings": [],
+  "finishedAt": "2026-11-21T21:11:34.718Z",
+  "passed": true
+}

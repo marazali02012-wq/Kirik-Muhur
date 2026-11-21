@@ -1,0 +1,42 @@
+{
+ "bellekTasarrufuKapali": {
+  "base": {
+   "totalMB": 493.4,
+   "largestProcMB": 173.9
+  },
+  "afterInit": {
+   "totalMB": 828.5,
+   "largestProcMB": 448.4
+  },
+  "peakDuringGeneration": {
+   "totalMB": 928.6,
+   "largestProcMB": 545
+  },
+  "afterGeneration": {
+   "totalMB": 921.3,
+   "largestProcMB": 539.6
+  },
+  "deltaInitMB": 335.1,
+  "deltaPeakMB": 435.2
+ },
+ "bellekTasarrufuAcik": {
+  "base": {
+   "totalMB": 495.1,
+   "largestProcMB": 175.5
+  },
+  "afterInit": {
+   "totalMB": 776.2,
+   "largestProcMB": 395.8
+  },
+  "peakDuringGeneration": {
+   "totalMB": 868.6,
+   "largestProcMB": 486.2
+  },
+  "afterGeneration": {
+   "totalMB": 865.7,
+   "largestProcMB": 482.6
+  },
+  "deltaInitMB": 281.1,
+  "deltaPeakMB": 373.5
+ }
+}

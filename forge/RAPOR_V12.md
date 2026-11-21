@@ -49,13 +49,26 @@ UNet (v-tahmini, DDIM 12/20/30 adım, rehberlik 1–3) → TAESD çözücü → 
 | TAESD çözücü | 1,22 M | 17,7 G (256) · 70,7 G (512) | 4,9 MB |
 | ONNX Runtime Web 1.31.1 | — | — | 14,9 MB (WASM) |
 
-**Eğitim:** 9.000 etiketli çizim (`araclar/egitim/veri_uret.js`, 4 iş parçacığı, ⟨VERI⟩ sn) → TAESD kodlama
-(11 dk) → ⟨ADIM⟩ adım, toplu 32, AdamW, kosinüs öğrenme oranı, EMA (⟨EGITIM_DK⟩ dk, 3 CPU çekirdeği).
-ONNX dışa aktarma doğrulaması: PyTorch ↔ ONNX Runtime en büyük fark ⟨ONNX_FARK⟩.
+**Eğitim:** 9.000 etiketli çizim (`araclar/egitim/veri_uret.js`, 4 iş parçacığı, 83,5 sn) → TAESD kodlama
+(11 dk; TAESD gidiş-dönüş PSNR 26,6 dB — çözücü bizim çizimlerimizi iyi geri kuruyor) → 5.000 adım, toplu 32, AdamW, kosinüs öğrenme oranı, EMA (58 dk, 3 CPU çekirdeği; kayıp 0,69 → 0,10).
+ONNX dışa aktarma doğrulaması: PyTorch ↔ ONNX Runtime en büyük fark 1,8×10⁻⁶. Örnek ızgara: `ciktilar/forge_mini_ornekler_adim5000.png`; tarayıcıda üretilenler: `ciktilar/yerel_ruya_ornek_256.png`, `ciktilar/ekran/yerel_ruya_tarayici_ornekleri.png`.
 
 **Ölçümler** (Chromium, ağ kapalı, tek WASM iş parçacığı; "6× yavaş" = CDP CPU yavaşlatması, düşük güçlü telefon yaklaşımı):
 
-⟨LD_TABLO⟩
+| Ayar | Masaüstü CPU (gerçek ölçüm) | Tek çekirdek paylaşımlı, ~2,5× yavaş (gerçek ölçüm) | Realme C55 **tahmini** (masaüstü × 4–6) |
+|---|---|---|---|
+| 256×256 · 20 adım · rehberlik 2 | **4,0 sn** (UNet 3,0 + çözücü 0,9) | 10,3 sn | 16–24 sn |
+| 256×256 · 12 adım · rehberlik 1 | **1,9 sn** | 4,6 sn | 8–12 sn |
+| 512×512 (256 üretim + 2× büyütme) | **4,1 sn** | 10,0 sn | 17–25 sn |
+| Motor başlatma (WASM derleme + 2 oturum) | 0,5–0,9 sn | 2,2–2,9 sn | 2–5 sn |
+| Bellek artışı, üretim tepe (Chrome toplam RSS) | **+435 MB** (bellek tasarrufu açık: **+374 MB**) | — | benzer mertebe |
+| Paket boyutu | **49,97 MB** (UNet 32,6 + WASM 14,8 + çözücü 4,9) | | |
+
+Not: Chrome'un CDP "CPU yavaşlatma" ayarı Web Worker'lara uygulanmadığı tespit edildi (o ölçüm geçersiz sayıldı);
+bunun yerine Chromium tek çekirdeğe sabitlenip aynı çekirdekte 5 meşgul süreç çalıştırıldı (gerçek ~2–2,5× yavaşlama).
+**512 kararı ölçümle verildi:** gizli uzayda 64×64 iyileştirme bu modelde bozulma üretti
+(`ciktilar/forge_mini_512_yontem_karsilastirma.png`, satır 3–5); bu yüzden 512 = 256 üretim + bikübik 2× büyütmedir ve
+arayüzde böyle yazar (yeni ayrıntı eklemez).
 
 **Sınırlar (dürüst değerlendirme):** Forge-Mini yalnızca kendi 3B tarzımızda, tek savaşçı, beyaz zemin üretir; serbest
 metni anlamaz (anahtar sözcük koşulları: yön, silah, zırh, miğfer, pelerin, kalkan, kumaş rengi, metal tonu, poz);
@@ -65,16 +78,16 @@ hattıdır; kalite için daha büyük/özel veriyle yeniden eğitim gerekir (bet
 ### Daha büyük açık modeller (Stable Diffusion ailesi) — değerlendirme
 
 Aşağıdaki işlem süreleri **bu oturumda ölçülen** WASM hızından (tek iş parçacığı ≈16–18 GMAC/sn masaüstü, 6×
-yavaşlatmada ≈⟨GMACS6⟩ GMAC/sn) türetilmiş **tahminlerdir**; ağırlıklar indirilemediği için model kartları/lisanslar
+telefon için ≈3–4,5 GMAC/sn varsayımı) türetilmiş **tahminlerdir**; ağırlıklar indirilemediği için model kartları/lisanslar
 bu ortamda **doğrulanamadı**, kurulum öncesi doğrulanmalıdır.
 
 | Model | UNet büyüklüğü | Adım | Telefon tarayıcısında tahmini süre | Bellek (fp32 / int8) | Not |
 |---|---|---|---|---|---|
-| SD 1.5 | ~860 M | 20 + CFG | saatler mertebesi (UNet ~0,34 TMAC/çağrı @512) | ~3,4 GB / ~0,9 GB | Tarayıcı sekmesi için çok ağır |
-| SD-Turbo | ~865 M | 1 | ~3–6 dk/görsel | ~3,5 GB / ~0,9 GB + metin kodlayıcı | Lisans: Stability topluluk lisansı (kontrol edilmeli) |
-| BK-SDM-Tiny / tiny-sd | ~0,32 B | ~25 + CFG | ~1 saat | ~1,3 GB / ~0,35 GB | OpenRAIL-M |
-| SDXS-512 | ~0,32 B | 1 | ~1–2 dk | ~1,3 GB / ~0,35 GB + ViT-H metin kodlayıcı | Lisans doğrulanmalı |
-| **Forge-Mini (bizim)** | **8 M** | 20 + CFG | **ölçüldü** (yukarıda) | **~50 MB paket** | Tamamen bize ait |
+| SD 1.5 | ~860 M | 20 + CFG | ~50–75 dk (UNet ~339 GMAC/çağrı @512, 40 çağrı) | ~3,4 GB / ~0,9 GB | Tarayıcı sekmesi için çok ağır |
+| SD-Turbo | ~865 M | 1 | ~2–3 dk/görsel | ~3,5 GB / ~0,9 GB + metin kodlayıcı | Lisans: Stability topluluk lisansı (kontrol edilmeli) |
+| BK-SDM-Tiny / tiny-sd | ~0,32 B | ~25 + CFG | ~40–60 dk (UNet ~205 GMAC/çağrı) | ~1,3 GB / ~0,35 GB | OpenRAIL-M |
+| SDXS-512 | ~0,32 B | 1 | doğrulanamadı (tek adım; SD-Turbo'dan hızlı olması beklenir) | ~1,3 GB / ~0,35 GB + ViT-H metin kodlayıcı | Lisans doğrulanmalı |
+| **Forge-Mini (bizim)** | **8 M** | 20 + CFG | **ölçüldü:** masaüstü 4,0 sn → telefon ≈16–24 sn | **50 MB paket, +374–435 MB çalışma belleği** | Tamamen bize ait |
 
 Sonuç: Realme C55 sınıfı bir cihazda **tarayıcı içinde** SD ailesi pratik değildir. Daha güçlü üretim için önerilen yol,
 aynı HTML'yi bir Android WebView uygulamasına gömüp (COOP/COEP ile çok iş parçacıklı WASM) ya da yerel C++ (MNN/ncnn,
@@ -95,7 +108,7 @@ int8, NEON) çalışma zamanı kullanmaktır; ikisi de bu ortamda derlenemedi/te
 
 **Analiz doğruluğu** (`tests/test_analiz.js`, parametreleri bilinen 60 rastgele karakter):
 baş yüksekliği hatası %1,7 · omuz genişliği hatası %5,3 · bacak oranı mutlak hata 0,027 · pelerin tespiti %100 ·
-kumaş tonu medyan 1,4°, %90'ı 30° içinde · **ağır zırh tespiti yalnızca %55 (zayıf; kullanıcı seçimle düzeltir)**.
+kumaş tonu medyan 1,9°, %92'si 30° içinde · **ağır zırh tespiti yalnızca %58 (zayıf; kullanıcı seçimle düzeltir)**.
 
 **Dürüst sınır:** Model şablon tabanlı ve stilize edilmiştir; V11.2'deki boyalı sanatın ince işçiliği (oyma desenler,
 kumaş kıvrımları) 3B'ye aktarılmaz — resmin renkleri ve oranları aktarılır. Resimden dokunun yüzeye yansıtılması
@@ -122,12 +135,13 @@ Ek kısıtlar: pelerin yerçekimiyle sarkar ve gövdeye giremez; pelerin eteği,
 |---|---|
 | Yürüyüşte basan ayağın dünyadaki kayması (240 örnek/döngü) | **0,00 mm** |
 | Basan ayak yüksekliği sapması | 0,00 mm |
-| En düşük vertex (tüm klipler) | −0,69 cm (çizme tabanı; ≥ −1,2 cm eşiği) |
+| En düşük vertex (tüm klipler) | −0,38 cm (ölüm, yere yatan kılıç kenarı; eşik −1,2 cm); yürüyüşte 0,00 cm |
 | GLB'de kırpmasız kumaş en düşük nokta (ölüm) | +3,8 cm (zeminin üstünde) |
 | Kol/bacak/boyun bağlantı kayması (halka yarıçapına oran) | en kötü %73 (iri beden, saldırı) < %100 → kopma yok |
 | Silah–el bağı sapması | 0,0000 mm |
 | Kemik uzunluğu korunumu | < 0,00001 mm |
 | Kılıç ucu en yüksek hız anı (saldırı) | t ≈ 0,31 (vuruş aralığı 0,3–0,6) |
+| Gövde/zırh yüzeyi en büyük kenar uzaması | 6,4 cm (iri beden, ölüm; kumaş hariç) |
 
 ## 5. Sprite ve GLB
 
@@ -136,20 +150,34 @@ Ek kısıtlar: pelerin yerçekimiyle sarkar ve gövdeye giremez; pelerin eteği,
   şekilde bir kez hesaplanır; **ayak çizgisi y = 228** tüm sayfalarda aynı. Yürüyüş hızı manifestte (px/sn).
 - **Bağımsız ZIP denetimi** (`tests/test_zip.py`, Python zipfile + Pillow): CRC tamam, 40 PNG + manifest + GLB,
   boyut/mod doğru, köşeler şeffaf, boş kare yok, boşta animasyonunda her yönde 8 karenin alt satırı aynı (±1 px).
-- **GLB:** 11 parça (malzeme başına sıkı vertex tamponu), 5.767 vertex, 8.102 üçgen, 26 eklem, 5 animasyon (60 kare/sn
+- **GLB:** 10 parça (malzeme başına sıkı vertex tamponu), 5.767 vertex, 8.102 üçgen, 26 eklem, 5 animasyon (60 kare/sn
   doğrusal), PBR malzemeler, kemik adları `hand_R` biçiminde, `extras.forge` içinde yürüyüş hızı ve tahmini parçalar.
   - **Khronos glTF-Validator 2.0.0-dev.3.10: 0 hata, 0 uyarı, 0 bilgi, 0 ipucu.**
-  - **three.js 0.170 GLTFLoader** ile açıldı: 26 kemik, 5 animasyon; AnimationMixer ile oynatıldı (`ciktilar/ekran/threejs_4poz.png`).
+  - **three.js 0.170 GLTFLoader** ile açıldı: 10 deri mesh, 26 kemik, 5 animasyon; AnimationMixer ile oynatıldı (`ciktilar/ekran/threejs_4poz.png`).
+  - Hareketli önizleme: `ciktilar/hareket_onizleme.gif` (5 hareket × 8 yön).
   - **Gidiş-dönüş:** GLB'den yeniden kurulan iskelet motordakinden en fazla **1,23 cm** sapar; siluet IoU ≥ 0,96 (60 örnek).
   - Uygulama içinde "GLB indir + doğrula" ve "GLB dosyası aç ve doğrula" dosyayı yeniden okuyup çizer.
 
 ## 6. Performans (telefon CPU'su hedefi)
 
 Gerçek Realme C55 (Helio G88, 2×A75 + 6×A55) bu ortamda **yok**; ölçümler Chromium'da masaüstü CPU (Xeon 2,3 GHz,
-tek iş parçacığı) ve **6× CPU yavaşlatma** (düşük güçlü telefon için kaba yaklaşım) ile alınmıştır. Telefonda gerçek
+tek iş parçacığı) ve tek çekirdek paylaşımlı yavaşlatma ile alınmıştır. Telefon sütunu, tek çekirdek başarım farkına
+dayanan **tahmindir** (×4–6). Telefonda gerçek
 değer için uygulamadaki **CİHAZ ÖLÇÜMÜ → Ölçümü kaydet (JSON)** kullanılmalıdır.
 
-⟨PERF_TABLO⟩
+| İşlem | Masaüstü CPU (gerçek) | Tek çekirdek ~2× yavaş (gerçek) | Realme C55 **tahmini** (×4–6) |
+|---|---|---|---|
+| Sayfa açılışı (file://, ağ kapalı) | 0,3 sn | 1,1 sn | 1–2 sn |
+| Resimden analiz | 35–90 ms | 140 ms | 0,2–0,5 sn |
+| Mesh + iskelet kurulumu | 11–46 ms | 39 ms | 0,1–0,3 sn |
+| 3B önizleme karesi (320×320, 2× örnekleme) | 36 ms | 73 ms | 150–220 ms → oynatmada otomatik 1× örnekleme |
+| 40 sprite + GLB + ZIP (Worker) | **10,5 sn** (36 sayfa devam) · Node'da 40 sayfa 10,2 sn | 21,6 sn | 45–70 sn |
+| GLB üretimi + doğrulama | 29–42 ms | — | 0,2 sn |
+| Bellek: Node'da tüm hat (RSS) | 135–160 MB | — | — |
+| Bellek: Chrome toplam RSS, 40 sprite sonrası | 675 MB (tüm Chrome süreçleri, başlangıç 490 MB) | — | — |
+
+Yapılan bellek düzeltmesi: model baytları worker'a kopyalanmak yerine aktarılır (transfer) ve paket cihaza kaydedildiyse
+ana iş parçacığındaki 50 MB'lık kopya bırakılır; oturumlar kurulduktan sonra worker'daki ham baytlar da serbest kalır.
 
 Uygulanan önlemler: tüm uzun işler Web Worker'da; önizleme 15 kare/sn ve sekme gizliyken durur; sprite üretiminde
 ve görsel üretiminde iptal + kaldığı yerden devam (görsel ara durumu IndexedDB'ye her 2 adımda yazılır); görsel
@@ -161,8 +189,10 @@ WASM SIMD: ONNX Runtime'ın SIMD derlemesi kullanılır. Çok iş parçacığı 
 ## 7. Çevrimdışı çalışma
 
 `tests/test_tarayici.js`: Chromium `offline: true` + **tüm** http(s) istekleri engellenir; sayfa `file://` ile açılır.
-Sonuç: **0 uzak istek**, konsolda hata yok; 3B, sprite, GLB, görsel üretimi ve sayfa yeniden yüklendiğinde modelin
-IndexedDB'den internetsiz geri gelmesi doğrulandı. Derleyici (`araclar/derle.js`) HTML'de CDN bağlantısı bulursa durur.
+Sonuç: **0 uzak istek**, konsolda hata yok (31 kontrol); 3B, sprite, GLB, görsel üretimi sayfa yeniden yüklendiğinde modelin
+IndexedDB'den internetsiz geri gelmesi ve sprite üretimi ortasında sayfa kapansa bile tamamlanan sayfaların geri gelip
+"Devam et" ile 40'a tamamlanması (`tests/test_sekme_kapanma.js`) doğrulandı. Sayfa yerel HTTP'den açıldığında
+"Paketi bu klasörden yükle" yolu da test edildi. Derleyici (`araclar/derle.js`) HTML'de CDN bağlantısı bulursa durur.
 
 ## 8. V11.2'nin korunması
 
@@ -175,7 +205,7 @@ V12'de V11.2 betiğine yalnızca kanca eklendi (`sourceCanvas`, `importImage`, `
 
 | # | Test | Sonuç |
 |---|---|---|
-| 1 | Telefon CPU'sunda resim üretimi | ⚠️ Gerçek telefon yok → masaüstü + 6× yavaşlatmalı Chromium'da üretildi; telefonda ölçüm aracı hazır |
+| 1 | Telefon CPU'sunda resim üretimi | ⚠️ Gerçek telefon yok → masaüstü ve tek çekirdek yavaşlatmalı Chromium'da gerçek üretim; telefon süresi tahmin; uygulamada ölçüm aracı hazır |
 | 2 | İnterneti kapatarak çalışma | ✅ 0 uzak istek |
 | 3 | Resimden gerçek 3B mesh | ✅ 5.459 vertex / 8.102 üçgen; analiz doğruluğu §3 |
 | 4 | 3B karakteri döndürme | ✅ sürükleme ile (test: yaw 0 → −1,44 rad) |

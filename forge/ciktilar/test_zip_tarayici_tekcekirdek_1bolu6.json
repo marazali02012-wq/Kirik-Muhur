@@ -1,0 +1,1120 @@
+{
+ "zip": "/home/user/Kirik-Muhur/forge/ciktilar/tarayici_tekcekirdek_1bolu6_sprite_40.zip",
+ "crcOk": true,
+ "files": 42,
+ "pngSheets": 40,
+ "hasManifest": true,
+ "hasGLB": true,
+ "sheets": {
+  "directions/dir0_front/attack.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    10582,
+    10530,
+    9891,
+    10071,
+    9862,
+    9762,
+    10332,
+    10569
+   ]
+  },
+  "directions/dir0_front/death.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    233,
+    233,
+    240,
+    241,
+    240,
+    243
+   ],
+   "opaquePixels": [
+    10701,
+    11039,
+    10792,
+    9269,
+    8491,
+    7474,
+    6780,
+    7626
+   ]
+  },
+  "directions/dir0_front/hurt.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    10719,
+    10515,
+    10829,
+    10945,
+    10937,
+    10853,
+    10796,
+    10719
+   ]
+  },
+  "directions/dir0_front/idle.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    10704,
+    10839,
+    10891,
+    10844,
+    10704,
+    10610,
+    10575,
+    10621
+   ]
+  },
+  "directions/dir0_front/walk.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    241,
+    238,
+    235,
+    232,
+    241,
+    238,
+    235,
+    232
+   ],
+   "opaquePixels": [
+    10251,
+    10207,
+    10320,
+    10208,
+    10261,
+    10150,
+    10216,
+    10142
+   ]
+  },
+  "directions/dir1_front_right/attack.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236
+   ],
+   "opaquePixels": [
+    9522,
+    9951,
+    10660,
+    9570,
+    9314,
+    9238,
+    9381,
+    9501
+   ]
+  },
+  "directions/dir1_front_right/death.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    236,
+    236,
+    246,
+    235,
+    239,
+    240,
+    239,
+    248
+   ],
+   "opaquePixels": [
+    9508,
+    10550,
+    10173,
+    9015,
+    8367,
+    8008,
+    8192,
+    8789
+   ]
+  },
+  "directions/dir1_front_right/hurt.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236
+   ],
+   "opaquePixels": [
+    9355,
+    10502,
+    9920,
+    9577,
+    9416,
+    9392,
+    9362,
+    9355
+   ]
+  },
+  "directions/dir1_front_right/idle.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236
+   ],
+   "opaquePixels": [
+    9342,
+    9368,
+    9359,
+    9372,
+    9327,
+    9304,
+    9278,
+    9291
+   ]
+  },
+  "directions/dir1_front_right/walk.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    232,
+    230,
+    228,
+    241,
+    238,
+    236,
+    234
+   ],
+   "opaquePixels": [
+    9115,
+    8956,
+    9234,
+    8988,
+    9144,
+    9096,
+    9368,
+    9294
+   ]
+  },
+  "directions/dir2_right/attack.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    7592,
+    8004,
+    8561,
+    8194,
+    8808,
+    8557,
+    8040,
+    7721
+   ]
+  },
+  "directions/dir2_right/death.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    242,
+    234,
+    233,
+    235,
+    238,
+    244
+   ],
+   "opaquePixels": [
+    7476,
+    8926,
+    8643,
+    7442,
+    7353,
+    8191,
+    8492,
+    9304
+   ]
+  },
+  "directions/dir2_right/hurt.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    7230,
+    9414,
+    8468,
+    7774,
+    7404,
+    7308,
+    7271,
+    7230
+   ]
+  },
+  "directions/dir2_right/idle.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    7253,
+    7239,
+    7246,
+    7241,
+    7260,
+    7240,
+    7223,
+    7246
+   ]
+  },
+  "directions/dir2_right/walk.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    233,
+    233,
+    228,
+    226,
+    233,
+    233,
+    233,
+    233
+   ],
+   "opaquePixels": [
+    9009,
+    8742,
+    7743,
+    8370,
+    8474,
+    8345,
+    7935,
+    8528
+   ]
+  },
+  "directions/dir3_back_right/attack.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    9798,
+    9845,
+    9131,
+    10101,
+    10073,
+    9932,
+    10165,
+    9952
+   ]
+  },
+  "directions/dir3_back_right/death.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    233,
+    233,
+    233,
+    233,
+    231,
+    237
+   ],
+   "opaquePixels": [
+    9902,
+    11143,
+    11115,
+    9350,
+    8813,
+    9291,
+    8049,
+    7475
+   ]
+  },
+  "directions/dir3_back_right/hurt.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    9881,
+    10891,
+    10365,
+    10046,
+    9882,
+    9901,
+    9879,
+    9881
+   ]
+  },
+  "directions/dir3_back_right/idle.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    9912,
+    9949,
+    9969,
+    9966,
+    9905,
+    9856,
+    9839,
+    9848
+   ]
+  },
+  "directions/dir3_back_right/walk.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    237,
+    233,
+    226,
+    228,
+    230,
+    230,
+    233,
+    235
+   ],
+   "opaquePixels": [
+    10239,
+    10209,
+    10155,
+    10042,
+    9887,
+    9756,
+    9705,
+    9975
+   ]
+  },
+  "directions/dir4_back/attack.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    231,
+    231,
+    231,
+    231,
+    231,
+    231,
+    231,
+    231
+   ],
+   "opaquePixels": [
+    10958,
+    10780,
+    10651,
+    10810,
+    10853,
+    10578,
+    10771,
+    10948
+   ]
+  },
+  "directions/dir4_back/death.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    231,
+    231,
+    228,
+    226,
+    226,
+    225,
+    222,
+    222
+   ],
+   "opaquePixels": [
+    11096,
+    10749,
+    11012,
+    10467,
+    9713,
+    9708,
+    8147,
+    7293
+   ]
+  },
+  "directions/dir4_back/hurt.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    231,
+    231,
+    231,
+    231,
+    231,
+    231,
+    231,
+    231
+   ],
+   "opaquePixels": [
+    10978,
+    10491,
+    10738,
+    10888,
+    10969,
+    10995,
+    10996,
+    10978
+   ]
+  },
+  "directions/dir4_back/idle.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    231,
+    231,
+    231,
+    231,
+    231,
+    231,
+    231,
+    231
+   ],
+   "opaquePixels": [
+    10976,
+    11048,
+    11073,
+    11065,
+    11005,
+    10971,
+    10944,
+    10940
+   ]
+  },
+  "directions/dir4_back/walk.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    235,
+    233,
+    229,
+    232,
+    235,
+    233,
+    229,
+    232
+   ],
+   "opaquePixels": [
+    10750,
+    10837,
+    10840,
+    10649,
+    10621,
+    10698,
+    10781,
+    10723
+   ]
+  },
+  "directions/dir5_back_left/attack.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    9860,
+    10075,
+    11088,
+    10315,
+    9750,
+    9703,
+    9841,
+    9896
+   ]
+  },
+  "directions/dir5_back_left/death.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    232,
+    233,
+    233,
+    231,
+    227,
+    227
+   ],
+   "opaquePixels": [
+    9802,
+    10859,
+    10622,
+    10126,
+    9530,
+    9807,
+    8806,
+    9015
+   ]
+  },
+  "directions/dir5_back_left/hurt.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    9736,
+    10860,
+    10050,
+    9743,
+    9655,
+    9706,
+    9712,
+    9736
+   ]
+  },
+  "directions/dir5_back_left/idle.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    9754,
+    9764,
+    9769,
+    9778,
+    9759,
+    9750,
+    9742,
+    9739
+   ]
+  },
+  "directions/dir5_back_left/walk.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    230,
+    230,
+    233,
+    235,
+    237,
+    233,
+    226,
+    228
+   ],
+   "opaquePixels": [
+    9797,
+    9655,
+    9558,
+    9714,
+    9883,
+    9973,
+    10018,
+    9935
+   ]
+  },
+  "directions/dir6_left/attack.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    7565,
+    8397,
+    9389,
+    8043,
+    8024,
+    7937,
+    7933,
+    7669
+   ]
+  },
+  "directions/dir6_left/death.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    233,
+    234,
+    233,
+    233,
+    233,
+    233
+   ],
+   "opaquePixels": [
+    7537,
+    8675,
+    8551,
+    7820,
+    7762,
+    8088,
+    8182,
+    8294
+   ]
+  },
+  "directions/dir6_left/hurt.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    7504,
+    9190,
+    8591,
+    7982,
+    7642,
+    7551,
+    7526,
+    7504
+   ]
+  },
+  "directions/dir6_left/idle.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234,
+    234
+   ],
+   "opaquePixels": [
+    7520,
+    7527,
+    7533,
+    7517,
+    7524,
+    7500,
+    7486,
+    7505
+   ]
+  },
+  "directions/dir6_left/walk.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    233,
+    233,
+    233,
+    233,
+    233,
+    233,
+    228,
+    226
+   ],
+   "opaquePixels": [
+    8687,
+    8496,
+    7987,
+    8434,
+    8901,
+    8567,
+    7792,
+    8594
+   ]
+  },
+  "directions/dir7_front_left/attack.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236
+   ],
+   "opaquePixels": [
+    9602,
+    9700,
+    9366,
+    9266,
+    9447,
+    9380,
+    9907,
+    9692
+   ]
+  },
+  "directions/dir7_front_left/death.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    236,
+    236,
+    236,
+    235,
+    239,
+    240,
+    239,
+    240
+   ],
+   "opaquePixels": [
+    9733,
+    10863,
+    10491,
+    8357,
+    8007,
+    7564,
+    7240,
+    7372
+   ]
+  },
+  "directions/dir7_front_left/hurt.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236
+   ],
+   "opaquePixels": [
+    9872,
+    10753,
+    10462,
+    10176,
+    10016,
+    9951,
+    9916,
+    9872
+   ]
+  },
+  "directions/dir7_front_left/idle.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236,
+    236
+   ],
+   "opaquePixels": [
+    9860,
+    9915,
+    9932,
+    9917,
+    9851,
+    9820,
+    9802,
+    9820
+   ]
+  },
+  "directions/dir7_front_left/walk.png": {
+   "size": [
+    1024,
+    512
+   ],
+   "mode": "RGBA",
+   "lowestOpaqueRow": [
+    241,
+    238,
+    236,
+    234,
+    234,
+    232,
+    230,
+    228
+   ],
+   "opaquePixels": [
+    9593,
+    9416,
+    9583,
+    9590,
+    9379,
+    9193,
+    9411,
+    9370
+   ]
+  }
+ },
+ "errors": [],
+ "footBaselineY": 228,
+ "idleLowestRowPerDirection": {
+  "dir0_front": 234,
+  "dir1_front_right": 236,
+  "dir2_right": 234,
+  "dir3_back_right": 234,
+  "dir4_back": 231,
+  "dir5_back_left": 234,
+  "dir6_left": 234,
+  "dir7_front_left": 236
+ },
+ "directions": [
+  "dir0_front",
+  "dir1_front_right",
+  "dir2_right",
+  "dir3_back_right",
+  "dir4_back",
+  "dir5_back_left",
+  "dir6_left",
+  "dir7_front_left"
+ ],
+ "actions": [
+  "attack.png",
+  "death.png",
+  "hurt.png",
+  "idle.png",
+  "walk.png"
+ ],
+ "ok": true
+}

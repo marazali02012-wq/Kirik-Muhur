@@ -27,13 +27,15 @@ async function init(m) {
   ORT.env.wasm.proxy = false;
   cfg = m.config; files = m.files; memSaver = !!m.memSaver;
   await ensureUnet();
-  if (!memSaver) await ensureDec();
+  if (!memSaver) { await ensureDec(); files = null; } // oturumlar modeli kendi belleğine aldı; ham baytlar bırakılır
   post({ type: 'ready', ms: performance.now() - t0, threads: ORT.env.wasm.numThreads, isolated: !!self.crossOriginIsolated });
 }
 
 // DDIM (v-tahmini) — eğitimdeki alphas_cumprod ile birebir aynı
 async function sample(m) {
-  const C = cfg.latentChannels, S0 = cfg.latentSize, size = m.size === 512 ? 512 : 256;
+  // 512: varsayılan olarak 256 üretilip 2x yüksek kaliteli büyütülür (ölçüldü: bu modelde gizli uzay iyileştirmesi bozuyor).
+  // m.hires === true ise deneysel gizli uzay iyileştirmesi kullanılır.
+  const C = cfg.latentChannels, S0 = cfg.latentSize, size = m.size === 512 && m.hires ? 512 : 256, upscale = m.size === 512 && !m.hires;
   const ab = cfg.alphasCumprod, T = cfg.trainSteps;
   const steps = Math.max(2, Math.min(60, m.steps || 20)), g = m.guidance || 1;
   const nullCond = cfg.attrSizes.slice();
@@ -102,7 +104,27 @@ async function sample(m) {
   if (memSaver && dec) { await dec.release(); dec = null; }
   const img = out.image.data, H = out.image.dims[2], W = out.image.dims[3], rgba = new Uint8ClampedArray(W * H * 4);
   for (let i = 0; i < W * H; i++) { rgba[i * 4] = img[i] * 255; rgba[i * 4 + 1] = img[W * H + i] * 255; rgba[i * 4 + 2] = img[2 * W * H + i] * 255; rgba[i * 4 + 3] = 255; }
+  if (upscale) {
+    const t1 = performance.now(), up = upscale2x(rgba, W, H); timings.upscaleMs = performance.now() - t1;
+    return { rgba: up, width: W * 2, height: H * 2, timings, upscaled: true };
+  }
   return { rgba, width: W, height: H, timings };
+}
+
+// 2x bikübik (Catmull-Rom) büyütme — yeni ayrıntı üretmez, yalnızca pürüzsüz büyütür
+function upscale2x(src, W, H) {
+  const W2 = W * 2, H2 = H * 2, out = new Uint8ClampedArray(W2 * H2 * 4);
+  const cr = t => { const a = Math.abs(t); return a <= 1 ? 1.5 * a * a * a - 2.5 * a * a + 1 : a < 2 ? -0.5 * a * a * a + 2.5 * a * a - 4 * a + 2 : 0; };
+  for (let y = 0; y < H2; y++) {
+    const fy = (y + 0.5) / 2 - 0.5, y0 = Math.floor(fy);
+    for (let x = 0; x < W2; x++) {
+      const fx = (x + 0.5) / 2 - 0.5, x0 = Math.floor(fx); let r = 0, g = 0, b = 0, wsum = 0;
+      for (let j = -1; j <= 2; j++) { const yy = Math.min(H - 1, Math.max(0, y0 + j)), wy = cr(fy - (y0 + j));
+        for (let i = -1; i <= 2; i++) { const xx = Math.min(W - 1, Math.max(0, x0 + i)), w = wy * cr(fx - (x0 + i)), o = (yy * W + xx) * 4; r += src[o] * w; g += src[o + 1] * w; b += src[o + 2] * w; wsum += w; } }
+      const o = (y * W2 + x) * 4; out[o] = r / wsum; out[o + 1] = g / wsum; out[o + 2] = b / wsum; out[o + 3] = 255;
+    }
+  }
+  return out;
 }
 
 self.onmessage = async ev => {

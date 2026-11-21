@@ -59,12 +59,13 @@
     async loadFromUrl(base) { // yalnızca sayfa http(s) üzerinden açıldığında (yerel sunucu / PWA) kullanılır
       const r = await fetch(base); if (!r.ok) throw new Error('Paket bulunamadı: ' + base); const buf = await r.arrayBuffer(); const p = parsePack(buf); p.source = base; p.bytes = buf.byteLength; this.pack = p; p.saved = await this.savePack(p); return p;
     },
-    config() { return this.pack ? JSON.parse(new TextDecoder().decode(this.pack.files['config.json'])) : null; },
+    config() { if (!this.pack) return null; if (!this.pack.files) return this.cfgCache; return (this.cfgCache = JSON.parse(new TextDecoder().decode(this.pack.files['config.json']))); },
     stop() { if (this.worker) this.worker.terminate(); this.worker = null; this.ready = false; },
     async start(opts) {
       opts = opts || {};
       if (!this.pack) throw new Error('Önce model paketini seçin');
       this.stop();
+      if (!this.pack.files) { const p = await kvGet('pack'); if (!p) throw new Error('Paket cihaz deposunda bulunamadı; yeniden seçin'); this.pack.files = p.files; }
       const src = document.getElementById('ld-worker-src').textContent;
       const w = this.worker = new Worker(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })));
       const f = this.pack.files, cfg = this.config();
@@ -72,9 +73,14 @@
         w.onmessage = ev => { const m = ev.data; if (m.type === 'ready') { this.ready = true; this.info = m; res(m); } else if (m.type === 'error') rej(new Error(m.message)); else if (this.onMessage) this.onMessage(m); };
         w.onerror = e => rej(new Error(e.message || 'Worker hatası'));
       });
-      w.postMessage({ type: 'init', ortJs: new TextDecoder().decode(f['ort.wasm.min.js']), glueMjs: new TextDecoder().decode(f['ort-wasm-simd-threaded.mjs']), wasm: f['ort-wasm-simd-threaded.wasm'].slice(0),
-        files: { unet: new Uint8Array(f['unet.onnx'].slice(0)), decoder: new Uint8Array(f['taesd_decoder.onnx'].slice(0)) }, config: cfg, threads: opts.threads || 1, memSaver: !!opts.memSaver });
+      // Kopyalar worker'a AKTARILIR (transfer): aynı baytlar bellekte iki kez tutulmaz
+      const wasm = f['ort-wasm-simd-threaded.wasm'].slice(0), unet = new Uint8Array(f['unet.onnx'].slice(0)), dec = new Uint8Array(f['taesd_decoder.onnx'].slice(0));
+      w.postMessage({ type: 'init', ortJs: new TextDecoder().decode(f['ort.wasm.min.js']), glueMjs: new TextDecoder().decode(f['ort-wasm-simd-threaded.mjs']), wasm,
+        files: { unet, decoder: dec }, config: cfg, threads: opts.threads || 1, memSaver: !!opts.memSaver }, [wasm, unet.buffer, dec.buffer]);
       const info = await ready;
+      this.cfgCache = cfg;
+      // Paket cihaza kaydedildiyse ana iş parçacığındaki ~50 MB'lık kopya bırakılır (gerekirse depodan yeniden okunur)
+      if (this.pack.saved) this.pack.files = null;
       w.onmessage = ev => { const m = ev.data; if (m.type === 'state') { this.lastState = Object.assign({ req: this.lastReq }, m.state); try { kvSet('ldstate', this.lastState); } catch (e) { } } if (this.onMessage) this.onMessage(m); };
       return info;
     },
