@@ -1,0 +1,231 @@
+<div class="app2" id="app">
+<header class="topbar">
+  <div class="tb-brand">◈ FORGE 2.5D <span>V12</span></div>
+  <div class="tb-where" id="hdr-section">Görsel Üret</div>
+  <div class="tb-proj" id="hdr-proj" title="Proje durumu">Proje yükleniyor…</div>
+  <div class="tb-bg" id="hdr-bg" hidden></div>
+</header>
+<nav class="tabs" id="tabs" role="tablist" aria-label="Bölümler">
+  <button role="tab" class="tab-btn" data-tab="uret"><span class="ic">✦</span><span class="tl">Üret</span></button>
+  <button role="tab" class="tab-btn" data-tab="duzenle"><span class="ic">✎</span><span class="tl">Düzenle</span></button>
+  <button role="tab" class="tab-btn" data-tab="model"><span class="ic">◆</span><span class="tl">3D Model</span></button>
+  <button role="tab" class="tab-btn" data-tab="anim"><span class="ic">▶</span><span class="tl">Animasyon</span></button>
+  <button role="tab" class="tab-btn" data-tab="aktar"><span class="ic">⬇</span><span class="tl">Dışa Aktar</span></button>
+  <button role="tab" class="tab-btn" data-tab="ayar"><span class="ic">⚙</span><span class="tl">Ayarlar</span><i class="dot" id="err-dot" hidden></i></button>
+</nav>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<main class="pages">
+
+<!-- 1 · GÖRSEL ÜRET -->
+<section class="page" id="tab-uret" data-title="Görsel Üret" role="tabpanel">
+  <h2>Görsel Üret</h2>
+  <p class="lead">Karakter görselini bu telefonda üret ya da hazır savaşçıyı kullan.</p>
+  <div class="seg" id="uret-mode" role="radiogroup" aria-label="Üretim türü">
+    <button class="seg-b active" data-mode="ai" role="radio" aria-checked="true">Yapay zekâ (cihazda)</button>
+    <button class="seg-b" data-mode="hazir" role="radio" aria-checked="false">Hazır savaşçı</button>
+  </div>
+  <label class="label" for="prompt">Türkçe tarif</label>
+  <textarea id="prompt" rows="2">Mavi zırhlı kılıçlı savaşçı</textarea>
+  <div class="cols">
+    <div class="col-ctl">
+      <div class="mode-ai">
+        <div class="chips" id="ld-chips"></div>
+        <div class="packline"><div class="status" id="ld-status" role="status">Model paketi kontrol ediliyor…</div>
+          <label class="filebtn" id="ld-file-lbl">Model paketi seç (.forgepack)<input type="file" id="ld-file" accept=".forgepack,application/octet-stream"></label></div>
+        <details class="acc"><summary>Üretim ayarları</summary>
+          <div class="grid2">
+            <label class="fld">Tohum<input id="ld-seed" type="number" placeholder="rastgele" inputmode="numeric"></label>
+            <label class="fld">Adım<select id="ld-steps"><option value="12">12 · hızlı</option><option value="20" selected>20</option><option value="30">30 · kaliteli</option></select></label>
+            <label class="fld">Rehberlik<select id="ld-guid"><option value="1">1 · tek geçiş</option><option value="2" selected>2</option><option value="3">3</option></select></label>
+            <label class="fld">Boyut<select id="ld-size"><option value="256" selected>256×256</option><option value="512">512×512 (2× büyütme)</option></select><small id="ld-size-note"></small></label>
+          </div>
+        </details>
+      </div>
+      <div class="mode-hazir" hidden>
+        <p class="hint">Boyanmış 8 açılı şablon savaşçı. Tarifteki renge boyanır (mavi, kırmızı, yeşil, mor, buz, siyah). Yapay zekâ değildir.</p>
+      </div>
+    </div>
+    <div class="col-pv">
+      <div class="mode-ai">
+        <div class="pv pv-img"><canvas id="ld-out" width="256" height="256" aria-label="Üretilen görsel"></canvas><span class="pv-empty" id="ld-empty">Henüz görsel üretilmedi</span></div>
+        <div class="row act"><button class="btn primary" id="ld-go" disabled>✦ Cihazda üret</button><button class="btn" id="ld-cancel" disabled>İptal</button><button class="btn" id="ld-resume" disabled>Devam et</button></div>
+        <div class="progress"><div id="ld-bar"></div></div>
+        <div class="row" id="ld-result" hidden><button class="btn" id="ld-to-forge">Karakter olarak kullan</button><button class="btn primary" id="ld-to-3d">3D'ye çevir →</button></div>
+        <p class="hint">Model: Forge-Mini (küçük, kendi eğittiğimiz). Ayrıntısı düşüktür.</p>
+      </div>
+      <div class="mode-hazir" hidden>
+        <div class="pv pv-img"><canvas id="hz-preview" width="256" height="256" aria-label="Hazır savaşçı önizlemesi"></canvas></div>
+        <div class="row act"><button id="generate" class="btn primary">✦ Hazır savaşçıyı oluştur</button></div>
+        <div class="status" id="status" role="status">8 yönlü sanat kütüphanesi yükleniyor…</div>
+      </div>
+    </div>
+  </div>
+  <div class="next"><button class="btn ghost" data-go="duzenle">Sonraki: Görsel Düzenle →</button></div>
+</section>
+
+<!-- 2 · GÖRSEL DÜZENLE -->
+<section class="page" id="tab-duzenle" data-title="Görsel Düzenle" role="tabpanel" hidden>
+  <h2>Görsel Düzenle</h2>
+  <p class="lead">Çalışma görselini yükle ve temizle. Her işlem hemen uygulanır; “Geri al” ile dönülür.</p>
+  <div class="cols">
+    <div class="col-ctl">
+      <label class="filebtn">Görsel yükle (PNG / JPG / WEBP)<input type="file" id="importFile" accept="image/png,image/jpeg,image/webp"></label>
+      <label class="chk"><input id="removeBg" type="checkbox" checked> Yüklerken beyaz arka planı temizle</label>
+      <div class="row"><button class="btn" id="importExample">Örnek büyücü</button><button class="btn" id="returnWarrior">Hazır savaşçıya dön</button></div>
+      <div class="src-line" id="ed-src">Çalışma görseli: —</div>
+      <div class="tools" role="toolbar" aria-label="Düzenleme araçları">
+        <button class="tool" data-tool="bg">Arka plan<br>kaldır</button>
+        <button class="tool" data-tool="pick">Saydam<br>yap</button>
+        <button class="tool" data-tool="crop">Kırp</button>
+        <button class="tool" data-tool="erase">Silgi</button>
+        <button class="tool" data-tool="color">Renk</button>
+      </div>
+      <div class="tool-opts" id="ed-opts">
+        <div data-opt="bg" hidden><label class="fld">Benzerlik eşiği<input type="range" id="ed-tol" min="8" max="120" value="42"></label><button class="btn primary" id="ed-bg-run">Kenardan arka planı kaldır</button><p class="hint">Kenarlara değen tek renkli zemin silinir.</p></div>
+        <div data-opt="pick" hidden><p class="hint"><b>Renge dokunarak saydam yap.</b></p><label class="fld">Benzerlik eşiği<input type="range" id="ed-tol2" min="8" max="120" value="36"></label><p class="hint">Görselde saydam yapılacak bölgeye dokunun (bitişik benzer renkler silinir).</p></div>
+        <div data-opt="crop" hidden><div class="row"><button class="btn" id="ed-autocrop">Otomatik kırp</button><button class="btn primary" id="ed-crop-run" disabled>Seçimi kırp</button></div><p class="hint">Görselde parmakla dikdörtgen çizin, sonra “Seçimi kırp”. Sonuç 384×512 çerçeveye sığdırılır.</p></div>
+        <div data-opt="erase" hidden><label class="fld">Silgi boyutu<input type="range" id="ed-brush" min="4" max="60" value="18"></label><p class="hint">Silmek için görselin üzerinde sürükleyin.</p></div>
+        <div data-opt="color" hidden>
+          <div id="ed-color-preset"><p class="hint">Hazır savaşçı: 8 yön korunarak zırh/pelerin yeniden boyanır.</p><div class="pills" id="palettes"></div></div>
+          <div id="ed-color-custom" hidden>
+            <label class="fld">Ton<input type="range" id="ed-hue" min="-180" max="180" value="0"></label>
+            <label class="fld">Doygunluk<input type="range" id="ed-sat" min="0" max="200" value="100"></label>
+            <label class="fld">Parlaklık<input type="range" id="ed-bri" min="40" max="160" value="100"></label>
+            <div class="row"><button class="btn primary" id="ed-color-apply">Uygula</button><button class="btn" id="ed-color-reset">Sıfırla</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-pv">
+      <div class="pv pv-ed"><canvas id="ed-canvas" width="384" height="512" aria-label="Düzenlenen görsel"></canvas></div>
+      <div class="row act"><button class="btn" id="ed-compare" aria-pressed="false">Önce / Sonra</button><button class="btn" id="ed-undo" disabled>↶ Geri al</button></div>
+      <div class="status" id="ed-status" role="status"></div>
+    </div>
+  </div>
+  <div class="next"><button class="btn ghost" data-go="model">Sonraki: 3D Model →</button></div>
+</section>
+
+<!-- 3 · 3D MODEL -->
+<section class="page" id="tab-model" data-title="3D Model" role="tabpanel" hidden>
+  <h2>3D Model</h2>
+  <p class="lead">Çalışma görselinden veya tariften gerçek 3B karakter (mesh + 26 kemik) oluştur.</p>
+  <div class="row act"><button class="btn primary" id="s3-analyze">Resimden 3D oluştur</button><button class="btn" id="s3-prompt">Tariften 3D oluştur</button></div>
+  <div class="cols">
+    <div class="col-pv"><div class="pv-host" id="pv3d-host-model"></div></div>
+    <div class="col-ctl">
+      <div class="src-line" id="s3-srcline">Kaynak: —</div>
+      <div class="status" id="s3-status" role="status"></div>
+      <div class="note" id="s3-info"></div>
+      <details class="acc"><summary>Anatomi</summary><div id="s3-sliders" class="s3-sliders"></div></details>
+      <details class="acc"><summary>Donanım (silah, zırh, kıyafet)</summary><div id="s3-styles" class="s3-styles"></div></details>
+      <details class="acc"><summary>Renkler</summary><div id="s3-colors" class="s3-colors"></div></details>
+      <details class="acc"><summary>Analiz notları</summary><div class="note" id="s3-notes"></div></details>
+      <details class="acc"><summary>3D model dosyası aç (GLB)</summary>
+        <label class="filebtn">GLB dosyası seç<input type="file" id="s3-verify-file" accept=".glb,model/gltf-binary"></label>
+        <div class="note" id="s3-import-out"></div>
+        <button class="btn" id="s3-glb-close" hidden>Forge karakterine dön</button>
+        <p class="hint">Açılan GLB önizlemede ve Animasyon bölümünde izlenir. Dışa aktarım her zaman Forge karakterini kullanır.</p>
+      </details>
+    </div>
+  </div>
+  <div class="next"><button class="btn ghost" data-go="anim">Sonraki: Animasyon →</button></div>
+</section>
+
+<!-- 4 · ANİMASYON -->
+<section class="page" id="tab-anim" data-title="Animasyon" role="tabpanel" hidden>
+  <h2>Animasyon</h2>
+  <div class="seg" id="an-viewer" role="radiogroup" aria-label="İzlenen model">
+    <button class="seg-b active" data-view="3d" role="radio" aria-checked="true">3B iskelet</button>
+    <button class="seg-b" data-view="2d" role="radio" aria-checked="false">2B boyalı görsel</button>
+  </div>
+  <div class="cols">
+    <div class="col-ctl">
+      <div class="label">Hareket</div><div class="actions" id="an-clips"></div>
+      <div class="label">Yön</div><div class="directions" id="an-dirs"></div>
+    </div>
+    <div class="col-pv">
+      <div class="pv-host" id="pv3d-host-anim"></div>
+      <div id="pv2d" hidden>
+        <div class="pv-label">İzlenen: <b>2B boyalı görsel</b> (V11.2 dönüşüm önizlemesi — iskelet yok)</div>
+        <div class="viewport"><canvas id="stage" width="512" height="512" aria-label="2B savaşçı önizlemesi"></canvas></div>
+        <div class="caption" id="viewState">Görsel kütüphanesi yükleniyor…</div>
+        <div class="strip" id="strip"></div>
+      </div>
+      <div class="frame-ctl"><button class="btn" id="an-prev" aria-label="Önceki kare">◀</button><button class="btn primary" id="an-play">❚❚ Durdur</button><button class="btn" id="an-next" aria-label="Sonraki kare">▶</button></div>
+      <label class="fld">Kare <b id="an-frame-lbl">1 / 8</b><input type="range" id="an-frame" min="1" max="8" value="1"></label>
+    </div>
+  </div>
+  <div class="v11-ctl" hidden><div class="directions" id="directions"></div><div class="actions" id="actions"></div></div>
+  <div class="next"><button class="btn ghost" data-go="aktar">Sonraki: Dışa Aktar →</button></div>
+</section>
+
+<!-- 5 · DIŞA AKTAR -->
+<section class="page" id="tab-aktar" data-title="Dışa Aktar" role="tabpanel" hidden>
+  <h2>Dışa Aktar</h2>
+  <p class="lead">Bütün indirmeler burada.</p>
+  <div class="grp"><h3>3B karakter → oyun</h3>
+    <div class="export"><button class="btn primary" id="s3-zip">40 sprite + GLB ZIP</button><button class="btn" id="s3-glb">GLB indir + doğrula</button><button class="btn" id="s3-cancel" disabled>İptal</button><button class="btn" id="s3-resume" disabled>Devam et</button></div>
+    <div class="progress"><div id="s3-bar"></div></div>
+    <div class="status" id="x-status" role="status"></div>
+    <div class="note" id="s3-verify-out"></div>
+    <canvas id="s3-glbview" width="200" height="200" hidden aria-label="GLB dosyasından yeniden kurulan karakter"></canvas>
+    <p class="hint">8 yön × 5 hareket · her hareket 8 kare (4×2) · 256×256 şeffaf PNG · aynı ayak hizası · manifest.json · GLB.</p>
+  </div>
+  <div class="grp"><h3>2B boyalı görsel (V11.2)</h3>
+    <div class="export"><button class="btn" id="one">Seçili yön PNG</button><button class="btn" id="atlas">8 yön atlas PNG</button><button class="btn" id="all">8 yön × 5 hareket ZIP</button><button class="btn" id="recipe">Tarif JSON</button></div>
+    <div class="progress"><div id="bar"></div></div>
+    <p class="hint">Boyalı 2D açı görselleridir; iskelet animasyonu veya GLB değildir. Yüklenen PNG tek yönlüdür. Yön ve hareket Animasyon bölümünden seçilir.</p>
+  </div>
+  <div class="grp"><h3>Görseller</h3>
+    <div class="export"><button class="btn" id="ld-save" disabled>Üretilen görsel PNG</button><button class="btn" id="ed-save">Çalışma görseli PNG</button></div>
+  </div>
+  <div class="grp"><h3>Dışa aktarılan dosyayı kontrol et</h3>
+    <label class="filebtn">GLB veya ZIP seç<input type="file" id="x-check" accept=".glb,.zip,model/gltf-binary,application/zip"></label>
+    <div class="note" id="x-check-out"></div>
+  </div>
+</section>
+
+<!-- 6 · AYARLAR VE TEST -->
+<section class="page" id="tab-ayar" data-title="Ayarlar ve Test" role="tabpanel" hidden>
+  <h2>Ayarlar ve Test</h2>
+  <details class="acc"><summary>İşlemci ve ısınma</summary>
+    <label class="fld">Görsel üretimi: adım arası bekleme<select id="ld-cool"><option value="0">yok</option><option value="40" selected>40 ms</option><option value="150">150 ms</option></select></label>
+    <label class="fld">Sprite üretimi: sayfa arası bekleme<select id="s3-cool"><option value="0">yok</option><option value="60" selected>60 ms</option><option value="250">250 ms</option></select></label>
+    <p class="hint" id="set-cpu-info"></p>
+  </details>
+  <details class="acc"><summary>Bellek</summary>
+    <label class="chk"><input type="checkbox" id="ld-memsaver"> Bellek tasarrufu (görsel motoru parçaları sırayla yükler)</label>
+    <p class="hint">Değişiklik bir sonraki motor başlatmada geçerli olur.</p>
+  </details>
+  <details class="acc"><summary>Model paketi</summary>
+    <div class="note" id="set-pack-info"></div>
+    <label class="filebtn">Ayrı dosyaları seç<input type="file" id="ld-files" multiple></label>
+    <div class="row"><button class="btn" id="ld-url" hidden>Paketi bu klasörden yükle</button><button class="btn" id="ld-forget">Paketi cihazdan sil</button></div>
+  </details>
+  <details class="acc"><summary>Öz-test</summary>
+    <button class="btn primary" id="st-run">Öz-testi çalıştır</button>
+    <ul class="checklist" id="st-out"></ul>
+  </details>
+  <details class="acc"><summary>Performans ve cihaz bilgisi (JSON)</summary>
+    <div class="row"><button class="btn" id="perf-run">Ölçümü yenile</button><button class="btn" id="perf-save">Ölçümü kaydet (JSON)</button></div>
+    <pre id="perf-out" class="perf"></pre>
+  </details>
+  <details class="acc"><summary>Hata kayıtları<b class="err-badge" id="err-count">0</b></summary>
+    <ul class="errlog" id="err-log"></ul>
+    <button class="btn" id="err-clear">Kayıtları temizle</button>
+  </details>
+  <details class="acc"><summary>Proje</summary>
+    <p class="hint" id="proj-info">Tarif, 3D ayarları ve yüklenen görsel bu cihazda otomatik saklanır.</p>
+    <button class="btn" id="proj-reset">Projeyi sıfırla</button>
+  </details>
+</section>
+</main>
+
+<!-- Paylaşılan 3B önizleme: 3D Model ve Animasyon bölümleri arasında taşınır (tek tuval, tek durum) -->
+<div id="pv3d" class="pv3d">
+  <div class="pv-label" id="pv-label">İzlenen: <b>3B karakter</b></div>
+  <div class="viewport s3vp"><canvas id="s3-view" width="320" height="320" aria-label="3B karakter önizlemesi (sürükleyerek döndürün)"></canvas></div>
+  <div class="caption" id="s3-fps"></div>
+  <div class="toggles"><label><input type="checkbox" id="s3-bones"> İskelet</label><label><input type="checkbox" id="s3-est"> Tahmini yüzeyler</label><label><input type="checkbox" id="s3-overlay"> Kaynakla karşılaştır</label></div>
+</div>
+</div>

@@ -1,0 +1,4337 @@
+{
+ "file": "Forge_25D_V12_1_Duzenli.html",
+ "startedAt": "2026-11-21T21:40:12.925Z",
+ "checks": [
+  {
+   "ok": true,
+   "check": "360x740 · uret: taşma yok, çakışma yok, yazı kesilmiyor, 17 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "360x740 · duzenle: taşma yok, çakışma yok, yazı kesilmiyor, 18 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "360x740 · model: taşma yok, çakışma yok, yazı kesilmiyor, 23 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "360x740 · anim: taşma yok, çakışma yok, yazı kesilmiyor, 28 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "360x740 · aktar: taşma yok, çakışma yok, yazı kesilmiyor, 17 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "360x740 · ayar: taşma yok, çakışma yok, yazı kesilmiyor, 23 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "PNG yüklendi (çalışma görseli oldu)",
+   "detail": {
+    "w": 384,
+    "h": 512,
+    "transparent": 7856,
+    "custom": true
+   }
+  },
+  {
+   "ok": true,
+   "check": "Arka plan kaldırma: yeşil zemin saydam oldu",
+   "detail": {
+    "önce": 7856,
+    "sonra": 138649
+   }
+  },
+  {
+   "ok": true,
+   "check": "Geri al: önceki hale döndü",
+   "detail": 7856
+  },
+  {
+   "ok": true,
+   "check": "Renge dokunarak saydam yapma çalıştı",
+   "detail": {
+    "önce": 138649,
+    "sonra": 141869
+   }
+  },
+  {
+   "ok": true,
+   "check": "Silgi çalıştı",
+   "detail": {
+    "önce": 138649,
+    "sonra": 140245
+   }
+  },
+  {
+   "ok": true,
+   "check": "Kırpma alanı çizildi"
+  },
+  {
+   "ok": true,
+   "check": "Seçimi kırp: sonuç 384×512 çerçevede",
+   "detail": {
+    "w": 384,
+    "h": 512,
+    "transparent": 131192,
+    "custom": true
+   }
+  },
+  {
+   "ok": true,
+   "check": "Otomatik kırp çalıştı",
+   "detail": "Boş kenarlar kırpıldı (241×464 → 384×512 çerçeve)."
+  },
+  {
+   "ok": true,
+   "check": "Renk (ton) uygulandı",
+   "detail": "Renk uygulandı (ton 90°, doygunluk ×1.00, parlaklık ×1.00)."
+  },
+  {
+   "ok": true,
+   "check": "Önce/Sonra karşılaştırma açıldı"
+  },
+  {
+   "ok": true,
+   "check": "3D: çalışma görselinden oluşturuldu",
+   "detail": "Kaynak: Resim — Yüklenen görsel “yesil_zeminli_karakter.png” (tek yön)"
+  },
+  {
+   "ok": true,
+   "check": "3D: tariften oluşturuldu"
+  },
+  {
+   "ok": true,
+   "check": "Anatomi: irilik 1.2 uygulandı"
+  },
+  {
+   "ok": true,
+   "check": "Donanım: silah baltaya çevrildi"
+  },
+  {
+   "ok": true,
+   "check": "Tek denetim: hareket + yön hem 3B hem 2B (V11.2) durumunu değiştirdi",
+   "detail": {
+    "clip": "walk",
+    "dir": 2,
+    "v11dir": 0,
+    "v11act": "walk",
+    "custom": true
+   }
+  },
+  {
+   "ok": true,
+   "check": "Durdur + 2 kare ileri (2 → 4)",
+   "detail": {
+    "playing": false
+   }
+  },
+  {
+   "ok": true,
+   "check": "Kare kaydırıcısı: kare 6/8"
+  },
+  {
+   "ok": true,
+   "check": "2B görünüme geçildi (V11.2 önizlemesi, iskelet yok)",
+   "detail": "İzlenen: 2B boyalı görsel (V11.2 dönüşüm önizlemesi — iskelet yok)"
+  },
+  {
+   "ok": true,
+   "check": "Hazır savaşçıda 2B yön değişti (Arka-sağ)",
+   "detail": {
+    "v11dir": 3,
+    "custom": false
+   }
+  },
+  {
+   "ok": true,
+   "check": "Paket yokken açık bilgi gösterildi",
+   "detail": "Model paketi yok. Bir kez “Model paketi seç” ile .forgepack dosyasını seçin; sonra internet gerekmez."
+  },
+  {
+   "ok": true,
+   "check": "Model paketi yüklendi, motor başladı (716 ms)",
+   "detail": "Hazır: Forge-Mini Savaşçı v1 · ONNX Runtime WASM (CPU, 1 iş parçacığı) · başlatma 445 ms"
+  },
+  {
+   "ok": true,
+   "check": "Gerçek modelle cihazda görsel üretildi; üretim sırasında bölüm değiştirildi, durmadı (4710 ms)",
+   "detail": {
+    "başlıkta": "● Görsel 2/20 sürüyor — bölüm değiştirmek durdurmaz"
+   }
+  },
+  {
+   "ok": true,
+   "check": "Üretilen görsel → karakter → 3D (akış kaybolmadan sürdü)"
+  },
+  {
+   "ok": true,
+   "check": "Üretilen görsel PNG indirildi",
+   "detail": "yerel_ruya_7.png"
+  },
+  {
+   "ok": true,
+   "check": "Çalışma görseli PNG indirildi (384×512)",
+   "detail": "PNG image data, 384 x 512, 8-bit/color RGBA, non-interlaced"
+  },
+  {
+   "ok": true,
+   "check": "V11.2: seçili yön PNG"
+  },
+  {
+   "ok": true,
+   "check": "V11.2: atlas PNG",
+   "detail": "PNG image data, 1024 x 512, 8-bit/color RGBA, non-interlaced"
+  },
+  {
+   "ok": true,
+   "check": "V11.2: tarif JSON"
+  },
+  {
+   "ok": true,
+   "check": "V11.2 kuralı korundu: yüklenen tek yönlü görselde 8 yön ZIP kapalı"
+  },
+  {
+   "ok": true,
+   "check": "V11.2: 8 yön × 5 hareket ZIP (41 dosya, CRC tamam)",
+   "detail": "41 None"
+  },
+  {
+   "ok": true,
+   "check": "40 sprite + GLB ZIP: bölüm değiştirilirken üretim sürdü, bağımsız denetim geçti (10734 ms)"
+  },
+  {
+   "ok": true,
+   "check": "GLB indirildi ve uygulamada yeniden okunarak doğrulandı"
+  },
+  {
+   "ok": true,
+   "check": "GLB Khronos glTF-Validator: 0 hata, 0 uyarı",
+   "detail": "0 0"
+  },
+  {
+   "ok": true,
+   "check": "\"Dosyayı kontrol et\": ZIP sağlam, 40 PNG, GLB geçerli",
+   "detail": "v121_sprite_40.zip: ZIP SAĞLAM · 42 dosya · 40 PNG (40× 1024×512, 40 şeffaf) · CRC hatası 0 · manifest var · GLB geçerli"
+  },
+  {
+   "ok": true,
+   "check": "\"Dosyayı kontrol et\": GLB doğrulandı"
+  },
+  {
+   "ok": true,
+   "check": "GLB içe aktarıldı ve izlenen model açıkça yazıyor",
+   "detail": "İzlenen: GLB dosyası “forge_v12_savasci.glb” (yalnızca görüntüleme)"
+  },
+  {
+   "ok": true,
+   "check": "Forge karakterine dönüldü"
+  },
+  {
+   "ok": true,
+   "check": "Öz-test: tüm maddeler geçti",
+   "detail": "✓ 3B mesh: 5459 vertex, 26 kemik✓ Yürüyüşte ayak kayması 0.00 mm✓ 5 hareket × 8 karede zemine girme yok (en düşük -0.38 cm)✓ GLB yaz + oku: geçerli (489 KB, 5 animasyon)✓ Sprite sayfası 1024×512, ayak"
+  },
+  {
+   "ok": true,
+   "check": "Performans ölçümü JSON kaydedildi"
+  },
+  {
+   "ok": true,
+   "check": "Hata kaydında hata yok",
+   "detail": "0"
+  },
+  {
+   "ok": true,
+   "check": "Yeniden açılışta proje (tarif, 3D ayarı, bölüm, model paketi) geri geldi",
+   "detail": {
+    "prompt": "Yeşil pelerinli mızraklı savaşçı",
+    "h": 1.95,
+    "tab": "model",
+    "pack": true
+   }
+  },
+  {
+   "ok": true,
+   "check": "360x740: sayfa hatası yok",
+   "detail": []
+  },
+  {
+   "ok": true,
+   "check": "740x360 · uret: taşma yok, çakışma yok, yazı kesilmiyor, 17 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "740x360 · duzenle: taşma yok, çakışma yok, yazı kesilmiyor, 18 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "740x360 · model: taşma yok, çakışma yok, yazı kesilmiyor, 23 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "740x360 · anim: taşma yok, çakışma yok, yazı kesilmiyor, 28 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "740x360 · aktar: taşma yok, çakışma yok, yazı kesilmiyor, 17 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "740x360 · ayar: taşma yok, çakışma yok, yazı kesilmiyor, 23 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "740x360: sayfa hatası yok",
+   "detail": []
+  },
+  {
+   "ok": true,
+   "check": "667x375 · uret: taşma yok, çakışma yok, yazı kesilmiyor, 17 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "667x375 · duzenle: taşma yok, çakışma yok, yazı kesilmiyor, 18 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "667x375 · model: taşma yok, çakışma yok, yazı kesilmiyor, 23 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "667x375 · anim: taşma yok, çakışma yok, yazı kesilmiyor, 28 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "667x375 · aktar: taşma yok, çakışma yok, yazı kesilmiyor, 17 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "667x375 · ayar: taşma yok, çakışma yok, yazı kesilmiyor, 23 denetim öğesi bağlı ve ≥40 px"
+  },
+  {
+   "ok": true,
+   "check": "667x375: sayfa hatası yok",
+   "detail": []
+  }
+ ],
+ "layout": {
+  "360x740": {
+   "uret": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 360,
+     "h": 59
+    }
+   },
+   "duzenle": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 360,
+     "h": 59
+    }
+   },
+   "model": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 360,
+     "h": 59
+    }
+   },
+   "anim": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 360,
+     "h": 59
+    }
+   },
+   "aktar": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 360,
+     "h": 59
+    }
+   },
+   "ayar": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 360,
+     "h": 59
+    }
+   }
+  },
+  "740x360": {
+   "uret": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 360
+    }
+   },
+   "duzenle": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 360
+    }
+   },
+   "model": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 360
+    }
+   },
+   "anim": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 360
+    }
+   },
+   "aktar": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 360
+    }
+   },
+   "ayar": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 360
+    }
+   }
+  },
+  "667x375": {
+   "uret": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 375
+    }
+   },
+   "duzenle": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 375
+    }
+   },
+   "model": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 375
+    }
+   },
+   "anim": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 375
+    }
+   },
+   "aktar": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 375
+    }
+   },
+   "ayar": {
+    "overflowX": 0,
+    "overlaps": [],
+    "textClip": [],
+    "navClear": true,
+    "nav": {
+     "w": 74,
+     "h": 375
+    }
+   }
+  }
+ },
+ "buttons": {
+  "360x740": {
+   "uret": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "mode:ai",
+     "text": "Yapay zekâ (cihazda)",
+     "w": 162,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "mode:hazir",
+     "text": "Hazır savaşçı",
+     "w": 162,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-file-lbl",
+     "text": "Model paketi seç (.forgepack)",
+     "w": 336,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Üretim ayarları",
+     "text": "Üretim ayarları",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-steps",
+     "text": "12 · hızlı\n20\n30 · kaliteli",
+     "w": 153,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-guid",
+     "text": "1 · tek geçiş\n2\n3",
+     "w": 153,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-size",
+     "text": "256×256\n512×512 (2× büyütme)",
+     "w": 153,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-go",
+     "text": "✦ Cihazda üret",
+     "w": 108,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ld-cancel",
+     "text": "İptal",
+     "w": 108,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ld-resume",
+     "text": "Devam et",
+     "w": 108,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "go:duzenle",
+     "text": "Sonraki: Görsel Düzenle →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "duzenle": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "importFile",
+     "text": "Görsel yükle (PNG / JPG / WEBP)",
+     "w": 336,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "removeBg",
+     "text": "Yüklerken beyaz arka planı temizle",
+     "w": 336,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "importExample",
+     "text": "Örnek büyücü",
+     "w": 165,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "returnWarrior",
+     "text": "Hazır savaşçıya dön",
+     "w": 165,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:bg",
+     "text": "Arka plan\nkaldır",
+     "w": 63,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:pick",
+     "text": "Saydam\nyap",
+     "w": 63,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:crop",
+     "text": "Kırp",
+     "w": 63,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:erase",
+     "text": "Silgi",
+     "w": 63,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:color",
+     "text": "Renk",
+     "w": 63,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ed-compare",
+     "text": "Önce / Sonra",
+     "w": 165,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ed-undo",
+     "text": "↶ Geri al",
+     "w": 165,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "go:model",
+     "text": "Sonraki: 3D Model →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "model": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-analyze",
+     "text": "Resimden 3D oluştur",
+     "w": 165,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-prompt",
+     "text": "Tariften 3D oluştur",
+     "w": 165,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-bones",
+     "text": "İskelet",
+     "w": 73,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-est",
+     "text": "Tahmini yüzeyler",
+     "w": 137,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-overlay",
+     "text": "Kaynakla karşılaştır",
+     "w": 151,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Anatomi",
+     "text": "Anatomi",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Donanım (silah, zırh",
+     "text": "Donanım (silah, zırh, kıyafet)",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Kılıç\nBalta\nMızrak\nA",
+     "text": "Kılıç\nBalta\nMızrak\nAsa\nTopuz\nÇekiç\nHançe",
+     "w": 154,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Ağır\nOrta\nHafif\nCüpp",
+     "text": "Ağır\nOrta\nHafif\nCüppe",
+     "w": 154,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Taç\nMiğfer\nAçık",
+     "text": "Taç\nMiğfer\nAçık",
+     "w": 154,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Dikenli\nUzun\nYok",
+     "text": "Dikenli\nUzun\nYok",
+     "w": 154,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Büyük\nKüçük\nYok",
+     "text": "Büyük\nKüçük\nYok",
+     "w": 154,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Renkler",
+     "text": "Renkler",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Analiz notları",
+     "text": "Analiz notları",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "3D model dosyası aç ",
+     "text": "3D model dosyası aç (GLB)",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-verify-file",
+     "text": "GLB dosyası seç",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "go:anim",
+     "text": "Sonraki: Animasyon →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "anim": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "view:3d",
+     "text": "3B iskelet",
+     "w": 162,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "view:2d",
+     "text": "2B boyalı görsel",
+     "w": 162,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:idle",
+     "text": "Bekleme",
+     "w": 63,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:walk",
+     "text": "Yürüyüş",
+     "w": 63,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:attack",
+     "text": "Saldırı",
+     "w": 63,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:hurt",
+     "text": "Darbe",
+     "w": 63,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:death",
+     "text": "Ölüm",
+     "w": 63,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:0",
+     "text": "Ön",
+     "w": 80,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:1",
+     "text": "Ön-sağ",
+     "w": 80,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:2",
+     "text": "Sağ",
+     "w": 80,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:3",
+     "text": "Arka-sağ",
+     "w": 80,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:4",
+     "text": "Arka",
+     "w": 80,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:5",
+     "text": "Arka-sol",
+     "w": 80,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:6",
+     "text": "Sol",
+     "w": 80,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:7",
+     "text": "Ön-sol",
+     "w": 80,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-bones",
+     "text": "İskelet",
+     "w": 73,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-est",
+     "text": "Tahmini yüzeyler",
+     "w": 137,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-overlay",
+     "text": "Kaynakla karşılaştır",
+     "w": 151,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-prev",
+     "text": "◀",
+     "w": 81,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-play",
+     "text": "❚❚ Durdur",
+     "w": 162,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-next",
+     "text": "▶",
+     "w": 81,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "go:aktar",
+     "text": "Sonraki: Dışa Aktar →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "aktar": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-zip",
+     "text": "40 sprite + GLB ZIP",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-glb",
+     "text": "GLB indir + doğrula",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-cancel",
+     "text": "İptal",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "s3-resume",
+     "text": "Devam et",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "one",
+     "text": "Seçili yön PNG",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "atlas",
+     "text": "8 yön atlas PNG",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "all",
+     "text": "8 yön × 5 hareket ZIP",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "recipe",
+     "text": "Tarif JSON",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-save",
+     "text": "Üretilen görsel PNG",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ed-save",
+     "text": "Çalışma görseli PNG",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "x-check",
+     "text": "GLB veya ZIP seç",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "ayar": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 60,
+     "h": 58,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "İşlemci ve ısınma",
+     "text": "İşlemci ve ısınma",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-cool",
+     "text": "yok\n40 ms\n150 ms",
+     "w": 314,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-cool",
+     "text": "yok\n60 ms\n250 ms",
+     "w": 314,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Bellek",
+     "text": "Bellek",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-memsaver",
+     "text": "Bellek tasarrufu (görsel motoru parçalar",
+     "w": 314,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Model paketi",
+     "text": "Model paketi",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-files",
+     "text": "Ayrı dosyaları seç",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-forget",
+     "text": "Paketi cihazdan sil",
+     "w": 314,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Öz-test",
+     "text": "Öz-test",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "st-run",
+     "text": "Öz-testi çalıştır",
+     "w": 106,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Performans ve cihaz ",
+     "text": "Performans ve cihaz bilgisi (JSON)",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "perf-run",
+     "text": "Ölçümü yenile",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "perf-save",
+     "text": "Ölçümü kaydet (JSON)",
+     "w": 154,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Hata kayıtları\n0",
+     "text": "Hata kayıtları\n0",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "err-clear",
+     "text": "Kayıtları temizle",
+     "w": 110,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Proje",
+     "text": "Proje",
+     "w": 314,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "proj-reset",
+     "text": "Projeyi sıfırla",
+     "w": 91,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ]
+  },
+  "740x360": {
+   "uret": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "mode:ai",
+     "text": "Yapay zekâ (cihazda)",
+     "w": 317,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "mode:hazir",
+     "text": "Hazır savaşçı",
+     "w": 317,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-file-lbl",
+     "text": "Model paketi seç (.forgepack)",
+     "w": 317,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Üretim ayarları",
+     "text": "Üretim ayarları",
+     "w": 295,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-steps",
+     "text": "12 · hızlı\n20\n30 · kaliteli",
+     "w": 144,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-guid",
+     "text": "1 · tek geçiş\n2\n3",
+     "w": 144,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-size",
+     "text": "256×256\n512×512 (2× büyütme)",
+     "w": 144,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-go",
+     "text": "✦ Cihazda üret",
+     "w": 102,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ld-cancel",
+     "text": "İptal",
+     "w": 102,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ld-resume",
+     "text": "Devam et",
+     "w": 102,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "go:duzenle",
+     "text": "Sonraki: Görsel Düzenle →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "duzenle": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "importFile",
+     "text": "Görsel yükle (PNG / JPG / WEBP)",
+     "w": 317,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "removeBg",
+     "text": "Yüklerken beyaz arka planı temizle",
+     "w": 317,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "importExample",
+     "text": "Örnek büyücü",
+     "w": 156,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "returnWarrior",
+     "text": "Hazır savaşçıya dön",
+     "w": 156,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:bg",
+     "text": "Arka plan\nkaldır",
+     "w": 76,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:pick",
+     "text": "Saydam\nyap",
+     "w": 76,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:crop",
+     "text": "Kırp",
+     "w": 76,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:erase",
+     "text": "Silgi",
+     "w": 76,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:color",
+     "text": "Renk",
+     "w": 76,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ed-compare",
+     "text": "Önce / Sonra",
+     "w": 156,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ed-undo",
+     "text": "↶ Geri al",
+     "w": 156,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "go:model",
+     "text": "Sonraki: 3D Model →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "model": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-analyze",
+     "text": "Resimden 3D oluştur",
+     "w": 320,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-prompt",
+     "text": "Tariften 3D oluştur",
+     "w": 320,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-bones",
+     "text": "İskelet",
+     "w": 73,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-est",
+     "text": "Tahmini yüzeyler",
+     "w": 137,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-overlay",
+     "text": "Kaynakla karşılaştır",
+     "w": 151,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Anatomi",
+     "text": "Anatomi",
+     "w": 295,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Donanım (silah, zırh",
+     "text": "Donanım (silah, zırh, kıyafet)",
+     "w": 295,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Kılıç\nBalta\nMızrak\nA",
+     "text": "Kılıç\nBalta\nMızrak\nAsa\nTopuz\nÇekiç\nHançe",
+     "w": 145,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Ağır\nOrta\nHafif\nCüpp",
+     "text": "Ağır\nOrta\nHafif\nCüppe",
+     "w": 145,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Taç\nMiğfer\nAçık",
+     "text": "Taç\nMiğfer\nAçık",
+     "w": 145,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Dikenli\nUzun\nYok",
+     "text": "Dikenli\nUzun\nYok",
+     "w": 145,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Büyük\nKüçük\nYok",
+     "text": "Büyük\nKüçük\nYok",
+     "w": 145,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Renkler",
+     "text": "Renkler",
+     "w": 295,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Analiz notları",
+     "text": "Analiz notları",
+     "w": 295,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "3D model dosyası aç ",
+     "text": "3D model dosyası aç (GLB)",
+     "w": 295,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-verify-file",
+     "text": "GLB dosyası seç",
+     "w": 295,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "go:anim",
+     "text": "Sonraki: Animasyon →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "anim": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "view:3d",
+     "text": "3B iskelet",
+     "w": 317,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "view:2d",
+     "text": "2B boyalı görsel",
+     "w": 317,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:idle",
+     "text": "Bekleme",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:walk",
+     "text": "Yürüyüş",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:attack",
+     "text": "Saldırı",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:hurt",
+     "text": "Darbe",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:death",
+     "text": "Ölüm",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:0",
+     "text": "Ön",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:1",
+     "text": "Ön-sağ",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:2",
+     "text": "Sağ",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:3",
+     "text": "Arka-sağ",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:4",
+     "text": "Arka",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:5",
+     "text": "Arka-sol",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:6",
+     "text": "Sol",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:7",
+     "text": "Ön-sol",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-bones",
+     "text": "İskelet",
+     "w": 73,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-est",
+     "text": "Tahmini yüzeyler",
+     "w": 137,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-overlay",
+     "text": "Kaynakla karşılaştır",
+     "w": 151,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-prev",
+     "text": "◀",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-play",
+     "text": "❚❚ Durdur",
+     "w": 153,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-next",
+     "text": "▶",
+     "w": 76,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "go:aktar",
+     "text": "Sonraki: Dışa Aktar →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "aktar": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-zip",
+     "text": "40 sprite + GLB ZIP",
+     "w": 152,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-glb",
+     "text": "GLB indir + doğrula",
+     "w": 152,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-cancel",
+     "text": "İptal",
+     "w": 152,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "s3-resume",
+     "text": "Devam et",
+     "w": 152,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "one",
+     "text": "Seçili yön PNG",
+     "w": 152,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "atlas",
+     "text": "8 yön atlas PNG",
+     "w": 152,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "all",
+     "text": "8 yön × 5 hareket ZIP",
+     "w": 152,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "recipe",
+     "text": "Tarif JSON",
+     "w": 152,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-save",
+     "text": "Üretilen görsel PNG",
+     "w": 309,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ed-save",
+     "text": "Çalışma görseli PNG",
+     "w": 309,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "x-check",
+     "text": "GLB veya ZIP seç",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "ayar": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 60,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "İşlemci ve ısınma",
+     "text": "İşlemci ve ısınma",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-cool",
+     "text": "yok\n40 ms\n150 ms",
+     "w": 624,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-cool",
+     "text": "yok\n60 ms\n250 ms",
+     "w": 624,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Bellek",
+     "text": "Bellek",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-memsaver",
+     "text": "Bellek tasarrufu (görsel motoru parçalar",
+     "w": 624,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Model paketi",
+     "text": "Model paketi",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-files",
+     "text": "Ayrı dosyaları seç",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-forget",
+     "text": "Paketi cihazdan sil",
+     "w": 624,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Öz-test",
+     "text": "Öz-test",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "st-run",
+     "text": "Öz-testi çalıştır",
+     "w": 106,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Performans ve cihaz ",
+     "text": "Performans ve cihaz bilgisi (JSON)",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "perf-run",
+     "text": "Ölçümü yenile",
+     "w": 309,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "perf-save",
+     "text": "Ölçümü kaydet (JSON)",
+     "w": 309,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Hata kayıtları\n0",
+     "text": "Hata kayıtları\n0",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "err-clear",
+     "text": "Kayıtları temizle",
+     "w": 110,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Proje",
+     "text": "Proje",
+     "w": 624,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "proj-reset",
+     "text": "Projeyi sıfırla",
+     "w": 91,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ]
+  },
+  "667x375": {
+   "uret": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "mode:ai",
+     "text": "Yapay zekâ (cihazda)",
+     "w": 281,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "mode:hazir",
+     "text": "Hazır savaşçı",
+     "w": 281,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-file-lbl",
+     "text": "Model paketi seç (.forgepack)",
+     "w": 281,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Üretim ayarları",
+     "text": "Üretim ayarları",
+     "w": 259,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-steps",
+     "text": "12 · hızlı\n20\n30 · kaliteli",
+     "w": 125,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-guid",
+     "text": "1 · tek geçiş\n2\n3",
+     "w": 125,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-size",
+     "text": "256×256\n512×512 (2× büyütme)",
+     "w": 125,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-go",
+     "text": "✦ Cihazda üret",
+     "w": 90,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ld-cancel",
+     "text": "İptal",
+     "w": 90,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ld-resume",
+     "text": "Devam et",
+     "w": 90,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "go:duzenle",
+     "text": "Sonraki: Görsel Düzenle →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "duzenle": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "importFile",
+     "text": "Görsel yükle (PNG / JPG / WEBP)",
+     "w": 281,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "removeBg",
+     "text": "Yüklerken beyaz arka planı temizle",
+     "w": 281,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "importExample",
+     "text": "Örnek büyücü",
+     "w": 137,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "returnWarrior",
+     "text": "Hazır savaşçıya dön",
+     "w": 137,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:bg",
+     "text": "Arka plan\nkaldır",
+     "w": 66,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:pick",
+     "text": "Saydam\nyap",
+     "w": 66,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:crop",
+     "text": "Kırp",
+     "w": 66,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:erase",
+     "text": "Silgi",
+     "w": 66,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tool:color",
+     "text": "Renk",
+     "w": 66,
+     "h": 52,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ed-compare",
+     "text": "Önce / Sonra",
+     "w": 137,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ed-undo",
+     "text": "↶ Geri al",
+     "w": 137,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "go:model",
+     "text": "Sonraki: 3D Model →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "model": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-analyze",
+     "text": "Resimden 3D oluştur",
+     "w": 284,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-prompt",
+     "text": "Tariften 3D oluştur",
+     "w": 284,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-bones",
+     "text": "İskelet",
+     "w": 73,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-est",
+     "text": "Tahmini yüzeyler",
+     "w": 137,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-overlay",
+     "text": "Kaynakla karşılaştır",
+     "w": 151,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Anatomi",
+     "text": "Anatomi",
+     "w": 259,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Donanım (silah, zırh",
+     "text": "Donanım (silah, zırh, kıyafet)",
+     "w": 259,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Kılıç\nBalta\nMızrak\nA",
+     "text": "Kılıç\nBalta\nMızrak\nAsa\nTopuz\nÇekiç\nHançe",
+     "w": 126,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Ağır\nOrta\nHafif\nCüpp",
+     "text": "Ağır\nOrta\nHafif\nCüppe",
+     "w": 126,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Taç\nMiğfer\nAçık",
+     "text": "Taç\nMiğfer\nAçık",
+     "w": 126,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Dikenli\nUzun\nYok",
+     "text": "Dikenli\nUzun\nYok",
+     "w": 126,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Büyük\nKüçük\nYok",
+     "text": "Büyük\nKüçük\nYok",
+     "w": 126,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Renkler",
+     "text": "Renkler",
+     "w": 259,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Analiz notları",
+     "text": "Analiz notları",
+     "w": 259,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "3D model dosyası aç ",
+     "text": "3D model dosyası aç (GLB)",
+     "w": 259,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-verify-file",
+     "text": "GLB dosyası seç",
+     "w": 259,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "go:anim",
+     "text": "Sonraki: Animasyon →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "anim": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "view:3d",
+     "text": "3B iskelet",
+     "w": 281,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "view:2d",
+     "text": "2B boyalı görsel",
+     "w": 281,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:idle",
+     "text": "Bekleme",
+     "w": 66,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:walk",
+     "text": "Yürüyüş",
+     "w": 66,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:attack",
+     "text": "Saldırı",
+     "w": 66,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:hurt",
+     "text": "Darbe",
+     "w": 66,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "clip:death",
+     "text": "Ölüm",
+     "w": 66,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:0",
+     "text": "Ön",
+     "w": 90,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:1",
+     "text": "Ön-sağ",
+     "w": 90,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:2",
+     "text": "Sağ",
+     "w": 90,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:3",
+     "text": "Arka-sağ",
+     "w": 90,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:4",
+     "text": "Arka",
+     "w": 90,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:5",
+     "text": "Arka-sol",
+     "w": 90,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:6",
+     "text": "Sol",
+     "w": 90,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "dir:7",
+     "text": "Ön-sol",
+     "w": 90,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-bones",
+     "text": "İskelet",
+     "w": 73,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-est",
+     "text": "Tahmini yüzeyler",
+     "w": 137,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-overlay",
+     "text": "Kaynakla karşılaştır",
+     "w": 151,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-prev",
+     "text": "◀",
+     "w": 67,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-play",
+     "text": "❚❚ Durdur",
+     "w": 134,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "an-next",
+     "text": "▶",
+     "w": 67,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "go:aktar",
+     "text": "Sonraki: Dışa Aktar →",
+     "w": 200,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "aktar": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-zip",
+     "text": "40 sprite + GLB ZIP",
+     "w": 133,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-glb",
+     "text": "GLB indir + doğrula",
+     "w": 133,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-cancel",
+     "text": "İptal",
+     "w": 133,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "s3-resume",
+     "text": "Devam et",
+     "w": 133,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "one",
+     "text": "Seçili yön PNG",
+     "w": 133,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "atlas",
+     "text": "8 yön atlas PNG",
+     "w": 133,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "all",
+     "text": "8 yön × 5 hareket ZIP",
+     "w": 133,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "recipe",
+     "text": "Tarif JSON",
+     "w": 133,
+     "h": 49,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-save",
+     "text": "Üretilen görsel PNG",
+     "w": 273,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": true
+    },
+    {
+     "id": "ed-save",
+     "text": "Çalışma görseli PNG",
+     "w": 273,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "x-check",
+     "text": "GLB veya ZIP seç",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ],
+   "ayar": [
+    {
+     "id": "tab:uret",
+     "text": "✦\nÜret",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:duzenle",
+     "text": "✎\nDüzenle",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:model",
+     "text": "◆\n3D Model",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:anim",
+     "text": "▶\nAnimasyon",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:aktar",
+     "text": "⬇\nDışa Aktar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "tab:ayar",
+     "text": "⚙\nAyarlar",
+     "w": 73,
+     "h": 63,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "İşlemci ve ısınma",
+     "text": "İşlemci ve ısınma",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-cool",
+     "text": "yok\n40 ms\n150 ms",
+     "w": 551,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "s3-cool",
+     "text": "yok\n60 ms\n250 ms",
+     "w": 551,
+     "h": 42,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Bellek",
+     "text": "Bellek",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-memsaver",
+     "text": "Bellek tasarrufu (görsel motoru parçalar",
+     "w": 551,
+     "h": 40,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Model paketi",
+     "text": "Model paketi",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-files",
+     "text": "Ayrı dosyaları seç",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "ld-forget",
+     "text": "Paketi cihazdan sil",
+     "w": 551,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Öz-test",
+     "text": "Öz-test",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "st-run",
+     "text": "Öz-testi çalıştır",
+     "w": 106,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Performans ve cihaz ",
+     "text": "Performans ve cihaz bilgisi (JSON)",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "perf-run",
+     "text": "Ölçümü yenile",
+     "w": 273,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "perf-save",
+     "text": "Ölçümü kaydet (JSON)",
+     "w": 273,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Hata kayıtları\n0",
+     "text": "Hata kayıtları\n0",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "err-clear",
+     "text": "Kayıtları temizle",
+     "w": 110,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "Proje",
+     "text": "Proje",
+     "w": 551,
+     "h": 46,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    },
+    {
+     "id": "proj-reset",
+     "text": "Projeyi sıfırla",
+     "w": 91,
+     "h": 44,
+     "clipped": false,
+     "bound": true,
+     "smallTouch": false,
+     "disabled": false
+    }
+   ]
+  }
+ },
+ "timings": {
+  "sprites40Ms": 10734
+ },
+ "passed": true,
+ "finishedAt": "2026-11-21T21:40:55.877Z"
+}
