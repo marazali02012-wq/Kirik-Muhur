@@ -62,6 +62,7 @@
     const I = mesh.index, triCount = I.length / 3;
     const filt = opts.partFilter || null;
     const tint = opts.tint || null; // [r,g,b,amount] (darbe kızarması)
+    const hl = opts.highlight || null; // parça başına 1: tahmini yüzey (turuncu taramayla gösterilir)
 
     for (let t = 0; t < triCount; t++) {
       const a = I[t * 3], b = I[t * 3 + 1], c = I[t * 3 + 2];
@@ -115,6 +116,7 @@
           let Bc = cb * k + fill * 0.95 + spec * 1.02 + rim * 0.6 * (0.6 + cb * 0.4);
           if (mat === 7) { R = cr * 0.55 + R * 0.6; G = cg * 0.55 + G * 0.6; Bc = cb * 0.55 + Bc * 0.6; } // mücevher: öz ışık
           if (tint) { R += (tint[0] - R) * tint[3]; G += (tint[1] - G) * tint[3]; Bc += (tint[2] - Bc) * tint[3]; }
+          if (hl && hl[pi] && ((px + py) >> 2) % 2 === 0) { R = R * 0.45 + 0.55; G = G * 0.45 + 0.3; Bc = Bc * 0.45; }
           col[o * 3] = R; col[o * 3 + 1] = G; col[o * 3 + 2] = Bc;
         }
       }

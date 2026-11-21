@@ -1,0 +1,5 @@
+Forge-Mini Savaşçı v1 — bu projeye ait küçük difüzyon modeli (unet.onnx).
+Eğitim verisi: yalnızca Forge 2.5D V12'nin kendi prosedürel 3B savaşçı çizimleri (araclar/egitim/veri_uret.js).
+Harici resim, başka bir yapay zekâ modelinin çıktısı veya internetten toplanmış veri kullanılmamıştır.
+Gizli uzay çözücüsü taesd_decoder.onnx: TAESD (Ollin Boer Bohan), MIT lisansı — TAESD_LICENSE_MIT.txt.
+Çalışma zamanı: ONNX Runtime Web, MIT lisansı — ONNXRUNTIME_WEB_LICENSE_MIT.txt.

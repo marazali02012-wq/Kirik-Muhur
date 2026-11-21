@@ -1,0 +1,122 @@
+{
+  "tag": "normal",
+  "cpuThrottle": 1,
+  "startedAt": "2026-11-21T20:12:16.457Z",
+  "checks": [
+    {
+      "ok": true,
+      "check": "Sayfa çevrimdışı açıldı (341 ms)"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: 8 yön düğmesi"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: 5 hareket önizlemesi"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: 6 renk paleti (renk düzenleme)"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: kırmızı palete geçildi (renk düzenleme çalışıyor)"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: 8 yön × 5 hareket ZIP oluşturuldu ve CRC doğrulandı",
+      "detail": "41 None"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: seçili yön PNG dışa aktarımı",
+      "detail": "forge_savasci_blue_dir0.png"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: örnek PNG içe aktarma (büyücü)"
+    },
+    {
+      "ok": true,
+      "check": "V11.2: telefondan PNG seçme + arka plan temizleme"
+    },
+    {
+      "ok": true,
+      "check": "Resimden analiz yapıldı",
+      "detail": "• V11.2 boyalı savaşçı (ön + yan görünüş) · güven 100% · analiz 57 ms• Bacak arası açıklık diz hizasında başlıyor (önlük"
+    },
+    {
+      "ok": true,
+      "check": "Gerçek mesh üretildi",
+      "detail": "5459 vertex · 8102 üçgen · 26 kemik · 34 parça · kurulum 16 ms"
+    },
+    {
+      "ok": true,
+      "check": "3B karakter sürükleyerek döndürüldü",
+      "detail": {
+        "yaw0": 0,
+        "yaw1": -1.44
+      }
+    },
+    {
+      "ok": true,
+      "check": "Önizleme karesi (320×320, CPU): 35.5 ms"
+    },
+    {
+      "ok": true,
+      "check": "Anatomi kaydırıcısı mesh'i yeniden kurdu (irilik 1.2)"
+    },
+    {
+      "ok": true,
+      "check": "Sprite üretimi iptal edildi (4/40 saklandı)"
+    },
+    {
+      "ok": true,
+      "check": "\"Devam et\" ile kalan sayfalar üretildi ve ZIP indirildi (7.8 sn)",
+      "detail": "Hazır: 42 dosya (40 sayfa + manifest + GLB) · ZIP 7.8 MB · CRC tamam · 7.8 sn"
+    },
+    {
+      "ok": true,
+      "check": "Tarayıcıda üretilen ZIP bağımsız Python denetiminden geçti",
+      "detail": "HATALAR: yok | SONUÇ: ZIP testi geçti"
+    },
+    {
+      "ok": true,
+      "check": "GLB tarayıcıda yeniden okunup doğrulandı",
+      "detail": "GLB DOĞRULANDI · 5863 vertex · 8102 üçgen · 26 kemik · 11 parça · 0.5 MBAnimasyonlar: idle 1.6s (17 kanal), walk 0.9s (19 kanal), attack 0.8s (19 kanal), hurt 0"
+    },
+    {
+      "ok": true,
+      "check": "GLB dosyası \"aç ve doğrula\" ile açıldı"
+    },
+    {
+      "ok": true,
+      "check": "Hiçbir uzak ağ isteği yapılmadı",
+      "detail": []
+    },
+    {
+      "ok": true,
+      "check": "Konsolda hata yok",
+      "detail": []
+    }
+  ],
+  "timings": {
+    "pageReadyMs": 341,
+    "analyzeClickMs": 611,
+    "preview320FrameMs": 35.5,
+    "sprites40ResumeMs": 7810,
+    "statusSeconds": 7.8
+  },
+  "memory": {
+    "heapAfterLoadMB": 6,
+    "chromeRssAfterLoadMB": 489.4,
+    "heapBeforeSpritesMB": 3.5,
+    "heapAfterSpritesMB": 27.2,
+    "chromeRssAfterSpritesMB": 655.5
+  },
+  "errors": [],
+  "consoleWarnings": [],
+  "finishedAt": "2026-11-21T20:12:35.372Z",
+  "passed": true
+}

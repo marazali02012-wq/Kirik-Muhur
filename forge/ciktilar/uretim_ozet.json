@@ -21,13 +21,13 @@
     ]
   },
   "timingsMs": {
-    "analyzeMs": 67,
-    "buildMeshMs": 28,
-    "framingMs": 62,
-    "glbMs": 31,
-    "spritesAndZipMs": 10103
+    "analyzeMs": 75,
+    "buildMeshMs": 33,
+    "framingMs": 80,
+    "glbMs": 37,
+    "spritesAndZipMs": 10112
   },
-  "rssMB": 125,
+  "rssMB": 152.4,
   "mesh": {
     "vertices": 5459,
     "triangles": 8102,
@@ -114,7 +114,7 @@
     }
   },
   "zip": {
-    "bytes": 6998111,
+    "bytes": 7020362,
     "files": 42
   }
 }

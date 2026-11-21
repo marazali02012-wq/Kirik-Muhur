@@ -92,7 +92,40 @@
       shadow: opts.shadow === false ? null : { cx: fr.cx, cy: fr.cy, rx: 0.36 * fr.scale, ry: 0.36 * fr.scale * Math.sin(fr.pitch), alpha: 0.3 },
       tint: res.tint && res.tint[3] > 0.01 ? res.tint : null, bg: opts.bg || null,
     });
+    if (clip === 'attack' && opts.trail !== false) drawTrail(ch, F.frameTime(clip, i, PER), dir, r, fr);
     r.contacts = res.contacts; return r;
+  }
+
+  // Saldırı izi: kılıcın gerçek 3B yolundan (son 0,12 normalize zaman) yarı saydam şerit
+  function bladeSeg(ch, clip, t) {
+    const J = ch.skel.index, res = F.sampleClip(ch.skel, clip, t), W = F.poseWorld(ch.skel, res.pose);
+    const wf = F.weaponFrame(ch.skel, n => ch.skel.bones[J[n]].restWorld), g = W.wpos[J.weapon], d = F.q.rotate(W.wrot[J.weapon], wf.dir);
+    const reach = { sword: 0.95, dagger: 0.42, axe: 0.86, hammer: 0.78, mace: 0.84, spear: 1.25, staff: 1.08 }[(ch.skel.style || {}).weapon] || 0.95;
+    return [F.v3.add(g, F.v3.scale(d, reach * 0.45)), F.v3.add(g, F.v3.scale(d, reach))];
+  }
+  function drawTrail(ch, t, dir, r, fr) {
+    if (t < 0.3 || t > 0.6 || !(ch.skel.style && ch.skel.style.weapon !== 'none')) return;
+    const N = 7, pts = [], opt = { yaw: dir * Math.PI / 4, pitch: fr.pitch, scale: fr.scale, cx: fr.cx, cy: fr.cy };
+    for (let k = 0; k <= N; k++) { const seg = bladeSeg(ch, 'attack', Math.max(0.33, t - k * 0.018)); pts.push(seg.map(p => F.project(p, opt))); }
+    const W = r.width, H = r.height, px = r.rgba;
+    const tri = (a, b, c, al) => {
+      const minX = Math.max(0, Math.floor(Math.min(a[0], b[0], c[0]))), maxX = Math.min(W - 1, Math.ceil(Math.max(a[0], b[0], c[0])));
+      const minY = Math.max(0, Math.floor(Math.min(a[1], b[1], c[1]))), maxY = Math.min(H - 1, Math.ceil(Math.max(a[1], b[1], c[1])));
+      const ar = (b[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (b[1] - a[1]); if (Math.abs(ar) < 1e-6) return;
+      for (let y = minY; y <= maxY; y++) for (let x = minX; x <= maxX; x++) {
+        const X = x + 0.5, Y = y + 0.5;
+        const w0 = ((b[0] - X) * (c[1] - Y) - (c[0] - X) * (b[1] - Y)) / ar, w1 = ((c[0] - X) * (a[1] - Y) - (a[0] - X) * (c[1] - Y)) / ar, w2 = 1 - w0 - w1;
+        if (w0 < 0 || w1 < 0 || w2 < 0) continue;
+        const o = (y * W + x) * 4, sa = px[o + 3] / 255, ta = al * (0.35 + 0.65 * (w1 + w2 * 0.5));
+        if (sa > 0.9) continue; // karakterin önüne değil, arkasındaki boşluğa çizilir
+        const na = ta + sa * (1 - ta);
+        px[o] = (190 * ta + px[o] * sa * (1 - ta)) / na; px[o + 1] = (235 * ta + px[o + 1] * sa * (1 - ta)) / na; px[o + 2] = (255 * ta + px[o + 2] * sa * (1 - ta)) / na; px[o + 3] = na * 255;
+      }
+    };
+    for (let k = 0; k < N; k++) {
+      const a0 = pts[k][0], a1 = pts[k][1], b0 = pts[k + 1][0], b1 = pts[k + 1][1], al = 0.42 * (1 - k / N);
+      tri(a0, a1, b1, al); tri(a0, b1, b0, al);
+    }
   }
 
   function renderSheet(ch, clip, dir, opts) {

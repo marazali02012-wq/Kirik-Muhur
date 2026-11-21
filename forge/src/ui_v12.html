@@ -1,0 +1,60 @@
+<section class="card v12" id="ld-card">
+<div class="section">YEREL RÜYA · CİHAZDA GÖRSEL ÜRETİMİ (CPU)</div>
+<div class="quality"><b>Nasıl çalışır:</b> Görsel, bu telefonda ONNX Runtime Web (WASM, yalnızca işlemci) ile bir difüzyon modeli çalıştırılarak üretilir. Ücretli servis, API, bulut, GPU veya internet yoktur. <b>İlk kurulum:</b> <code>.forgepack</code> model paketini bir kez seçin; tarayıcı izin verirse cihaza kaydedilir ve sonraki açılışlarda çevrimdışı hazır olur.<br><b>Mevcut model (Forge-Mini Savaşçı v1):</b> kendi eğittiğimiz küçük modeldir; yalnızca Forge'un 3B savaşçı tarzında karakter üretir. Serbest metni anlamaz; renk, silah, zırh, miğfer, pelerin, kalkan, yön ve poz sözcüklerine göre koşullanır.</div>
+<div class="row ld-row"><label class="filebtn">Model paketi seç (.forgepack)<input type="file" id="ld-file" accept=".forgepack,application/octet-stream"></label><label class="filebtn">Ayrı dosyaları seç<input type="file" id="ld-files" multiple></label></div>
+<div class="row ld-row"><button class="btn" id="ld-url" hidden>Paketi bu klasörden yükle</button><button class="btn" id="ld-forget">Paketi cihazdan sil</button></div>
+<div class="status" id="ld-status" role="status">Model paketi kontrol ediliyor…</div>
+<label class="label" for="ld-prompt">Ne üretilsin?</label>
+<textarea id="ld-prompt">Kırmızı pelerinli, miğferli, kalkanlı, baltalı savaşçı, önden</textarea>
+<div class="chips" id="ld-chips"></div>
+<div class="ld-grid">
+<label>Tohum<input id="ld-seed" type="number" placeholder="rastgele" inputmode="numeric"></label>
+<label>Adım<select id="ld-steps"><option value="12">12 (hızlı)</option><option value="20" selected>20</option><option value="30">30 (kaliteli)</option></select></label>
+<label>Rehberlik<select id="ld-guid"><option value="1">1 (tek geçiş)</option><option value="2" selected>2</option><option value="3">3</option></select></label>
+<label>Boyut<select id="ld-size"><option value="256" selected>256×256</option><option value="512">512×512</option></select><small id="ld-size-note"></small></label>
+<label>Soğuma<select id="ld-cool"><option value="0">yok</option><option value="40" selected>40 ms/adım</option><option value="150">150 ms/adım</option></select></label>
+<label class="s3-chk"><input type="checkbox" id="ld-memsaver"> Bellek tasarrufu</label>
+</div>
+<div class="row" style="margin-top:8px"><button class="btn primary" id="ld-go" disabled>✦ CİHAZDA ÜRET</button><button class="btn" id="ld-cancel" disabled>İptal</button><button class="btn" id="ld-resume" disabled>Devam et</button></div>
+<div class="progress"><div id="ld-bar"></div></div>
+<div id="ld-result" hidden><canvas id="ld-out" width="256" height="256" aria-label="Üretilen görsel"></canvas>
+<div class="row"><button class="btn" id="ld-save">PNG kaydet</button><button class="btn" id="ld-to-forge">Forge'a aktar</button><button class="btn primary" id="ld-to-3d">3B karaktere çevir</button></div></div>
+</section>
+
+<section class="card v12" id="s3-card">
+<div class="section">3B KARAKTER STÜDYOSU · RESİM → ANALİZ → MESH → İSKELET → ANİMASYON → SPRITE</div>
+<div class="quality">Gerçek vertex/üçgen mesh, 26 kemikli iskelet, IK ile ayak kilitleme ve 5 iskelet animasyonu. Çizim tamamen işlemcide (yazılım rasterleştirici) yapılır; GPU gerekmez. <b>Tek resimden sırt, yan ve pelerin içi kesin bilinemez:</b> bu yüzeyler tahminidir (✓ Tahmini yüzeyler ile görünür) ve kaydırıcılarla düzeltilebilir.</div>
+<div class="row" style="margin:8px 0"><button class="btn primary" id="s3-analyze">Seçili görselden 3B oluştur</button><button class="btn" id="s3-prompt">Tariften 3B oluştur</button></div>
+<div class="s3-wrap" id="s3-editor">
+<div class="s3-left">
+<div class="viewport s3vp"><canvas id="s3-view" width="320" height="320" aria-label="3B karakter önizlemesi (sürükleyerek döndürün)"></canvas></div>
+<div class="caption" id="s3-fps"></div>
+<div class="directions" id="s3-dirs"></div>
+<div class="actions" id="s3-clips" style="margin-top:5px"></div>
+<div class="row" style="margin-top:5px"><button class="btn" id="s3-play">❚❚ Durdur</button></div>
+<div class="toggles"><label><input type="checkbox" id="s3-bones"> İskelet</label><label><input type="checkbox" id="s3-est"> Tahmini yüzeyler</label><label><input type="checkbox" id="s3-overlay"> Kaynakla karşılaştır</label></div>
+<div class="note" id="s3-info"></div>
+<div class="note flag" id="s3-notes"></div>
+</div>
+<div class="s3-right">
+<div class="section">ANATOMİ</div><div id="s3-sliders" class="s3-sliders"></div>
+<div class="section">DONANIM</div><div id="s3-styles" class="s3-styles"></div>
+<div class="section">RENKLER</div><div id="s3-colors" class="s3-colors"></div>
+<hr><div class="section">OYUNA AKTAR</div>
+<div class="export"><button class="btn primary" id="s3-zip">40 sprite + GLB ZIP</button><button class="btn" id="s3-glb">GLB indir + doğrula</button><button class="btn" id="s3-cancel" disabled>İptal</button><button class="btn" id="s3-resume" disabled>Devam et</button></div>
+<label class="filebtn" style="margin-top:6px">GLB dosyası aç ve doğrula<input type="file" id="s3-verify-file" accept=".glb,model/gltf-binary"></label>
+<div class="progress"><div id="s3-bar"></div></div>
+<div class="status" id="s3-status"></div>
+<div class="note" id="s3-verify-out"></div>
+<canvas id="s3-glbview" width="200" height="200" hidden aria-label="GLB dosyasından yeniden kurulan karakter"></canvas>
+<div class="note">ZIP: 8 yön × 5 hareket = 40 sayfa · her sayfa 8 kare (4×2) · kare 256×256 · şeffaf PNG · tüm sayfalarda aynı ölçek ve ayak hizası · manifest.json (yürüyüş hızı, ayak çizgisi) · model/forge_savasci.glb.</div>
+</div>
+</div>
+</section>
+
+<section class="card v12" id="perf-card">
+<div class="section">CİHAZ ÖLÇÜMÜ (Realme C55 vb. için gerçek sonuç)</div>
+<div class="note">Bu düğmeler ölçümleri bu cihazda alır. Telefonda bir sprite ZIP ve bir görsel ürettikten sonra "Ölçümü kaydet" ile JSON dosyasını saklayın.</div>
+<div class="row"><button class="btn" id="perf-run">Ölçümü yenile</button><button class="btn" id="perf-save">Ölçümü kaydet (JSON)</button></div>
+<pre id="perf-out" class="perf"></pre>
+</section>

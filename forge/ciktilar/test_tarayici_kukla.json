@@ -1,0 +1,177 @@
+{
+  "tag": "kukla",
+  "cpuThrottle": 1,
+  "startedAt": "2026-11-21T20:14:38.737Z",
+  "checks": [
+    {
+      "ok": true,
+      "check": "Sayfa çevrimdışı açıldı (354 ms)"
+    },
+    {
+      "ok": true,
+      "check": "Resimden analiz yapıldı",
+      "detail": "• V11.2 boyalı savaşçı (ön + yan görünüş) · güven 100% · analiz 65 ms• Bacak arası açıklık diz hizasında başlıyor (önlük"
+    },
+    {
+      "ok": true,
+      "check": "Gerçek mesh üretildi",
+      "detail": "5459 vertex · 8102 üçgen · 26 kemik · 34 parça · kurulum 12 ms"
+    },
+    {
+      "ok": true,
+      "check": "3B karakter sürükleyerek döndürüldü",
+      "detail": {
+        "yaw0": 0,
+        "yaw1": -1.44
+      }
+    },
+    {
+      "ok": true,
+      "check": "Önizleme karesi (320×320, CPU): 34.9 ms"
+    },
+    {
+      "ok": true,
+      "check": "Anatomi kaydırıcısı mesh'i yeniden kurdu (irilik 1.2)"
+    },
+    {
+      "ok": true,
+      "check": "Model paketi yüklendi, ONNX Runtime WASM motoru başladı",
+      "detail": "Hazır: Forge-Mini Savaşçı v1 · 49.9 MB · ONNX Runtime WASM (CPU, 1 iş parçacığı) · başlatma 720 ms"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (4.2 sn)",
+      "detail": "Üretildi: 256×256 · 4.2 sn (UNet 3.1 sn, çözücü 1.0 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (0.0 sn)",
+      "detail": "Üretildi: 256×256 · 4.2 sn (UNet 3.1 sn, çözücü 1.0 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Cihazda 256×256 PNG üretildi (4.7 sn)",
+      "detail": "Üretildi: 256×256 · 4.2 sn (UNet 3.1 sn, çözücü 1.0 sn) · tamamen bu cihazda"
+    },
+    {
+      "ok": true,
+      "check": "Görsel üretimi iptal edildi"
+    },
+    {
+      "ok": true,
+      "check": "Kaydedilen adımdan \"Devam et\" ile tamamlandı"
+    },
+    {
+      "ok": true,
+      "check": "Üretilen görsel PNG olarak kaydedildi",
+      "detail": "(256, 256) RGBA"
+    },
+    {
+      "ok": true,
+      "check": "Üretilen görsel Forge'a aktarıldı ve 3B analizine gönderildi",
+      "detail": "• İçe aktarılan PNG (tek yön) · güven 100% · analiz 55 ms• Derinlik (göğüs/bel/kalça kalınlığı) ve s"
+    },
+    {
+      "ok": true,
+      "check": "Yeniden açılışta model, cihaz deposundan internetsiz yüklendi",
+      "detail": "Hazır: Forge-Mini Savaşçı v1 · 49.9 MB · ONNX Runtime WASM (CPU, 1 iş parçacığı) · başlatma 839 ms"
+    },
+    {
+      "ok": true,
+      "check": "Hiçbir uzak ağ isteği yapılmadı",
+      "detail": []
+    },
+    {
+      "ok": true,
+      "check": "Konsolda hata yok",
+      "detail": []
+    }
+  ],
+  "timings": {
+    "pageReadyMs": 354,
+    "analyzeClickMs": 679,
+    "preview320FrameMs": 34.9,
+    "ldPackLoadAndInitMs": 1017
+  },
+  "memory": {
+    "heapAfterLoadMB": 8.8,
+    "chromeRssAfterLoadMB": 487,
+    "heapAfterLdInitMB": 3.9,
+    "chromeRssAfterLdInitMB": 928.6
+  },
+  "errors": [],
+  "localDream": [
+    {
+      "prompt": "Kırmızı pelerinli, miğferli, kalkanlı, baltalı savaşçı, önden",
+      "size": 256,
+      "steps": 20,
+      "guidance": 2,
+      "seed": 11,
+      "wallMs": 4214,
+      "status": "Üretildi: 256×256 · 4.2 sn (UNet 3.1 sn, çözücü 1.0 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 720,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 4162,
+          "unetMs": 3093,
+          "çözücüMs": 1000,
+          "unetAdım": 20
+        }
+      },
+      "file": "kukla_yerel_ruya_256_11.png",
+      "heapMB": 4.5,
+      "chromeRssMB": 1003.1
+    },
+    {
+      "prompt": "Mavi cüppeli asalı büyücü, sağdan",
+      "size": 256,
+      "steps": 20,
+      "guidance": 2,
+      "seed": 5,
+      "wallMs": 30,
+      "status": "Üretildi: 256×256 · 4.2 sn (UNet 3.1 sn, çözücü 1.0 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 720,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 4162,
+          "unetMs": 3093,
+          "çözücüMs": 1000,
+          "unetAdım": 20
+        }
+      },
+      "file": "kukla_yerel_ruya_256_5.png",
+      "heapMB": 4.9,
+      "chromeRssMB": 1004.2
+    },
+    {
+      "prompt": "Yeşil pelerinli kılıçlı altın zırhlı savaşçı, saldırı",
+      "size": 256,
+      "steps": 12,
+      "guidance": 1,
+      "seed": 7,
+      "wallMs": 4653,
+      "status": "Üretildi: 256×256 · 4.2 sn (UNet 3.1 sn, çözücü 1.0 sn) · tamamen bu cihazda",
+      "perf": {
+        "motorBaşlatmaMs": 720,
+        "iş_parçacığı": 1,
+        "sonÜretim": {
+          "boyut": 256,
+          "toplamMs": 4227,
+          "unetMs": 3122,
+          "çözücüMs": 1041,
+          "unetAdım": 20
+        }
+      },
+      "file": "kukla_yerel_ruya_256_7.png",
+      "heapMB": 5.5,
+      "chromeRssMB": 1008.7
+    }
+  ],
+  "consoleWarnings": [],
+  "finishedAt": "2026-11-21T20:15:01.833Z",
+  "passed": true
+}
