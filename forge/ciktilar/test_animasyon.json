@@ -33,17 +33,17 @@
       },
       "attack": {
         "worstAttachment": "upperarm.R",
-        "worstAttachmentCm": 5.16,
-        "worstAttachmentRatio": 0.668,
-        "maxSolidEdgeGrowth_cm": 3.39,
+        "worstAttachmentCm": 4.44,
+        "worstAttachmentRatio": 0.576,
+        "maxSolidEdgeGrowth_cm": 3.23,
         "minVertexY_cm": 0,
         "clothRawMinY_cm_GLB": 20.24,
-        "maxEdgeStretch": 1.533,
-        "maxEdgeGrowth_cm": 3.39,
+        "maxEdgeStretch": 1.508,
+        "maxEdgeGrowth_cm": 3.23,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 41.04,
-        "bladeTipPeakAt": 0.333
+        "bladeTipPeakSpeed": 64.02,
+        "bladeTipPeakAt": 0.313
       },
       "hurt": {
         "worstAttachment": "upperarm.L",
@@ -56,7 +56,7 @@
         "maxEdgeGrowth_cm": 3.19,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 22.05,
+        "bladeTipPeakSpeed": 15.12,
         "bladeTipPeakAt": 0.021
       },
       "death": {
@@ -70,8 +70,8 @@
         "maxEdgeGrowth_cm": 6.98,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 3.42,
-        "bladeTipPeakAt": 0.125
+        "bladeTipPeakSpeed": 10.88,
+        "bladeTipPeakAt": 0.333
       }
     }
   },
@@ -110,16 +110,16 @@
       "attack": {
         "worstAttachment": "upperarm.R",
         "worstAttachmentCm": 6.76,
-        "worstAttachmentRatio": 0.73,
-        "maxSolidEdgeGrowth_cm": 3.96,
+        "worstAttachmentRatio": 0.729,
+        "maxSolidEdgeGrowth_cm": 3.99,
         "minVertexY_cm": 0,
         "clothRawMinY_cm_GLB": 19.74,
-        "maxEdgeStretch": 1.623,
-        "maxEdgeGrowth_cm": 3.96,
+        "maxEdgeStretch": 1.627,
+        "maxEdgeGrowth_cm": 3.99,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 41.04,
-        "bladeTipPeakAt": 0.333
+        "bladeTipPeakSpeed": 64.02,
+        "bladeTipPeakAt": 0.313
       },
       "hurt": {
         "worstAttachment": "upperarm.L",
@@ -132,7 +132,7 @@
         "maxEdgeGrowth_cm": 2.85,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 22.63,
+        "bladeTipPeakSpeed": 15.73,
         "bladeTipPeakAt": 0.021
       },
       "death": {
@@ -146,8 +146,8 @@
         "maxEdgeGrowth_cm": 10.74,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 3.76,
-        "bladeTipPeakAt": 0.125
+        "bladeTipPeakSpeed": 10.88,
+        "bladeTipPeakAt": 0.333
       }
     }
   },
@@ -185,17 +185,17 @@
       },
       "attack": {
         "worstAttachment": "upperarm.R",
-        "worstAttachmentCm": 3.94,
-        "worstAttachmentRatio": 0.601,
-        "maxSolidEdgeGrowth_cm": 2.65,
+        "worstAttachmentCm": 3.43,
+        "worstAttachmentRatio": 0.523,
+        "maxSolidEdgeGrowth_cm": 2.57,
         "minVertexY_cm": 0,
         "clothRawMinY_cm_GLB": 53.12,
-        "maxEdgeStretch": 1.417,
-        "maxEdgeGrowth_cm": 2.65,
+        "maxEdgeStretch": 1.405,
+        "maxEdgeGrowth_cm": 2.57,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 41.04,
-        "bladeTipPeakAt": 0.333
+        "bladeTipPeakSpeed": 64.02,
+        "bladeTipPeakAt": 0.313
       },
       "hurt": {
         "worstAttachment": "upperarm.L",
@@ -208,7 +208,7 @@
         "maxEdgeGrowth_cm": 1.56,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 21.57,
+        "bladeTipPeakSpeed": 14.62,
         "bladeTipPeakAt": 0.021
       },
       "death": {
@@ -222,8 +222,8 @@
         "maxEdgeGrowth_cm": 3.75,
         "weaponGripErrMm": 0,
         "boneLenErrMm": 0,
-        "bladeTipPeakSpeed": 3.1,
-        "bladeTipPeakAt": 0.125
+        "bladeTipPeakSpeed": 14.49,
+        "bladeTipPeakAt": 0.313
       }
     }
   }

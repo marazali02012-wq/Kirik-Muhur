@@ -1,0 +1,9 @@
+{
+  "name": "forge-v12-testleri",
+  "private": true,
+  "description": "Yalnızca test araçları. Uygulamanın kendisi bu paketlere ihtiyaç duymaz.",
+  "devDependencies": {
+    "gltf-validator": "2.0.0-dev.3.10",
+    "three": "0.170.0"
+  }
+}

@@ -1,0 +1,529 @@
+{
+  "ornek_savasci.glb": {
+    "khronos": {
+      "version": "2.0.0-dev.3.10",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "hints": 0,
+      "messages": [],
+      "info": {
+        "version": "2.0",
+        "generator": "Forge 2.5D V12 — yerel CPU üretimi (harici servis yok)",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 470012
+          }
+        ],
+        "animationCount": 5,
+        "materialCount": 11,
+        "hasMorphTargets": false,
+        "hasSkins": true,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 11,
+        "totalVertexCount": 5863,
+        "totalTriangleCount": 8102,
+        "maxUVs": 0,
+        "maxInfluences": 4,
+        "maxAttributes": 5
+      }
+    },
+    "own": {
+      "ok": true,
+      "errors": [],
+      "stats": {
+        "vertices": 5863,
+        "triangles": 8102,
+        "primitives": 11,
+        "materials": 11,
+        "joints": 26,
+        "nodes": 27,
+        "animations": {
+          "idle": {
+            "channels": 17,
+            "duration": 1.6
+          },
+          "walk": {
+            "channels": 19,
+            "duration": 0.9
+          },
+          "attack": {
+            "channels": 19,
+            "duration": 0.8
+          },
+          "hurt": {
+            "channels": 18,
+            "duration": 0.5
+          },
+          "death": {
+            "channels": 18,
+            "duration": 1.4
+          }
+        },
+        "bytes": 506896,
+        "jointNames": [
+          "root",
+          "hips",
+          "spine",
+          "chest",
+          "neck",
+          "head",
+          "shoulder.L",
+          "upperarm.L",
+          "forearm.L",
+          "hand.L",
+          "shoulder.R",
+          "upperarm.R",
+          "forearm.R",
+          "hand.R",
+          "thigh.L",
+          "shin.L",
+          "foot.L",
+          "toe.L",
+          "thigh.R",
+          "shin.R",
+          "foot.R",
+          "toe.R",
+          "weapon",
+          "cape.1",
+          "cape.2",
+          "shield"
+        ],
+        "maxWeightSumError": 2.9802322387695312e-8,
+        "maxIBMError": 0.000001397548675452498
+      }
+    }
+  },
+  "roundTrip": {
+    "samples": 60,
+    "minIoU": 0.9636,
+    "maxJointDiffCm": 1.23,
+    "detail": [
+      {
+        "clip": "idle",
+        "t": 0.1,
+        "dir": 0,
+        "iou": 0.9999,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.1,
+        "dir": 3,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.1,
+        "dir": 6,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.37,
+        "dir": 0,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.37,
+        "dir": 3,
+        "iou": 0.9999,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.37,
+        "dir": 6,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.62,
+        "dir": 0,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.62,
+        "dir": 3,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.62,
+        "dir": 6,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.9,
+        "dir": 0,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.9,
+        "dir": 3,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "idle",
+        "t": 0.9,
+        "dir": 6,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "walk",
+        "t": 0.1,
+        "dir": 0,
+        "iou": 0.9986,
+        "maxJointDiffCm": 1.23
+      },
+      {
+        "clip": "walk",
+        "t": 0.1,
+        "dir": 3,
+        "iou": 0.9945,
+        "maxJointDiffCm": 1.23
+      },
+      {
+        "clip": "walk",
+        "t": 0.1,
+        "dir": 6,
+        "iou": 0.991,
+        "maxJointDiffCm": 1.23
+      },
+      {
+        "clip": "walk",
+        "t": 0.37,
+        "dir": 0,
+        "iou": 0.9999,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "walk",
+        "t": 0.37,
+        "dir": 3,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "walk",
+        "t": 0.37,
+        "dir": 6,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "walk",
+        "t": 0.62,
+        "dir": 0,
+        "iou": 0.9996,
+        "maxJointDiffCm": 0.08
+      },
+      {
+        "clip": "walk",
+        "t": 0.62,
+        "dir": 3,
+        "iou": 0.9994,
+        "maxJointDiffCm": 0.08
+      },
+      {
+        "clip": "walk",
+        "t": 0.62,
+        "dir": 6,
+        "iou": 0.9993,
+        "maxJointDiffCm": 0.08
+      },
+      {
+        "clip": "walk",
+        "t": 0.9,
+        "dir": 0,
+        "iou": 0.9998,
+        "maxJointDiffCm": 0.06
+      },
+      {
+        "clip": "walk",
+        "t": 0.9,
+        "dir": 3,
+        "iou": 0.9994,
+        "maxJointDiffCm": 0.06
+      },
+      {
+        "clip": "walk",
+        "t": 0.9,
+        "dir": 6,
+        "iou": 0.999,
+        "maxJointDiffCm": 0.06
+      },
+      {
+        "clip": "attack",
+        "t": 0.1,
+        "dir": 0,
+        "iou": 0.9988,
+        "maxJointDiffCm": 0.12
+      },
+      {
+        "clip": "attack",
+        "t": 0.1,
+        "dir": 3,
+        "iou": 0.993,
+        "maxJointDiffCm": 0.12
+      },
+      {
+        "clip": "attack",
+        "t": 0.1,
+        "dir": 6,
+        "iou": 0.9907,
+        "maxJointDiffCm": 0.12
+      },
+      {
+        "clip": "attack",
+        "t": 0.37,
+        "dir": 0,
+        "iou": 0.9879,
+        "maxJointDiffCm": 1.23
+      },
+      {
+        "clip": "attack",
+        "t": 0.37,
+        "dir": 3,
+        "iou": 0.9636,
+        "maxJointDiffCm": 1.23
+      },
+      {
+        "clip": "attack",
+        "t": 0.37,
+        "dir": 6,
+        "iou": 0.9686,
+        "maxJointDiffCm": 1.23
+      },
+      {
+        "clip": "attack",
+        "t": 0.62,
+        "dir": 0,
+        "iou": 0.9981,
+        "maxJointDiffCm": 0.09
+      },
+      {
+        "clip": "attack",
+        "t": 0.62,
+        "dir": 3,
+        "iou": 0.9992,
+        "maxJointDiffCm": 0.09
+      },
+      {
+        "clip": "attack",
+        "t": 0.62,
+        "dir": 6,
+        "iou": 0.9981,
+        "maxJointDiffCm": 0.09
+      },
+      {
+        "clip": "attack",
+        "t": 0.9,
+        "dir": 0,
+        "iou": 0.9999,
+        "maxJointDiffCm": 0.02
+      },
+      {
+        "clip": "attack",
+        "t": 0.9,
+        "dir": 3,
+        "iou": 0.9998,
+        "maxJointDiffCm": 0.02
+      },
+      {
+        "clip": "attack",
+        "t": 0.9,
+        "dir": 6,
+        "iou": 0.9993,
+        "maxJointDiffCm": 0.02
+      },
+      {
+        "clip": "hurt",
+        "t": 0.1,
+        "dir": 0,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "hurt",
+        "t": 0.1,
+        "dir": 3,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "hurt",
+        "t": 0.1,
+        "dir": 6,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "hurt",
+        "t": 0.37,
+        "dir": 0,
+        "iou": 0.9999,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "hurt",
+        "t": 0.37,
+        "dir": 3,
+        "iou": 0.9993,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "hurt",
+        "t": 0.37,
+        "dir": 6,
+        "iou": 0.9996,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "hurt",
+        "t": 0.62,
+        "dir": 0,
+        "iou": 0.9998,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "hurt",
+        "t": 0.62,
+        "dir": 3,
+        "iou": 0.9994,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "hurt",
+        "t": 0.62,
+        "dir": 6,
+        "iou": 0.9996,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "hurt",
+        "t": 0.9,
+        "dir": 0,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "hurt",
+        "t": 0.9,
+        "dir": 3,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "hurt",
+        "t": 0.9,
+        "dir": 6,
+        "iou": 1,
+        "maxJointDiffCm": 0
+      },
+      {
+        "clip": "death",
+        "t": 0.1,
+        "dir": 0,
+        "iou": 0.9993,
+        "maxJointDiffCm": 0.03
+      },
+      {
+        "clip": "death",
+        "t": 0.1,
+        "dir": 3,
+        "iou": 0.9992,
+        "maxJointDiffCm": 0.03
+      },
+      {
+        "clip": "death",
+        "t": 0.1,
+        "dir": 6,
+        "iou": 0.9991,
+        "maxJointDiffCm": 0.03
+      },
+      {
+        "clip": "death",
+        "t": 0.37,
+        "dir": 0,
+        "iou": 0.9998,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "death",
+        "t": 0.37,
+        "dir": 3,
+        "iou": 0.9997,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "death",
+        "t": 0.37,
+        "dir": 6,
+        "iou": 0.9993,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "death",
+        "t": 0.62,
+        "dir": 0,
+        "iou": 0.9997,
+        "maxJointDiffCm": 0.02
+      },
+      {
+        "clip": "death",
+        "t": 0.62,
+        "dir": 3,
+        "iou": 0.9996,
+        "maxJointDiffCm": 0.02
+      },
+      {
+        "clip": "death",
+        "t": 0.62,
+        "dir": 6,
+        "iou": 0.9992,
+        "maxJointDiffCm": 0.02
+      },
+      {
+        "clip": "death",
+        "t": 0.9,
+        "dir": 0,
+        "iou": 0.9998,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "death",
+        "t": 0.9,
+        "dir": 3,
+        "iou": 0.999,
+        "maxJointDiffCm": 0.01
+      },
+      {
+        "clip": "death",
+        "t": 0.9,
+        "dir": 6,
+        "iou": 0.9996,
+        "maxJointDiffCm": 0.01
+      }
+    ],
+    "note": "GLB 30 kare/sn doğrusal anahtarlarla örneklenir; küçük fark ara değerlemeden kaynaklanır."
+  }
+}

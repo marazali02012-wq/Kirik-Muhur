@@ -81,6 +81,21 @@
           }
         }
       },
+      // Silah–zemin kısıtı: silahın ucu ve sapı zeminin üstünde kalır (gerekirse el döndürülür)
+      weaponGround() {
+        const type = (skel.style && skel.style.weapon) || 'sword'; if (type === 'none') return;
+        const R = { sword: [0.96, 0.16], dagger: [0.44, 0.16], axe: [0.89, 0.17], hammer: [0.8, 0.17], mace: [0.87, 0.17], spear: [1.29, 0.58], staff: [1.11, 0.58] }[type] || [0.97, 0.16]; // mesh ile aynı uç/sap uzunlukları
+        const W = F.poseWorld(skel, pose), wf = F.weaponFrame(skel, Pr), g = W.wpos[J.weapon];
+        const d = q.rotate(W.wrot[J.weapon], wf.dir), lim = 0.035;
+        const lo = -(g[1] - lim) / R[0], hi = (g[1] - lim) / R[1];
+        let ny = d[1];
+        if (lo > hi) ny = 0; else ny = clamp(ny, lo, hi);
+        if (Math.abs(ny - d[1]) < 1e-6) return;
+        const hzl = Math.hypot(d[0], d[2]) || 1, k = Math.sqrt(Math.max(0, 1 - ny * ny)) / hzl;
+        const nd = [d[0] * k, ny, d[2] * k];
+        const hw = W.wrot[J['hand.R']];
+        F.setWorldRot(skel, pose, J['hand.R'], q.norm(q.mul(q.fromTo(d, nd), hw)));
+      },
       bladeRot(dir, flatHint) { // el kemiği için dünya dönüşü: kılıç dinlenme yönü -> dir
         const wf = F.weaponFrame(skel, Pr);
         return F.rotBetweenFrames(F.frame(wf.dir, wf.side), F.frame(dir, flatHint || [0, 1, 0]));
@@ -101,6 +116,7 @@
     c.E('upperarm.R', 0.03 * Math.sin(ph + 0.5), 0, -0.03 * Math.sin(ph));
     c.E('forearm.R', -0.10 - 0.04 * Math.sin(ph + 0.8), 0, 0);
     for (const s of ['L', 'R']) c.leg(s, c.Pr('foot.' + s), 0);
+    c.weaponGround();
     c.cape(0.02 + 0.02 * Math.sin(ph), 0.03 + 0.03 * Math.sin(ph + 1), 0);
     return { pose: c.pose, contacts: { L: 1, R: 1 } };
   }
@@ -138,6 +154,7 @@
     // silahı yürürken sabit açıda tut (uzun silahlar zemine çarpmaz)
     const wf = F.weaponFrame(skel, c.Pr);
     F.setWorldRot(skel, c.pose, c.J['hand.R'], c.bladeRot(v3.norm([wf.dir[0], wf.dir[1] * 0.85 + 0.12, wf.dir[2]]), [0, 1, 0]));
+    c.weaponGround();
     c.cape(0.12 + 0.04 * Math.cos(2 * ph), 0.2 + 0.06 * Math.sin(2 * ph), 0.05 * Math.sin(ph));
     return { pose: c.pose, contacts };
   }
@@ -147,8 +164,8 @@
     const c = makeCtx(skel), B = skel.body;
     const wr0 = c.Pr('hand.R'), wf = F.weaponFrame(skel, c.Pr);
     const K = [0, 0.28, 0.40, 0.52, 0.72, 1.0];
-    const wrist = track([[0, wr0], [0.14, [-0.44, 1.18, 0.1]], [0.28, [-0.33, 1.52, -0.12]], [0.34, [-0.24, 1.56, 0.14]], [0.40, [-0.14, 1.30, 0.30]], [0.52, [0.16, 0.98, 0.30]], [0.72, [-0.25, 0.97, 0.18]], [1, wr0]], t);
-    const blade = v3.norm(track([[0, wf.dir], [0.14, v3.norm([-0.3, 0.55, 0.78])], [0.21, v3.norm([-0.38, 0.92, -0.05])], [0.28, v3.norm([-0.3, 0.42, -0.86])], [0.34, v3.norm([0.0, 0.97, 0.25])], [0.40, v3.norm([0.72, 0.08, 0.69])], [0.52, v3.norm([0.78, -0.52, 0.34])], [0.72, v3.norm([0.25, -0.6, 0.76])], [1, wf.dir]], t));
+    const wrist = track([[0, wr0], [0.14, [-0.44, 1.18, 0.1]], [0.28, [-0.33, 1.45, -0.12]], [0.34, [-0.22, 1.45, 0.16]], [0.40, [-0.14, 1.30, 0.30]], [0.52, [0.16, 0.98, 0.30]], [0.72, [-0.25, 0.97, 0.18]], [1, wr0]], t);
+    const blade = v3.norm(track([[0, wf.dir], [0.14, v3.norm([-0.3, 0.55, 0.78])], [0.21, v3.norm([-0.42, 0.62, -0.66])], [0.28, v3.norm([-0.3, 0.42, -0.86])], [0.34, v3.norm([0.45, 0.6, 0.66])], [0.40, v3.norm([0.72, 0.08, 0.69])], [0.52, v3.norm([0.78, -0.52, 0.34])], [0.72, v3.norm([0.25, -0.6, 0.76])], [1, wf.dir]], t));
     const flat = v3.norm(track([[0, [0, 1, 0]], [0.14, [0.1, 0.6, -0.6]], [0.21, [0.15, 0.2, 0.95]], [0.28, [0.2, 0.3, 0.9]], [0.34, [0.9, 0.0, 0.4]], [0.40, [0, 1, 0.1]], [0.52, [0.3, 0.7, -0.2]], [0.72, [0, 1, 0]], [1, [0, 1, 0]]], t));
     const yaw = track([[0, 0], [0.28, -0.42], [0.40, 0.08], [0.52, 0.36], [0.72, 0.12], [1, 0]], t);
     const lean = track([[0, 0], [0.28, -0.06], [0.40, 0.14], [0.52, 0.2], [0.72, 0.07], [1, 0]], t);
@@ -162,6 +179,7 @@
     c.E('upperarm.L', la[0], la[1], la[2]); c.E('forearm.L', -0.35 - 0.3 * Math.abs(la[0]), 0, 0);
     for (const s of ['L', 'R']) c.leg(s, c.Pr('foot.' + s), 0);
     c.arm('R', wrist, c.bladeRot(blade, flat), [-0.6, -0.2, -0.8]);
+    c.weaponGround();
     c.cape(0.06 + 0.2 * Math.abs(yaw), 0.1 + 0.3 * Math.abs(yaw), -yaw * 0.25);
     return { pose: c.pose, contacts: { L: 1, R: 1 }, strike: t > 0.3 && t < 0.56 };
   }
@@ -176,8 +194,9 @@
     c.E('spine', -0.16 * w, 0.05 * w, 0.03 * w); c.E('chest', -0.14 * w, 0.06 * w, 0);
     c.E('neck', -0.12 * w, 0, 0); c.E('head', -0.28 * w, -0.1 * w, 0.06 * w);
     c.E('upperarm.L', -0.35 * w, 0, 0.42 * w); c.E('forearm.L', -0.12 - 0.5 * w, 0, 0);
-    c.E('upperarm.R', -0.25 * w, 0, -0.35 * w); c.E('forearm.R', -0.1 - 0.4 * w, 0, 0);
+    c.E('upperarm.R', -0.12 * w, 0, -0.22 * w); c.E('forearm.R', -0.1 - 0.25 * w, 0, 0);
     for (const s of ['L', 'R']) c.leg(s, c.Pr('foot.' + s), 0);
+    c.weaponGround();
     c.cape(0.05 + 0.1 * w, 0.08 + 0.25 * w, 0);
     return { pose: c.pose, contacts: { L: 1, R: 1 }, tint: [1, 0.2, 0.14, 0.24 * clamp(k * 1.2, 0, 1) * (t < 0.45 ? 1 : 0)] };
   }
@@ -215,10 +234,11 @@
     const wrL = track([[0, c.Pr('hand.L')], [0.18, [0.42, 1.0, 0.12]], [0.45, [0.38, 0.66, 0.3]], [0.7, sh ? [0.42, 0.42, 0.5] : [0.32, 0.34, 0.55]], [1, sh ? [0.42, 0.3, 0.56] : [0.3, 0.11, 0.62]]], t);
     const wrR = track([[0, c.Pr('hand.R')], [0.18, [-0.44, 1.02, 0.1]], [0.45, [-0.38, 0.66, 0.32]], [0.7, [-0.34, 0.34, 0.55]], [1, [-0.34, 0.11, 0.6]]], t);
     const wf = F.weaponFrame(skel, c.Pr);
-    const blade = v3.norm(track([[0, wf.dir], [0.18, v3.norm([-0.35, -0.5, 0.79])], [0.45, v3.norm([-0.7, -0.2, 0.35])], [0.7, v3.norm([-0.8, -0.1, -0.2])], [1, v3.norm([-0.62, 0.0, -0.78])]], t));
+    const blade = v3.norm(track([[0, wf.dir], [0.18, v3.norm([-0.2, -0.45, 0.6])], [0.45, v3.norm([-0.3, -0.3, -0.9])], [0.7, v3.norm([-0.6, -0.2, -0.75])], [1, v3.norm([-0.62, 0.0, -0.78])]], t));
     const flat = v3.norm(track([[0, [0, 1, 0]], [0.6, [0.2, 0.9, 0.1]], [1, [0, 1, 0]]], t));
     c.arm('L', wrL, null, [0.6, 0.2, -0.8]);
     c.arm('R', wrR, c.bladeRot(blade, flat), [-0.6, 0.2, -0.8]);
+    c.weaponGround();
     c.cape(track([[0, 0.03], [0.18, 0.25], [0.6, 0.1], [1, 0.0]], t), track([[0, 0.05], [0.18, 0.4], [0.6, 0.15], [1, 0.0]], t), 0);
     return { pose: c.pose, contacts: { L: 1, R: 1 } };
   }

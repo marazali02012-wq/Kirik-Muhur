@@ -1,0 +1,120 @@
+{
+  "input": "view0_in.png",
+  "analysis": {
+    "confidence": 1,
+    "ratios": {
+      "headFrac": 0.123,
+      "legFrac": 0.46,
+      "shoulderFrac": 0.41,
+      "asym": 0.048
+    },
+    "style": {
+      "cape": true,
+      "armor": "heavy",
+      "helmet": "circlet",
+      "weapon": "sword",
+      "pauldrons": "large"
+    },
+    "notes": [
+      "Bacak arası açıklık diz hizasında başlıyor (önlük/etek örtüyor); bacak oranı 0.46 kabul edildi.",
+      "Derinlik (göğüs/bel/kalça kalınlığı) ve sırt/yan renkler tek resimden kesin bilinemez; anatomik oranlarla tahmin edildi."
+    ]
+  },
+  "timingsMs": {
+    "analyzeMs": 67,
+    "buildMeshMs": 28,
+    "framingMs": 62,
+    "glbMs": 31,
+    "spritesAndZipMs": 10103
+  },
+  "rssMB": 125,
+  "mesh": {
+    "vertices": 5459,
+    "triangles": 8102,
+    "bones": 26
+  },
+  "framing": {
+    "scale": 102.791,
+    "cx": 128,
+    "cy": 229,
+    "pitch": 0.33,
+    "frame": 256,
+    "extents": {
+      "maxX": 1.148546381874981,
+      "maxUp": 2.14613759365284,
+      "maxDown": 0.18870718290351668
+    }
+  },
+  "glb": {
+    "bytes": 506896,
+    "verify": {
+      "ok": true,
+      "errors": [],
+      "stats": {
+        "vertices": 5863,
+        "triangles": 8102,
+        "primitives": 11,
+        "materials": 11,
+        "joints": 26,
+        "nodes": 27,
+        "animations": {
+          "idle": {
+            "channels": 17,
+            "duration": 1.6
+          },
+          "walk": {
+            "channels": 19,
+            "duration": 0.9
+          },
+          "attack": {
+            "channels": 19,
+            "duration": 0.8
+          },
+          "hurt": {
+            "channels": 18,
+            "duration": 0.5
+          },
+          "death": {
+            "channels": 18,
+            "duration": 1.4
+          }
+        },
+        "bytes": 506896,
+        "jointNames": [
+          "root",
+          "hips",
+          "spine",
+          "chest",
+          "neck",
+          "head",
+          "shoulder.L",
+          "upperarm.L",
+          "forearm.L",
+          "hand.L",
+          "shoulder.R",
+          "upperarm.R",
+          "forearm.R",
+          "hand.R",
+          "thigh.L",
+          "shin.L",
+          "foot.L",
+          "toe.L",
+          "thigh.R",
+          "shin.R",
+          "foot.R",
+          "toe.R",
+          "weapon",
+          "cape.1",
+          "cape.2",
+          "shield"
+        ],
+        "maxWeightSumError": 2.9802322387695312e-8,
+        "maxIBMError": 0.000001397548675452498
+      }
+    }
+  },
+  "zip": {
+    "bytes": 6998111,
+    "files": 42
+  }
+}
