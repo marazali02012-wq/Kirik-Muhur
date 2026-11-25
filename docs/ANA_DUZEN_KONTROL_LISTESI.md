@@ -215,3 +215,28 @@ Kaynaklar: [MU Online resmi sınıf görevleri](https://muonline.webzen.com/en/g
 - [ ] 300/400/500 sınavlarında seviye + gerçek güç + önceki bölüm + terfi/boss gibi uygulanmış ön koşullar. Kilitli ana görev otomatik durur, nedeni ve kalan şart görünür. Alternatif av, yan görev, ekipman ve günlük içerik erişilebilir; haklar dolduğunda gerçek sayaç. Seviye ve güç arttıkça görev süreleri ve zorluk artar, çözümsüz kilit ve zorunlu satın alma yok.
 - [ ] Görev çeşitliliği: keşif, teslim, toplama, çok dalga, elit/boss, ekipman geliştirme, terfi, zindan, kule, günlük/haftalık. Çevrim içi görevler yerel ilerlemeyi kilitlemez.
 - [ ] Denge ve kabul: doğal ilerleme simülasyonu 1/50/100/200/299/300/399/400/499/500 ve eski kayıt; XP kaynaklarının erişilebilirliği, çift ödül, saat değişimi, boşta bekleme, yeniden açılma, ölüm, uygulama kapanışı, Android FPS. Gerçek süre hedefleri ölçümden sonra belirlenir. İleri seviye mekanikleri henüz kodlanmadı.
+
+
+## Karakter XP ekonomisi — kullanıcı ek talebi (2026-11-26)
+Kullanıcı: her içerikten XP alınmamalı; XP Arena, XP Zindanı ve görevler ayrı kaynaklar olarak tasarlanacak. Mevcut öncelik sırası korunur, başa dönülmez. Bu tablo Kırık Mühür'e özgü denge taslağıdır; Kung Fu Saga'daki kesin XP oranları veya tüm arena/boss ödülleri olarak sunulmaz.
+Referanslar: [Kung Fu Saga görevler](https://gamingonphone.com/guides/avatars-saga-beginners-guide-and-tips/), [Daily Trial Dungeon ve dalga XP](https://medium.com/@anonnftgroup/kung-fu-saga-beginner-guide-part-1-best-class-for-beginners-and-your-first-7-days-cc0ca4986f42), [ana görev örnekleri](https://medium.com/@anonnftgroup/part-2-of-the-kung-fu-saga-beginner-series-e61cf774daeb), [otomatik gelişim](https://www.bluestacks.com/blog/game-guides/avatars-saga/avs-beginner-guide-en.html), [XP iksiri, çevrim dışı kartı, ayrı kanat özü](https://www.dudcode.com/game/kung-fu-saga/).
+| İçerik | Karakter XP | Ayrı ödül/işlev |
+|---|---|---|
+| Ana hikâye | Yüksek; bir defa | Hikâye, açılma, altın |
+| Yan görev | Orta; bir defa | Görev kaynakları |
+| XP Zindanı | Çok yüksek; hak sınırlı | Dalga performansı |
+| XP Arena | Yüksek; hak sınırlı | Ayrı otomatik PvE deneyim arenası; normal Solo/PvP ile karıştırılmaz |
+| Günlük av görevi | Orta; hak sınırlı | Günlük ilerleme |
+| Haftalık XP görevi | Yüksek; hak sınırlı | Haftalık ilerleme |
+| Normal açık dünya avı | Düşük ve sınırlı | Seviye farkı ve günlük XP bütçesi; normal loot devam edebilir |
+| Çevrim dışı eğitim | Düşük, süre/bütçe sınırlı | Çevrim içi avla aynı süre için çift XP yok |
+| Bireysel/elit/dünya/lonca bossu | 0 | Ekipman ve özel boss kaynakları |
+| Normal Solo Arena/PvP | 0 | Arena parası, sıralama |
+| Ekipman/altın zindanı | 0 | Ekipman/altın |
+| Mühür Kulesi | 0 | Kader ve ilk kat ödülleri |
+| Pet/binek/kanat/kostüm/demirci/diğer geliştirmeler | 0 | İlgili sistemin kendi gelişim puanı ve materyali |
+- [ ] XP Arena ayrı Arena alt sekmesi; XP Zindanı Zindan alt sekmesi. Giriş şartı, kalan hak, süre, ödül önizlemesi, otomatik mücadele, sonuç ve doğru kategoriye dönüş.
+- [ ] Önerilen başlangıç denge değerleri (henüz kodlanmadı): XP Zindanı günde 2, XP Arena günde 3; günlük haklar Türkiye saati 00.00 yenilenir. Haftalık yenilenme ve av/çevrim dışı süre sınırları 1–500+ doğal ilerleme ölçümüyle belirlenecek.
+- [ ] XP yalnız merkezi izinli kaynak fonksiyonundan geçer; kaynak kimliği, tekil ödül/oturum kimliği, hak, seviye farkı, bütçe kontrolü. İzin verilmeyen kaynaklara varsayılan 0. Boss veya kule görevi XP veriyorsa yalnız bir defalık görev teslimi ödülü; boss öldürmesi ayrıca XP vermez. XP zindanı/arena dalgaları ile sonuç ödülü çift sayılmaz.
+- [ ] İlerleyen 300/400/500 seviyelerinde XP eğrisi ve kaynak ödülleri birlikte dengelenir. Haklar dolunca gerçek bekleme ve geri sayım; kilitli hikâye için erişilebilir alternatif XP kaynağı kalması veya bir sonraki günlük yenilenmede açılması garanti edilir. Düşük seviyeli sonsuz farm ve saat geri alma açığı önlenir. XP iksiri eklenirse yalnız izinli kaynaklara etki eder; hak ve bütçe sınırını aşamaz.
+- [ ] Mevcut 3.130 görev/av XP yollarını kaynak bazlı denetle ve eski kayıtları koru. Yeni XP planı, arena/zindan kodu ve merkezi dağıtım henüz uygulanmadı; günlük etkinlik motoru mevcut öncelik, bu plan ilgili aşamalara eklenir. Android ve 1–500+ doğal ilerleme testleri zorunlu.
