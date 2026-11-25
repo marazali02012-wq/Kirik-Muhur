@@ -403,3 +403,12 @@ Kullanıcının önceliği: Kung Fu Saga ana içerik/mekanik referansıdır; di�
 - [ ] K27 Denge ve genişletme kabulü: 1/50/60/100/180/200/299/300/399/400/499/500 ve gelecekteki seviye tavanında doğal ilerleme, hakların bitişi, gerçek kilit/açılma, erişilebilir alternatifler; yüksek seviye kayıt göçü, tavan aşımı, düşük seviye farm, tekrarlı ödül, saat ve sunucu kontrolü. Fiziksel Android ve uzun oyun testi.
 
 27 referansa özel kontrol maddesi; önceki maddelerle ilişkili, 27 bağımsız yeni özellik olarak sayılmaz. Bu turda kaynak kod ve yerel ekran görüntüleri incelendi, doküman güncellendi; oyun kodu, sanat ve test sürümü değiştirilmedi. Sıradaki 3.131 günlük etkinlik ve ödül motoru; K16/G01-G04 ve mevcut XP kaynak denetimi ilgili sırada ele alınır.
+
+
+## 3.131 TEST — günlük etkinlik ve ödül motoru (2026-11-26)
+- 3.130 ZIP tabanı korunarak tek HTML test paketi oluşturuldu: Kirik_Muhur_3_131_Gunluk_Etkinlik_Odul_TEST.zip (40.645.825 bayt, SHA256 5e89cdf9190a7bd40e5cffdc716e48bd9ab2e699d4d4c08bdf5edd2fedb6e4f3). Oyun ZIP'i bu commit'e yüklenmedi, sadece ilerleme kaydı.
+- Günlük av 12 normal düşman/40 puan, 2 görev teslimi/40 puan, boss veya kule zaferi/20 puan; 40/80/100 günlük ve 3/5 giriş, 240 puan haftalık ödül. Ödüller altın/ruh tozu, karakter XP yok. Bunlar test denge değerleri.
+- Günlük Türkiye 00.00, haftalık pazartesi 00.00 yenilenme; kaçan ödüller sona erer. Yerel saat geriye alındığında yeni etkinlik ödülleri kilitlenir; sunucu saati ve ileri saat manipülasyonuna dayanıklılık henüz yok.
+- Etkinlik altında Günlük/Takvim/Ödüller ayrı işlevsel görünümler. Hak ve ödül aynı kayıt nesnesinde; başarısız yerel yazma durumunda ödül iptal edilir. Mevcut kayıt anahtarı korunur; boss snapshot üzerinden sayılır.
+- JS sözdizimi, ZIP CRC/bütünlüğü, gerçek kaynak fonksiyonlarının kontrollü bağımlılıklarla 12 birim/entegrasyon testi geçti (görev, öldürme ve boss ödül hook'ları dahil). Tarayıcı yerel dosya erişimi yönetici politikasıyla engellendi; gerçek oyun E2E, ekran görüntüsü ve fiziksel Android doğrulaması yapılmadı.
+- G01–G04/K16 kısmi uygulama; görsel kabul, saatli özel etkinlikler, çevrim dışı eğitim, tam XP kaynak motoru ve sunucu güvenliği açık. Tamamlandı işareti konulmadı. Önce 3.131 gerçek ekran/oyun testi, sonra mevcut sıraya göre ilerleme.
