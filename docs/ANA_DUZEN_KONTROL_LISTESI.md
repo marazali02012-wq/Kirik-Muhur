@@ -240,3 +240,122 @@ Referanslar: [Kung Fu Saga görevler](https://gamingonphone.com/guides/avatars-s
 - [ ] XP yalnız merkezi izinli kaynak fonksiyonundan geçer; kaynak kimliği, tekil ödül/oturum kimliği, hak, seviye farkı, bütçe kontrolü. İzin verilmeyen kaynaklara varsayılan 0. Boss veya kule görevi XP veriyorsa yalnız bir defalık görev teslimi ödülü; boss öldürmesi ayrıca XP vermez. XP zindanı/arena dalgaları ile sonuç ödülü çift sayılmaz.
 - [ ] İlerleyen 300/400/500 seviyelerinde XP eğrisi ve kaynak ödülleri birlikte dengelenir. Haklar dolunca gerçek bekleme ve geri sayım; kilitli hikâye için erişilebilir alternatif XP kaynağı kalması veya bir sonraki günlük yenilenmede açılması garanti edilir. Düşük seviyeli sonsuz farm ve saat geri alma açığı önlenir. XP iksiri eklenirse yalnız izinli kaynaklara etki eder; hak ve bütçe sınırını aşamaz.
 - [ ] Mevcut 3.130 görev/av XP yollarını kaynak bazlı denetle ve eski kayıtları koru. Yeni XP planı, arena/zindan kodu ve merkezi dağıtım henüz uygulanmadı; günlük etkinlik motoru mevcut öncelik, bu plan ilgili aşamalara eklenir. Android ve 1–500+ doğal ilerleme testleri zorunlu.
+
+
+## MMORPG kapsam genişletmesi — çoklu referans eksik analizi (2026-11-26)
+Kullanıcı talebi: RPG/MMORPG'lerdeki yararlı, eksik veya yeterince tanımlanmamış sistemleri ana listeye ekle; tam bir oyun hedefle. Mevcut öncelik sırası değişmez; 3.130 sonrası günlük etkinlik/ödül motorunun kalanları, mücevher/set, kostüm/kanat, ileri gelişim, mücadele, sanat, online ve genel kabul. Bu bölüm ilgili grupların alt iş kuyruğudur, baştan başlama talimatı değildir. 3.130 kodunun her fonksiyonu bu incelemede yeniden doğrulanmadı: açık maddeler mevcut takip dokümanında tamamlandığı kanıtlanmamış kapsam/iyileştirmelerdir; kesin kod yokluğu iddiası değil. Yeni özelliklerin mekanikleri, modelleri ve testleri henüz uygulanmadı. Her birinin uygulanabilirliği, bağımlılıkları ve ekonomi dengesi ilgili aşamada değerlendirilecek.
+Kesin kurallar: sabit dikey, joystick yok, tam otomatik hareket/savaş; oyuncu içerik ve gelişim kararlarını verir. Ayrı kategorili özgün UI; gerçek çevrim içi işlevler sunucu kurulunca. ZIP sınırı yok; fiziksel Android performansı şart. Önceki 1–500+ ilerleme ve izinli XP kaynak tablosu geçerli; meslek, koleksiyon, ustalık ve lonca puanları karakter XP'sine otomatik dönüşmez. Her içerik ayrı amaç/ödül taşır; zorunlu ödeme, sahte oyuncu, zorunlu online ilerleme veya çözümsüz kilit yok. Premium/ücretli sistemler ayrı onay ister.
+
+### Referans kaynaklar ve uyarlama
+- [Kung Fu Saga](https://play.google.com/store/apps/details?id=com.rxsjus.an.watt): mevcut mobil otomatik görev/gelişim referansı; önceki araştırma kaynakları korunur.
+- [Black Desert Mobile resmi rehber](https://www.world.blackdesertm.com/Ocean/Wiki), [dünya ve yaşam sistemleri](https://www.world.blackdesertm.com/Ocean/ArchiveOverview/): bilgi/koleksiyon, aile, kamp, meslek, ticaret.
+- [MU Online element sistemi](https://muonline.webzen.com/en/gameinfo/guide/detail/170): element donanımı ve rünler; mevcut sınıf terfisi ve ustalık planını derinleştirme.
+- [Diablo Immortal resmi içerik](https://news.blizzard.com/en-us/article/24189528/discover-secrets-hidden-in-the-sharval-wilds), [zorluk/yarıklar](https://news.blizzard.com/en-gb/article/24140118/regale-in-the-winds-of-fortune): eşya özleri, zorluk ve mücadele döngüsü.
+- [World of Warcraft](https://worldofwarcraft.blizzard.com/en-us/news/24107633/world-of-warcraft-the-war-within%E2%84%A2-sera-disponible-le-27-ao%C3%BBt), [Delves](https://worldofwarcraft.blizzard.com/en-us/news/24104270/), [üretim siparişleri](https://worldofwarcraft.blizzard.com/en-gb/news/23785116/world-of-warcraft-dragonflight-deep-dive): hesap koleksiyonu, itibar, NPC yoldaşlı solo mücadele, meslek.
+- [Final Fantasy XIV oyun kılavuzu](https://na.finalfantasyxiv.com/game_manual/view/): görev ve içerik bulucu, NPC desteği, konut, koleksiyon, hazine avı.
+- [Albion Online](https://albiononline.com/guides/), [üretim](https://albiononline.com/news/guide-crafting): toplama, işleme, üretim, fraksiyon. Zorunlu açık dünya PvP ve eşya kaybı aynen alınmaz.
+- [Lost Ark](https://www.playlostark.com/en-us/game/releases/abyssal-assault), [engraving](https://www.playlostark.com/en-gb/game/releases/welcome-to-paradise): kartlar, set pasifleri, özel pasifler, üs görevlendirmesi.
+- [RuneScape](https://www.runescape.com/game-guide/skills): bağımsız meslek seviyesi ve beceriye bağlı açılmalar.
+- [Journey of Monarch](https://about.ncsoft.com/en/news/article/journey_update2_241205), [lonca baskını](https://about.ncsoft.com/en/news/article/journeyofmonarch-update-250410), [kuşatma](https://about.ncsoft.com/en/news/article/jm_update_250808_2): otomatik ilerleme, ayrı gelişim kaynakları ve lonca faaliyetleri.
+Aşağıdaki önerilerin hepsi aynı oyunda bulunmaz; farklı referanslardan uyarlanan özgün tasarım ve üretim gereksinimleridir.
+
+### A. Görev, dünya ve keşif (mevcut görev aşamasını genişlet)
+- [ ] A01 Bölüm/epizot arşivi, görev günlüğü (aktif, kilitli, tamamlanan, tekrar), hikâye özeti ve ödül geçmişi.
+- [ ] A02 Hikâye, yan, günlük, haftalık, bölge, sınıf, meslek, keşif, zincir, gizli ve açılış görevleri; her tür ayrı kural ve ödül.
+- [ ] A03 Otomatik eskort/koruma, savunma dalgası, hedef arama, teslimat, toplama, nadir yaratık avı, çok hedefli görev ve NPC diyalogları.
+- [ ] A04 Görev seçimi/öncelik, geçici duraklatma, güvenli iptal ve kayıt sonrası devam; ana görev kilidinde uygun alternatif öner.
+- [ ] A05 Bölge itibar/şöhret ve NPC dostluk seviyesi; özgün açılan mağaza/görev; ayrı puan, karakter XP yok.
+- [ ] A06 Keşif yüzdesi, görülen bölge/NPC/canavar bilgi kitabı, nadir düşman ve gizli hazine; bölgesel koleksiyon ödülleri.
+- [ ] A07 Dünya haritası bölgeler/önerilen güç/loot, hızlı seyahat noktaları ve güvenli şehir dönüşü; otomatik rota, manuel joystick yok.
+- [ ] A08 Gündüz/gece, hava, bölgeye özgü canavar ve ortam; oynanışa etkisi yalnız dengelenmiş ve test edilmişse.
+- [ ] A09 Açık dünya dinamik etkinlikleri: kervan koruma, istila, bölge savunma, nadir av ve hazine; gerçek zaman penceresi.
+- [ ] A10 Bölge başına hikâye, şehir, NPC, canavar türü, boss ve özgün sanat üretim şablonu; 1–500+ bantları için veri tabanlı içerik.
+
+### B. Karakter ve otomatik savaş derinliği
+- [ ] B01 Sınıfa göre farklı saldırı döngüsü, aktif/pasif, otomatik beceri koşulu (can, mana, menzil, hedef sayısı, boss aşaması), beceri önceliği ve bekleme.
+- [ ] B02 Beceri/ekipman hazır kombinasyonları (boss, av, arena, savunma); kaydet, seç, sınırlı ve güvenli geçiş.
+- [ ] B03 Fiziksel/büyüsel/element hasarı ve direnç; kritik, isabet, kaçınma, delme, blok, can çalma, şifa ve durum direnci formülleri.
+- [ ] B04 Zehir/yanma/donma/yavaşlatma/sersemletme, güçlendirme/zayıflatma; süre, yenileme ve istif kuralları, boss bağışıklığı.
+- [ ] B05 Otomatik hedef önceliği ve tehlike kaçınması; saldırı alanı, isabet anı, hareket/animasyon senkronu; bütün sınıflar.
+- [ ] B06 Can/mana iksirleri, otomatik kullanım eşiği, stok ve bekleme; gerçek tüketim, sınırsız şifa yok.
+- [ ] B07 Ölüm, güvenli doğuş, yenilgi nedeni, tekrar giriş/ücret/hak ve bağlantı kopması kuralları; eşya kaybı varsayılan yok.
+- [ ] B08 Ustalık/terfi (300/400/500), özel ustalık ağacı ve ilgili puan; karakter XP kaynakları korunur.
+- [ ] B09 Eğitim kuklası, gerçek hasar ölçümü, savaş özeti, hasar/şifa/kaçınma istatistikleri ve güç karşılaştırması.
+- [ ] B10 Ayrıntılı karakter sayfası: özellik açıklamaları, nereden güçleneceği, eşya/etki kaynağı; hesaplanan güç gerçek istatistiklerden.
+- [ ] B11 Birden fazla kayıtlı karakter ve hesap koleksiyonları; mevcut kayda güvenli geçiş; server gerektiren hesap işlevleri daha sonra.
+
+### C. Ekipman ve ileri ekonomi (mücevher/set sırasında)
+- [ ] C01 Kademe/rarity, yıldız, kalite, özellik aralıkları ve rastgele ek nitelikler; gerçek loot tablosu ve kaynak bilgisi.
+- [ ] C02 Mücevher yuvası, tak/çıkar, birleştir, yükselt; set 2/4/6 parça bonusu ve gerçek savaş etkisi.
+- [ ] C03 Element rünü, tılsım, mühür, takı ve kalıntılar; sınıf uyumu, ayrı yuva/puan, gereksiz para birimi çoğaltma yok.
+- [ ] C04 Efsanevi eşya özünü çıkarma/aktarma, özel beceri değiştirici nitelik; tekil sahiplik ve güvenli aktarım.
+- [ ] C05 Nitelik yeniden şekillendirme ve kilitleme, yükseltme aktarımı, üretim tarifleri; maliyet ve sonuç önizlemesi, kayıp önleme.
+- [ ] C06 Üretim/işleme/eritme, ekipman birleştirme ve geri dönüşüm; otomatik toplama/çöp filtresi oyuncu tercihine bağlı.
+- [ ] C07 Eşya kilitleme, favori, sıralama/filtre, toplu parçalama, yığın, kapasite ve depo; değerli ekipmanı onaysız silme yok.
+- [ ] C08 Ekipman kaynağı rehberi, nadir drop olasılığı ve uygun zindan; şansa bağlı ödüllerde görünür kurallar, ücretsiz garanti ilerleme.
+- [ ] C09 Ekonomi denetimi: kaynak giriş/çıkışı, enflasyon, maliyet eğrisi, sınır/taşma, işlem günlüğü; online takas için sunucu doğrulaması.
+- [ ] C10 Eşya dayanıklılığı/tamir, bağlanmış ve ticarete uygun eşya ayrımı yalnız denge uygun olursa; zorunlu ödeme veya cezalandırıcı kayıp yok.
+
+### D. Koleksiyon, görünüm ve yoldaşlar
+- [ ] D01 Kostüm/kanat planının yanında silah görünümü, başlık, pelerin, aura, iz efekti, portre çerçevesi ve unvan koleksiyonları.
+- [ ] D02 Görünüm ve ekipman gücü ayrı; önizleme, giy/çıkar, koleksiyon kaydı, renk seçenekleri, kombinasyon kaydı; sekiz yön ve animasyon.
+- [ ] D03 Pet/binek koleksiyonu, birden çok tür, seçme, evrim, özel yetenek, donanım; otomatik hareket ve savaşla uyum.
+- [ ] D04 Yardımcı ruh/yoldaş (NPC savaş desteği), pasif/aktif rol, geliştirme, çağırma; mevcut petin gereksiz kopyası olmasın.
+- [ ] D05 Kart/canavar kitabı, keşif koleksiyonu ve koleksiyon set bonusları; ayrı kaynak ve gerçek stat etkisi.
+- [ ] D06 Kader, meridyen, ruh ekipmanı, ilahi silah, dönüşüm, kanat gelişimi; mevcut planın her alt sistemine gerçek kaynak, kilit, seviye, kayıt ve savaş testi.
+- [ ] D07 Başarı, unvan, koleksiyon tamamlanma yüzdesi ve ödül arşivi; ödül bir defa, karakter XP yalnız izinli kaynak ise.
+
+### E. Meslek ve yaşam (ana sistemler sonrası)
+- [ ] E01 Madencilik, odunculuk, bitki toplama, balıkçılık; otomatik rota ve süre, ayrı meslek tecrübesi.
+- [ ] E02 Demircilik, simya, yemek, işleme ve zanaat uzmanlığı; tarif, malzeme, çıktı ve meslek kilidi; karakter XP yok.
+- [ ] E03 Kişisel kamp/konut: dekorasyon, depolama ve kaynak istasyonları; özgün ekran.
+- [ ] E04 NPC işçi/görevlendirme ve keşif seferleri: gerçek süre, malzeme, teslim, çevrim dışı güvenli hesap.
+- [ ] E05 Üretim siparişleri, NPC ticareti, kervan ve bölge kaynakları; gerçek oyuncu siparişleri sunucu sonrası.
+- [ ] E06 Meslek ve keşif için özel koleksiyon, tarif defteri, ayrı ödül; zorunlu yan meslek grind'ı ile ana hikâye kilitlenmez.
+
+### F. Mücadele ve son oyun
+- [ ] F01 XP zindanı, XP arenası, ekipman, altın, materyal, pet/binek/kanat ve kader zindanları; mevcut XP izin tablosu geçerli.
+- [ ] F02 Normal/zor/elit/ustalık kademeleri, bölüm ve güç şartı, giriş önizlemesi, ödül/ilk zafer, başarısızlık ve tekrar.
+- [ ] F03 Dalga savunması, hayatta kalma, süreli av, sonsuz kule, boss zinciri, zindan rotası, hazine labirenti, nadir boss, bölge istilası.
+- [ ] F04 Haftalık baskın ve son oyun bossları: çok aşama, tehlike alanı, taktik koşulu, hak ve katkı; solo NPC desteği ile online raid ayrı.
+- [ ] F05 Değişen zindan kuralları (element, ek düşman, iyileşme, süre), performans dereceleri ve adil ödüller.
+- [ ] F06 Solo arena, AI rakipler açıkça bot; XP Arena ayrı; PvP, takım arena, sezon sıralaması ve eşleşme gerçek sunucu.
+- [ ] F07 Dünya bossu katkı/ödül hakkı, lonca bossu ve grup zindanı; aynı katılım iki ödül üretmez, kopma sonrası kayıt.
+- [ ] F08 Son oyun 300/400/500+ bölümleri; ustalık ve ekipman sınavları, haftalık zorluklar, sezon hedefleri; mevcut seviyeyi silen zorunlu sıfırlama yok.
+- [ ] F09 Her mücadele için seçim→koşul/hak→onay→yükleme→otomatik savaş→sonuç→ödül→doğru kategori/şehre dönüş; içeriklere özel ekran.
+- [ ] F10 Daha önce tamamlanmış kolay içeriğin hızlı tamamlama özelliği yalnız gerçek zafer ve hak tüketimiyle; XP/ödül açığı yok.
+
+### G. Günlük ve süreli sistemler (mevcut sıradaki iş)
+- [ ] G01 Günlük/haftalık görev puanı ve basamak ödülleri; gerçek etkinlik takvimi, açılma, bitiş, geri sayım.
+- [ ] G02 Günlük giriş takvimi ve kaçırılmış gün davranışı; haftalık ödüller, aylık/özel dönem etkinlikleri.
+- [ ] G03 Hak, bilet, yenilenme, çevrim dışı süre, saat geri alma, tek ödül ve kayıt; online olunca yetkili sunucu saati.
+- [ ] G04 Ödül merkezi: hazır/alınmış/süresi geçmiş; otomatik görev ödülünü tekrar alma yok.
+- [ ] G05 Geri dönen oyuncu ve yeni başlayan telafi/rehberleri; bedava kaynakların kötüye kullanımına karşı kayıt ve hak.
+- [ ] G06 Sezon hedefleri, ücretsiz ilerleme yolu, dönemsel koleksiyon; ücretli pass/VIP varsa ayrı kullanıcı onayı.
+- [ ] G07 Kısıtlı XP dağıtımı ve 1–500+ doğal ilerleme ölçümleri; karakter, meslek, pet, binek ve lonca puanları ayrı.
+
+### H. Gerçek MMORPG ve operasyon (sunucu aşaması)
+- [ ] H01 Hesap, güvenli oturum, karakter seçimi, sunucu/bölge/kanal, bulut kayıt ve cihazlar arası devam, hesap kurtarma.
+- [ ] H02 Arkadaş, engelleme, özel/dünya/takım/lonca sohbeti, bildirim ve posta; spam ve raporlama.
+- [ ] H03 Takım/rol, içerik bulucu, eşleşme, bekleme, hazır onayı, bağlantı kopması/geri giriş ve ödül hakkı.
+- [ ] H04 Lonca: kur/katıl/ayrıl, rütbe/yetki, duyuru, bağış, lonca puanı, görev, mağaza, lonca bossu ve turnuva.
+- [ ] H05 Fraksiyon/bölge mücadelesi, lonca kuşatması, sezon sıralaması; yalnız isteğe bağlı içerik, başlangıç ve solo ilerleme korunur.
+- [ ] H06 Pazar/müzayede/takas/üretim siparişi, fiyat geçmişi, işlem ücreti, yetkili envanter ve sahte eşya engeli.
+- [ ] H07 Gerçek PvP/MMR, lig, sezon, dengeli eşleşme, sonuç ve yeniden bağlanma; ödül idempotent.
+- [ ] H08 Sunucu yetkili savaş, loot, XP, ekonomi, hak ve saat; istemci doğrulaması, hız/tekrar/dupe açığı ve bot/istismar denetimi.
+- [ ] H09 Operasyon: yönetim paneli, olay kayıtları, hata raporu, destek, moderasyon, yedekleme/geri yükleme, bakım/versiyon uyumu.
+- [ ] H10 Sunucu yük, gecikme, iki cihaz eşleşmesi, çökme/kopma ve veri güvenliği testleri; gerçek altyapı yokken menü kilitli.
+
+### I. Görsel, ses, kullanım ve teslim
+- [ ] I01 Ayrı özgün menü aileleri (boss/zindan/arena/etkinlik, karakter, ekipman, koleksiyon, meslek, sosyal); ikon sözlüğü, geri ve kategori hafızası.
+- [ ] I02 Her ekran için açılış, yükleniyor, boş, kilitli, başarısız, bağlantı yok, tamamlandı durumları; gerçek koşul ve anlaşılır açıklama.
+- [ ] I03 Açılan sistem öğreticisi, yardım/terimler, kaynak nereden bulunur, içerik önerisi; bildirimler çakışmaz.
+- [ ] I04 Karakter/NPC/boss/pet/binek/kanat/kostüm ve çevre sanat envanteri, özgün 2.5D katmanlar, sekiz yön, animasyon ve efekt.
+- [ ] I05 Ses/müzik, ses düzeyi, kapatma ve arka plana geçiş, özgün/lisanslı varlıklar.
+- [ ] I06 Dikey ekran, ölçek/yazı okunurluğu, dokunma hedefi, renk körlüğü için yalnız renge bağlı olmayan göstergeler, efekt azaltma.
+- [ ] I07 Android fiziksel test, FPS/kare süresi, bellek, sıcaklık, pil, dokunma, kalıcı kayıt, çevrim dışı/yeniden açılış; 30 FPS hedef, 60 opsiyon.
+- [ ] I08 Uzun oynanış ve 1–500+ denge testleri; eski kayıt göçü, veri yedeği, çift ödül ve ekonomi regresyonu; sürüm başına kanıt.
+- [ ] I09 APK imzalama, sabit dikey manifest, Play dağıtımı, gizlilik/izinler, çökme raporu, güncelleme/geri dönüş, sürüm yedeği.
+- [ ] I10 İçerik üretim araçları: görev/bölge/boss/eşya veri şablonları ve doğrulayıcı; tek tek kod kopyalamak yerine tutarlı genişletilebilir yapı.
+
+Toplam 81 numaralı açık kapsam/iyileştirme kontrolü (A10+B11+C10+D7+E6+F10+G7+H10+I10 = 81). Bunların bir kısmı önceki planların ayrıntılandırılmasıdır, 81 tamamen yeni bağımsız mekanik değildir. Sıradaki kod sürümü 3.131: günlük etkinlik ve ödül motoru; mevcut çalışma sırası korunacak. Bu eklemede oyun kodu veya görseller değiştirilmedi.
