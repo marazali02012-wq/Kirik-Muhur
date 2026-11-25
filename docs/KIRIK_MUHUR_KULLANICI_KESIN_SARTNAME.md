@@ -144,3 +144,8 @@ Bu bölüm yukarıdaki kullanıcı hedeflerine **ek yorumdur**; onları değişt
 **Mevcut 3.24 tespiti:** Oyun Canvas ile her kare çiziliyor; sahnede önceden oluşturulan katmanlar var; `resize()` tam `devicePixelRatio` ile çizim çözünürlüğünü ayarlıyor. Bu risk analizi FPS ölçümü değildir. Fiziksel telefon testleri bekliyor.
 
 **Kod ve kabul durumu için detay:** [Ana proje omurgası](KIRIK_MUHUR_PROJE_OMURGASI_KARAR_2026-11-19.md).
+
+
+## 14) Kullanıcının güncel kesin kararı — tam otomatik oyun ve kategorili özgün UI (2026-11-26)
+Bu karar önceki joystick/manuel hareket şartlarının yerine geçer. Sabit dikey; joystick, klavye yön tuşu ve sahaya sürükleyerek manuel hareket yok. Karakter hedefe kendisi yürür; görev, normal saldırı, seçili otomatik beceriler, şifa, boss takibi ve görev ödülü otomatik yürütülür. Çiçek menüsü sadece menü kontrolüdür. Oyuncu içerik, hedef, ekipman ve gelişim kararlarını verir. Biletli boss/arena girişleri oyuncu onayı olmadan başlatılmaz. Menü, ölüm ve arka plan güvenliği korunur. Çevrim içi sistemlerin gerçek altyapısı yoksa işlevleri etkinleştirilmez.
+Kung Fu Saga tek referans değildir: diğer dikey MMORPG'lerin iyi ekran ve akış ilkeleri de incelenir; birebir görsel/isim/UI kopyası yapılmaz. Tek katalogda her şeyi sıkıştırmak yasak. Boss, zindan, arena, etkinlik ayrı içerik girişleri; kendi alt kategorileri, giriş koşulları, ödül, süre ve geri dönüşleri; karakter, ekipman, gelişim, sosyal, lonca, pazar ve hesap kendi alanlarında. Her ilerleme ana kontrol listesinde işaretlenir; gerçek test ve görsel denetim şarttır.
