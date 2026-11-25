@@ -188,3 +188,30 @@ Kostüm ve kanat düzenleri ana oyun mimarisine alınacak. Özgün modeller iler
 ### Kabul
 - [ ] Dikey ekran ve menü geçişleri, gerçek tak/çıkar, kilit ve kayıt, özgün sanat, dört ekran boyutu, fiziksel Android FPS/bellek. Kozmetik güç bonusları, fiyatlar ve model sayıları kullanıcı onayı/denge planıyla belirlenir. Çalışmayan fonksiyonlara sahte ödül verilmez.
 - [ ] Kod ve modeller henüz uygulanmadı; bu kayıt plan kapsamı eklemesidir. 3.130 günlük etkinlik çalışması ve mevcut açık işler korunur.
+
+
+## 3.130 — Görev kilitleri ve günlük seferler
+- [x] Mevcut 16 ana görev ve kayıt indeksleri korunuyor. 4 gelişim kapısı (görev indeksleri 3/7/10/13; Sv4/7/9/11; son ikisinde ayrıca güç 220/300) gerçek durumdan hesaplanıyor. Bu eşikler geçici denge değerleridir.
+- [x] Yan görev sayısı 6→12. Kilitliyken oyuncu yan görev veya Ruh Ormanı gelişim avını seçebilir; gerçek XP ile şart karşılanınca otomatik ana göreve dönülür.
+- [x] Hikâye sonrasındaki tekrar seferleri günlük 3 hakla sınırlı; Türkiye saati 00.00 yenilenir. Hak kaydı, geri saat değişiminde sıfırlanmama ve tek ödül kontrol edildi.
+- [x] Son yerel test kaydı 31/31 Chromium; dört dikey boyut, gerçek hasar/XP ile kilit açılması, kontrollü görev teslimi, simüle depolama ve tarih ilerletme. JS sözdizimi ve ZIP bütünlüğü doğrulandı. KM3130_Bekleme.png görseli incelendi.
+- [ ] Tam doğal hikâye ilerleyişi, gerçek Android/kayıt, sunucu saati doğrulaması ve ileri seviye denge açık. HTML/ZIP yerel, ana index.html korunuyor.
+- [ ] Mevcut sıradaki öncelik: günlük etkinlik/ödül motorunun kalanları, sonra mücevher/set, kostüm/kanat ve mevcut sıradaki ileri gelişim işleri.
+
+## İleri seviye görev ve zorluk mimarisi — kullanıcı ek kararı (2026-11-26)
+Kullanıcı: 300, 400, 500 seviyelerine uzanan, gittikçe zorlaşan görev ve gelişim sistemi. Mevcut geliştirme sırası bozulmaz; başa dönülmez, bu ileri içerikler bağımlılıkları tamamlanınca uygulanır. 500 başlangıç kapsam hedefidir, nihai seviye tavanı kararı değildir.
+Kaynaklar: [MU Online resmi sınıf görevleri](https://muonline.webzen.com/en/gameinfo/guide/detail/92) (150/220/380–400 sınıf görevleri), [MU Online resmi tekrarlanabilir 301–400 ve usta görevleri](https://muonline.webzen.com/en/events/EX700Guide/pop_guild), [Black Desert Mobile ilerleme](https://www.world.blackdesertm.com/Ocean/Wiki?wikiNo=550) (hikâye, güç ve sistem kullanımı), [Kung Fu Saga başlangıç rehberi](https://www.bluestacks.com/blog/game-guides/avatars-saga/avs-beginner-guide-en.html) (Sv60 + ön görevle ikinci sınıf). Aşağıdaki seviye bantları özgün taslak, referansın birebir değerleri değil.
+| Seviye | Özgün içerik ve ilerleme kapısı |
+|---|---|
+| 1–50 | Başlangıç, ana/yan görevler, ekipman ve yoldaşların öğretimi |
+| 51–100 | Bölüm bossları, günlük deneyim, ilk sınıf terfisi/ön görev |
+| 101–200 | Mücevher/set, kader, daha zor bölgeler, kule ve kaynak görevleri |
+| 201–299 | Kanat/ruh gelişimi, özel bosslar, daha uzun görev zincirleri |
+| 300–399 | Ustalık ön koşulları, üst seviye ekipman, elit zindan ve boss sınavı |
+| 400–499 | İleri terfi, ruh/kanat ve ekipman sınavları, katmanlı zindanlar, daha ağır XP gereksinimi |
+| 500+ | Son oyun: bölüm sınavları, haftalık mücadeleler, ileri ekipman ve tekrar döngüsü; çevrim içi içerikler sunucu kurulunca |
+- [ ] Veri tabanlı görev/bölüm tanımları: kalıcı benzersiz ID, ön görev, seviye, güç, sistem açılma şartı, bölge, hedef, ödül, tekrar hakkı, yenilenme, kilit nedeni ve alternatif etkinlik. Eski kayıt indeksleri geçişte korunur.
+- [ ] Mevcut XP gereksinimi level*95 (doğrulandı); kayıt seviyesi 1–999 arasında temizleniyor, XP kazanım döngüsünde açık bir üst seviye tavanı yok. 1–500+ eğrisi, XP ödülleri, ekonomik kaynaklar, düşman can/hasar ve güç hesapları birlikte yeniden dengelenecek; sırf seviye sayısını büyütmek yeterli değil.
+- [ ] 300/400/500 sınavlarında seviye + gerçek güç + önceki bölüm + terfi/boss gibi uygulanmış ön koşullar. Kilitli ana görev otomatik durur, nedeni ve kalan şart görünür. Alternatif av, yan görev, ekipman ve günlük içerik erişilebilir; haklar dolduğunda gerçek sayaç. Seviye ve güç arttıkça görev süreleri ve zorluk artar, çözümsüz kilit ve zorunlu satın alma yok.
+- [ ] Görev çeşitliliği: keşif, teslim, toplama, çok dalga, elit/boss, ekipman geliştirme, terfi, zindan, kule, günlük/haftalık. Çevrim içi görevler yerel ilerlemeyi kilitlemez.
+- [ ] Denge ve kabul: doğal ilerleme simülasyonu 1/50/100/200/299/300/399/400/499/500 ve eski kayıt; XP kaynaklarının erişilebilirliği, çift ödül, saat değişimi, boşta bekleme, yeniden açılma, ölüm, uygulama kapanışı, Android FPS. Gerçek süre hedefleri ölçümden sonra belirlenir. İleri seviye mekanikleri henüz kodlanmadı.
