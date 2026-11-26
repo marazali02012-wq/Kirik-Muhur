@@ -18,6 +18,35 @@ Yetkili temel: [Kullanıcının kesin şartnamesi](KIRIK_MUHUR_KULLANICI_KESIN_S
 | 13 | Sosyal/çevrim içi | Gerçek hesap, arkadaş, sohbet, takım, lonca, PvP, market, eşleşme, kopma, sunucu yetkisi | Eksik; sahte online yok |
 | 14 | Teknik/görsel QA | Dikey APK, 320×568 / 360×800 / 393×873 ve şartnamedeki diğer cihaz boyutları; fiziksel Android FPS/bellek/ısınma, kalıcı kayıt, kalite ve sürüm yedeği | Açık |
 
+## Bağlayıcı yeniden uygulama sırası — bilinen sistemler (2026-11-26)
+
+Kaynak: [001–154 metin denetimi](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga/referanslar/kung-fu-saga/157_154_EKRAN_METIN_DENETIMI.md), [WEB-155–178](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga/referanslar/kung-fu-saga/155_ileri_seviye_web_referanslari.md). Kullanıcı kararı: bilinenleri bitir, bilinmeyenleri uydurmadan araştırma listesinde tut; baştan sıra ile ilerle. Aşağıdaki açık kabul maddeleri mevcut M/R/Q/V kimliklerini değiştirmez ve tamamlanmış eski alt testleri silmez. Referans seviyeleri örnektir; bizim kesin seviye ekonomimiz doğal denge testi ile belirlenir.
+
+- [ ] 01/M01 Açılış/kayıt: 002–003/045; geniş özgün manzara, tek giriş, kayıtlı kahraman, güvenli yeniden açılış/bozuk kayıt. Gerçek olmayan sunucu seçimi veya çoklu kayıt yuvası yok.
+- [ ] 02/M01 Karakter: 045; büyük model, sınıf/cinsiyet/ad, 8 yön, gerçek başlangıç statı, taslak, geri, güvenli onay.
+- [ ] 03/M03 Eğitim: 004–007/022/051/096/122/143; NPC, hareket, savaş, teslim, tek ödül, sistem açılışı ve geçilebilir öğretici; gerçek doğal görev zinciri.
+- [ ] 04/M02/R01 HUD: 005/046/067/114/154; profil→Ayarlar, HP/MP/XP, gerçek kilitler, küçük sabit şeffaf görev, boş merkez, joystick otomatik görevi durdurur, ayrı çiçek, ikon ve hedef çakışması yok. Ayarlar alt menüde yok. Genel/Gösterim/Ses/Dil yalnız gerçek işlevlerle.
+- [ ] 05/M04–05/R02/Q01–04 Görev: 006/047–049/073–075/088/091/098; ana/yan ayrımı, gerçek hedef ve ilerleme, NPC ödülü, 2→4 ekipman +10 hedefi, stat sınavları, gerçek günlük 20 tur örneği, tek ödül.
+- [ ] 06/M10–11/R04 Savaş/beceri: 011/024/031/077; aktif beceri Sv6/11/30 örnekleri, normal saldırı iki hedef örneği, otomatik sıra, pasif kitap Sv30/50/70/90/110/130/150/180/210/240 ve ayrı Tarikat parşömeni, gerçek etki ve cooldown. Denge değişikliği ayrıca test.
+- [ ] 07/M02/M04 Menü/kilit: referans görev/level/önkoşulu, ön gösterim→ilk kullanım→dönüş, ortak erişim kuralı, ayrı içerik girişleri. Sahte düğme yok.
+- [ ] 08/M06–09/R03 Karakter/çanta/demirci: 008–021/030/060/070/132–138/152; 84 çanta/72 depo, 6 sütun, mevcut onaylı 6 aktif yuva, görünüm/unvan/özellik, Wuxun terfi örneği; kademe/nadirlik/yıldız/+seviyesi ayrı. Füzyon silah/normal ekipman/aksesuar ayrı; 135/136 beş olası yuva, 137 üç, 138 iki; asgari adet/başarı oranı doğrulanmadan kesin tarif diye uygulama.
+- [ ] 09/M12–14/R05 Pet/binek/kanat: 022–024/048–053/072/078/151; Sv15/32/48 ana görev referansları; aşama/yıldız/malzeme, ayrı beceri/görünüm, gerçek oturuş; kanat set/şekil ayrı, önizleme ve stat.
+- [ ] 10/M03/M22 Dünya/şehir: 026–027/071/090/142; rota, bölge girişi, ayrı harita, doğal dekor, NPC, düşman aralığı, kamera, kayıt ve dönüş. 3.172 fiziksel örtüşme açık.
+- [ ] 11/M15–18/R06 Boss/zindan/kule/arena: 029/055–059/063–065/101/116–118/123–130/139–150. Ayrı özgün harita ve HUD her içerik türü; Dünya Boss çok hedef/3 hak/30 dk örneği; XP 180 sn/10 dalga/2 hak/1 bilet örneği; ilham ve iksir; kule 500 kat kullanıcı kuralı, her 5. kat büyük boss, ilk zafer ve 5. kat kader yuvası referansı; kader işle/erit/füzyon/çıkar ayrı; arena 10 hak örneği, onur, sonuç ve güvenli dönüş.
+- [ ] 12/M19 Günlük/ödül: 032–044/066/086/097–099/127–128; gerçek 00:00 yenileme, haftalık pazartesi, giriş 2/7/14/21/28 örneği, aktivite 20/50/90/130/180, günlük20 tur, gerçek geçmişle kurtarma; ayrı kaynak mağazası, ücretli/VIP yok.
+- [ ] 13/M20/R07 Bilinen ileri gelişim: 001/087/119 ve WEB-155–164. Kutsal silah dört parça 47/56/65/70 ana görev referansı; meridyen ve boss kaynağı, savaş ruhları, ruh ekipmanı, gizli silah, ilahi enstrüman, iç zırh, canavar ekipmanı, antik hazine, dönüşüm, 9. sınıf değişimi referansları. Her biri gerçek kaynak, etki, ayrı ekran, önkoşul ve kayıttan sonra kabul. 500 normal+100 peri kullanıcı kuralı, referans alt sistem tavanlarıyla karıştırılmaz.
+- [ ] 14/M21 Sosyal/çevrim içi: 010/054/089/100/102–118/153; gerçek sunucu hesapları, posta, takım, lonca, arena, sıralama, pazar, çapraz sunucu ve etkinlik. Altyapı olmadan sahte çevrim içi işlev veya oyuncu yok.
+- [ ] 15/M23/V01–06 Teknik ve görsel QA: her sıra ayrı orijinal referans, önce/sonra gerçek ekran, doğal işlev, kayıt, mobil dokunma, FPS ve fiziksel Android; ana index korunur. 
+
+### Bilinmeyenler — ayrı araştırma kuyruğu (uygulamayı engelleyen bilgi dışında öne alınmaz)
+- [ ] 151–154 özgün JPEG'leri yeniden bul ve küçük yazıları oku.
+- [ ] 060/133 elmas kademe kilitleri, 075/077 örtülü pasif hedefler, 097 kapalı 65. seviye kartı, 125/126 EXP iksir süre/çarpan.
+- [ ] 135–138 ileri füzyon yardım ekranı, başarı/malzeme/renk tablosu; 001 canavar ekipmanı için 25 sahiplik şartını tüketim sanma.
+- [ ] Gerçek ileri peri, iç zırh, gizli silah, ilahi enstrüman, savaş ruhu, dönüşüm, boss katları ve ileri sınıf açılış ekranları/kuralları. Web/video kanıtı; bulunamazsa bilinmiyor, yeni sistem uydurulmaz.
+- [ ] Referans oyununda daha ileride varlığı henüz bilinmeyen sistemler: yalnız güvenilir kanıt çıktığında ilgili mevcut maddenin altına eklenir.
+
+**Şu an sıra 01 açılış/kayıt. 3.174 temel; diğer kabul maddeleri açık.**
+
 ## Sürüm ilerlemesi
 - [x] 3.115: dört açılış durumu, kayıt uyarısı, onaysız üzerine yazmayı önleme (tarayıcı simülasyonu).
 - [x] 3.116: önizleme 300×350, 6 model, 8 yön, isim ve taslak, 24 tarayıcı kontrolü (önceki yerel rapor).
