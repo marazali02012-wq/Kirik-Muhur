@@ -238,3 +238,7 @@ Test etmediğin işlevi başarılı gösterme. Fiziksel Android testi yapılmad�
 Önemli gelişmeleri GitHub'a kaydet ve çalışan TEST ZIP dosyasını teslim et.
 
 **ANA KURAL: Hızlı sürüm çıkarmak değil, referanslara uygun, kaliteli, ferah ve gerçekten çalışan bir oyun oluşturmak önceliklidir.**
+
+
+## Güncel kullanıcı kararı — ücretli yükselme
+26.11.2026 — Kullanıcının güncel kararı: Kırık Mühür'de para yatırmadan yükselme olmayacak; ödeme zorunluluğu olmadan ilerleme/yükselme garantisi kapsam dışıdır. Önceki ücretsiz yükselme, zorunlu ödeme yasağı ve ücretli sistem yasağı bu konuda geçersizdir. Hangi seviye veya gelişim aşamasında ödeme gerekeceği, fiyatlar, ürünler, VIP/abonelik ve ödeme altyapısı henüz belirlenmedi; bunlar varsayılmaz. Gerçek ödeme doğrulaması, şeffaf fiyat/koşul ve satın alma teslim güvenliği gerekir. 500+100 seviye, hikâye, mevcut sistemler ve diğer kabul koşulları korunur.
