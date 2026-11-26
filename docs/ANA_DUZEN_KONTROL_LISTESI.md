@@ -3,7 +3,7 @@ Yetkili temel: [Kullanıcının kesin şartnamesi](KIRIK_MUHUR_KULLANICI_KESIN_S
 
 | Sıra | Ekran | Görsel / işlev kabulü | Durum |
 |---|---|---|---|
-| 1 | Açılış/kayıt | Logo, kahraman, yeni/devam, bozuk kayıt, gerçek yeniden açılış | Kısmi: 3.115, 18/18 simüle kayıt |
+| 1 | Açılış/kayıt | Logo, kahraman, yeni/devam, bozuk kayıt, gerçek yeniden açılış | Temel kabul: 3.182 fiziksel Android görseli, 3.181 D 13/13 gerçek kayıt ve kapanış teyidi |
 | 2 | Karakter | Büyük tematik önizleme, sınıf, cinsiyet, ad, ileri/geri, taslak, görünüm | Kısmi: 3.116, 24/24; 6 model, 8 yön, 3 ekran; saç özelleştirme ve sanat açık |
 | 3 | Eğitim | Ekranı örtmeyen aşamalı öğretici; hareket, NPC, otomatik görev, gerçek saldırı, teslim ve ödül | Kısmi: 3.117, 15/15 Chromium; ilk NPC rotası, manuel kesinti/devam, ilk saldırı ve tek ödülle görev teslimi doğrulandı; gerçek dokunmatik ve kalıcı kayıt açık |
 | 4 | Ana HUD | Üst sol profil/seviye/güç/VIP; üst kaynaklar; üst sağ bölge/koordinat/mini harita; sol orta görev; orta savaş; alt beceri, ayrı hareket ve çiçek menüsü; çakışma yok | Kısmi |
@@ -22,7 +22,7 @@ Yetkili temel: [Kullanıcının kesin şartnamesi](KIRIK_MUHUR_KULLANICI_KESIN_S
 
 Kaynak: [001–154 metin denetimi](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga/referanslar/kung-fu-saga/157_154_EKRAN_METIN_DENETIMI.md), [WEB-155–178](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga/referanslar/kung-fu-saga/155_ileri_seviye_web_referanslari.md). Kullanıcı kararı: bilinenleri bitir, bilinmeyenleri uydurmadan araştırma listesinde tut; baştan sıra ile ilerle. Aşağıdaki açık kabul maddeleri mevcut M/R/Q/V kimliklerini değiştirmez ve tamamlanmış eski alt testleri silmez. Referans seviyeleri örnektir; bizim kesin seviye ekonomimiz doğal denge testi ile belirlenir.
 
-- [ ] 01/M01 Açılış/kayıt: 002–003/045; geniş özgün manzara, tek giriş, kayıtlı kahraman, güvenli yeniden açılış/bozuk kayıt. Gerçek olmayan sunucu seçimi veya çoklu kayıt yuvası yok.
+- [x] 01/M01 Açılış/kayıt: 002–003/045; geniş özgün manzara, tek giriş, kayıtlı kahraman, güvenli yeniden açılış/bozuk kayıt. Gerçek olmayan sunucu seçimi veya çoklu kayıt yuvası yok. 3.182 Android açılış ve dünya geçişi; 3.181 D gerçek kayıt/kurtarma 13/13 ve tam kapanış kullanıcı teyidi. Temel görsel kabul mevcut KayKit çizgisinde; sanat cilası genel QA kapsamında açık.
 - [ ] 02/M01 Karakter: 045; büyük model, sınıf/cinsiyet/ad, 8 yön, gerçek başlangıç statı, taslak, geri, güvenli onay.
 - [ ] 03/M03 Eğitim: 004–007/022/051/096/122/143; NPC, hareket, savaş, teslim, tek ödül, sistem açılışı ve geçilebilir öğretici; gerçek doğal görev zinciri.
 - [ ] 04/M02/R01 HUD: 005/046/067/114/154; profil→Ayarlar, HP/MP/XP, gerçek kilitler, küçük sabit şeffaf görev, boş merkez, joystick otomatik görevi durdurur, ayrı çiçek, ikon ve hedef çakışması yok. Ayarlar alt menüde yok. Genel/Gösterim/Ses/Dil yalnız gerçek işlevlerle.
@@ -45,7 +45,7 @@ Kaynak: [001–154 metin denetimi](https://github.com/marazali02012-wq/Kirik-Muh
 - [ ] Gerçek ileri peri, iç zırh, gizli silah, ilahi enstrüman, savaş ruhu, dönüşüm, boss katları ve ileri sınıf açılış ekranları/kuralları. Web/video kanıtı; bulunamazsa bilinmiyor, yeni sistem uydurulmaz.
 - [ ] Referans oyununda daha ileride varlığı henüz bilinmeyen sistemler: yalnız güvenilir kanıt çıktığında ilgili mevcut maddenin altına eklenir.
 
-**Şu an sıra 01 açılış/kayıt. 3.174 temel; diğer kabul maddeleri açık.**
+**Şu an sıra 02 karakter seçimi. 01 temel kabulü 3.182; diğer kabul maddeleri açık.**
 
 ## Sürüm ilerlemesi
 - [x] 3.115: dört açılış durumu, kayıt uyarısı, onaysız üzerine yazmayı önleme (tarayıcı simülasyonu).
@@ -907,3 +907,8 @@ Chromium set_content, bellek localStorage, kontrollü Sv1/4/18 durumları: iki k
 - 18 script Node syntax, ZIP CRC, asset boyutu ve kod eşitliği geçti. Önceki 70/70 kontrollü ve D gerçek Android 13/13 kayıt kanıtı 3.181 içindir; kayıt mantığı değişmedi, bu sürümde fonksiyonel test yeniden çalıştırılmadı. Yeni WebP görseli referans ve eski gerçek ekranla karşılaştırıldı; yeni gerçek oyun ekranı değil. Yönetilen Chromium URL kısıtı nedeniyle yeni gerçek tarayıcı renderı alınmadı. Sanat kalitesi ilerledi ancak referans ayrıntı standardı ve mobil nihai kabul açık.
 - KM_3_182_Sanat_Baslat.sh (67.865 bayt) mevcut C ZIP'inden SHA doğrulamasıyla 3.181 normal kaynak kodunu geri kurar, art yamasını uygular ve 3.182 HTML hash'ini doğrular. Ayrı kmArtProbe3182__ anahtarları, ayrı HOME/.km_art_preview_3182 ve 127.0.0.1:8732; önceki C/D ve normal kayıtlar ayrı tutulur. Bash syntax ve gerçek Linux HTTP 200, no-store, normalize edilmiş byte eşitliği ve beklenmeyen URL 404 doğrulandı. Fiziksel Android art ekranı henüz alınmadı. Kullanıcı yalnız küçük başlatıcıyı yeniden indirerek mevcut C ZIP üzerinden çalıştırabilir.
 - ZIP Kirik_Muhur_3_182_Acilis_3B_Manzara_TEST.zip, 54.348.427 bayt, SHA256 7a9a3499663f268a282880e5636718208fdc86efa2729ea639ea99a6b40852a1. HTML SHA256 8f3d282d7882af0ef9427d77b880a8795318e8944528edf6be25733612fde0b4. Ana index.html değişmedi, ikili ZIP GitHub'a yüklenmedi. 01 kayıt alt maddesi tamamlandı, sanat kabulü açık; 02'ye geçilmedi. M/R/Q/V listeleri korunur.
+
+
+## 3.182 — Fiziksel Android açılış kabulü ve 02 karakter seçimi sırasına geçiş (2026-11-26)
+- Kullanıcının 3.182 port 8732 Android ekranları (1000045868.jpg, 1000045869.jpg, 1000045870.jpg): kayıtlı Sv3 Mühür Muhafızı/Fener Köyü açılışı, ana dünya HUD ve kahraman seçim ekranı görüldü. KFS 003 özgün JPEG yeniden açılıp karşılaştırıldı. Logo, alt başlık, tek ana eylem, kayıt bilgisi okunur; ekranda taşma yok, özgün KayKit düşük poligonlu manzara mevcut. KFS'deki su ve dağ detay kalitesi aynı düzeyde değil. Mevcut özgün sanat çizgisi kapsamında temel açılış görsel kabulü geliştirici değerlendirmesiyle verildi; kullanıcı ayrıca sanat beğenisi/onayı bildirmedi. İleri sanat cilası ve fiziksel yoğun oynanış/FPS genel QA maddesinde açık kalır. 3.181 D gerçek kayıt 13/13, tam kapanış teyidi, 3.182 kayıt kodunun değişmediği önceki statik eşitlik ve yeni Android kayıtlı giriş kanıtı birlikte 01 temel kabulünü destekler. 3.182'de D kurtarma paketi tekrar çalıştırılmadı.
+- 01 kapandı; bağlayıcı sırada 02 karakter seçimi açıldı. Kullanıcının Android seçim ekranında eski 3.142 etiketi, üç büyük asset katalog kartı, T pozlu ön/arka modeller ve ekipman parçaları, görseller üzerine binen sınıf başlıkları ve eski sahaya dokunma açıklaması görüldü. 045/002–004 gerçek referansları yeniden açılarak büyük tek karakter önizlemesi, sınıf/cinsiyet/ad, 8 yön, stat, taslak, geri ve güvenli onay sırasıyla doğrulanacak. 02 henüz uygulanmadı veya tamamlanmadı. HUD görüntüsündeki görev paneli ve karakter etiket/örtüşmeleri 04 açık sırasına not; bu adımda HUD kodu değiştirilmedi. Ana index.html, 3.182 ZIP, M/R/Q/V listeleri korunur. Bu adım görsel kanıt kabulü ve liste güncellemesidir, yeni oyun kodu/ZIP üretilmedi.
