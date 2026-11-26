@@ -1153,3 +1153,10 @@ Kullanıcı talimatı: öncelikli temel maddeler bitmeden oyunun ortasındaki bo
 ## 26.11.2026 — Malzeme kaynak ve kullanım yolu
 - [Malzeme kaynak/kullanım ve ilerleme matrisi](KFS_MALZEME_KAYNAK_KULLANIM_YOLU.md): 33 açıklamalı eşya kaydı, açıklaması açılmamış kartların araştırma kuyruğu ve Y01–Y11 kaynak→malzeme→tüketici→ilerleme yolları. 156–190 açıklamaları görselden tekrar okundu. 3.211 kodu ile statik karşılaştırma yapıldı. KFS-E01–E37 ve T02–T08 ile bağlı.
 - Önce gerçek edinim ve kullanım zinciri, sonra mağaza; normal ekipman, iç zırh, canavar, binek ve Kader özel taşları farklı. Kullanım tarifi, miktar, seviye ve kesin oran bilinmiyorsa doğrulanmadı olarak kalır. Referans fiyatları/level değerleri kopyalanmaz. Mevcut kayıt, sistem ve görevler korunur; bu adımda kod değişikliği yok.
+
+
+## 3.212 TEST — 08.1 Bacaklık ve mevcut malzeme kaynakları
+- KFS 167 ve 183 özgün kullanıcı görselleri yeniden açıldı. Onuncu ekipman yuvası bacaklık; mevcut ilk altı set hesabı korunur. Yeni savunma katsayısı 0.35 ve K2+ ganimet havuzu geçici özgün denge kararı. Kuşanma, güçlendirme, mücevher, füzyon ve kayıt normalizasyonu bağlandı.
+- Çanta Malzeme sekmesi gerçek altın, toz, boss cüzdanı ve mücevher kayıtlarını okur; kaynak ve kullanım açıklamaları gösterilir. 33 özel malzemenin yeni işlem defteri ve dağıtımı henüz uygulanmadı. 08.1 açık.
+- 391 diğer kontrol + 96 güncellenen slot kontrolü + 42 yeni kontrol = 529 geçti; 29 inline JS syntax, 227 raster URI eşitliği. Beş izole panel × dört ekran boyutu taşma kontrolü geçti; karakter animasyonu/tam oyun ve fiziksel Android testi açık. ZIP CRC doğrulandı.
+- Yerel ZIP Kirik_Muhur_3_212_Bacaklik_Malzeme_TEST.zip 54455091 bayt SHA256 a6faf38a0d5714460176ef24a64bbe545945aa4089b79eaa6027689d4bcaacd0. Ayrı kaynak yaması yerelde; GitHub'a oyun HTML/ZIP yazılmadı. Sıradaki: gerçek malzeme kimliği/kazanım/tüketim altyapısı ve ekipman nitelikleri; önce kaynak doğrulaması.
