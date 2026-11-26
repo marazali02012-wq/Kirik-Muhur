@@ -456,3 +456,11 @@ Kung Fu Saga ana görsel referans; özgün Kırık Mühür sanat dili. Önce mev
 - [ ] V05 Boss/zindan/arena/etkinlik ekranları ve savaş/ödül görselleri. Mevcut mekanik regresyonu.
 - [ ] V06 Android cihaz, FPS, taşma, dokunma ve kayıt testi; ardından kader/kule, meridyen, ruh ve ilahi donanım sırasına dön.
 3.137 ZIP: Kirik_Muhur_3_137_Gorsel_HUD_Kahraman_TEST.zip, 40.664.317 bayt, SHA256 d6b164a6b8cacc476d8c81dbdb9d008acec55d3c49cd2f378f504bfefca05e66; ZIP CRC başarılı. Bu commit yalnız liste ve test kayıtları; ZIP depoya yüklenmedi. Dünya ve model varlıkları bu aşamada değişmedi.
+
+
+## Görsel çizgi koruma — bağlayıcı kullanıcı kararı (2026-11-26)
+- Kırık Mühür için depodaki mevcut, kullanıcı tarafından kabul edilmiş görseller birincil sanat referansıdır. Her yeni karakter, çevre, dekor, kostüm, kanat, silah, ikon, HUD ve panel önce ilgili mevcut varlıklar ve gerçek oyun ekranları ile karşılaştırılır.
+- Mevcut 2.5D/piksel sanat dili, perspektif, oran, siluet, çizgi/kenar karakteri, renk paleti, ışık-gölge, malzeme ve süsleme dili korunur. Kalite, detay, netlik ve kompozisyon artırılır; farklı bir sanat stiline geçilmez. Mevcut onaylı varlıklar izinsiz değiştirilmez/silinmez.
+- Kung Fu Saga mekanik, menü düzeni, içerik ve kalite standardı için referanstır; görsel stil kopyalanmaz, Kırık Mühür'ün özgün kimliği korunur. Kaynak görsel yolu ve önce/sonra gerçek render kanıtı her görsel değişiklikte kaydedilir.
+- /GÖRSEL-DENETİM: Stil uyumu, taşma, hizalama, renk, karakter/dekor ölçeği, animasyon, katman ve performans kontrolü zorunludur. Uyum kanıtlanmazsa nihai kabul verilmez; ana sürüm değiştirilmez. Gerçek cihaz testi yoksa açıkça belirtilir.
+- Güncel hareket kararı: 3.136 dinamik joystick, sol boş oyun alanında dokunulan noktada belirir, bırakınca kaybolur; otomatik görev rotası devam eder. Bu hüküm 14. bölümdeki manuel hareket yasağının yalnız joystick kısmını günceller; çiçek menüsü ayrı, diğer otomatik kurallar geçerli.
