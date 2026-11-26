@@ -13,3 +13,18 @@
 | [referans/kung-fu-saga-07](https://github.com/marazali02012-wq/Kirik-Muhur/tree/referans/kung-fu-saga-07) | 144–150 | KFS_Referans_07.zip | 10111641 | `fdd3b4fc16d678acf55e2a33796d9fa9a62a8a215c6436031724ef12682b05bb` |
 
 Arşiv referans içindir, oyun varlığı olarak dağıtılmaz. Ana şartname ve M01–M23/R/Q/V korunur. Her yeni ekran incelemesinde görsel numarası, görülen metin, durum, menü hiyerarşisi, işlev ve Kırık Mühür karşılığı kaydedilecek. Kendi KayKit/2.5D sanat çizgisi korunur.
+
+
+## Ek arşiv — 26.11.2026, 68 ekran (155–222)
+
+Önceki 154 kayıt + yeni 68 kayıt = 222 referans. Eski 150 ekranın arşiv tablosu korunur; 151–154 için ayrı önceki inceleme kayıtları geçerlidir. Yeni kaynak `kunfu referans.zip`, 72847191 bayt, SHA256 `26576a610d116ae28db7a761de2fd2632b74ee03b38a09a4e7215b60f2124c95`. 68/68 CRC kontrolü başarılı. Orijinal JPEG baytları değiştirilmeden kronolojik dosya adlarına göre 3 bağımsız ZIP hazırlanmıştır; her ZIP ayrıca CRC ve orijinal bayt eşitliğinden geçmiştir.
+
+| Dal | Genel no / yeni sıra | Dosya | Bayt | SHA256 |
+|---|---|---|---:|---|
+| [08](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga-08/referanslar/kung-fu-saga/PARCA_08.md) | 155–179 / 001–025 | KFS_Referans_08.zip | 26868746 | d68fa21998d345165b4ee72c44947d78844bb4981fa3acef7f61acf2691d4f8d |
+| [09](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga-09/referanslar/kung-fu-saga/PARCA_09.md) | 180–202 / 026–048 | KFS_Referans_09.zip | 26737576 | 9121befdcd1f3a11a0d64f579eb7ccc3169f1131959d27d9dc0e5c4194d4b9cc |
+| [10](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga-10/referanslar/kung-fu-saga/PARCA_10.md) | 203–222 / 049–068 | KFS_Referans_10.zip | 19242602 | 92062203c6da788bc9cb379aceb9869216c65f8c0b704718e6f299d8f25adc07 |
+
+**Durum:** Dallar ve metin kayıtları GitHub'da; ZIP ikili dosyaları yüklenmedi, yerel çalışma alanında hazır. Kamuya açık depo için hesap/sohbet alanları gözden geçirilmelidir.
+
+[68 ekranın numaralı metin denetimi](158_68_YENI_EKRAN_METIN_DENETIMI.md) — mağaza/EXP, zindan, boss, dönüş, şekil, hazine, arena ve takvim. Okunamayan/örtülen/kırpılan alanlar ayrıca belirtildi. T02–T07 geliştirme bağlantıları dosyada; ana oyun kodu değiştirilmedi.
