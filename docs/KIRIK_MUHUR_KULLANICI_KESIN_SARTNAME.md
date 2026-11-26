@@ -164,3 +164,77 @@ Kung Fu Saga'nın hem açık dünya/HUD yerleşimi hem açılan ekranların iç 
 - Dış düzen: dikey sahne, portre/seviye/can ve kaynaklar, harita, tek etkin görev takip alanı, mücadele/gelişim girişleri, beceri/durum göstergeleri ve dinamik joystick; sahne merkezi açık kalacak. Çiçek hızlı menüsü korunur. Görev bilgisi tekrar edilmez; sohbet ve etkinlik içerikleri kendi kategorisinde.
 - İç düzen: her kategoride başlık/geri dönüş, uygun alt sekmeler, büyük gerçek karakter/pet/binek önizlemesi, ikonlu ekipman yuvaları ve çanta ızgarası, seçili beceri ayrıntısı ve otomatik kullanım sırası, gerçek mevcut/sonraki özellikler, kaynak/maliyet, kilit/açılma şartı ve görünür eylem. Boss/zindan/arena girişleri ayrı; süre, hak, ödül, sonuç ve dönüş. Her ekranda gereksiz dikey kaydırma ve tekrar azaltılır; aktif işlevler öncelikli, hazırlananlar açıkça belirtilir.
 - R01–R07 ve Q01–Q04 mevcut sıra ve açık durumları korunur. Her ekran için dış giriş → iç alt sekme → gerçek işlev → sonuç → doğru geri dönüş zinciri test edilir. 360×800, 393×852, 412×915 gerçek render, dokunma, taşma, katman, görev/otomatik rota ve kayıt regresyonu; fiziksel Android kabulü ayrı. Mevcut GitHub sanat çizgisi birincil; Kung Fu Saga görselleri kopyalanmaz. Bu kayıt bir tasarım ve kabul kuralıdır, kod değişikliği değildir.
+
+
+## KIRIK MÜHÜR — KESİN REFERANS VE GELİŞTİRME KURALLARI (2026-11-26)
+
+Kullanıcının son kesin kararı; önceki çelişen joystick, HUD ve ilerleme hükümlerinin yerine geçer. Önceki açık işler silinmez.
+
+### 1. Referanslara bağlılık
+- Kullanıcının gönderdiği 154 referans görselini birincil kaynak kabul et.
+- Görselleri yüzeysel inceleme. Her yazıyı, ikonu, düğmeyi, konumu, boyutu, şeffaflığı, haritayı ve ekran geçişini dikkatlice incele.
+- Sadece isimleri değiştirerek mevcut tasarımı kullanma.
+- Kung Fu Saga'nın yerleşim, ferahlık, mekanik ve ilerleme düzenini esas al.
+- Referansın yetersiz kaldığı yerlerde web üzerinden araştırma yap. Gerekirse benzer MMORPG oyunlarını incele.
+- Kendi varsayımlarını kullanıcının kararı gibi uygulama.
+
+### 2. Dış arayüz
+- Sol üstte karakter portresi, seviye ve okunabilir HP/MP göstergeleri bulunacak.
+- Karakter portresine basıldığında Ayarlar açılacak.
+- Alt menüden Ayarlar kaldırılacak.
+- Görev paneli sabit, küçük ve şeffaf olacak.
+- Savaş alanı gereksiz panellerle kapatılmayacak.
+- İkonların boyutu, aralıkları ve konumları referanslara göre düzenlenecek.
+- Joystick kullanıldığında otomatik görev duracak ve kontrol oyuncuya geçecek.
+
+### 3. İç arayüz
+Her menünün kendi düzeni olacak. Bütün ekranlara aynı panel tasarımı uygulanmayacak.
+Karakter, çanta, demirci, ekipman füzyonu, pet, binek, kanat, kader ve beceri ekranları kendi referans görsellerine göre ayrı ayrı düzenlenecek.
+Gereksiz yazılar, büyük kutular, tekrar eden bilgiler ve aşırı kaydırma kaldırılacak.
+
+### 4. Boss ve zindan düzeni
+- Boss zindanına girildiğinde ana dünya haritasından çıkılacak.
+- Her zindan türünün kendisine ait ayrı savaş haritası, zemini, çevre dekoru ve atmosferi olacak.
+- Boss, kule, arena, deneyim zindanı ve ekipman zindanı aynı haritanın isim değiştirilmiş biçimi olmayacak.
+- Zindan içi arayüz, ana dünya arayüzünden farklı olacak.
+- Boss canı, mücadele süresi, hedef, ganimet ve çıkış düğmesi referanslara göre yerleştirilecek.
+- Mücadele tamamlandığında gerçek ödül ve doğru dönüş ekranı açılacak.
+- Boss görselleri, boyutları, saldırıları ve animasyonları ayrıca denetlenecek.
+
+### 5. Mekanik ve ilerleme
+- Görev, savaş, yürüyüş, animasyon ve gelişim hızları doğal olacak.
+- Sistemler doğru görev, seviye ve güç şartlarına bağlı açılacak.
+- 500 normal seviye ve 100 peri seviyesi korunacak.
+- 500 katlı kule düzeni korunacak.
+- Ekipman kademeleri, yıldızlar, renkler ve füzyon tarifleri birbirine bağlı çalışacak.
+- Bir sistemin yalnızca menüsünün bulunması, tamamlandığı anlamına gelmeyecek.
+
+### 6. Sanat çizgisi
+- KayKit sanat çizgisi korunacak.
+- Yeni görseller özgün fakat mevcut karakterlerle uyumlu olacak.
+- Sürekli aynı görseller farklı isimlerle kullanılmayacak.
+- Karakter, binek, silah, çevre ve boss oranları tutarlı olacak.
+- Binek üzerinde karakter gerçekten oturma pozunda bulunacak.
+
+### 7. Liste sırasından sapma yasağı
+GitHub'daki mevcut M01–M23, R01–R07, Q01–Q04 ve V01–V06 kontrol listelerini esas al.
+Bir madde tamamlanmadan sonraki maddeye geçme. Kullanıcının bildirdiği kritik hatalar öncelikli olarak onarılabilir; ardından kaldığın maddeye dön.
+Listeyi silme, açık işleri tamamlandı gösterme ve gereksiz yeni özellik ekleme.
+
+### 8. Zorunlu görsel denetim
+Her değişiklikte:
+- Orijinal referansı aç.
+- Mevcut oyun ekranını incele.
+- Gerçek kodu düzenle.
+- Yeni oyun ekranının görüntüsünü al.
+- Referans ile yeni görüntüyü yan yana karşılaştır.
+- Yerleşim, şeffaflık, ölçek, renk, taşma, animasyon ve mekanikleri kontrol et.
+- Uyum sağlanmadıysa tekrar düzelt.
+Sadece kod testinin başarılı olması görsel kabul anlamına gelmez.
+
+### 9. Tamamlanma şartı
+X10 + RED TEAM + KÖK NEDEN + FACT CHECK + TEST + /GÖRSEL-DENETİM uygula.
+Test etmediğin işlevi başarılı gösterme. Fiziksel Android testi yapılmadıysa açıkça belirt. Doğal oynanış yerine hızlandırılmış test kullanıldıysa bunu gizleme.
+Önemli gelişmeleri GitHub'a kaydet ve çalışan TEST ZIP dosyasını teslim et.
+
+**ANA KURAL: Hızlı sürüm çıkarmak değil, referanslara uygun, kaliteli, ferah ve gerçekten çalışan bir oyun oluşturmak önceliklidir.**
