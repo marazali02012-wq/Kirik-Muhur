@@ -53,6 +53,10 @@ Bağlayıcı ek: [Yapımcı kaynaklarıyla 56 maddelik bütün MMO eksik denetim
 
 Bağlayıcı ek 2: [Yapımcı/oyuncu ve endgame denetimi: P57–P84](YAPIMCI_OYUNCU_ENDGAME_DENETIMI_3_201.md). Bu ek 28 açık kabul ölçütü ve somut statik kod risklerini içerir; P01–P56 ve 15 ana sıra korunur. P01–P56, önceki M/R/Q/V kimliklerine ek açık kabul ölçütleridir; ayrı bir oyun veya önceki ilerlemenin silinmesi değildir.
 
+
+
+**Temel mimari kabul kapıları — öncelikli bağımlılık:** [T01–T08 temel denetimi](TEMEL_MIMARI_KABUL_KAPILARI_3_202.md). 3.202 gerçek fonksiyonlarıyla beş kontrollü ilerleme durumu incelendi. Eksik teslim zinciri bazı sistemleri kilitlerken diğerlerini açıyor; bilinmeyen bölge id'si açık dönüyor. T01/T02 ortak veri ve erişim/göç, T03 hikâye ve kaynak grafiği, T04/T05 işlem ve sunucu, T06 ücret dengesi, T07 mobil/görsel bütçe ve T08 regresyon kabulü. 15 sıra ve P01–P84 korunur. Temel kapılar tamamlanmış değildir; eski kabul kanıtları silinmez. 08 içerik sırası açık. Bu denetimde oyun HTML'i ve ZIP değişmedi.
+
 ## Sürüm ilerlemesi
 - [x] 3.115: dört açılış durumu, kayıt uyarısı, onaysız üzerine yazmayı önleme (tarayıcı simülasyonu).
 - [x] 3.116: önizleme 300×350, 6 model, 8 yön, isim ve taslak, 24 tarayıcı kontrolü (önceki yerel rapor).
