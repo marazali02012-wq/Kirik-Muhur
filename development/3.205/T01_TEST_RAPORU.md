@@ -1,0 +1,8 @@
+# 3.205 — T01 kayıt güvenliği
+26.11.2026. Kullanıcının 3.204 ZIP kaynağı SHA256 5d8f3348cc07cb2d9647cd8a68eacabe6f4cbbd161cb6e4ccf82822014076d5f ile doğrulandı.
+
+Gerçek index.html ve shared/progression.cjs üzerinde sıkı sayısal tür, görev kimliği, tekrar ödül, şema/bölüm bayrağı denetimleri uygulandı. 46 sonrası günlük sefer indeksi korunur. Yeni snapshot yazımdan önce doğrulanır. Eski kayıt göçünde birebir ham yedek ve restore ara yazım engeli uygulanır. 249 gömülü görsel URI çokluğu değişmedi.
+
+Son test: 61 Node doğrulama + 12 kontrollü Chromium + 34 mevcut yerel HTTP/SQLite + 4 katalog = 111/111. 29 inline JS ve CJS syntax, ZIP CRC başarılı. Chromium gerçek oyun HTML ve tüm gerçek görsellerle set_content; bellek localStorage/taklit IDB, RAF kapalı, görev teslimi kontrollü hedef/NPC durumu. Gerçek teslimde kota geri alımı, tek ödül ve tekrar reddi geçti. 320×568, 360×800, 393×852, 412×915 kayıt uyarısı render; taşma ve hizalama sorunu görülmedi. Fiziksel Android, gerçek disk/IDB, iki sekme, eski gerçek kayıt örnekleri, bütün 46 görev doğal koşusu, animasyon/yön nihai denetimi açık. T01 kısmi, yeniden test; T02 yeni çalışma başlamadı. Önceki P01–P84, 15 ana sıra, T01–T08 ve kabul kararları korunur.
+
+Yerel teslim: Kirik_Muhur_3_205_Kayit_Guvenligi_TEST.zip, 56.393.404 bayt, SHA256 30bad119e4769839f51b1b123e8ae190368b950b4514188a56f26d35499a4aa5. HTML SHA256 278e4eb6c549d995a3b3885bcf443050e83c53cc6795aa8b480a1734cb951c67. CJS SHA256 bce5df4d4482662405274693215b80558f79148bdc079aa9076647f155c4dea2. ZIP/HTML ve ekran görüntüleri yerel teslim; GitHub'a bu aşamada rapor yazıldı, ana index.html değiştirilmedi.
