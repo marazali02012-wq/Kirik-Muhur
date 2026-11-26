@@ -1,0 +1,57 @@
+# Kırık Mühür — Temel mimari ve kabul kapıları (3.202)
+2026-11-26. Kullanıcı amacı: baştan sona eksik kalmaması, temel sağlam olmadan yeni içerik yığılmaması. Yetkili şartname, 15 ana sıra, M/R/Q/V ve P01–P84 korunur. Bu belge ikinci bir özellik listesi değildir; her mevcut maddeye uygulanacak önkoşul ve kabul yöntemidir. Önceki 01–07 temel kontrollü kabulleri geçmiş kanıt olarak korunur, nihai kabul sayılmaz. Oyun kodu bu denetimde değiştirilmedi.
+
+## 1. Denetim kanıtı
+3.202 ZIP SHA256 e7b1871e13ce88ff535a86d49c8d14d6d93faca5426e7ece5e6457905b7999f0 eşleşti. ZIP: index.html, shared/inventory-progression.cjs, shared/story.cjs, OKU.txt. 84 P satırı iki yetkili belge üzerinden tekrar okundu. Chromium üzerinde gerçek oyun fonksiyonları çağrıldı; başlangıç karakteri gerçek seçim akışından, test durumları sentetik, bellek localStorage/taklit IndexedDB, 80 gerçek raster ve diğerleri yer tutucu, dünya RAF kapalı. 5 durum, sayfa hatası 0. Test bir saldırı veya normal oyunda kayıt manipülasyonunun mümkün olduğunun kanıtı değil, erişim fonksiyonlarının tutarsız davranışının kanıtıdır.
+
+| Test | Seviye / görev / teslim | Çanta/depo açık | Demir Teras | İlahi Mühür / ruh | Füzyon | XP Arena kalıcı kilit |
+|---|---|---|---|---|---|---|
+| Başlangıç | 1 / 0 / 0 | 42/42 | Kapalı | Kapalı/kapalı | Kapalı | Kapalı |
+| Tam 40 | 36 / 40 / 40 | 78/72 | Açık | Açık/açık | Açık | Açık |
+| Arada eksik teslim 3 | 36 / 40 / 39 | 42/42 | Açık | Açık/açık | Açık | Açık |
+| Hiç teslim yok | 36 / 40 / 0 | 42/42 | Açık | Kapalı/kapalı | Açık | Açık |
+| Tam 46 | 36 / 46 / 46 | 84/72 | Açık | Açık/açık | Açık | Açık |
+
+Ayrıca beş durumun tamamında km326Unlocked('unknown-test-zone') true döndü: tanımsız bölge varsayılan eşik 0. Bu helper davranışı kesin hata; gerçek harita/portalın bilinmeyen id'yi kabul ettiği ayrıca test edilmeli. Açılış yolu toplam 75 satır, bunların hepsi çalışan sistem değildir; plan ve mevcut hedef ayrımı korunur.
+
+### Kök nedenler
+- km326Unlocked, km3162Open, km3102Access gibi birçok işlev missionIndex kullanır; km3148Unlocked/3151Open belirli ödül anahtarları, km200Gate kesintisiz teslim zinciri kullanır. Yol haritası da ayrı koşullar üretir. Tek doğrulanmış oyuncu ilerleme sözleşmesi yok.
+- Eski restore/migration kodu eski questSchema'ları destekler ve görev indeksini koruyan sürümler var. Tam teslim doğrulamasını her yere bir anda zorlamak eski oyuncuyu kilitleyebilir. Güvenli göç stratejisi ve gerçek eski kayıt örnekleri olmadan yapılmaz; eksik kaydı otomatik ödüllendirmek veya silmek yok.
+- 3.202 ana görev bir yerel yazıma alındı ancak IDB yazma asenkron, sunucu otoritesi yok, eski kısmi kayıt ve yan/günlük/zindan ödülü işlemleri açık. Yerel doğrulama sunucu transaction veya disk dayanıklılığı garantisi değildir.
+- Ana hikâye 46 görev / yaklaşık Sv36; sonra sefer şablonları. Sv50 Demir Mahzen, ileri kitaplar ve 500/100 tavanı var fakat baştan sona kazanım zinciri doğrulanmadı. Peri geçiş işlevi Sv500 ve oyun durumunu kontrol eder, hikâye finali şartı yok. Bu düzeltme ileride gerçek final eklendikten sonra yapılmalı.
+- Mevcut 54 hedefin erişim ekranı, bütün içeriklerin çalıştığı veya bütün ekonomi/oyun dengesi kabulü anlamına gelmez.
+
+## 2. Yapımcı referansı ve mimari karar
+- Heroic Labs: https://heroiclabs.com/docs/nakama/concepts/storage/collections/ ve https://heroiclabs.com/docs/nakama/client-libraries/snippets/authoritative-write/ : sahiplik, sadece sunucu yazması, sürüm kontrollü yazım.
+- https://heroiclabs.com/docs/nakama/concepts/multiplayer/authoritative/ : server-authoritative oyun kuralları ve sabit tick. Nakama seçildi/kuruldu anlamına gelmez.
+- Blizzard: https://news.blizzard.com/en-gb/article/23761596/diablo-immortal-closed-beta-learnings : haftalık XP tavanı ve eşya eritme cezasından öğrenilenler; ilerleme kilitleri önceden ölçülmeli.
+- Android: https://developer.android.com/games/optimize ; https://developer.android.com/games/optimize/adpf/thermal : frame süreleri, bellek, ısıl yük ve sürdürülebilir performans ölçümü. Native araç önerileri HTML/WebView'da doğrudan uygulanabilir varsayılmaz.
+- KFS'nin kesin formülü veya tüm tarihsel sistemleri biliniyor denmez. Önceki resmi/oyuncu/görsel araştırma kayıtları korunur.
+
+## 3. Sekiz zorunlu temel kabul kapısı
+Her kapı gerçek kaynak, işlev, başarısızlık ve test kanıtıyla kapanır. Farklı kapılar bağımsız içerik yüzdesi değildir. 08 mevcut içerik sırası korunur; altyapı bağımlılıkları kritik oldukları için önceliklidir.
+
+| Kapı | Uygulama | Kanıt / mevcut açık P maddeleri |
+|---|---|---|
+| T01 Veri modeli ve göç | Kalıcı characterId, questId, systemId, item instanceId, rewardId, schema/content sürümü; eski indeks/anahtar eşleme, yedek, doğrulanmış göç, bilinmeyen id reddi. Bir kayıt sorununda ham veriyi koru; otomatik kazanım uydurma. | P01,P53,P61,P62,P75,P82. Eski/bozuk/eksik/tekrar/yeni kayıt senaryoları; sahiplik testleri. |
+| T02 Ortak ilerleme | Tek saf erişim karar fonksiyonu: karakterin doğrulanmış durumu, önceki görev, seviye, güç, zafer, sahiplik ve ücretli hak ayrı. Karar neden kodu, kalan şart; kalıcı açılma ve günlük hak ayrı. Menü, görev, harita ve gerçek işlem aynı kurala bağlanır. | P03,P10,P11,P60,P62,P68. Tam, eksik, sıradışı ve sınır durumları; tanımsız id; UI/motor eşitlik. |
+| T03 Hikâye ve kaynak grafiği | 1–500 normal, peri 1–100 ve 500 kule için bölüm/harita/NPC/amaç/boss/kaynak/ödül/çıkış; her hedefin elde edilme yolu ve bağımlılığı. Bölüm sonu bir sonraki hikâye ve yeni sistemle bağlanır; tekrarlanabilir sefer ayrı. | P04,P05,P06,P07,P24,P28,P29,P40–47,P57,P59,P60,P74. Döngü/ulaşılamayan düğüm, eksik ödül, günlük kota, her sınıf için doğal oynanış. |
+| T04 İşlem ve ekonomi | Tekil ödül defteri, envanter/para/XP/posta/görev ilerlemesi tek işlem, sürüm karşılaştırma, çift tıklama ve yeniden gönderim, negatif kaynak ve kayıp eşya engeli. Savaş/üretim/drop kaynağı, harcama ve kazanım eğrisi birlikte. | P12,P16–18,P35–39,P53,P61,P63–65,P69,P78–80. Kapanma, kota, ağ kopma, iki oturum ve yeniden deneme testleri. |
+| T05 Sunucu omurgası | Önce işleyen küçük uçtan uca akış: gerçek kimlik→karakter→görev/savaş komutu→sunucu karar/ödül→iki istemcide tutarlı restore. Sunucu zamanı, oturum, veri sürümü, yetki; istemcinin gönderdiği XP/altın güvenilir değil. | P48–54,P75–81. Gerçek iki istemci ve DB transaction, yetkisiz istek, reconnect, sıra/tekrar, yük testi. Sunucu sağlayıcısı ve maliyet kararı açık. |
+| T06 Ücret dengesi | Kullanıcı kararı: sürekli ödeme yok, normal oynanış doğal gelişim + belirli ücretli aşamalar; tamamen ücretsiz tavan garantisi yok. Her bantta güç farkı, ödeme sıklığı/toplam maliyet ve doğal kaynak ekonomisi ölçülür. Ürün/fiyat/eşik önceden belirlenmeden kilit uygulanmaz; gerçek ödeme doğrulaması/teslim ve hata durumları. | P37,P47,P53,P78,P80,P84, güncel şartname. Fiyat/ürün/ödeme sağlayıcısı açık; sahte ödeme yok. |
+| T07 Mobil ve görsel temel | Tek HTML prototipi korunurken iş mantığı, veri, render ve ağ sorumlulukları ayrıştırılır; ihtiyaç halinde aşamalı modül çıkarımı. Her ekran kendi referans yerleşimi. Gerçek tüm varlıklarla açılış, uzun savaş, FPS/frame time/bellek/ısı ve dokunma, düşük cihaz bütçesi. | P02,P08,P09,P13–15,P19–26,P55,P56,P66,P67,P71,P72,P83. 320/360/393/412 ekranlar, fiziksel Android nihai kabul; geliştirme testleri her değişiklikte. |
+| T08 Sürüm ve regresyon | Her modülde şu beş kanıt: gerçek erişim, işlev, ödül/etki, kayıt/restore, görsel. Önceki çalışan zincirlerin otomatik testleri her kritik değişiklikte. Gerçek ilerleme testi sentetik testten ayrı. Kaynak ve kod/ZIP hash, sürümlü yedek, GitHub test kayıtları, geri alma. | Bütün P01–84 ve 15 sıra; P55,P82–84. Eksik/kanıt yok/test edilmedi/başarısız/başarılı ayrı. Test sayısı yüzde değildir. |
+
+## 4. İçerik eklemenin kesin önkoşulları
+Her yeni bölüm için: kararlı kimlik, önceki bölüm bağı, seviye bandı (denge verisinden), harita, NPC, gerçek savaş/toplama hedefi, tekrar/teslim kuralı, XP/para/ganimet kaynağı, açılan sistem, tek ödül, hata/kayıt davranışı ve görsel. Önce tüm seviye bantlarının taslak grafiği, ardından oynanabilir içerik. Henüz 500/100'e kadar kesin seviye, görev ve ödül tablosu yoktur. Ödeme eşikleri mevcut kullanıcı kararını uygulayan ayrı tasarım tablosunda belirlenir, uydurulmaz. Hikâye devamına yalnız sayısal şablon çoğaltma kabul edilmez.
+Her yeni sistem için önce kaynak ve tüketim tablosu; ör. pet evrim malzemesi kapalı pet zindanından geliyorsa önkoşul döngüsü oluşmamalı. Gelişim hakkı dolduğunda bir sonraki yenilenme, başka doğal kaynak veya açık tasarlanmış ücretli eşik açıklanmalı. Teknik kilit ödeme zorunluluğu ile karıştırılmamalı.
+
+## 5. Sıradaki uygulama
+1. T01/T02: eski kayıt örnekleri ve tek erişim sözleşmesi; bilinmeyen bölge reddi, önceki ödül anahtarlarının doğru yorumlanması. Önce bölge/çanta/füzyon/İlahi Mühür/XP erişim eşitliği; sonra diğer 54 mevcut hedef. Eski kayıtlar silinmez, eksik kayıt otomatik ödül verilerek uydurulmaz.
+2. T03: 46 görev ötesi hikâye, 500/100 seviye, 500 kule ve kaynak/harcama bağımlılık haritası; oynanabilir bölümler sırayla.
+3. T04/T05: 3.202'deki yerel ana görev işleminden ortak ödül sözleşmesine ve gerçek sunucu dikey kesitine geçiş. 08–14 sistemleri bu altyapıya bağlanır. Eski istemci kayıtları çevrim içi güvenilir ödül kanıtı sayılmaz.
+4. T06–08 paralel kabul kriterleri; fiziksel Android nihai kabul 15'te, ama mobil bütçe ve görsel denetim en baştan.
+
+## 6. Tekrar üretme notu
+Kontrollü Chromium başlangıcında (test harness, gerçek oyunda kullanılmaz) state.missionIndex, state.level ve state.questRewards ayrı ayrı beş test durumuna ayarlanıp şu gerçek fonksiyonlar çağrıldı: km200Cap(), km200Cap('depot'), km326Unlocked('ironterrace'), km3148Unlocked(state), km3151Open(state), km3162Open(), km3102Access(KM3132_XPA,state).locked, km3145Rows(), km326Unlocked('unknown-test-zone'). Her test sonunda önceki durum geri yüklendi; kayda yazılmadı. Yukarıdaki sonuçlar gerçek çalıştırmadan. Tüm 75 satırın gerçek eylem tıklama testi veya doğal oyun sonuna ulaşma testi değildir.
+Denetim yeni ZIP veya runtime yaması üretmedi. 3.202 mevcut test tabanı olarak korunur. Bütün 84 maddenin kusursuzluğu kanıtlanmadı; bu kapılar eksiklerin sonradan saklanmasını önleyen kabul sistemi olarak eklenir.
