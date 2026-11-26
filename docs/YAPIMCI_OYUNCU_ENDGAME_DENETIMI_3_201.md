@@ -1,6 +1,8 @@
 # Kırık Mühür 3.201 — Yapımcı, oyuncu ve endgame denetimi
 26.11.2026. Ana 15 geliştirme sırası, P01–P56 ve M/R/Q/V korunur. Bu ek, P57–P84 açık kabul kriterlerini ve eski P maddelerinin kök nedenlerini ayrıntılandırır. Yeni özellikler rastgele oyuna eklenmez; öncelik hikâye, ilerleme, ekonomi, gerçek işlev ve sunucu sözleşmesi. Bu çalışma araştırma ve statik kaynak denetimidir, oyun kodu değiştirilmedi.
 
+> **Güncel kullanıcı kararı:** 26.11.2026 — Kullanıcının güncel kararı: Kırık Mühür'de para yatırmadan yükselme olmayacak; ödeme zorunluluğu olmadan ilerleme/yükselme garantisi kapsam dışıdır. Önceki ücretsiz yükselme, zorunlu ödeme yasağı ve ücretli sistem yasağı bu konuda geçersizdir. Hangi seviye veya gelişim aşamasında ödeme gerekeceği, fiyatlar, ürünler, VIP/abonelik ve ödeme altyapısı henüz belirlenmedi; bunlar varsayılmaz. Gerçek ödeme doğrulaması, şeffaf fiyat/koşul ve satın alma teslim güvenliği gerekir. 500+100 seviye, hikâye, mevcut sistemler ve diğer kabul koşulları korunur.
+
 ## 1. İncelenen kaynaklar
 Resmî kaynak ile oyuncu iddiası birbirinden ayrılır. Sürüm tarihleri kaynak sürümüne aittir; bugün tüm oyunlarda geçerli kesin oranlar olarak alınmaz. KFS gizli drop/XP formülleri ve nihai seviye tavanı kesinleştirilemedi.
 
@@ -56,7 +58,7 @@ Her satır önceki P01–56 kapsamını genişletir; aynı işi iki kez gelişti
 | P57 / 05,10,13 | 46. görev sonrası gerçek özgün bölümler; her bölüm yeni NPC/çatışma/harita, özgün düşman, önceki bölüm sonu bağlantısı, ödül/ekipman kaynağı. 500'e kadar kilometre taşı tablosu ve bütün önkoşullar. | K01; açık; A03,A12,A13 |
 | P58 / 11,13 | KFS ileri yarışma parası, mübadele mağazası, çok parçalı set ve özel stat kazanımı; ayrı kaynak, düşen parçanın gerçek slot/işlevi, set eşik etkisi; referanstaki kesin 12 parçayı otomatik kopyalama yok. | P17/P32/P40–44 ayrıntısı, A01; tasarım/araştırma |
 | P59 / 13 | Normal seviye finali hikâye zirvesine bağlanır; 100 peri seviyesi kendi görev/bölge/ödül eğrisi, seviye tavanından sonra ustalık/keşif/zirve bossu/kozmetik hedefleri. | K08; açık; A07,A10,A13 |
-| P60 / 05–07,12 | Her zorunlu kilit için erişilebilir alternatif XP/güç yolu; önkoşul döngüsü, kaynak/loot kısır döngüsü ve günlük kota denetimi. Seviye kazanımını boss şartıyla körlemesine kilitleme. | K02; açık; A05,A06,A08 |
+| P60 / 05–07,12 | Her teknik ilerleme kilidi için erişilebilir XP/güç yolu; kullanıcı kararıyla ücretli yükselme şartı ayrı ve açık; önkoşul döngüsü, kaynak/loot kısır döngüsü ve günlük kota denetimi. Seviye kazanımını boss şartıyla körlemesine kilitleme. | K02; açık; A05,A06,A08 |
 | P61 / 05,14 | Görev teslimi, XP, para, eşya, yoldaş, açılım, ödül anahtarı ve görev indeksi tek atomik işlem veya güvenli tekrar edilebilir event; ara aşamaların her birinde crash ve quota testi. | K03; kritik statik risk |
 | P62 / 07,08,14 | Tek merkezi önkoşul grafiği; tam teslim sırası ve karakter sahipliği server doğrulanır. Menü/harita/öğretici/işlem aynı karar ve neden kodu. | K04; kısmi |
 | P63 / 08,12,14 | Ödül postasında benzersiz teslim kimliği, kaynak, oluşturulma zamanı, tür/adet, alındı durumu, alıcı ve tekrar engeli; dolu çanta ve eski fazla kayıt korunur. Malzeme yığını ve görev eşyası politikası ayrı. | K05; kısmi |
@@ -72,9 +74,9 @@ Her satır önceki P01–56 kapsamını genişletir; aynı işi iki kez gelişti
 | P73 / 12 | Günlük görevler farklı etkinliklerden doldurulabilsin; 20 tur referansı mevcut ama tüm tur zorunlu olmasın; kazanım tavanı ve ödül dengesi, normal hikâye ayrı. | A05,A08,A16,U06; tasarım/denetim |
 | P74 / 05,10,13 | Hikâye bölümü arşivi/tekrar oynama; tekrar ödülü ilk teslim ödülünden ayrılır, keşif ve ustalık alternatif hedefleri, eski bölgeye tekrar gitme nedeni. | A10,A12; açık |
 | P75 / 14 | Hesap girişinde idempotent karakter oluşturma; isim/sahiplik/tek kayıt kontrolü, aynı istek yeniden geldiğinde kopya karakter oluşmaması; eski yerel kayıt güvenli göç. | K10,U01; açık |
-| P76 / 14 | Arkadaşla oynama ve yeni oyuncu yakalama; ücretsiz ilerleme, uygun güç aralığı, solo/co-op farklı ödül dengesi. Sunucu nüfusuna göre ölçüm, gerekirse güvenli birleştirme ve isim/ödül çakışma planı. | A05,A08,U02; açık |
+| P76 / 14 | Arkadaşla oynama ve yeni oyuncu yakalama; ücretli yükselme şartlarıyla uyumlu uygun güç aralığı, solo/co-op farklı ödül dengesi. Sunucu nüfusuna göre ölçüm, gerekirse güvenli birleştirme ve isim/ödül çakışma planı. | A05,A08,U02; açık |
 | P77 / 14 | Moderasyon: rapor, engelle, sustur, spam/rate limit, denetim, oyuncu destek ve itiraz iş akışı; özel veriyi loga yazmama. | U02; açık |
-| P78 / 08,14 | Para birimleri ayırt edilir; altın/toz/özel kaynak ayrı isim, ikon, harcama önizlemesi, kaynağı ve kullanım yeri. Ücretli güç sistemi eklenmez. | U01/P53; kısmi |
+| P78 / 08,14 | Para birimleri ayırt edilir; altın/toz/özel kaynak ayrı isim, ikon, harcama önizlemesi, kaynağı ve kullanım yeri. Ücretli güçlenme kullanıcı kararıdır; fiyat/ürün/eşik tasarımı ve gerçek ödeme doğrulaması açık. | U01/P53; kısmi |
 | P79 / 10,14 | Üretim ekonomisi: kaynak giriş/çıkış tablosu, eşya yıkımı/eritme, alım-satım ücret ve emanet, fiyat/üretim maliyeti gösterimi; yapay pazar fiyatı gerçek oyuncu fiyatı diye gösterilmez. | A11,U05; açık |
 | P80 / 14 | Sunucu API sözleşmesi: oyuncu komutu, doğrulanmış sonuç, idempotency key, sürüm/çakışma, yetki, rate limit, DB transaction, hata kodları; client stat/XP doğrudan kabul edilmez. | K10/P53–54; açık |
 | P81 / 14 | Eşleşme/oda/instance ve reconnect: sunucu tick, sequence, snapshot, oyuncu ayrılması, iki istemci aynı sonuç/ödül; sahte oyuncu yok, NPC eğitim müttefiki etiketli. | A09,A12/P33–54; açık |
@@ -84,7 +86,7 @@ Her satır önceki P01–56 kapsamını genişletir; aynı işi iki kez gelişti
 
 ## 4. Hikâye sonu ve ileri oyun tasarım kararı
 Diğer oyunların ortak modeli: yeni hikâye bölümü yeni yer ve tehdit açar; zorluk/ekipman büyür; zirve bossu, yatay ustalık ve koleksiyon oyunu sürdürür. KFS kesin final/tavanı bulunmadı. Toram gibi sürümle tavan artırmak bir model, GW2 gibi sabit tavanda ustalık bir başka model, Diablo gibi tavan sonrası seviye bir başka model. Kırık Mühür için mevcut kullanıcı sınırı 500 normal +100 peri +500 kule korunur. Önerilen özgün hikâye: başlangıç 1–36, sonra Mahzen'den gelen çatlak mühürlerin bölgesel zincirlerini çözme; ara bölüm sonlarında özel sistem ve boss; Sv500'de mühürlerin kaynağı ile final hesaplaşması; peri yolunda mühür dünyasının ardındaki bölgeler, özel bosslar ve ustalık; peri 100'de hikâye kapanışı ve tekrarlanabilir zirve/keşif/kozmetik/lonca içerikleri. Bu bölüm planıdır, içerik sayısı ve seviye eşikleri henüz kesinleştirilmedi; yalnız 46 görevi 500'e uzatmak kabul değil.
-Kullanıcı 500+100 tavanını belirledi; gereksiz yeni tavan, premium/VIP, başka oyunların grafik/isim/karakterlerini doğrudan oyuna ekleme yok. İlham yalnız mekanik, düzen, bağımlılık ve kalite.
+Kullanıcı 500+100 tavanını belirledi; gereksiz yeni tavan veya başka oyunların grafik/isim/karakterlerini doğrudan oyuna ekleme yok. Ücretli yükselme kapsamda; VIP ayrıntıları açık. İlham yalnız mekanik, düzen, bağımlılık ve kalite.
 
 ## 5. Görsel referans dizini
 Görseller web görüntü sonuçlarında incelendi; orijinal CDN dosyalarının iki indirme denemesi başarısız. Buradaki doğrudan URL'ler ve kaynak sayfaları GitHub'da kaydedildi; görüntüler binary olarak yüklenmedi. Telifli referans görseller oyun asset'i olarak kullanılmaz.
