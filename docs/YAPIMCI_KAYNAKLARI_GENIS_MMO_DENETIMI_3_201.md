@@ -1,6 +1,8 @@
 # Kırık Mühür 3.201 — Yapımcı kaynakları, bütün oyun eksik denetimi
 2026-11-26. Kullanıcı kararı: depo/çanta tek örnek; oyunun tamamını seviye, hikâye, gerçek açılma, ekonomi ve çevrim içi altyapıyla birlikte kur. Ana 15 sıra, M/R/Q/V kimlikleri, özgün KayKit sanatı ve isimleri korunur. Bu genişletilmiş kabul listesi önceki kontrollü testleri silmez; yeni açıklar ilgili maddelere eklenir. Kodda yalnız katalog/menü adı bulunması işlev kabulü değildir. Tamamlanmış 01–07 yalnız temel kabul, nihai oyun kabulü değil.
 
+> **Güncel kullanıcı kararı:** 26.11.2026 — Kullanıcının güncel kararı: Kırık Mühür'de para yatırmadan yükselme olmayacak; ödeme zorunluluğu olmadan ilerleme/yükselme garantisi kapsam dışıdır. Önceki ücretsiz yükselme, zorunlu ödeme yasağı ve ücretli sistem yasağı bu konuda geçersizdir. Hangi seviye veya gelişim aşamasında ödeme gerekeceği, fiyatlar, ürünler, VIP/abonelik ve ödeme altyapısı henüz belirlenmedi; bunlar varsayılmaz. Gerçek ödeme doğrulaması, şeffaf fiyat/koşul ve satın alma teslim güvenliği gerekir. 500+100 seviye, hikâye, mevcut sistemler ve diğer kabul koşulları korunur.
+
 ## Birincil kaynaklar ve sınırlar
 - S01 Watt Games, Kung Fu Saga resmi App Store sürüm geçmişi: https://apps.apple.com/us/app/kung-fu-saga-martial-path/id1660688865 — özellikle 2023–2024 sürüm notları: sınıf terfileri, ruh çeşitleri, ekipman birleşimi, ileri setler, dönüşüm ve onun özel beceri/seti, farklı uçurum katları, savaş/ödül değişimleri, meridyenin boss kaynağı, seviyeden yetenek puanı, çapraz sunucu ekipman ganimeti ve müzayede. Yeni mücevher tavanı örneği 12. Bunlar özellik kanıtıdır, KFS'nin gizli formülü veya bizim kesin eşiklerimiz değil.
 - S02 Pearl Abyss resmi macera rehberi: https://www.world.blackdesertm.com/Ocean/Wiki?wikiNo=2009 — hikâyeyle açılan beceri ve birleşim sistemleri, bölgeye özgü kaynaklar, keşif süresi/giriş malzemesi, güçlendirme aktarımı, pet becerileri, işçi/kamp, ticaret, peri keşfi.
@@ -16,7 +18,7 @@
 - S12 https://heroiclabs.com/docs/nakama/server-framework/introduction/best-practices/ — sunucuda ilerleme ve envanter birlikte işlem, sürüm çakışması kontrolü, sınırlı sıcak kayıt ve arşiv, toplu yazma, savaş tick'inde veritabanı sorgusundan kaçınma.
 - S13 https://heroiclabs.com/docs/nakama/concepts/multiplayer/authoritative/ — sunucuda girdileri doğrulama, durum yayını, oturum ve yeniden bağlanma.
 - S14 https://www.world.blackdesertm.com/Ocean/News/Detail?boardNo=3612 — ana görevle içerik açılması, görev arayüzünde açılacak içerik ve ödül, eski ilerlemenin yeni göreve taşınması.
-- 154 kullanıcı görseli, 24 önceki web referansı, 157 metin denetimi ve ana şartname birincil proje girdileridir; bu denetimde tüm görseller yeniden tek tek açılmadı. 135–138 önceki gerçek füzyon gözlemleri korunur. Bilinmeyen formül, kesin maliyet, drop oranı veya açılma seviyesi uydurulmaz. Özgün oyun kararları ayrıca işaretlenir. Kaynaklardaki ücretli/VIP sistemler bizim tasarıma otomatik eklenmez.
+- 154 kullanıcı görseli, 24 önceki web referansı, 157 metin denetimi ve ana şartname birincil proje girdileridir; bu denetimde tüm görseller yeniden tek tek açılmadı. 135–138 önceki gerçek füzyon gözlemleri korunur. Bilinmeyen formül, kesin maliyet, drop oranı veya açılma seviyesi uydurulmaz. Özgün oyun kararları ayrıca işaretlenir. Ücretli yükselme kullanıcı kararıdır; kaynaklardaki VIP ve ürün tarifleri otomatik kopyalanmaz.
 
 ## Yeni ana kural: tek ilerleme grafiği
 Her işlevde: kalıcı sistem kimliği + hikâye bölümü + ön görev teslim anahtarı + seviye/güç + gerekiyorsa kaynak/zafer + gerçek işlem + ödül kaydı + UI açılma eğitimi + test. Ayrı ayrı menülerde çelişkili kilit yok. Açık sistem, günlük giriş hakkı ve sahip olunan donanım ayrı durumdur. Bir sistemin gerçek çalışması ve menüsü birbirinden ayrılmaz; bilinen fakat kodlanmamış özellik oyuncuya oynanabilir gösterilmez.
@@ -63,7 +65,7 @@ Durum K=kısmi/yeniden denetim, E=eksik veya yalnız plan, D=ayrıntı/kanıt do
 | P34 / 11,14 | Solo ve gerçek PvP arena | Yerel PvE XP Arena mevcut, ayrı solo/PvP kuralları ve gerçek eşleşme; S13 | K |
 | P35 / 12 | Günlük ve haftalık görev hedefleri | Sunucu zamanı, alınıp alınmayan ödül, görev/saat penceresi; S10 | K |
 | P36 / 12 | Giriş takvimi ve aktivite sandıkları | 2/7/14/21/28 ve aktivite örnek eşikleri, telafi, tek ödül, gerçek sayaç; 032–044/S10 | K |
-| P37 / 12 | Etkinlik takvimi ve sezon | Başlangıç/bitiş, hak, katılım, süre sonu ödülü; gerçek zaman, ücretsiz ilerleme; S10 | E |
+| P37 / 12 | Etkinlik takvimi ve sezon | Başlangıç/bitiş, hak, katılım, süre sonu ödülü; gerçek zaman, ücretli yükselme koşullarıyla uyum; S10 | E |
 | P38 / 12 | Çevrim dışı eğitim | Geçen süre üst sınırı, gerçek sunucu saati, güvenli tek ödül, sahte diğer oyuncu yok; S03,S12 | E |
 | P39 / 12 | Ödül geçmişi, boss ganimet günlüğü | Kaynak, eşya, zaman, ödül kimliği, alınma durumu; 150/S11 | K |
 | P40 / 13 | İlahi silah dört parça | Gerçek ana görev/boss malzemesi, farklı parça ve beceri; 001/S01 | K |
