@@ -18,6 +18,8 @@ Yetkili temel: [Kullanıcının kesin şartnamesi](KIRIK_MUHUR_KULLANICI_KESIN_S
 | 13 | Sosyal/çevrim içi | Gerçek hesap, arkadaş, sohbet, takım, lonca, PvP, market, eşleşme, kopma, sunucu yetkisi | Eksik; sahte online yok |
 | 14 | Teknik/görsel QA | Dikey APK, 320×568 / 360×800 / 393×873 ve şartnamedeki diğer cihaz boyutları; fiziksel Android FPS/bellek/ısınma, kalıcı kayıt, kalite ve sürüm yedeği | Açık |
 
+> **Güncel ücretli yükselme kararı:** 26.11.2026 — Kullanıcının güncel kararı: Kırık Mühür'de para yatırmadan yükselme olmayacak; ödeme zorunluluğu olmadan ilerleme/yükselme garantisi kapsam dışıdır. Önceki ücretsiz yükselme, zorunlu ödeme yasağı ve ücretli sistem yasağı bu konuda geçersizdir. Hangi seviye veya gelişim aşamasında ödeme gerekeceği, fiyatlar, ürünler, VIP/abonelik ve ödeme altyapısı henüz belirlenmedi; bunlar varsayılmaz. Gerçek ödeme doğrulaması, şeffaf fiyat/koşul ve satın alma teslim güvenliği gerekir. 500+100 seviye, hikâye, mevcut sistemler ve diğer kabul koşulları korunur.
+
 ## Bağlayıcı yeniden uygulama sırası — bilinen sistemler (2026-11-26)
 
 Kaynak: [001–154 metin denetimi](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga/referanslar/kung-fu-saga/157_154_EKRAN_METIN_DENETIMI.md), [WEB-155–178](https://github.com/marazali02012-wq/Kirik-Muhur/blob/referans/kung-fu-saga/referanslar/kung-fu-saga/155_ileri_seviye_web_referanslari.md). Kullanıcı kararı: bilinenleri bitir, bilinmeyenleri uydurmadan araştırma listesinde tut; baştan sıra ile ilerle. Aşağıdaki açık kabul maddeleri mevcut M/R/Q/V kimliklerini değiştirmez ve tamamlanmış eski alt testleri silmez. Referans seviyeleri örnektir; bizim kesin seviye ekonomimiz doğal denge testi ile belirlenir.
@@ -33,7 +35,7 @@ Kaynak: [001–154 metin denetimi](https://github.com/marazali02012-wq/Kirik-Muh
 - [ ] 09/M12–14/R05 Pet/binek/kanat: 022–024/048–053/072/078/151; Sv15/32/48 ana görev referansları; aşama/yıldız/malzeme, ayrı beceri/görünüm, gerçek oturuş; kanat set/şekil ayrı, önizleme ve stat.
 - [ ] 10/M03/M22 Dünya/şehir: 026–027/071/090/142; rota, bölge girişi, ayrı harita, doğal dekor, NPC, düşman aralığı, kamera, kayıt ve dönüş. 3.172 fiziksel örtüşme açık.
 - [ ] 11/M15–18/R06 Boss/zindan/kule/arena: 029/055–059/063–065/101/116–118/123–130/139–150. Ayrı özgün harita ve HUD her içerik türü; Dünya Boss çok hedef/3 hak/30 dk örneği; XP 180 sn/10 dalga/2 hak/1 bilet örneği; ilham ve iksir; kule 500 kat kullanıcı kuralı, her 5. kat büyük boss, ilk zafer ve 5. kat kader yuvası referansı; kader işle/erit/füzyon/çıkar ayrı; arena 10 hak örneği, onur, sonuç ve güvenli dönüş.
-- [ ] 12/M19 Günlük/ödül: 032–044/066/086/097–099/127–128; gerçek 00:00 yenileme, haftalık pazartesi, giriş 2/7/14/21/28 örneği, aktivite 20/50/90/130/180, günlük20 tur, gerçek geçmişle kurtarma; ayrı kaynak mağazası, ücretli/VIP yok.
+- [ ] 12/M19 Günlük/ödül: 032–044/066/086/097–099/127–128; gerçek 00:00 yenileme, haftalık pazartesi, giriş 2/7/14/21/28 örneği, aktivite 20/50/90/130/180, günlük20 tur, gerçek geçmişle kurtarma; ayrı kaynak mağazası ve gerçek ücretli yükselme; ürün/eşik/VIP ayrıntıları açık.
 - [ ] 13/M20/R07 Bilinen ileri gelişim: 001/087/119 ve WEB-155–164. Kutsal silah dört parça 47/56/65/70 ana görev referansı; meridyen ve boss kaynağı, savaş ruhları, ruh ekipmanı, gizli silah, ilahi enstrüman, iç zırh, canavar ekipmanı, antik hazine, dönüşüm, 9. sınıf değişimi referansları. Her biri gerçek kaynak, etki, ayrı ekran, önkoşul ve kayıttan sonra kabul. 500 normal+100 peri kullanıcı kuralı, referans alt sistem tavanlarıyla karıştırılmaz.
 - [ ] 14/M21 Sosyal/çevrim içi: 010/054/089/100/102–118/153; gerçek sunucu hesapları, posta, takım, lonca, arena, sıralama, pazar, çapraz sunucu ve etkinlik. Altyapı olmadan sahte çevrim içi işlev veya oyuncu yok.
 - [ ] 15/M23/V01–06 Teknik ve görsel QA: her sıra ayrı orijinal referans, önce/sonra gerçek ekran, doğal işlev, kayıt, mobil dokunma, FPS ve fiziksel Android; ana index korunur. 
@@ -245,7 +247,7 @@ Kaynaklar: [MU Online resmi sınıf görevleri](https://muonline.webzen.com/en/g
 | 500+ | Son oyun: bölüm sınavları, haftalık mücadeleler, ileri ekipman ve tekrar döngüsü; çevrim içi içerikler sunucu kurulunca |
 - [ ] Veri tabanlı görev/bölüm tanımları: kalıcı benzersiz ID, ön görev, seviye, güç, sistem açılma şartı, bölge, hedef, ödül, tekrar hakkı, yenilenme, kilit nedeni ve alternatif etkinlik. Eski kayıt indeksleri geçişte korunur.
 - [ ] Mevcut XP gereksinimi level*95 (doğrulandı); kayıt seviyesi 1–999 arasında temizleniyor, XP kazanım döngüsünde açık bir üst seviye tavanı yok. 1–500+ eğrisi, XP ödülleri, ekonomik kaynaklar, düşman can/hasar ve güç hesapları birlikte yeniden dengelenecek; sırf seviye sayısını büyütmek yeterli değil.
-- [ ] 300/400/500 sınavlarında seviye + gerçek güç + önceki bölüm + terfi/boss gibi uygulanmış ön koşullar. Kilitli ana görev otomatik durur, nedeni ve kalan şart görünür. Alternatif av, yan görev, ekipman ve günlük içerik erişilebilir; haklar dolduğunda gerçek sayaç. Seviye ve güç arttıkça görev süreleri ve zorluk artar, çözümsüz kilit ve zorunlu satın alma yok.
+- [ ] 300/400/500 sınavlarında seviye + gerçek güç + önceki bölüm + terfi/boss gibi uygulanmış ön koşullar. Kilitli ana görev otomatik durur, nedeni ve kalan şart görünür. Alternatif av, yan görev, ekipman ve günlük içerik erişilebilir; haklar dolduğunda gerçek sayaç. Seviye ve güç arttıkça görev süreleri ve zorluk artar, teknik olarak çözümsüz kilit yok; tasarlanmış ücretli yükselme şartı ayrı gösterilir.
 - [ ] Görev çeşitliliği: keşif, teslim, toplama, çok dalga, elit/boss, ekipman geliştirme, terfi, zindan, kule, günlük/haftalık. Çevrim içi görevler yerel ilerlemeyi kilitlemez.
 - [ ] Denge ve kabul: doğal ilerleme simülasyonu 1/50/100/200/299/300/399/400/499/500 ve eski kayıt; XP kaynaklarının erişilebilirliği, çift ödül, saat değişimi, boşta bekleme, yeniden açılma, ölüm, uygulama kapanışı, Android FPS. Gerçek süre hedefleri ölçümden sonra belirlenir. İleri seviye mekanikleri henüz kodlanmadı.
 
@@ -277,7 +279,7 @@ Referanslar: [Kung Fu Saga görevler](https://gamingonphone.com/guides/avatars-s
 
 ## MMORPG kapsam genişletmesi — çoklu referans eksik analizi (2026-11-26)
 Kullanıcı talebi: RPG/MMORPG'lerdeki yararlı, eksik veya yeterince tanımlanmamış sistemleri ana listeye ekle; tam bir oyun hedefle. Mevcut öncelik sırası değişmez; 3.130 sonrası günlük etkinlik/ödül motorunun kalanları, mücevher/set, kostüm/kanat, ileri gelişim, mücadele, sanat, online ve genel kabul. Bu bölüm ilgili grupların alt iş kuyruğudur, baştan başlama talimatı değildir. 3.130 kodunun her fonksiyonu bu incelemede yeniden doğrulanmadı: açık maddeler mevcut takip dokümanında tamamlandığı kanıtlanmamış kapsam/iyileştirmelerdir; kesin kod yokluğu iddiası değil. Yeni özelliklerin mekanikleri, modelleri ve testleri henüz uygulanmadı. Her birinin uygulanabilirliği, bağımlılıkları ve ekonomi dengesi ilgili aşamada değerlendirilecek.
-Kesin kurallar: sabit dikey, joystick yok, tam otomatik hareket/savaş; oyuncu içerik ve gelişim kararlarını verir. Ayrı kategorili özgün UI; gerçek çevrim içi işlevler sunucu kurulunca. ZIP sınırı yok; fiziksel Android performansı şart. Önceki 1–500+ ilerleme ve izinli XP kaynak tablosu geçerli; meslek, koleksiyon, ustalık ve lonca puanları karakter XP'sine otomatik dönüşmez. Her içerik ayrı amaç/ödül taşır; zorunlu ödeme, sahte oyuncu, zorunlu online ilerleme veya çözümsüz kilit yok. Premium/ücretli sistemler ayrı onay ister.
+Kesin kurallar: sabit dikey, joystick yok, tam otomatik hareket/savaş; oyuncu içerik ve gelişim kararlarını verir. Ayrı kategorili özgün UI; gerçek çevrim içi işlevler sunucu kurulunca. ZIP sınırı yok; fiziksel Android performansı şart. Önceki 1–500+ ilerleme ve izinli XP kaynak tablosu geçerli; meslek, koleksiyon, ustalık ve lonca puanları karakter XP'sine otomatik dönüşmez. Her içerik ayrı amaç/ödül taşır; sahte oyuncu, çözümsüz teknik kilit yok. Ücretli yükselme güncel kullanıcı kararıdır; ürün, eşik ve VIP ayrıntıları açık.
 
 ### Referans kaynaklar ve uyarlama
 - [Kung Fu Saga](https://play.google.com/store/apps/details?id=com.rxsjus.an.watt): mevcut mobil otomatik görev/gelişim referansı; önceki araştırma kaynakları korunur.
@@ -325,7 +327,7 @@ Aşağıdaki önerilerin hepsi aynı oyunda bulunmaz; farklı referanslardan uya
 - [ ] C05 Nitelik yeniden şekillendirme ve kilitleme, yükseltme aktarımı, üretim tarifleri; maliyet ve sonuç önizlemesi, kayıp önleme.
 - [ ] C06 Üretim/işleme/eritme, ekipman birleştirme ve geri dönüşüm; otomatik toplama/çöp filtresi oyuncu tercihine bağlı.
 - [ ] C07 Eşya kilitleme, favori, sıralama/filtre, toplu parçalama, yığın, kapasite ve depo; değerli ekipmanı onaysız silme yok.
-- [ ] C08 Ekipman kaynağı rehberi, nadir drop olasılığı ve uygun zindan; şansa bağlı ödüllerde görünür kurallar, ücretsiz garanti ilerleme.
+- [ ] C08 Ekipman kaynağı rehberi, nadir drop olasılığı ve uygun zindan; şansa bağlı ödüllerde görünür kurallar, açık ücret ve kazanım koşulları.
 - [ ] C09 Ekonomi denetimi: kaynak giriş/çıkışı, enflasyon, maliyet eğrisi, sınır/taşma, işlem günlüğü; online takas için sunucu doğrulaması.
 - [ ] C10 Eşya dayanıklılığı/tamir, bağlanmış ve ticarete uygun eşya ayrımı yalnız denge uygun olursa; zorunlu ödeme veya cezalandırıcı kayıp yok.
 
@@ -364,7 +366,7 @@ Aşağıdaki önerilerin hepsi aynı oyunda bulunmaz; farklı referanslardan uya
 - [ ] G03 Hak, bilet, yenilenme, çevrim dışı süre, saat geri alma, tek ödül ve kayıt; online olunca yetkili sunucu saati.
 - [ ] G04 Ödül merkezi: hazır/alınmış/süresi geçmiş; otomatik görev ödülünü tekrar alma yok.
 - [ ] G05 Geri dönen oyuncu ve yeni başlayan telafi/rehberleri; bedava kaynakların kötüye kullanımına karşı kayıt ve hak.
-- [ ] G06 Sezon hedefleri, ücretsiz ilerleme yolu, dönemsel koleksiyon; ücretli pass/VIP varsa ayrı kullanıcı onayı.
+- [ ] G06 Sezon hedefleri, dönemsel koleksiyon; ücretli yükselme ile uyumlu koşullar, pass/VIP ayrıntıları açık.
 - [ ] G07 Kısıtlı XP dağıtımı ve 1–500+ doğal ilerleme ölçümleri; karakter, meslek, pet, binek ve lonca puanları ayrı.
 
 ### H. Gerçek MMORPG ve operasyon (sunucu aşaması)
@@ -1034,3 +1036,7 @@ Chromium set_content, bellek localStorage, kontrollü Sv1/4/18 durumları: iki k
 ## 3.201 — Yapımcı ve oyuncu kaynaklı ikinci kapsam denetimi (2026-11-26)
 - [Yapımcı, oyuncu ve endgame denetimi — P57–P84](YAPIMCI_OYUNCU_ENDGAME_DENETIMI_3_201.md) ana 15 madde ve P01–P56'ya bağlandı. 28 ek kabul kontrolü (toplam 84 P kimliği; birbirine bağlı, bağımsız özellik sayısı değil), 11 statik kod bulgusu, 7 web görsel kaydı ve kaynak URL'leri. Resmî yapımcı açıklamaları ile oyuncu şikâyetleri ayrıldı. Tüm kaynakların tarihsel arşivi/oyunların gizli formülleri tamamlanmadı. İki görsel dosyası indirme denemesi başarısız; görsellerin URL'leri kaydedildi, binary yüklenmedi.
 - 3.201 ZIP SHA256 doğrulandı. K01–K11 statik kod denetimi: 46 görev sonrası tekrar şablonu, günlük XP tıkanma riski, görev teslimi/ödülün çok aşamalı kayıt riski, kapasite eşiklerinin bütün önceki görevleri doğrulamaması, posta kimliği eksikliği, günlük/haftalık ödül taşıma doğrulaması, istemci saati, peri final şartı ve sınıf becerisi, gerçek ağ yokluğu ve kabul kanıtlarının sınırı. En önemli P61 atomik görev ödülü/ilerleme, P62 ortak önkoşul grafiği, P60 tıkanmasız ilerleme, P57 500/100 hikâye. Bunlar önceki 08 sırasına bağımlılık/iyileştirme olarak bağlı; çalışan 01–07 işlevleri silinmez. P57–84 henüz açık. Oyunda değişiklik, yeni TEST ZIP veya yeni runtime test yok.
+
+
+## Güncel karar — ücretli yükselme
+26.11.2026 — Kullanıcının güncel kararı: Kırık Mühür'de para yatırmadan yükselme olmayacak; ödeme zorunluluğu olmadan ilerleme/yükselme garantisi kapsam dışıdır. Önceki ücretsiz yükselme, zorunlu ödeme yasağı ve ücretli sistem yasağı bu konuda geçersizdir. Hangi seviye veya gelişim aşamasında ödeme gerekeceği, fiyatlar, ürünler, VIP/abonelik ve ödeme altyapısı henüz belirlenmedi; bunlar varsayılmaz. Gerçek ödeme doğrulaması, şeffaf fiyat/koşul ve satın alma teslim güvenliği gerekir. 500+100 seviye, hikâye, mevcut sistemler ve diğer kabul koşulları korunur.
